@@ -449,20 +449,8 @@ def draw_source(meta: dict, settings: dict, page: int, total: int) -> Image.Imag
     for ln in wrap(src, fb, BODY_W):
         tdraw(d, (MX, y), ln, fb, c["text"])
         y += 56
-    y += 10
-    for ln in ("대한민국 정책브리핑 www.korea.kr", meta.get("license_label", "공공누리 제1유형(출처표시)")):
-        tdraw(d, (MX, y), ln, font("medium", 32), c["sub"])
-        y += 52
-    y += 14
-    note = "카드의 글은 보도자료 원문 그대로이며, 일부 내용은 생략했을 수 있어요. 전체 내용은 캡션의 원문 링크에서 확인하세요."
-    for ln in wrap(note, font("regular", 32), BODY_W):
-        tdraw(d, (MX, y), ln, font("regular", 32), c["sub"])
-        y += 50
-
-    y = max(y + 40, 760)
-    d.line((MX, y, W - MX, y), fill=c["line"], width=2)
-    y += 40
-    y = _disclaimer_and_office(d, c, settings, y)
+    # 정책브리핑 주소·공공누리·면책 문구는 카드에서 빼고 캡션에만 둔다(사용자 요청)
+    _office_rows(d, c, settings, max(y + 60, 760))
     _footer(d, c, settings, page, total, "")
     return img
 
@@ -472,6 +460,11 @@ def _disclaimer_and_office(d, c, settings: dict, y: int) -> int:
     for ln in wrap(disc, font("medium", 32), BODY_W):
         tdraw(d, (MX, y), ln, font("medium", 32), c["text"])
         y += 50
+    return _office_rows(d, c, settings, y)
+
+
+def _office_rows(d, c, settings: dict, y: int) -> int:
+    """중개사무소 정보(설정에 넣었을 때만)."""
     office = settings.get("office") or {}
     rows = [office.get("name"), office.get("ceo") and f"대표 {office['ceo']}",
             office.get("reg_no") and f"등록번호 {office['reg_no']}",
