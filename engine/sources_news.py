@@ -20,7 +20,7 @@ from urllib.parse import urlparse
 import httpx
 
 from . import filter as flt
-from .common import KST, log, register_secret
+from .common import KST, log, redact, register_secret
 
 HUB_API = "https://naverapihub.apigw.ntruss.com/search/v1/news"
 OLD_API = "https://openapi.naver.com/v1/search/news.json"
@@ -79,17 +79,21 @@ def fetch(client_id: str, client_secret: str, settings: dict, now: datetime, hou
         for q in queries:
             try:
                 r = c.get(api, params={"query": q, "display": 50, "sort": "date", **extra}, headers=headers)
-                if r.status_code == 401 and len(endpoints) > 1:
+                if r.status_code in (401, 403) and len(endpoints) > 1:
+                    log(f"네이버 거절 이유({api.split('/')[2]}, HTTP {r.status_code}): {redact(r.text[:300])}")
                     # 열쇠가 다른 방식용이면 한 번만 바꿔 본다
                     api, headers, extra = endpoints.pop()
                     r = c.get(api, params={"query": q, "display": 50, "sort": "date", **extra}, headers=headers)
             except httpx.HTTPError as e:
                 log(f"네이버 뉴스 연결 실패({q}): {type(e).__name__}")
                 continue
-            if r.status_code == 401:
-                raise RuntimeError("네이버 뉴스 열쇠(Client ID/Secret)가 맞지 않거나, NAVER API HUB에서 뉴스 검색을 신청하지 않았어요")
+            if r.status_code in (401, 403):
+                detail = redact(r.text[:300])
+                log(f"네이버 거절 이유({api.split('/')[2]}, HTTP {r.status_code}): {detail}")
+                raise RuntimeError("네이버 뉴스 열쇠(Client ID/Secret)가 맞지 않거나, NAVER API HUB에서 뉴스 검색을 신청하지 않았어요"
+                                   f" (네이버 응답: {detail[:120]})")
             if r.status_code != 200:
-                log(f"네이버 뉴스 오류({q}): HTTP {r.status_code}")
+                log(f"네이버 뉴스 오류({q}): HTTP {r.status_code} {redact(r.text[:200])}")
                 continue
             for it in r.json().get("items", []):
                 link = it.get("originallink") or it.get("link") or ""
