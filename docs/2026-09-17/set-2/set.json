@@ -14,7 +14,21 @@
       "published": "2026-09-17T18:42:00+09:00",
       "date_label": "2026.09.17 18:42",
       "score": 9,
-      "tag": "정책"
+      "tag": "정책",
+      "gov": {
+        "dept": "국토교통부",
+        "title": "토지거래허가구역 내 실거주 유예, '27년 12월 31일까지 연장·확대",
+        "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782110",
+        "date_label": "2026.09.17",
+        "text": "토지거래허가구역 내 주택 거래 시, 세입자가 거주하고 있어 매수자가 바로 입주하기 어려운 주택에 대해, 내년 말까지 실거주 유예를 신청할 수 있게 된다. 다만, 무주택 실수요자 요건과 입주 후 2년 거주의무는 그대로 유지 된다.",
+        "license_label": "공공누리 제1유형(텍스트에 한함)",
+        "embargo": {
+          "available_at": "2026-09-17T11:00:00+09:00",
+          "raw": "2026. 9. 17.(목) 11:00 이후(9. 18.(금) 조간)",
+          "rule": "적힌 시각",
+          "certain": true
+        }
+      }
     },
     {
       "title": "대구 아파트값 2주째 보합…경북 매매·전세 동반 하락",
@@ -69,7 +83,7 @@
     "cards/06.jpg",
     "cards/07.jpg"
   ],
-  "caption": "오늘의 부동산 뉴스 (2026.09.17)\n\n1. 토지거래허가구역 실거주 유예 내년 말까지 연장…임대차 갱신도 허용 — 조세일보\n   http://www.joseilbo.com/news/news_read.php?uid=575919&class=33&grp=\n2. 대구 아파트값 2주째 보합…경북 매매·전세 동반 하락 — 경북일보\n   https://www.kyongbuk.co.kr/news/articleView.html?idxno=4084735\n3. 청년 달래는 與 “고품질 임대주택 추석 전 발표” — 세계일보\n   https://www.segye.com/newsView/20260917516863?OutUrl=naver\n4. “엄마, 월세가 300만원이래 어떡해” 세입자들 한숨...믿었던 ‘노도강... — 서울경제\n   https://www.sedaily.com/article/20092365?ref=naver\n5. [단독] 갤러리아, 상품본부 축소…명품관 재건축·부동산 개발 집중 — 한국경제\n   https://www.hankyung.com/article/2026091720621\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n정보 제공용 콘텐츠입니다. 세금·대출은 반드시 전문가와 상담하세요.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사 #카드뉴스",
+  "caption": "오늘의 부동산 뉴스 (2026.09.17)\n\n1. 토지거래허가구역 실거주 유예 내년 말까지 연장…임대차 갱신도 허용 — 조세일보\n   http://www.joseilbo.com/news/news_read.php?uid=575919&class=33&grp=\n   📄 정부 발표: 국토교통부 「토지거래허가구역 내 실거주 유예, '27년 12월 31일까지 연장·확대」(2026.09.17) https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782110\n2. 대구 아파트값 2주째 보합…경북 매매·전세 동반 하락 — 경북일보\n   https://www.kyongbuk.co.kr/news/articleView.html?idxno=4084735\n3. 청년 달래는 與 “고품질 임대주택 추석 전 발표” — 세계일보\n   https://www.segye.com/newsView/20260917516863?OutUrl=naver\n4. “엄마, 월세가 300만원이래 어떡해” 세입자들 한숨...믿었던 ‘노도강... — 서울경제\n   https://www.sedaily.com/article/20092365?ref=naver\n5. [단독] 갤러리아, 상품본부 축소…명품관 재건축·부동산 개발 집중 — 한국경제\n   https://www.hankyung.com/article/2026091720621\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n정부 발표 원문 출처: 대한민국 정책브리핑 www.korea.kr — 공공누리 제1유형\n정보 제공용 콘텐츠입니다. 세금·대출은 반드시 전문가와 상담하세요.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사 #카드뉴스",
   "caption_problems": [],
   "embargo": null,
   "license": null,
@@ -81,5 +95,5 @@
     "https://www.sedaily.com/article/20092365?ref=naver",
     "https://www.hankyung.com/article/2026091720621"
   ],
-  "created_at": "2026-09-17T23:00:06.146642+09:00"
+  "created_at": "2026-09-17T23:07:55.829400+09:00"
 }
