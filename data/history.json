@@ -1,4 +1,19 @@
 {
   "made": [],
-  "posted": []
+  "posted": [
+    {
+      "date": "2026-09-17",
+      "set": 1,
+      "kind": "policy",
+      "mode": "연습",
+      "source_urls": [
+        "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782110"
+      ],
+      "problems": [],
+      "notes": [
+        "인스타 연결 정상(@buto.story), 오늘 게시 0/100"
+      ],
+      "at": "2026-09-17T22:07:39.222802+09:00"
+    }
+  ]
 }
