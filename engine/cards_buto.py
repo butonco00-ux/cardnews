@@ -44,10 +44,10 @@ def _footer(d, c, settings: dict, page: int | None = None, total: int | None = N
         tdraw(d, (right - bw, FOOTER_Y + 34), brand, fb, c["ink"])
         right -= bw + 30
     if page and total:
-        fp = font("light", 26)
+        # 쪽 번호는 구분선 위, 로고 바로 위(오른쪽 맞춤)
+        fp = font("light", 28)
         label = f"{page}/{total}"
-        tdraw(d, (right - tlen(label, fp), FOOTER_Y + 52), label, fp, c["muted"])
-        right -= tlen(label, fp) + 24
+        tdraw(d, (W - 64 - tlen(label, fp), FOOTER_Y - 48), label, fp, c["muted"])
     if note:
         fn = font("light", 27)
         line = wrap(note, fn, right - 64)[0]
@@ -287,7 +287,7 @@ def draw_news_item(n: int, item: dict, note: str, settings: dict, page: int, tot
             tdraw(d, (x, y), ln, fn, c["sub"])
             y += 54
 
-    _source_right(d, c, f"출처 : {item.get('press', '')}")
+    _source_right(d, c, f"출처 : {item.get('press', '')}", y=1110)
     _footer(d, c, settings, page, total)
     return img
 
