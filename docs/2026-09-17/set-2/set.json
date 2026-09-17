@@ -1,0 +1,85 @@
+{
+  "kind": "news",
+  "date": "2026-09-17",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.09.17)",
+  "date_label": "2026.09.17",
+  "news_items": [
+    {
+      "title": "경기도시정비협회 출범...\"정비사업 새 질서·투명한 시장 만든다\"",
+      "link": "https://www.ajunews.com/view/20260917175106195",
+      "naver_link": "https://www.ajunews.com/view/20260917175106195",
+      "press": "아주경제",
+      "published": "2026-09-17T22:56:00+09:00",
+      "date_label": "2026.09.17 22:56",
+      "score": 3,
+      "tag": "정책"
+    },
+    {
+      "title": "\"얼굴만 봐도 불편\" 김남일·김영광, 찐친 케미…성남 26억 아파트에 '눈...",
+      "link": "https://mhnse.com/news/articleView.html?idxno=1548724",
+      "naver_link": "https://m.entertain.naver.com/article/445/0000465777",
+      "press": "mhnse.com",
+      "published": "2026-09-17T22:50:00+09:00",
+      "date_label": "2026.09.17 22:50",
+      "score": 3,
+      "tag": "정책"
+    },
+    {
+      "title": "반도체연구소·청년주택 5천 호…민선 9기 비전 제시",
+      "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8666643&ref=A",
+      "naver_link": "https://n.news.naver.com/mnews/article/056/0012259693?sid=101",
+      "press": "KBS",
+      "published": "2026-09-17T22:05:00+09:00",
+      "date_label": "2026.09.17 22:05",
+      "score": 3,
+      "tag": "정책"
+    },
+    {
+      "title": "'구해줘! 홈즈' 분당 정자동 아파트→서판교 회장님마을 소개",
+      "link": "https://enter.etoday.co.kr/news/view/302531",
+      "naver_link": "https://enter.etoday.co.kr/news/view/302531",
+      "press": "이투데이",
+      "published": "2026-09-17T22:02:00+09:00",
+      "date_label": "2026.09.17 22:02",
+      "score": 3,
+      "tag": "정책"
+    },
+    {
+      "title": "강남 떨어져도 서울 아파트값 84주 상승 릴레이",
+      "link": "https://www.ytn.co.kr/_ln/0103_202609172155279777",
+      "naver_link": "https://n.news.naver.com/mnews/article/052/0002408505?sid=102",
+      "press": "YTN",
+      "published": "2026-09-17T21:55:00+09:00",
+      "date_label": "2026.09.17 21:55",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg",
+    "cards/07.jpg"
+  ],
+  "caption": "오늘의 부동산 뉴스 (2026.09.17)\n\n1. 경기도시정비협회 출범...\"정비사업 새 질서·투명한 시장 만든다\" — 아주경제\n   https://www.ajunews.com/view/20260917175106195\n2. \"얼굴만 봐도 불편\" 김남일·김영광, 찐친 케미…성남 26억 아파트에 '눈... — mhnse.com\n   https://mhnse.com/news/articleView.html?idxno=1548724\n3. 반도체연구소·청년주택 5천 호…민선 9기 비전 제시 — KBS\n   https://news.kbs.co.kr/news/pc/view/view.do?ncd=8666643&ref=A\n4. '구해줘! 홈즈' 분당 정자동 아파트→서판교 회장님마을 소개 — 이투데이\n   https://enter.etoday.co.kr/news/view/302531\n5. 강남 떨어져도 서울 아파트값 84주 상승 릴레이 — YTN\n   https://www.ytn.co.kr/_ln/0103_202609172155279777\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n정보 제공용 콘텐츠입니다. 세금·대출은 반드시 전문가와 상담하세요.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사 #카드뉴스",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.ajunews.com/view/20260917175106195",
+    "https://mhnse.com/news/articleView.html?idxno=1548724",
+    "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8666643&ref=A",
+    "https://enter.etoday.co.kr/news/view/302531",
+    "https://www.ytn.co.kr/_ln/0103_202609172155279777"
+  ],
+  "created_at": "2026-09-17T22:56:46.498546+09:00"
+}
