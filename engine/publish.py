@@ -76,9 +76,15 @@ def _wait_images(meta: dict, day: str, settings: dict, limit_s: int = 600) -> li
             time.sleep(20)
 
 
-def post(day: str, set_no: int, mode: str, confirm: str, caption_override: str) -> int:
+def post(day: str, set_no: int, mode: str, confirm: str, caption_override: str, style: str = "1") -> int:
     settings = read_json(data_dir() / "settings.json", {})
     meta = _load(day, set_no)
+    style = (style or "1").strip()[:1]
+    styles = meta.get("styles") or {"1": meta.get("cards", [])}
+    if style not in styles:
+        log(f"❌ 스타일 {style} 카드가 없어요. 있는 스타일: {', '.join(styles)}")
+        return 1
+    meta = dict(meta, cards=styles[style])
     h = history.load()
     now = now_kst()
     problems: list[str] = []
@@ -135,7 +141,7 @@ def post(day: str, set_no: int, mode: str, confirm: str, caption_override: str) 
                 notes.append(f"인스타 연결 확인 실패: {e}")
         else:
             notes.append("인스타 열쇠가 아직 없어요(연습이라 괜찮아요)")
-        log(f"✅ 연습 모드: 실제로는 올리지 않았어요. 사진 {len(meta['cards'])}장, 캡션 {len(cap)}자")
+        log(f"✅ 연습 모드: 실제로는 올리지 않았어요. 스타일 {style}, 사진 {len(meta['cards'])}장, 캡션 {len(cap)}자")
         for n in notes:
             log(n)
         _record(h, day, set_no, meta, mode, ok=True, problems=[], notes=notes)
@@ -190,13 +196,14 @@ def main() -> int:
     ap.add_argument("--mode", default="연습")
     ap.add_argument("--confirm", default="")
     ap.add_argument("--caption", default="")
+    ap.add_argument("--style", default="1")
     ap.add_argument("--notes", nargs="*", default=[])
     a = ap.parse_args()
     day = a.date.strip()
     if a.step == "prepare":
         prepare(day, a.set, a.notes)
         return 0
-    return post(day, a.set, a.mode.strip(), a.confirm, a.caption)
+    return post(day, a.set, a.mode.strip(), a.confirm, a.caption, a.style)
 
 
 if __name__ == "__main__":

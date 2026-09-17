@@ -30,11 +30,13 @@ DEFAULT_COLORS = {
 }
 
 WEIGHTS = {
+    "light": "Pretendard-Light.otf",
     "regular": "Pretendard-Regular.otf",
     "medium": "Pretendard-Medium.otf",
     "semibold": "Pretendard-SemiBold.otf",
     "bold": "Pretendard-Bold.otf",
     "extrabold": "Pretendard-ExtraBold.otf",
+    "black": "Pretendard-Black.otf",
 }
 
 

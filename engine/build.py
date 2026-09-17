@@ -6,7 +6,17 @@ import shutil
 from datetime import date
 from pathlib import Path
 
-from . import caption, cards, splitter
+from . import caption, cards, cards_buto, splitter
+
+# 스타일: (그리는 모듈, 폴더 이름, 화면 이름). 확인 페이지·올리기에서 고른다.
+STYLES = {
+    "1": (cards, "cards", "스타일 1 (기본)"),
+    "2": (cards_buto, "cards-buto", "스타일 2 (Buto)"),
+}
+
+
+def _styles(settings: dict) -> list[str]:
+    return [k for k in (settings.get("card_styles") or list(STYLES)) if k in STYLES]
 from .common import docs_dir, now_kst, squash, write_json
 
 
@@ -45,15 +55,19 @@ def build_policy(rel: dict, tag: str, day: str, set_no: int, settings: dict) -> 
         return meta
 
     total = len(body_cards) + 2
-    files = []
-    img = cards.draw_cover(meta, settings)
-    cards.save(img, out / "cards" / "01.jpg")
-    files.append("cards/01.jpg")
-    for i, items in enumerate(body_cards, 2):
-        cards.save(cards.draw_body(items, meta, settings, i, total), out / "cards" / f"{i:02d}.jpg")
-        files.append(f"cards/{i:02d}.jpg")
-    cards.save(cards.draw_source(meta, settings, total, total), out / "cards" / f"{total:02d}.jpg")
-    files.append(f"cards/{total:02d}.jpg")
+    styles = {}
+    for key in _styles(settings):
+        mod, folder, _ = STYLES[key]
+        files = []
+        cards.save(mod.draw_cover(meta, settings), out / folder / "01.jpg")
+        files.append(f"{folder}/01.jpg")
+        for i, items in enumerate(body_cards, 2):
+            cards.save(mod.draw_body(items, meta, settings, i, total), out / folder / f"{i:02d}.jpg")
+            files.append(f"{folder}/{i:02d}.jpg")
+        cards.save(mod.draw_source(meta, settings, total, total), out / folder / f"{total:02d}.jpg")
+        files.append(f"{folder}/{total:02d}.jpg")
+        styles[key] = files
+    files = styles.get("1") or next(iter(styles.values()))
 
     first_para = next((it.text for it in parsed.items if it.level in (0, 1)), "")
     cap = caption.policy(meta, first_para, settings)
@@ -66,7 +80,7 @@ def build_policy(rel: dict, tag: str, day: str, set_no: int, settings: dict) -> 
         original.append({"text": ln, "used": "all" if part and _covered(s, used) else ("part" if part else "no")})
 
     meta.update(
-        ok=True, problems=[], cards=files,
+        ok=True, problems=[], cards=files, styles=styles,
         card_items=[[it.to_dict() for it in c] for c in body_cards],
         omitted=info["omitted"], skipped=info["skipped"],
         original=original, excluded_tail=parsed.excluded_tail[:2000],
@@ -93,20 +107,25 @@ def build_news(items: list[dict], day: str, set_no: int, settings: dict, notes: 
         shutil.rmtree(out)
     dl = _date_label(day)
     total = len(items) + 2
-    files = []
-    cards.save(cards.draw_news_cover(dl, len(items), settings), out / "cards" / "01.jpg")
-    files.append("cards/01.jpg")
-    for i, a in enumerate(items, 1):
-        note = notes[i - 1] if i <= len(notes) else ""
-        cards.save(cards.draw_news_item(i, a, note, settings, i + 1, total), out / "cards" / f"{i + 1:02d}.jpg")
-        files.append(f"cards/{i + 1:02d}.jpg")
-    cards.save(cards.draw_news_end(settings, total, total), out / "cards" / f"{total:02d}.jpg")
-    files.append(f"cards/{total:02d}.jpg")
+    styles = {}
+    for key in _styles(settings):
+        mod, folder, _ = STYLES[key]
+        files = []
+        cards.save(mod.draw_news_cover(dl, len(items), settings), out / folder / "01.jpg")
+        files.append(f"{folder}/01.jpg")
+        for i, a in enumerate(items, 1):
+            note = notes[i - 1] if i <= len(notes) else ""
+            cards.save(mod.draw_news_item(i, a, note, settings, i + 1, total), out / folder / f"{i + 1:02d}.jpg")
+            files.append(f"{folder}/{i + 1:02d}.jpg")
+        cards.save(mod.draw_news_end(settings, total, total), out / folder / f"{total:02d}.jpg")
+        files.append(f"{folder}/{total:02d}.jpg")
+        styles[key] = files
+    files = styles.get("1") or next(iter(styles.values()))
     cap = caption.news(items, dl, settings, notes)
     meta = {
         "kind": "news", "date": day, "set": set_no, "tag": "뉴스", "title": f"오늘의 부동산 뉴스 ({dl})",
         "date_label": dl, "news_items": items, "notes": notes, "ok": True, "problems": [],
-        "cards": files, "caption": cap, "caption_problems": caption.check(cap),
+        "cards": files, "styles": styles, "caption": cap, "caption_problems": caption.check(cap),
         "embargo": None, "license": None, "badge": "",
         "source_urls": [a["link"] for a in items], "created_at": now_kst().isoformat(),
     }

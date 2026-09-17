@@ -11,6 +11,12 @@ on:
         required: true
         type: choice
         options: ["1", "2"]
+      style:
+        description: "카드 스타일 (1 = 기본, 2 = Buto)"
+        required: true
+        type: choice
+        default: "2"
+        options: ["1", "2"]
       mode:
         description: "모드 (처음엔 연습으로 해 보세요)"
         required: true
@@ -62,6 +68,7 @@ jobs:
       IN_DATE: ${{ inputs.date }}
       IN_SET: ${{ inputs.set }}
       IN_MODE: ${{ inputs.mode }}
+      IN_STYLE: ${{ inputs.style }}
       IN_CONFIRM: ${{ inputs.confirm }}
       IN_CAPTION: ${{ inputs.caption }}
       N1: ${{ inputs.note1 }}
@@ -101,7 +108,7 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           GH_REPO_NAME: ${{ github.repository }}
-        run: python -m engine.publish post --date "$IN_DATE" --set "$IN_SET" --mode "$IN_MODE" --confirm "$IN_CONFIRM" --caption "$IN_CAPTION"
+        run: python -m engine.publish post --date "$IN_DATE" --set "$IN_SET" --mode "$IN_MODE" --confirm "$IN_CONFIRM" --caption "$IN_CAPTION" --style "$IN_STYLE"
 
       - name: 결과 저장
         if: always()

@@ -129,9 +129,12 @@ def _set_block(meta: dict, day: str, h: dict, info: dict, version: str) -> str:
     if posted and posted.get("permalink"):
         out.append(f"<p><a class='btn gray' href='{e(posted['permalink'])}' target='_blank' rel='noopener'>인스타 게시물 보기 ↗</a></p>")
 
-    imgs = "".join(f"<img loading='lazy' src='{base}{e(f)}?v={version}' alt='카드 {i}'>"
-                   for i, f in enumerate(meta.get("cards", []), 1))
-    out.append(f"<div class='slider'>{imgs}</div><div class='sub'>옆으로 밀어서 넘겨 보세요 · {len(meta.get('cards', []))}장</div>")
+    style_names = {"1": "스타일 1 (기본)", "2": "스타일 2 (Buto)"}
+    for key, files in (meta.get("styles") or {"1": meta.get("cards", [])}).items():
+        imgs = "".join(f"<img loading='lazy' src='{base}{e(f)}?v={version}' alt='카드 {i}'>"
+                       for i, f in enumerate(files, 1))
+        out.append(f"<h3>{e(style_names.get(key, key))}</h3><div class='slider'>{imgs}</div>"
+                   f"<div class='sub'>옆으로 밀어서 넘겨 보세요 · {len(files)}장</div>")
 
     if kind == "policy":
         emb = meta.get("embargo") or {}
@@ -183,7 +186,7 @@ def _set_block(meta: dict, day: str, h: dict, info: dict, version: str) -> str:
             "<ol class='steps'>"
             "<li>아래 버튼을 눌러 GitHub 화면으로 가요(GitHub 앱이나 사파리에 로그인돼 있어야 해요)</li>"
             "<li>오른쪽의 <b>Run workflow</b>를 눌러요</li>"
-            "<li>날짜·세트 번호를 위 값으로 넣어요</li>"
+            "<li>날짜·세트 번호를 위 값으로 넣고, <b>카드 스타일</b>(1 = 기본, 2 = Buto)을 골라요</li>"
             "<li>처음엔 <b>모드 = 연습</b>으로 해 보고, 실제로 올릴 땐 <b>실제</b> + 확인 칸에 <b>올립니다</b></li>"
             + ("<li>뉴스 세트는 '한마디' 칸에 기사별로 한 줄 설명을 적을 수 있어요(비우면 없음)</li>" if kind == "news" else "")
             + "<li>초록색 <b>Run workflow</b> → 2~5분 뒤 이 페이지에 결과가 나와요</li></ol>"
