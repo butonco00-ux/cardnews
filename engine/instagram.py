@@ -24,14 +24,23 @@ class IGError(RuntimeError):
 
 class Instagram:
     def __init__(self, user_id: str, token: str, host: str = "graph.instagram.com", version: str = "v25.0"):
-        if not user_id or not token:
-            raise IGError("인스타 열쇠(IG_USER_ID, IG_ACCESS_TOKEN)가 GitHub 비밀 보관함에 없어요")
+        if not token:
+            raise IGError("인스타 열쇠(IG_ACCESS_TOKEN)가 GitHub 비밀 보관함에 없어요")
         register_secret(token)
-        self.user_id = user_id
+        self.user_id = (user_id or "").strip()
         self.token = token
         self.host = host
         self.base = f"https://{host}/{version}"
         self.c = httpx.Client(timeout=60)
+
+    def _ensure_user(self) -> None:
+        """사용자 ID(숫자)를 안 넣었으면 토큰으로 알아낸다(GET /me?fields=user_id)."""
+        if self.user_id:
+            return
+        body = self._req("GET", "me", fields="user_id,username")
+        self.user_id = str(body.get("user_id") or body.get("id") or "")
+        if not self.user_id:
+            raise IGError("토큰으로 인스타 계정을 찾지 못했어요. 토큰을 다시 받아 주세요")
 
     def _req(self, method: str, path: str, **params) -> dict:
         params["access_token"] = self.token
@@ -66,9 +75,11 @@ class Instagram:
 
     # -------------------------------------------------- 읽기
     def check(self) -> dict:
+        self._ensure_user()
         return self._req("GET", self.user_id, fields="username")
 
     def quota(self) -> dict:
+        self._ensure_user()
         body = self._req("GET", f"{self.user_id}/content_publishing_limit", fields="quota_usage,config")
         data = (body.get("data") or [{}])[0]
         usage = data.get("quota_usage", 0)
@@ -91,6 +102,7 @@ class Instagram:
     def publish_carousel(self, image_urls: list[str], caption: str) -> dict:
         if not 2 <= len(image_urls) <= 10:
             raise IGError("캐러셀은 사진 2~10장이어야 해요")
+        self._ensure_user()
         children = []
         for i, u in enumerate(image_urls, 1):
             body = self._req("POST", f"{self.user_id}/media", image_url=u, is_carousel_item="true")

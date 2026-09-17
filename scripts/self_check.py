@@ -189,6 +189,12 @@ try:
 except instagram.IGError as e:
     check("만료" in str(e) and "TOKEN_SHOULD_NOT_LEAK" not in str(e), "만료 토큰 → 쉬운 안내(토큰 노출 없음)")
 
+ig3 = instagram.Instagram("", "TOKEN_SHOULD_NOT_LEAK")
+ig3.c = httpx.Client(transport=httpx.MockTransport(
+    lambda r: httpx.Response(200, json={"user_id": "17841400000000000", "username": "test"} if r.url.path.endswith("/me") else {"username": "test"})))
+ig3.check()
+check(ig3.user_id == "17841400000000000", "사용자 ID를 안 넣어도 토큰으로 알아냄")
+
 print("9. 노트북·GitHub 나눠 쓰기")
 from engine import make  # noqa: E402
 from engine.common import write_json  # noqa: E402

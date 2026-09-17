@@ -121,7 +121,7 @@ def post(day: str, set_no: int, mode: str, confirm: str, caption_override: str) 
 
     if mode == "연습":
         notes = []
-        if token and user:
+        if token:
             try:
                 ig = instagram.Instagram(user, token, host, version)
                 name = ig.check().get("username", "")
