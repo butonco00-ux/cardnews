@@ -1,0 +1,11 @@
+name: 접속 검사(임시)
+on: workflow_dispatch
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for u in https://www.korea.kr/ "https://www.korea.kr/briefing/pressReleaseList.do?repCode=A00006" https://www.molit.go.kr/ https://www.moef.go.kr/ https://www.nts.go.kr/ "https://apis.data.go.kr/1371000/pressReleaseService/pressReleaseList" https://www.data.go.kr/ https://openapi.naver.com/v1/search/news.json https://graph.instagram.com/ https://www.eum.go.kr/; do
+            echo "$u -> $(curl -s -o /dev/null -m 25 -w '%{http_code} %{time_total}s' "$u" || echo FAIL)"
+          done
+          curl -s -m 10 https://ipinfo.io/country || true
