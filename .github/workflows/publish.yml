@@ -95,13 +95,7 @@ jobs:
 
       - name: 바뀐 카드 먼저 확인 페이지에 올리기
         run: |
-          git config user.name "cardnews-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs data
-          if git diff --cached --quiet; then echo "바뀐 카드 없음"; exit 0; fi
-          git commit -q -m "한마디 반영 $IN_DATE 세트 $IN_SET"
-          for i in 1 2 3; do git pull -q --rebase && git push -q && exit 0; sleep 5; done
-          exit 1
+          bash scripts/save_and_push.sh "한마디 반영 $IN_DATE 세트 $IN_SET"
 
       - name: 인스타에 올리기
         env:
@@ -113,8 +107,4 @@ jobs:
       - name: 결과 저장
         if: always()
         run: |
-          git add docs data
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -q -m "올리기 결과 $IN_DATE 세트 $IN_SET ($IN_MODE)"
-          for i in 1 2 3; do git pull -q --rebase && git push -q && exit 0; sleep 5; done
-          exit 1
+          bash scripts/save_and_push.sh "올리기 결과 $IN_DATE 세트 $IN_SET ($IN_MODE)"
