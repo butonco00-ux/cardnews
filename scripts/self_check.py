@@ -81,6 +81,9 @@ _, info = doctext.pdf_text((FIX / "molit_land.pdf").read_bytes(), with_info=True
 check(info["tables_removed"] >= 1, f"표 {info['tables_removed']}개를 원문에서 뺌")
 fake = [[Item(0, "□", "원문에 없는 문장을 지어냈다.")]]
 check(splitter.verify(fake, "□ 실제 원문 문장이다.") != [], "원문에 없는 글이 들어가면 검사에서 걸림")
+page_break = chr(10).join(["□ 쪽을 넘어가는 문장은", "- 3 -", "보도자료", "원문 그대로 이어진다."])
+pb_items = splitter.parse(page_break).items
+check(splitter.verify([pb_items], page_break) == [], "쪽 번호 사이로 이어지는 문장도 원문으로 인정")
 
 print("4. 관련도·광고·중복")
 check(flt.score("토지거래허가구역 내 실거주 유예 연장", "", {})[0] >= 3, "부동산 제목 점수")

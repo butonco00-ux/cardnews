@@ -245,7 +245,9 @@ def build_cards(items: list[Item], max_body: int = 8) -> tuple[list[list[Item]],
 
 def verify(cards: list[list[Item]], original: str) -> list[str]:
     """카드 글자가 모두 원문 글자인지 확인. 문제 목록(비면 통과)."""
-    src = squash(original)
+    # 쪽 번호("- 3 -")·머리글("보도자료") 줄은 빼고 비교(쪽을 넘어가는 문장도 원문 그대로 이어지게)
+    kept = [ln for ln in original.replace(chr(13), "").split(chr(10)) if not DROP.match(ln)]
+    src = squash(chr(10).join(kept))
     problems = []
     for n, card in enumerate(cards, 1):
         for it in card:
