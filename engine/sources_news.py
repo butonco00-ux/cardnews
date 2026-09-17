@@ -174,7 +174,7 @@ def select(pool: list[dict], settings: dict, excluded: list[dict], count: int = 
     chosen: list[dict] = []
     presses: set[str] = set()
     for a in scored:
-        if any(flt.similar(a["title"], b["title"]) for b in chosen):
+        if any(flt.similar(a["title"], b["title"]) or flt.same_topic(a["title"], b["title"], settings) for b in chosen):
             excluded.append({"title": a["title"], "reason": "같은 내용의 기사가 이미 있음"})
             continue
         if a["press"] in presses:

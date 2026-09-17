@@ -88,6 +88,10 @@ check(flt.score("핵심광물 공급망 MOU", "", {})[0] == 0, "공급망 ≠ �
 check(flt.is_ad("[분양] ○○ 모델하우스 그랜드 오픈", {}), "광고성 제목 제외")
 check(flt.similar("정부, 공공택지 3만호 공급 앞당긴다", "[속보] 정부 공공택지 3만호 공급 앞당긴다"), "같은 기사 중복 판정")
 
+check(flt.same_topic("토지거래허가구역 실거주 유예 연장", "토허구역 내 실거주 의무 2029년까지 유예", {}), "같은 소식(토허구역=토지거래허가구역) 묶기")
+check(not flt.same_topic("대구 아파트값 2주째 보합", "서울 아파트값 84주 상승", {}), "일반어(아파트값)만 같으면 다른 소식")
+check(sources_news.off_topic("'구해줘! 홈즈' 분당 아파트 소개", {}), "예능 기사 제외")
+
 print("5. 뉴스(본문·요약문 미사용)")
 settings = json.loads((TMP / "data" / "settings.json").read_text(encoding="utf-8"))
 raw_items = [{"title": f"<b>양도세</b> 중과 완화 {i}번째 &quot;효과&quot;", "link": f"https://www.yna.co.kr/{i}",

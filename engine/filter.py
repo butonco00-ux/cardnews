@@ -67,6 +67,27 @@ def _norm(t: str) -> str:
     return re.sub(r"[^0-9A-Za-z가-힣]", "", t)
 
 
+# 같은 소식을 다르게 쓴 제목을 묶기 위한 줄임말·일반어
+ALIASES = {"토허구역": "토지거래허가", "토허제": "토지거래허가", "주담대": "주택담보대출", "종부세": "종합부동산세",
+           "양도세": "양도소득세", "재초환": "재건축초과이익", "갭투자": "갭투자"}
+GENERIC = {"부동산", "주택", "아파트", "전세", "월세", "공급", "주거", "부동산 시장", "매매가격", "전세가격",
+           "아파트 가격", "가격동향", "착공", "준공", "인허가"}
+
+
+def topic_keys(title: str, settings: dict) -> set[str]:
+    t = title
+    for k, v in ALIASES.items():
+        t = t.replace(k, v)
+    extra = ["실거주", "갱신계약", "재건축초과이익", "갭투자", "스트레스 DSR", "생애최초", "신생아 특례", "특례대출",
+             "공시가격", "보유세", "다주택", "임대사업자", "전세사기", "역전세", "청약", "분양가상한제"]
+    words = [w for ws in keywords(settings).values() for w in ws] + extra
+    return {w for w in words if w in t and w not in GENERIC}
+
+
+def same_topic(a: str, b: str, settings: dict) -> bool:
+    return bool(topic_keys(a, settings) & topic_keys(b, settings))
+
+
 def similar(a: str, b: str) -> bool:
     na, nb = _norm(a), _norm(b)
     if not na or not nb:
