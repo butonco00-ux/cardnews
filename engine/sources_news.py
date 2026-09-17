@@ -1,7 +1,13 @@
-"""네이버 검색 API(뉴스) — 기사 제목·언론사·날짜·링크만 쓴다.
+"""네이버 뉴스 검색 — 기사 제목·언론사·날짜·링크만 쓴다.
 
 주의: description(요약문)과 본문은 저작권 때문에 절대 저장·표시하지 않는다.
-API: GET https://openapi.naver.com/v1/search/news.json (헤더 X-Naver-Client-Id / X-Naver-Client-Secret)
+
+확인(2026-09-17): 네이버 개발자센터 검색 API는 2026-07-31 신규 신청이 막히고 NAVER API HUB(네이버 클라우드)로 이관,
+2027-06-30 개발자센터 키 호출 종료.
+- 새 방식(기본): GET https://naverapihub.apigw.ntruss.com/search/v1/news?query&display(1~100)&sort=date&format=json
+  헤더 X-NCP-APIGW-API-KEY-ID / X-NCP-APIGW-API-KEY, 하루 25,000회
+- 예전 방식(개발자센터 키가 이미 있는 경우): https://openapi.naver.com/v1/search/news.json
+  헤더 X-Naver-Client-Id / X-Naver-Client-Secret
 """
 from __future__ import annotations
 
@@ -16,7 +22,8 @@ import httpx
 from . import filter as flt
 from .common import KST, log, register_secret
 
-API = "https://openapi.naver.com/v1/search/news.json"
+HUB_API = "https://naverapihub.apigw.ntruss.com/search/v1/news"
+OLD_API = "https://openapi.naver.com/v1/search/news.json"
 
 DEFAULT_QUERIES = ["부동산 정책", "주택 공급", "양도세", "종부세", "취득세", "전세", "주택담보대출", "아파트 가격", "재건축"]
 
@@ -61,16 +68,26 @@ def fetch(client_id: str, client_secret: str, settings: dict, now: datetime, hou
     seen_links: set[str] = set()
     pool: list[dict] = []
     excluded: list[dict] = []
-    headers = {"X-Naver-Client-Id": client_id, "X-Naver-Client-Secret": client_secret}
+    endpoints = [
+        (HUB_API, {"X-NCP-APIGW-API-KEY-ID": client_id, "X-NCP-APIGW-API-KEY": client_secret}, {"format": "json"}),
+        (OLD_API, {"X-Naver-Client-Id": client_id, "X-Naver-Client-Secret": client_secret}, {}),
+    ]
+    if settings.get("naver_api") == "old":
+        endpoints.reverse()
     with httpx.Client(timeout=20) as c:
+        api, headers, extra = endpoints[0]
         for q in queries:
             try:
-                r = c.get(API, params={"query": q, "display": 50, "sort": "date"}, headers=headers)
+                r = c.get(api, params={"query": q, "display": 50, "sort": "date", **extra}, headers=headers)
+                if r.status_code == 401 and len(endpoints) > 1:
+                    # 열쇠가 다른 방식용이면 한 번만 바꿔 본다
+                    api, headers, extra = endpoints.pop()
+                    r = c.get(api, params={"query": q, "display": 50, "sort": "date", **extra}, headers=headers)
             except httpx.HTTPError as e:
                 log(f"네이버 뉴스 연결 실패({q}): {type(e).__name__}")
                 continue
             if r.status_code == 401:
-                raise RuntimeError("네이버 검색 열쇠(Client ID/Secret)가 맞지 않아요")
+                raise RuntimeError("네이버 뉴스 열쇠(Client ID/Secret)가 맞지 않거나, NAVER API HUB에서 뉴스 검색을 신청하지 않았어요")
             if r.status_code != 200:
                 log(f"네이버 뉴스 오류({q}): HTTP {r.status_code}")
                 continue
