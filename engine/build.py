@@ -19,7 +19,8 @@ BUTO_COLORS = {
     "primary": "#111111", "accent": "#111111", "bg": "#EDEBE8", "text": "#111111", "sub": "#555555",
     "line": "#9A9A9A", "badge": "#EEEA5E", "badge_text": "#111111", "number": "#111111",
     "cover_text": "#111111", "cover_sub": "#3A3A3A", "on_primary": "#FFFFFF", "box": "#FFFFFF",
-    "mark": "#EEEA5E",
+    "mark": "#EEEA5E",          # 노란 형광펜은 표지에만
+    "text2": "#4A4A4A",         # 2장부터 본문 글자(숫자는 accent 검정)
 }
 
 

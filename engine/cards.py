@@ -424,6 +424,8 @@ def draw_body(items: list[Item], meta: dict, settings: dict, page: int, total: i
         if i:
             y += gap
         color = c[color_key]
+        if _buto(settings) and it.level in (1, 2):
+            color = c.get("text2", color)     # 스타일 2: 본문은 짙은 회색, 숫자만 검정
         for j, ln in enumerate(lines):
             if j == 0 and marker:
                 mcolor = c["accent"] if it.level in (0, "heading") else color
@@ -432,7 +434,7 @@ def draw_body(items: list[Item], meta: dict, settings: dict, page: int, total: i
             if it.level == "system":
                 tdraw(d, (MX + indent + mw, y), ln, f, color)
             else:
-                _draw_highlighted(d, (MX + indent + mw, y), ln, f, color, c["accent"], c.get("mark") if _buto(settings) else None)
+                _draw_highlighted(d, (MX + indent + mw, y), ln, f, color, c["accent"])
             y += line_h
     _footer(d, c, settings, page, total, f"출처: {meta.get('dept', '')} 보도자료")
     return img
@@ -545,7 +547,7 @@ def draw_news_item(n: int, item: dict, note: str, settings: dict, page: int, tot
         tdraw(d, (MX + 32, y + 24), label, font("bold", 29), c["accent"])
         yy = y + 76
         for ln in glines:
-            _draw_highlighted(d, (MX + 32, yy), ln, fg, c["text"], c["accent"], c.get("mark") if _buto(settings) else None)
+            _draw_highlighted(d, (MX + 32, yy), ln, fg, c.get("text2", c["text"]) if _buto(settings) else c["text"], c["accent"])
             yy += 52
         tdraw(d, (MX + 32, yy + 8), f"{gov.get('license_label', '공공누리 제1유형')} · 정책브리핑", font("regular", 24), c["sub"])
         y += box_h + 26
