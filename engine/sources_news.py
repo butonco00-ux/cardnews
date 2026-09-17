@@ -61,6 +61,7 @@ def press_name(url: str, settings: dict) -> str:
 
 def fetch(client_id: str, client_secret: str, settings: dict, now: datetime, hours: int = 24) -> tuple[list[dict], list[dict]]:
     """반환: (고른 기사, 제외 목록[제목·이유])."""
+    client_id, client_secret = (client_id or "").strip(), (client_secret or "").strip()
     register_secret(client_id)
     register_secret(client_secret)
     queries = settings.get("news_queries") or DEFAULT_QUERIES
@@ -69,21 +70,24 @@ def fetch(client_id: str, client_secret: str, settings: dict, now: datetime, hou
     pool: list[dict] = []
     excluded: list[dict] = []
     endpoints = [
-        (HUB_API, {"X-NCP-APIGW-API-KEY-ID": client_id, "X-NCP-APIGW-API-KEY": client_secret}, {"format": "json"}),
         (OLD_API, {"X-Naver-Client-Id": client_id, "X-Naver-Client-Secret": client_secret}, {}),
+        # ID·Secret 을 바꿔 넣은 경우도 한 번 시도
+        (HUB_API, {"X-NCP-APIGW-API-KEY-ID": client_secret, "X-NCP-APIGW-API-KEY": client_id}, {"format": "json"}),
+        (HUB_API, {"X-NCP-APIGW-API-KEY-ID": client_id, "X-NCP-APIGW-API-KEY": client_secret}, {"format": "json"}),
     ]
     if settings.get("naver_api") == "old":
         endpoints.reverse()
     with httpx.Client(timeout=20) as c:
-        api, headers, extra = endpoints[0]
+        api, headers, extra = endpoints.pop()
         for q in queries:
             try:
                 r = c.get(api, params={"query": q, "display": 50, "sort": "date", **extra}, headers=headers)
-                if r.status_code in (401, 403) and len(endpoints) > 1:
+                while r.status_code in (401, 403) and endpoints:
                     log(f"네이버 거절 이유({api.split('/')[2]}, HTTP {r.status_code}): {redact(r.text[:300])}")
-                    # 열쇠가 다른 방식용이면 한 번만 바꿔 본다
                     api, headers, extra = endpoints.pop()
                     r = c.get(api, params={"query": q, "display": 50, "sort": "date", **extra}, headers=headers)
+                    if r.status_code == 200 and len(endpoints) == 1:
+                        log("네이버: ID·Secret이 서로 바뀌어 들어가 있어요. 동작은 하지만 비밀 보관함에서 바로잡아 주세요")
             except httpx.HTTPError as e:
                 log(f"네이버 뉴스 연결 실패({q}): {type(e).__name__}")
                 continue
