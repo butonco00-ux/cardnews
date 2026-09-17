@@ -556,7 +556,7 @@ def draw_news_item(n: int, item: dict, note: str, settings: dict, page: int, tot
         for ln in nl:
             tdraw(d, (MX + 30, yy), ln, fn, c["text"])
             yy += 50
-    _footer(d, c, settings, page, total, "원문 링크는 캡션에")
+    _footer(d, c, settings, page, total, "")
     return img
 
 

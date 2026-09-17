@@ -124,7 +124,7 @@ def build_news(items: list[dict], day: str, set_no: int, settings: dict, notes: 
     if out.exists():
         shutil.rmtree(out)
     dl = _date_label(day)
-    total = len(items) + 2
+    total = len(items) + 1          # 표지 + 기사 카드('알려드려요' 장은 사용자 요청으로 뺌)
     styles = {}
     for key in _styles(settings):
         mod, folder, _ = STYLES[key]
@@ -136,8 +136,6 @@ def build_news(items: list[dict], day: str, set_no: int, settings: dict, notes: 
             note = notes[i - 1] if i <= len(notes) else ""
             cards.save(mod.draw_news_item(i, a, note, st, i + 1, total), out / folder / f"{i + 1:02d}.jpg")
             files.append(f"{folder}/{i + 1:02d}.jpg")
-        cards.save(mod.draw_news_end(st, total, total), out / folder / f"{total:02d}.jpg")
-        files.append(f"{folder}/{total:02d}.jpg")
         styles[key] = files
     files = styles.get("1") or next(iter(styles.values()))
     cap = caption.news(items, dl, settings, notes)
