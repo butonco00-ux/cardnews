@@ -112,7 +112,7 @@ def draw_cover(meta: dict, settings: dict) -> Image.Image:
     img, d = _new(c)
     x = 110
     y = _tag(d, c, x, 130, f"{meta.get('tag', '정책')} · {_month_label(meta.get('date_label', meta.get('date', '')))}")
-    y = _headline(d, c, x, y + 70, meta["title"], range(104, 67, -4), 4)
+    y = _headline(d, c, x, y + 28, meta["title"], range(104, 67, -4), 4)
     y += 26
     fs = font("light", 52)
     for sub in meta.get("subtitles", [])[:2]:
@@ -132,18 +132,18 @@ def draw_cover(meta: dict, settings: dict) -> Image.Image:
 def draw_body(items: list[Item], meta: dict, settings: dict, page: int, total: int) -> Image.Image:
     c = _c(settings)
     img, d = _new(c)
-    ft = font("extrabold", 50)
-    title = wrap(meta["title"], ft, BODY_W)
-    lines = title[:2]
-    if len(title) > 2:
-        last = lines[1]
-        while tlen(last + "…", ft) > BODY_W and last:
-            last = last[:-1]
-        lines[1] = last + "…"
-    y = 70
-    for ln in lines:
-        tdraw(d, (MX, y), ln, ft, c["ink"])
-        y += 66
+    # 제목은 한 줄: 넘치면 글자를 줄이고(최소 30), 그래도 넘치면 끝을 … 로
+    title = meta["title"]
+    for size in range(50, 29, -2):
+        ft = font("extrabold", size)
+        if tlen(title, ft) <= BODY_W:
+            break
+    line = title
+    if tlen(line, ft) > BODY_W:
+        while tlen(line + "…", ft) > BODY_W and line:
+            line = line[:-1]
+        line += "…"
+    tdraw(d, (MX, 120 - ft.size // 2), line, ft, c["ink"])
 
     y = BODY_TOP
     for i, it in enumerate(items):
@@ -225,7 +225,7 @@ def draw_news_cover(date_label: str, count: int, settings: dict) -> Image.Image:
     img, d = _new(c)
     x = 110
     y = _tag(d, c, x, 130, _month_label(date_label))
-    y += 70
+    y += 28
     f = font("extrabold", 116)
     for i, ln in enumerate(("오늘의", "부동산 뉴스")):
         if i == 1:
@@ -249,7 +249,7 @@ def draw_news_item(n: int, item: dict, note: str, settings: dict, page: int, tot
     x = 110
     y = _tag(d, c, x, 110, f"뉴스 {n:02d} · {item.get('date_label', '')[:10]}", 34)
     gov = item.get("gov")
-    y = _headline(d, c, x, y + 50, item["title"], range(88, 55, -3), 3 if (gov or note) else 4)
+    y = _headline(d, c, x, y + 24, item["title"], range(88, 55, -3), 3 if (gov or note) else 4)
     y += 14
     fs = font("light", 40)
     tdraw(d, (x, y), item.get("press", ""), fs, c["sub"])
