@@ -1,0 +1,119 @@
+{
+  "kind": "news",
+  "date": "2026-09-18",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.09.18)",
+  "date_label": "2026.09.18",
+  "news_items": [
+    {
+      "title": "토지거래허가구역 실거주 유예 내년 말까지 연장…임대차 갱신도 허용",
+      "link": "http://www.joseilbo.com/news/news_read.php?uid=575919&class=33&grp=",
+      "naver_link": "https://n.news.naver.com/mnews/article/123/0002390422?sid=102",
+      "press": "조세일보",
+      "published": "2026-09-17T18:42:00+09:00",
+      "date_label": "2026.09.17 18:42",
+      "score": 9,
+      "tag": "정책",
+      "gov": {
+        "dept": "국토교통부",
+        "title": "토지거래허가구역 내 실거주 유예, '27년 12월 31일까지 연장·확대",
+        "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782110",
+        "date_label": "2026.09.17",
+        "text": "토지거래허가구역 내 주택 거래 시, 세입자가 거주하고 있어 매수자가 바로 입주하기 어려운 주택에 대해, 내년 말까지 실거주 유예를 신청할 수 있게 된다. 다만, 무주택 실수요자 요건과 입주 후 2년 거주의무는 그대로 유지 된다.",
+        "license_label": "공공누리 제1유형(텍스트에 한함)",
+        "embargo": {
+          "available_at": "2026-09-17T11:00:00+09:00",
+          "raw": "2026. 9. 17.(목) 11:00 이후(9. 18.(금) 조간)",
+          "rule": "적힌 시각",
+          "certain": true
+        }
+      }
+    },
+    {
+      "title": "유동균 “청년주택서 신혼부부 주택으로…주거 안정 이어갈 것”",
+      "link": "https://www.sedaily.com/article/20092413?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/011/0004663117?sid=102",
+      "press": "서울경제",
+      "published": "2026-09-17T23:42:00+09:00",
+      "date_label": "2026.09.17 23:42",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "대구 아파트값 2주째 보합…경북 매매·전세 동반 하락",
+      "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4084735",
+      "naver_link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4084735",
+      "press": "경북일보",
+      "published": "2026-09-17T19:58:00+09:00",
+      "date_label": "2026.09.17 19:58",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "청년 달래는 與 “고품질 임대주택 추석 전 발표”",
+      "link": "https://www.segye.com/newsView/20260917516863?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004159930?sid=100",
+      "press": "세계일보",
+      "published": "2026-09-17T19:32:00+09:00",
+      "date_label": "2026.09.17 19:32",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "[단독] 갤러리아, 상품본부 축소…명품관 재건축·부동산 개발 집중",
+      "link": "https://www.hankyung.com/article/2026091720621",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005333630?sid=101",
+      "press": "한국경제",
+      "published": "2026-09-17T18:44:00+09:00",
+      "date_label": "2026.09.17 18:44",
+      "score": 6,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg",
+    "cards/07.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg",
+      "cards/07.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg",
+      "cards-buto/07.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.09.18)\n\n1. 토지거래허가구역 실거주 유예 내년 말까지 연장…임대차 갱신도 허용 — 조세일보\n   http://www.joseilbo.com/news/news_read.php?uid=575919&class=33&grp=\n   📄 정부 발표: 국토교통부 「토지거래허가구역 내 실거주 유예, '27년 12월 31일까지 연장·확대」(2026.09.17) https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782110\n2. 유동균 “청년주택서 신혼부부 주택으로…주거 안정 이어갈 것” — 서울경제\n   https://www.sedaily.com/article/20092413?ref=naver\n3. 대구 아파트값 2주째 보합…경북 매매·전세 동반 하락 — 경북일보\n   https://www.kyongbuk.co.kr/news/articleView.html?idxno=4084735\n4. 청년 달래는 與 “고품질 임대주택 추석 전 발표” — 세계일보\n   https://www.segye.com/newsView/20260917516863?OutUrl=naver\n5. [단독] 갤러리아, 상품본부 축소…명품관 재건축·부동산 개발 집중 — 한국경제\n   https://www.hankyung.com/article/2026091720621\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n정부 발표 원문 출처: 대한민국 정책브리핑 www.korea.kr — 공공누리 제1유형\n정보 제공용 콘텐츠입니다. 세금·대출은 반드시 전문가와 상담하세요.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사 #카드뉴스",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "http://www.joseilbo.com/news/news_read.php?uid=575919&class=33&grp=",
+    "https://www.sedaily.com/article/20092413?ref=naver",
+    "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4084735",
+    "https://www.segye.com/newsView/20260917516863?OutUrl=naver",
+    "https://www.hankyung.com/article/2026091720621"
+  ],
+  "created_at": "2026-09-18T00:12:56.180419+09:00"
+}
