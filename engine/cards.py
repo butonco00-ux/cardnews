@@ -299,9 +299,7 @@ def _tag(d, c, settings: dict, x: int, y: int, text: str, size: int, cover: bool
     """분야 태그. 스타일 1은 둥근 알약, 스타일 2는 검정 네모 상자."""
     f = font("bold", size)
     if _buto(settings):
-        h = int(size * 1.6)
-        d.rectangle((x, y, x + tlen(text, f) + size * 0.9, y + h), fill=c["primary"])
-        tdraw(d, (x + size * 0.45, y + (h - size * 1.2) / 2), text, f, c["on_primary"])
+        _pill(d, x, y, text, f, c["primary"], c["on_primary"])   # 1번과 같은 둥근 모양, 검정 바탕
     elif cover:
         _pill(d, x, y, text, f, None, c["cover_text"], outline=c["cover_text"])
     else:
