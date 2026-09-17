@@ -27,7 +27,7 @@
   },
   "badge": "",
   "source_file": "260918(조간) 토지거래허가구역 실거주 유예 ’27년 말까지 연장·확대(토지정책과).pdf",
-  "created_at": "2026-09-17T23:07:22.766179+09:00",
+  "created_at": "2026-09-17T23:17:29.973212+09:00",
   "ok": true,
   "problems": [],
   "cards": [
@@ -41,6 +41,30 @@
     "cards/08.jpg",
     "cards/09.jpg"
   ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg",
+      "cards/07.jpg",
+      "cards/08.jpg",
+      "cards/09.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg",
+      "cards-buto/07.jpg",
+      "cards-buto/08.jpg",
+      "cards-buto/09.jpg"
+    ]
+  },
   "card_items": [
     [
       {
