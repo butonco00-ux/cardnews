@@ -1,0 +1,38 @@
+<!doctype html><html lang='ko'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><meta http-equiv='Cache-Control' content='no-cache'><meta name='robots' content='noindex'><title>부동산 카드뉴스 확인</title><style>
+:root{--bg:#F7F5F2;--card:#fff;--text:#2F2B28;--sub:#827E79;--line:#E4DDD5;--primary:#9E9577;--accent:#955330;
+--ok:#2E7D4F;--warn:#B7791F;--bad:#B3261E}
+@media (prefers-color-scheme:dark){:root{--bg:#1C1A18;--card:#26231F;--text:#EFEAE4;--sub:#A9A29A;--line:#3A3530}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic",sans-serif;
+padding:16px;padding-bottom:80px}
+main{max-width:980px;margin:0 auto}
+h1{font-size:24px;margin:8px 0 4px}h2{font-size:20px;margin:0 0 6px}h3{font-size:16px;margin:18px 0 6px}
+a{color:var(--accent)}
+.sub{color:var(--sub);font-size:14px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:14px 0}
+.alert{border-radius:12px;padding:12px 14px;margin:10px 0;font-weight:600}
+.alert.warn{background:#FFF4DB;color:#6B4A00}.alert.bad{background:#FDE7E5;color:#7A1A14}.alert.ok{background:#E3F4EA;color:#1E5436}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.chip{font-size:13px;border-radius:99px;padding:3px 10px;border:1px solid var(--line);background:var(--bg)}
+.chip.ok{border-color:#9CD3B2;color:var(--ok)}.chip.warn{border-color:#F0C674;color:var(--warn)}.chip.bad{border-color:#F2A7A1;color:var(--bad)}
+.slider{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;-webkit-overflow-scrolling:touch;padding-bottom:6px}
+.slider img{flex:0 0 min(78%,420px);width:min(78%,420px);max-width:100%;aspect-ratio:4/5;scroll-snap-align:center;border-radius:10px;border:1px solid var(--line);background:#ddd}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:0;border-radius:12px;padding:12px 16px;font-size:16px;font-weight:700;
+background:var(--accent);color:#fff;text-decoration:none;cursor:pointer;min-height:48px}
+.btn.gray{background:var(--line);color:var(--text)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+pre.caption{white-space:pre-wrap;word-break:break-all;background:var(--bg);border-radius:10px;padding:12px;font:14px/1.6 inherit;max-height:320px;overflow:auto}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:15px}
+.kv b{white-space:nowrap}
+.copy{font-size:14px;padding:6px 10px;min-height:36px}
+details summary{cursor:pointer;font-weight:700;padding:6px 0}
+.orig p{margin:4px 0;padding:4px 8px;border-radius:6px;font-size:14px}
+.orig .all{background:#FFF1A8;color:#2F2B28}.orig .part{background:#FFF8D6;color:#2F2B28}.orig .no{color:var(--sub)}
+ol.steps{padding-left:22px}ol.steps li{margin:4px 0}
+table{border-collapse:collapse;width:100%;font-size:14px}td,th{border-bottom:1px solid var(--line);padding:6px;text-align:left;vertical-align:top}
+.tablewrap{overflow-x:auto}
+</style></head><body><main><h1>부동산 카드뉴스 확인</h1><p class='sub'><a href='https://github.com/butonco00-ux/cardnews/actions' target='_blank' rel='noopener'>GitHub 실행 기록 보기 ↗</a></p><div class='alert warn'>인스타 열쇠(토큰)가 아직 없어요. 설정안내.md 4단계를 따라 넣어 주세요</div><a class='box' style='display:block;text-decoration:none;color:inherit' href='2026-09-17/index.html'><h2>2026-09-17</h2><div class=sub>만든 세트 없음</div></a></main><script>
+function copyText(id,btn){const t=document.getElementById(id).innerText;
+ navigator.clipboard.writeText(t).then(()=>{const o=btn.innerText;btn.innerText='복사됨';setTimeout(()=>btn.innerText=o,1500)})
+ .catch(()=>{const r=document.createRange();r.selectNodeContents(document.getElementById(id));const s=getSelection();s.removeAllRanges();s.addRange(r);});}
+</script></body></html>
