@@ -24,7 +24,7 @@
   "min_score": 4,
   "news_queries": ["부동산 정책", "주택 공급", "양도세", "종부세", "취득세", "전세", "주택담보대출", "아파트 가격", "재건축"],
   "news_count": 5,
-  "github_repo": "",
+  "github_repo": "butonco00-ux/cardnews",
   "instagram_host": "graph.instagram.com",
   "instagram_api_version": "v25.0"
 }
