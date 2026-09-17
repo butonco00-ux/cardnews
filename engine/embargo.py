@@ -61,7 +61,7 @@ def parse(text: str, list_date: date, filename: str = "") -> dict:
     candidates: list[tuple[datetime, str]] = []
 
     if header:
-        if re.search(r"즉\s*시", header.split("/")[0]):
+        if re.search(r"즉\s*시|배\s*포\s*시|배\s*포\s*후", header.split("/")[0]):
             dd = _deploy_date(text, base_year) or list_date
             return _result(datetime(dd.year, dd.month, dd.day, 0, 0, tzinfo=KST), raw, "배포 즉시 보도", True)
         for m in _DATE.finditer(header):

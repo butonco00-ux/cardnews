@@ -21,12 +21,13 @@
   "gov_departments": {
     "A00006": "국토교통부",
     "A00041": "재정경제부",
-    "B00004": "국세청",
+    "C00003": "금융위원회",
     "A00031": "행정안전부"
   },
   "min_score": 4,
   "news_queries": ["부동산 정책", "주택 공급", "양도세", "종부세", "취득세", "전세", "주택담보대출", "아파트 가격", "재건축"],
   "news_count": 5,
+  "news_press_only": ["한국경제", "한국주택경제", "매일경제", "헤럴드경제", "아시아경제", "연합뉴스", "세계일보"],
   "github_repo": "butonco00-ux/cardnews",
   "instagram_host": "graph.instagram.com",
   "instagram_api_version": "v25.0"

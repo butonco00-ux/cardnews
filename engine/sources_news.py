@@ -46,7 +46,7 @@ DEFAULT_PRESS = {
     "kyongbuk.co.kr": "경북일보", "imaeil.com": "매일신문", "yeongnam.com": "영남일보", "kado.net": "강원도민일보",
     "kwnews.co.kr": "강원일보", "jjan.kr": "전북일보", "kjdaily.com": "광주매일신문", "joongdo.co.kr": "중도일보",
     "daejonilbo.com": "대전일보", "kyeonggi.com": "경기일보", "kihoilbo.co.kr": "기호일보", "incheonilbo.com": "인천일보",
-    "housingherald.co.kr": "하우징헤럴드", "rtimes.co.kr": "부동산타임스", "r114.com": "부동산R114",
+    "housingherald.co.kr": "하우징헤럴드", "arunews.com": "한국주택경제", "rtimes.co.kr": "부동산타임스", "r114.com": "부동산R114",
     "kpinews.kr": "KPI뉴스", "fntimes.com": "한국금융신문", "thebell.co.kr": "더벨", "mk.co.kr/news": "매일경제",
 }
 
@@ -111,11 +111,11 @@ def fetch(client_id: str, client_secret: str, settings: dict, now: datetime, hou
         api, headers, extra = endpoints.pop()
         for q in queries:
             try:
-                r = c.get(api, params={"query": q, "display": 50, "sort": "date", **extra}, headers=headers)
+                r = c.get(api, params={"query": q, "display": 100, "sort": "date", **extra}, headers=headers)
                 while r.status_code in (401, 403) and endpoints:
                     log(f"네이버 거절 이유({api.split('/')[2]}, HTTP {r.status_code}): {redact(r.text[:300])}")
                     api, headers, extra = endpoints.pop()
-                    r = c.get(api, params={"query": q, "display": 50, "sort": "date", **extra}, headers=headers)
+                    r = c.get(api, params={"query": q, "display": 100, "sort": "date", **extra}, headers=headers)
                     if r.status_code == 200 and len(endpoints) == 1:
                         log("네이버: ID·Secret이 서로 바뀌어 들어가 있어요. 동작은 하지만 비밀 보관함에서 바로잡아 주세요")
             except httpx.HTTPError as e:
@@ -161,6 +161,9 @@ def select(pool: list[dict], settings: dict, excluded: list[dict], count: int = 
         if off_topic(a["title"], settings):
             excluded.append({"title": a["title"], "reason": "연예·예능성 제목"})
             continue
+        allowed = settings.get("news_press_only") or []
+        if allowed and a["press"] not in allowed:
+            continue                                   # 정해 둔 언론사만(설정 news_press_only)
         if settings.get("news_known_press_only", True) and not known_press(a["link"], settings):
             excluded.append({"title": a["title"], "reason": f"잘 알려지지 않은 매체({a['press']})"})
             continue
