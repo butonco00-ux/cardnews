@@ -5,9 +5,7 @@
 from __future__ import annotations
 
 import html
-import json
 import os
-from datetime import datetime
 
 from . import embargo, history
 from .common import data_dir, docs_dir, now_kst, read_json
@@ -187,19 +185,38 @@ def _set_block(meta: dict, day: str, h: dict, info: dict, version: str) -> str:
     return "".join(out)
 
 
+def _merged_runs(root) -> dict:
+    """노트북(run-gov)·GitHub(run-news)·올리기(run-publish) 기록을 합친다."""
+    merged = {"messages": [], "candidates": [], "news_excluded": [], "finished_at": "", "has_gov": False}
+    for name in ("run.json", "run-gov.json", "run-news.json", "run-publish.json"):
+        r = read_json(root / name, None)
+        if not r:
+            continue
+        if name == "run-gov.json":
+            merged["has_gov"] = True
+        merged["messages"] += r.get("messages", [])
+        merged["candidates"] += r.get("candidates", [])
+        merged["news_excluded"] += r.get("news_excluded", [])
+        merged["finished_at"] = max(merged["finished_at"], r.get("finished_at", ""))
+    return merged
+
+
 def build_day(day: str, settings: dict) -> None:
     root = docs_dir() / day
     sets = []
     for p in sorted(root.glob("set-*/set.json"), key=lambda x: int(x.parent.name.split("-")[1])):
         sets.append(read_json(p, None))
     sets = [s for s in sets if s]
-    run = read_json(root / "run.json", {})
+    run = _merged_runs(root)
     h = history.load()
     info = repo_info(settings)
     version = now_kst().strftime("%Y%m%d%H%M%S")
 
     body = [f"<p><a href='../index.html'>← 날짜 목록</a></p><h1>{e(day)} 카드뉴스</h1>",
             f"<div class='sub'>만든 시각 {e(run.get('finished_at', '')[:16].replace('T', ' '))}</div>", _token_alert()]
+    if not run["has_gov"] and not (root / "set-1").exists() and day == now_kst().strftime("%Y-%m-%d"):
+        body.append("<div class='alert warn'>노트북이 아직 오늘 보도자료 카드를 만들지 않았어요. "
+                    "노트북을 켜 두면 자동으로 만들어 올려요.</div>")
     for msg in run.get("messages", []):
         body.append(f"<div class='alert {e(msg.get('level', 'warn'))}'>{e(msg['text'])}</div>")
     if not sets:
@@ -212,9 +229,8 @@ def build_day(day: str, settings: dict) -> None:
         rows = "".join(
             f"<tr><td>{e(c.get('dept'))}</td><td><a href='{e(c['url'])}' target='_blank' rel='noopener'>{e(c['title'])}</a></td>"
             f"<td>{e(c.get('score', ''))}</td><td>{e(c.get('status', ''))}</td></tr>" for c in cands)
-        make_link = info.get("make")
-        how = (f"<p class='sub'>다른 보도자료로 만들려면: 주소를 복사 → <a href='{e(make_link)}' target='_blank' rel='noopener'>만들기 화면</a> → "
-               "Run workflow → '원문 주소' 칸에 붙여넣기</p>") if make_link else ""
+        how = ("<p class='sub'>다른 보도자료로 만들려면: 노트북에서 <b>카드뉴스_보도자료로만들기.bat</b>을 열고 "
+               "원하는 보도자료 주소를 붙여 넣으세요(정부 사이트가 해외 서버 접속을 막아 노트북에서만 돼요).</p>")
         body.append(f"<details class='box'><summary>오늘 살펴본 보도자료 {len(cands)}건</summary>{how}"
                     f"<div class='tablewrap'><table><tr><th>부처</th><th>제목</th><th>점수</th><th>결과</th></tr>{rows}</table></div></details>")
     excluded_news = run.get("news_excluded", [])

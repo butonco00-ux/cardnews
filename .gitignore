@@ -4,3 +4,4 @@ __pycache__/
 *.tmp
 .env
 열쇠*.txt
+logs/

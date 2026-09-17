@@ -189,7 +189,24 @@ try:
 except instagram.IGError as e:
     check("만료" in str(e) and "TOKEN_SHOULD_NOT_LEAK" not in str(e), "만료 토큰 → 쉬운 안내(토큰 노출 없음)")
 
-print("9. 사용자 데이터 보호")
+print("9. 노트북·GitHub 나눠 쓰기")
+from engine import make  # noqa: E402
+from engine.common import write_json  # noqa: E402
+day_dir = TMP / "docs" / "2026-09-17"
+write_json(day_dir / "run-gov.json", {"messages": [{"level": "ok", "text": "노트북_보도자료_메시지"}], "candidates": [], "finished_at": "2026-09-17T07:01:00+09:00"})
+write_json(day_dir / "run-news.json", {"messages": [{"level": "warn", "text": "클라우드_뉴스_메시지"}], "news_excluded": [], "finished_at": "2026-09-17T07:05:00+09:00"})
+pages.build_day("2026-09-17", settings)
+idx = (day_dir / "index.html").read_text(encoding="utf-8")
+check("노트북_보도자료_메시지" in idx and "클라우드_뉴스_메시지" in idx, "노트북·GitHub 결과가 한 페이지에 합쳐짐")
+before = {p.name for p in day_dir.iterdir()}
+make.make_news("2026-09-17", settings)
+after = {p.name for p in day_dir.iterdir()}
+check("set-1" in after and (day_dir / "run-gov.json").read_text(encoding="utf-8").count("노트북_보도자료_메시지") == 1,
+      "뉴스 만들기가 노트북 파일(set-1, run-gov)을 건드리지 않음")
+wf = (ROOT / ".github" / "workflows" / "make.yml").read_text(encoding="utf-8")
+check("--only news" in wf, "GitHub 매일 실행은 뉴스만(정부 사이트 해외 차단)")
+
+print("10. 사용자 데이터 보호")
 check(not (ROOT / "data" / "history.json").exists() or os.environ["CARDNEWS_DATA"] != str(ROOT / "data"), "검사는 임시 폴더만 사용")
 req = (ROOT / "requirements.txt").read_bytes()
 check(all(b < 128 for b in req), "requirements.txt 는 ASCII만")

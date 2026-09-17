@@ -162,7 +162,7 @@ def _record(h, day, set_no, meta, mode, ok, problems, notes=None, result=None):
         rec.update(media_id=result.get("media_id"), permalink=result.get("permalink"))
     history.add_post(h, rec)
     history.save(h)
-    run = read_json(docs_dir() / day / "run.json", {"messages": []})
+    run = read_json(docs_dir() / day / "run-publish.json", {"messages": []})
     label = "실제 게시" if mode == "실제" else "연습"
     if ok:
         text = f"세트 {set_no} {label} 완료" + (f": {result.get('permalink')}" if result and result.get("permalink") else "")
@@ -172,7 +172,8 @@ def _record(h, day, set_no, meta, mode, ok, problems, notes=None, result=None):
     else:
         run.setdefault("messages", []).append(
             {"level": "bad", "text": f"[{now_kst():%m/%d %H:%M}] 세트 {set_no} {label} 안 됨: " + " / ".join(problems)})
-    write_json(docs_dir() / day / "run.json", run)
+    run["finished_at"] = now_kst().isoformat()
+    write_json(docs_dir() / day / "run-publish.json", run)
     pages.build_day(day, settings)
     pages.build_index(settings)
 

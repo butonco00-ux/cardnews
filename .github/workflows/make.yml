@@ -1,14 +1,13 @@
-name: 매일 카드뉴스 만들기
+name: 매일 뉴스 카드 만들기
 
 on:
   schedule:
-    - cron: "0 22 * * *"   # 매일 07:00 한국시간(UTC 22:00). GitHub 사정으로 수십 분 늦을 수 있음
+    # 매일 07:00 한국시간(UTC 22:00). GitHub 사정으로 수십 분 늦을 수 있음
+    # 정부 보도자료 카드(세트 1)는 노트북이 만든다(한국 정부 사이트가 해외 서버 접속을 막음).
+    # 여기서는 뉴스 헤드라인(세트 2)·토큰 확인·확인 페이지만.
+    - cron: "0 22 * * *"
   workflow_dispatch:
     inputs:
-      source_url:
-        description: "원문 주소 (비우면 자동으로 고름) 예) https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782110"
-        required: false
-        default: ""
       date:
         description: "날짜 (비우면 오늘) 예) 2026-09-17"
         required: false
@@ -39,7 +38,7 @@ jobs:
       - name: 부품 설치
         run: pip install -q -r requirements.txt
 
-      - name: 카드뉴스 만들기
+      - name: 뉴스 카드 만들기
         env:
           TZ: Asia/Seoul
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
@@ -48,9 +47,8 @@ jobs:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           GH_PAT: ${{ secrets.GH_PAT }}
           GH_REPO_NAME: ${{ github.repository }}
-          SOURCE_URL: ${{ inputs.source_url }}
           RUN_DATE: ${{ inputs.date }}
-        run: python -m engine.make --date "$RUN_DATE" --url "$SOURCE_URL"
+        run: python -m engine.make --only news --date "$RUN_DATE"
 
       - name: 결과 저장(확인 페이지 갱신)
         if: always()
@@ -59,6 +57,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs data
           if git diff --cached --quiet; then echo "바뀐 것 없음"; exit 0; fi
-          git commit -q -m "카드뉴스 만들기 $(TZ=Asia/Seoul date +%F)"
+          git commit -q -m "뉴스 카드 만들기 $(TZ=Asia/Seoul date +%F)"
+          # 노트북은 docs/날짜/set-1 과 run-gov.json 만 올리므로 여기 파일과 부딪히지 않는다
           for i in 1 2 3; do git pull -q --rebase && git push -q && exit 0; sleep 5; done
           exit 1

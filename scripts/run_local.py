@@ -32,7 +32,7 @@ def main() -> int:
     sys.path.insert(0, str(ROOT))
     from engine import make
 
-    info = make.run(a.date, a.url, with_news=True)
+    info = make.run(a.date, a.url, only="all")
     index = PREVIEW / "docs" / info["date"] / "index.html"
     print(f"\n확인 페이지: {index}")
     if not a.no_open:
