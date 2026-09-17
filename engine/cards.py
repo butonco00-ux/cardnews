@@ -27,6 +27,11 @@ DEFAULT_COLORS = {
     "sub": "#827E79",
     "line": "#CEC1B6",
     "badge": "#F2C94C",
+    "badge_text": "#2F2B28",
+    "cover_text": "#FFFFFF",      # 표지 글자
+    "cover_sub": "#FFFFFFDD",     # 표지 부제·설명
+    "on_primary": "#FFFFFF",      # 주색 위 글자(태그)
+    "box": "#FFFFFF",             # 정부 발표·한마디 상자
 }
 
 WEIGHTS = {
@@ -217,7 +222,13 @@ BODY_H = BODY_BOTTOM - BODY_TOP
 
 # ---------------------------------------------------------------- 그리기 도우미
 
-def _draw_highlighted(d: ImageDraw.ImageDraw, xy, text: str, f, color, accent):
+def _buto(settings: dict) -> bool:
+    """스타일 2: 1번 배치 + Buto 색(회색 바탕·검정 글씨·노란 형광펜·검정 상자) + Buto 아래쪽."""
+    return settings.get("variant") == "buto"
+
+
+def _draw_highlighted(d: ImageDraw.ImageDraw, xy, text: str, f, color, accent, mark: str | None = None):
+    """숫자·금액·날짜 강조. mark(형광펜 색)가 있으면 글자색 대신 뒤에 형광펜."""
     x, y = xy
     pos = 0
     for m in HIGHLIGHT.finditer(text):
@@ -225,7 +236,13 @@ def _draw_highlighted(d: ImageDraw.ImageDraw, xy, text: str, f, color, accent):
             continue
         if m.start() > pos:
             x = tdraw(d, (x, y), text[pos:m.start()], f, color)
-        x = tdraw(d, (x, y), text[m.start():m.end()], f, accent)
+        seg = text[m.start():m.end()]
+        if mark:
+            if any(ch.isdigit() for ch in seg):
+                d.rectangle((x - 2, y + f.size * 0.16, x + tlen(seg, f) + 2, y + f.size * 1.2), fill=mark)
+            x = tdraw(d, (x, y), seg, f, color)
+        else:
+            x = tdraw(d, (x, y), seg, f, accent)
         pos = m.end()
     if pos < len(text):
         tdraw(d, (x, y), text[pos:], f, color)
@@ -278,7 +295,60 @@ def _pill(d: ImageDraw.ImageDraw, x: int, y: int, text: str, f, fill, fg, outlin
     return int(x + tw + f.size * 1.4)
 
 
+def _tag(d, c, settings: dict, x: int, y: int, text: str, size: int, cover: bool) -> None:
+    """분야 태그. 스타일 1은 둥근 알약, 스타일 2는 검정 네모 상자."""
+    f = font("bold", size)
+    if _buto(settings):
+        h = int(size * 1.6)
+        d.rectangle((x, y, x + tlen(text, f) + size * 0.9, y + h), fill=c["primary"])
+        tdraw(d, (x + size * 0.45, y + (h - size * 1.2) / 2), text, f, c["on_primary"])
+    elif cover:
+        _pill(d, x, y, text, f, None, c["cover_text"], outline=c["cover_text"])
+    else:
+        _pill(d, x, y, text, f, c["primary"], c["on_primary"])
+
+
+def _title_lines(d, c, settings: dict, x: int, y: int, lines: list[str], f, size: int, lh: int, color) -> int:
+    """표지 큰 제목. 스타일 2는 숫자가 든 줄(없으면 첫 줄)에 노란 형광펜."""
+    mark = -1
+    if _buto(settings):
+        mark = next((i for i, ln in enumerate(lines) if any(ch.isdigit() for ch in ln)), 0)
+    for i, ln in enumerate(lines):
+        if i == mark:
+            d.rectangle((x - 6, y + size * 0.1, x + tlen(ln, f) + 6, y + size * 1.22), fill=c["mark"])
+        tdraw(d, (x, y), ln, f, color)
+        y += lh
+    return y
+
+
+BUTO_FOOTER_Y = 1222
+
+
+def _buto_footer(d, c, settings: dict, page: int | None, total: int | None, source_short: str) -> None:
+    fl = font("light", 28)
+    if source_short:
+        tdraw(d, (MX, BUTO_FOOTER_Y - 48), source_short, fl, c["sub"])
+    if page and total:
+        label = f"{page}/{total}"
+        tdraw(d, (W - 64 - tlen(label, fl), BUTO_FOOTER_Y - 48), label, fl, c["sub"])
+    d.rectangle((0, BUTO_FOOTER_Y, W, BUTO_FOOTER_Y + 2), fill=c["line"])
+    brand = settings.get("brand_name") or settings.get("account_name") or ""
+    right = W - 64
+    if brand:
+        fb = font("black", 54)
+        bw = tlen(brand, fb)
+        tdraw(d, (right - bw, BUTO_FOOTER_Y + 34), brand, fb, c["text"])
+        right -= bw + 30
+    note = settings.get("footer_note", "")
+    if note:
+        fn = font("light", 27)
+        tdraw(d, (64, BUTO_FOOTER_Y + 50), wrap(note, fn, right - 64)[0], fn, c["sub"])
+
+
 def _footer(d, c, settings: dict, page: int | None, total: int | None, source_short: str):
+    if _buto(settings):
+        _buto_footer(d, c, settings, page, total, source_short)
+        return
     f = font("medium", 26)
     d.line((MX, 1215, W - MX, 1215), fill=c["line"], width=2)
     account = settings.get("account_name") or ""
@@ -305,40 +375,41 @@ def save(img: Image.Image, path: Path) -> None:
 
 def draw_cover(meta: dict, settings: dict) -> Image.Image:
     c = colors_from(settings)
-    img, d = _new(c["primary"])
+    buto = _buto(settings)
+    img, d = _new(c["bg"] if buto else c["primary"])
     x = MX
-    _pill(d, x, 110, meta.get("tag", "정책"), font("bold", 32), None, "#FFFFFF", outline="#FFFFFF")
+    _tag(d, c, settings, x, 110, meta.get("tag", "정책"), 32, cover=True)
 
     f, lines, size = _fit_lines(meta["title"], "extrabold", range(86, 55, -4), BODY_W, 3)
-    y = 300
-    for ln in lines:
-        tdraw(d, (x, y), ln, f, "#FFFFFF")
-        y += int(size * 1.32)
+    y = _title_lines(d, c, settings, x, 300, lines, f, size, int(size * 1.32), c["cover_text"])
 
     y += 30
     fs = font("medium", 36)
     for sub in meta.get("subtitles", [])[:3]:
         for ln in wrap(sub, fs, BODY_W - 40):
-            tdraw(d, (x, y), ln, fs, "#FFFFFFDD")
+            tdraw(d, (x, y), ln, fs, c["cover_sub"])
             y += 54
         y += 10
 
     if meta.get("badge"):
-        _pill(d, x, 960, meta["badge"], font("bold", 32), c["badge"], "#2F2B28")
+        _pill(d, x, 960, meta["badge"], font("bold", 32), c["badge"], c["badge_text"])
 
     fd = font("bold", 44)
-    tdraw(d, (x, 1090), f"{meta.get('dept', '')}  |  {meta.get('date_label', '')}", fd, "#FFFFFF")
+    tdraw(d, (x, 1090), f"{meta.get('dept', '')}  |  {meta.get('date_label', '')}", fd, c["cover_text"])
+    if buto:
+        _buto_footer(d, c, settings, None, None, "")
+        return img
     account = settings.get("account_name") or ""
     if account:
-        d.text((x, 1250), account, font=font("medium", 28), fill="#FFFFFFCC", anchor="lm")
-    d.text((W - MX, 1250), "보도자료 원문", font=font("medium", 28), fill="#FFFFFFCC", anchor="rm")
+        d.text((x, 1250), account, font=font("medium", 28), fill=c["cover_sub"], anchor="lm")
+    d.text((W - MX, 1250), "보도자료 원문", font=font("medium", 28), fill=c["cover_sub"], anchor="rm")
     return img
 
 
 def draw_body(items: list[Item], meta: dict, settings: dict, page: int, total: int) -> Image.Image:
     c = colors_from(settings)
     img, d = _new(c["bg"])
-    _pill(d, MX, 90, meta.get("tag", "정책"), font("bold", 28), c["primary"], "#FFFFFF")
+    _tag(d, c, settings, MX, 90, meta.get("tag", "정책"), 28, cover=False)
     ft = font("semibold", 30)
     title_line = wrap(meta["title"], ft, BODY_W)[0]
     if title_line != meta["title"]:
@@ -361,7 +432,7 @@ def draw_body(items: list[Item], meta: dict, settings: dict, page: int, total: i
             if it.level == "system":
                 tdraw(d, (MX + indent + mw, y), ln, f, color)
             else:
-                _draw_highlighted(d, (MX + indent + mw, y), ln, f, color, c["accent"])
+                _draw_highlighted(d, (MX + indent + mw, y), ln, f, color, c["accent"], c.get("mark") if _buto(settings) else None)
             y += line_h
     _footer(d, c, settings, page, total, f"출처: {meta.get('dept', '')} 보도자료")
     return img
@@ -419,28 +490,35 @@ def _disclaimer_and_office(d, c, settings: dict, y: int) -> int:
 
 def draw_news_cover(date_label: str, count: int, settings: dict) -> Image.Image:
     c = colors_from(settings)
-    img, d = _new(c["primary"])
-    _pill(d, MX, 110, "뉴스", font("bold", 32), None, "#FFFFFF", outline="#FFFFFF")
+    buto = _buto(settings)
+    img, d = _new(c["bg"] if buto else c["primary"])
+    _tag(d, c, settings, MX, 110, "뉴스", 32, cover=True)
+    f = font("extrabold", 104)
     y = 340
-    for ln in ("오늘의", "부동산 뉴스"):
-        tdraw(d, (MX, y), ln, font("extrabold", 104), "#FFFFFF")
+    for i, ln in enumerate(("오늘의", "부동산 뉴스")):
+        if buto and i == 1:
+            d.rectangle((MX - 6, y + 104 * 0.1, MX + tlen(ln, f) + 6, y + 104 * 1.22), fill=c["mark"])
+        tdraw(d, (MX, y), ln, f, c["cover_text"])
         y += 136
-    d.text((MX, y + 40), f"{date_label}  |  헤드라인 {count}건", font=font("bold", 44), fill="#FFFFFF")
+    d.text((MX, y + 40), f"{date_label}  |  헤드라인 {count}건", font=font("bold", 44), fill=c["cover_text"])
     note = "기사는 제목과 언론사만 소개하고, 정부 발표가 있는 소식은 보도자료 원문을 함께 실었어요."
     y = 1010
     for ln in wrap(note, font("medium", 32), BODY_W):
-        tdraw(d, (MX, y), ln, font("medium", 32), "#FFFFFFDD")
+        tdraw(d, (MX, y), ln, font("medium", 32), c["cover_sub"])
         y += 50
+    if buto:
+        _buto_footer(d, c, settings, None, None, "")
+        return img
     account = settings.get("account_name") or ""
     if account:
-        d.text((MX, 1250), account, font=font("medium", 28), fill="#FFFFFFCC", anchor="lm")
+        d.text((MX, 1250), account, font=font("medium", 28), fill=c["cover_sub"], anchor="lm")
     return img
 
 
 def draw_news_item(n: int, item: dict, note: str, settings: dict, page: int, total: int) -> Image.Image:
     c = colors_from(settings)
     img, d = _new(c["bg"])
-    d.text((MX, 120), f"{n:02d}", font=font("extrabold", 96), fill=c["primary"])
+    d.text((MX, 120), f"{n:02d}", font=font("extrabold", 96), fill=c.get("number") or c["primary"])
     gov = item.get("gov")
     max_title_lines = 4 if (gov or note) else 5
     f, lines, size = _fit_lines(item["title"], "bold", range(58, 41, -3), BODY_W, max_title_lines)
@@ -463,11 +541,11 @@ def draw_news_item(n: int, item: dict, note: str, settings: dict, page: int, tot
             sents = sents[:-1]          # 넘치면 뒤 문장을 뺀다(글자는 그대로)
         glines = wrap(" ".join(sents), fg, BODY_W - 64)[:max_lines]
         box_h = 76 + 52 * len(glines) + 60
-        d.rounded_rectangle((MX, y, W - MX, y + box_h), radius=22, fill="#FFFFFF", outline=c["primary"], width=3)
+        d.rounded_rectangle((MX, y, W - MX, y + box_h), radius=22, fill=c["box"], outline=c["primary"], width=3)
         tdraw(d, (MX + 32, y + 24), label, font("bold", 29), c["accent"])
         yy = y + 76
         for ln in glines:
-            _draw_highlighted(d, (MX + 32, yy), ln, fg, c["text"], c["accent"])
+            _draw_highlighted(d, (MX + 32, yy), ln, fg, c["text"], c["accent"], c.get("mark") if _buto(settings) else None)
             yy += 52
         tdraw(d, (MX + 32, yy + 8), f"{gov.get('license_label', '공공누리 제1유형')} · 정책브리핑", font("regular", 24), c["sub"])
         y += box_h + 26
@@ -479,7 +557,7 @@ def draw_news_item(n: int, item: dict, note: str, settings: dict, page: int, tot
         if y + box_h > BODY_BOTTOM + 30:
             nl = nl[:1]
             box_h = 66 + 50 + 24
-        d.rounded_rectangle((MX, y, W - MX, y + box_h), radius=22, fill="#FFFFFF", outline=c["line"], width=2)
+        d.rounded_rectangle((MX, y, W - MX, y + box_h), radius=22, fill=c["box"], outline=c["line"], width=2)
         d.text((MX + 30, y + 22), settings.get("note_label") or "중개사 한마디", font=font("bold", 28), fill=c["accent"])
         yy = y + 66
         for ln in nl:

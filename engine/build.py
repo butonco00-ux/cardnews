@@ -6,13 +6,29 @@ import shutil
 from datetime import date
 from pathlib import Path
 
-from . import caption, cards, cards_buto, splitter
+from . import caption, cards, splitter
 
 # 스타일: (그리는 모듈, 폴더 이름, 화면 이름). 확인 페이지·올리기에서 고른다.
 STYLES = {
     "1": (cards, "cards", "스타일 1 (기본)"),
-    "2": (cards_buto, "cards-buto", "스타일 2 (Buto)"),
+    "2": (cards, "cards-buto", "스타일 2 (Buto)"),     # 1번 배치 + Buto 색·아래쪽(settings "style2_colors")
 }
+
+# 스타일 2 기본 색: 검정·노랑·밝은 회색
+BUTO_COLORS = {
+    "primary": "#111111", "accent": "#111111", "bg": "#EDEBE8", "text": "#111111", "sub": "#555555",
+    "line": "#9A9A9A", "badge": "#EEEA5E", "badge_text": "#111111", "number": "#111111",
+    "cover_text": "#111111", "cover_sub": "#3A3A3A", "on_primary": "#FFFFFF", "box": "#FFFFFF",
+    "mark": "#EEEA5E",
+}
+
+
+def _style_settings(key: str, settings: dict) -> dict:
+    if key != "2":
+        return settings
+    colors = dict(BUTO_COLORS)
+    colors.update(settings.get("style2_colors") or {})
+    return dict(settings, colors=colors, variant="buto")
 
 
 def _styles(settings: dict) -> list[str]:
@@ -58,13 +74,14 @@ def build_policy(rel: dict, tag: str, day: str, set_no: int, settings: dict) -> 
     styles = {}
     for key in _styles(settings):
         mod, folder, _ = STYLES[key]
+        st = _style_settings(key, settings)
         files = []
-        cards.save(mod.draw_cover(meta, settings), out / folder / "01.jpg")
+        cards.save(mod.draw_cover(meta, st), out / folder / "01.jpg")
         files.append(f"{folder}/01.jpg")
         for i, items in enumerate(body_cards, 2):
-            cards.save(mod.draw_body(items, meta, settings, i, total), out / folder / f"{i:02d}.jpg")
+            cards.save(mod.draw_body(items, meta, st, i, total), out / folder / f"{i:02d}.jpg")
             files.append(f"{folder}/{i:02d}.jpg")
-        cards.save(mod.draw_source(meta, settings, total, total), out / folder / f"{total:02d}.jpg")
+        cards.save(mod.draw_source(meta, st, total, total), out / folder / f"{total:02d}.jpg")
         files.append(f"{folder}/{total:02d}.jpg")
         styles[key] = files
     files = styles.get("1") or next(iter(styles.values()))
@@ -110,14 +127,15 @@ def build_news(items: list[dict], day: str, set_no: int, settings: dict, notes: 
     styles = {}
     for key in _styles(settings):
         mod, folder, _ = STYLES[key]
+        st = _style_settings(key, settings)
         files = []
-        cards.save(mod.draw_news_cover(dl, len(items), settings), out / folder / "01.jpg")
+        cards.save(mod.draw_news_cover(dl, len(items), st), out / folder / "01.jpg")
         files.append(f"{folder}/01.jpg")
         for i, a in enumerate(items, 1):
             note = notes[i - 1] if i <= len(notes) else ""
-            cards.save(mod.draw_news_item(i, a, note, settings, i + 1, total), out / folder / f"{i + 1:02d}.jpg")
+            cards.save(mod.draw_news_item(i, a, note, st, i + 1, total), out / folder / f"{i + 1:02d}.jpg")
             files.append(f"{folder}/{i + 1:02d}.jpg")
-        cards.save(mod.draw_news_end(settings, total, total), out / folder / f"{total:02d}.jpg")
+        cards.save(mod.draw_news_end(st, total, total), out / folder / f"{total:02d}.jpg")
         files.append(f"{folder}/{total:02d}.jpg")
         styles[key] = files
     files = styles.get("1") or next(iter(styles.values()))
