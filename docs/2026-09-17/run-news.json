@@ -1,10 +1,10 @@
 {
   "date": "2026-09-17",
-  "finished_at": "2026-09-17T22:50:01.699962+09:00",
+  "finished_at": "2026-09-17T22:51:08.406481+09:00",
   "messages": [
     {
       "level": "bad",
-      "text": "뉴스를 가져오다 문제가 생겼어요: 네이버 뉴스 열쇠(Client ID/Secret)가 맞지 않거나, NAVER API HUB에서 뉴스 검색을 신청하지 않았어요"
+      "text": "뉴스를 가져오다 문제가 생겼어요: 네이버 뉴스 열쇠(Client ID/Secret)가 맞지 않거나, NAVER API HUB에서 뉴스 검색을 신청하지 않았어요 (네이버 응답: {\"errorMessage\":\"NID AUTH Result Invalid (1000) : Authentication failed. (인증에 실패했습니다.)\",\"errorCode\":\"024\"})"
     }
   ],
   "news_excluded": []
