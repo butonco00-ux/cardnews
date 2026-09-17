@@ -37,8 +37,38 @@ DEFAULT_PRESS = {
     "jtbc.co.kr": "JTBC", "ytn.co.kr": "YTN", "hankookilbo.com": "한국일보", "seoul.co.kr": "서울신문",
     "segye.com": "세계일보", "kmib.co.kr": "국민일보", "munhwa.com": "문화일보", "etoday.co.kr": "이투데이",
     "biz.chosun.com": "조선비즈", "bizwatch.co.kr": "비즈워치", "ajunews.com": "아주경제", "newspim.com": "뉴스핌",
-    "dt.co.kr": "디지털타임스", "etnews.com": "전자신문", "hankyung.com/realestate": "한국경제",
+    "dt.co.kr": "디지털타임스", "etnews.com": "전자신문", "ytn.co.kr": "YTN", "mbn.co.kr": "MBN",
+    "tvchosun.com": "TV조선", "ichannela.com": "채널A", "nocutnews.co.kr": "노컷뉴스", "ohmynews.com": "오마이뉴스",
+    "pressian.com": "프레시안", "sisajournal.com": "시사저널", "koreadaily.com": "코리아데일리", "newdaily.co.kr": "뉴데일리",
+    "dailian.co.kr": "데일리안", "ebn.co.kr": "EBN", "joseilbo.com": "조세일보", "taxtimes.co.kr": "세무사신문",
+    "koreaherald.com": "코리아헤럴드", "hankyung.co.kr": "한국경제", "kukinews.com": "쿠키뉴스", "wowtv.co.kr": "한국경제TV",
+    "sbscnbc.co.kr": "SBS Biz", "sbs.co.kr/news": "SBS", "busan.com": "부산일보", "kookje.co.kr": "국제신문",
+    "kyongbuk.co.kr": "경북일보", "imaeil.com": "매일신문", "yeongnam.com": "영남일보", "kado.net": "강원도민일보",
+    "kwnews.co.kr": "강원일보", "jjan.kr": "전북일보", "kjdaily.com": "광주매일신문", "joongdo.co.kr": "중도일보",
+    "daejonilbo.com": "대전일보", "kyeonggi.com": "경기일보", "kihoilbo.co.kr": "기호일보", "incheonilbo.com": "인천일보",
+    "housingherald.co.kr": "하우징헤럴드", "rtimes.co.kr": "부동산타임스", "r114.com": "부동산R114",
+    "kpinews.kr": "KPI뉴스", "fntimes.com": "한국금융신문", "thebell.co.kr": "더벨", "mk.co.kr/news": "매일경제",
 }
+
+
+# 연예·예능·생활 기사 제외(제목에 '아파트'만 들어간 경우가 많음)
+DEFAULT_OFF_TOPIC = ["구해줘", "홈즈", "예능", "케미", "찐친", "배우", "가수", "아이돌", "드라마", "셀럽", "연예",
+                     "유튜버", "열애", "결혼", "이혼", "방송인", "개그맨", "출연", "전참시", "나혼산", "나 혼자",
+                     "화보", "근황", "스타", "톱스타", "재벌집", "집 공개", "럭셔리 하우스"]
+
+
+def off_topic(title: str, settings: dict) -> bool:
+    words = settings.get("news_off_topic") or DEFAULT_OFF_TOPIC
+    return any(w in title for w in words)
+
+
+def known_press(url: str, settings: dict) -> bool:
+    return press_name(url, settings) != _host(url)
+
+
+def _host(url: str) -> str:
+    host = urlparse(url).netloc.lower()
+    return host[4:] if host.startswith("www.") else host
 
 
 def clean(text: str) -> str:
@@ -128,12 +158,19 @@ def select(pool: list[dict], settings: dict, excluded: list[dict], count: int = 
         if flt.is_ad(a["title"], settings):
             excluded.append({"title": a["title"], "reason": "광고·분양 홍보성 제목"})
             continue
+        if off_topic(a["title"], settings):
+            excluded.append({"title": a["title"], "reason": "연예·예능성 제목"})
+            continue
+        if settings.get("news_known_press_only", True) and not known_press(a["link"], settings):
+            excluded.append({"title": a["title"], "reason": f"잘 알려지지 않은 매체({a['press']})"})
+            continue
         s, tag, found = flt.score(a["title"], "", settings)
         if s < 3:
             continue
         a = dict(a, score=s, tag=tag)
         scored.append(a)
-    scored.sort(key=lambda a: (a["published"], a["score"]), reverse=True)
+    # 관련도 높은 기사 먼저, 같으면 최신
+    scored.sort(key=lambda a: (min(a["score"], 9), a["published"]), reverse=True)
     chosen: list[dict] = []
     presses: set[str] = set()
     for a in scored:
