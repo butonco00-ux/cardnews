@@ -1,10 +1,10 @@
 {
   "date": "2026-09-18",
-  "finished_at": "2026-09-18T00:19:57.320945+09:00",
+  "finished_at": "2026-09-18T00:27:33.405274+09:00",
   "messages": [
     {
-      "level": "ok",
-      "text": "정책·세금 카드 9장을 만들었어요: 토지거래허가구역 내 실거주 유예, '27년 12월 31일까지 연장·확대"
+      "level": "bad",
+      "text": "카드를 만들지 못했어요: 3번째 카드: 원문에 없는 글자 → ｢부동산 시장 안정을 위한 금융 종합대책｣(8.13일, / 3번째 카드: 기호와 글이 원문과 다름 → ※ ｢부동산 시장 안정을 위한 금융 종합 / 6번째 카드: 원문에 없는 글자 → (재구조화) 직접투자로 기존채권 인수 및 기존 시행사로 / 6번째 카드: 기호와 글이 원문과 다름 → * (재구조화) 직접투자로 기존채권 인수"
     }
   ],
   "candidates": [
@@ -27,7 +27,7 @@
       "dept": "국토교통부",
       "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782110",
       "score": 16,
-      "status": "선택됨 → 세트 1"
+      "status": "후보 (전에 만든 적 있음)"
     },
     {
       "title": "5극3특 국가균형발전 뒷받침할 초광역교통 전략 연내 마련",
@@ -44,9 +44,37 @@
       "status": "부동산 관련 단어가 제목에 없음"
     },
     {
-      "title": "세금포인트로 떠나는 게임과 바다 속 여행!",
-      "dept": "국세청",
-      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782183",
+      "title": "국민성장펀드에 더 많은 전문가들이 참여하여의사결정의 객관성과 투명성을 강화합니다. - 9월 기금운용심의회, 약 1조원 규모 5건 사업도 함께 승인의결",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782211",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "사업보고서 등에 대한 조사·감리결과 조치 - 제16차 증권선물위원회('26.9.16.) 조치 의결",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782067",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "청소년에서 군 장병까지, 도박문제 예방·치유 안전망 확대",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782209",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "부실사업장 정상화를 통한 신속한 주택공급 권대영 금융위 부위원장, 캠코펀드 사업장 방문",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782118",
+      "score": 15,
+      "status": "선택됨 → 세트 1"
+    },
+    {
+      "title": "\"투자자와 벤처기업, 전문가의 의견을 균형있게 청취하였습니다.\" - 신기술금융업권 제3자 연대책임 관련 간담회 개최",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782091",
       "score": 0,
       "status": "부동산 관련 단어가 제목에 없음"
     },
