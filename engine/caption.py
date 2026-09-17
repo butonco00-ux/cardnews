@@ -47,7 +47,11 @@ def news(items: list[dict], date_label: str, settings: dict, notes: list[str] | 
         if notes and i <= len(notes) and notes[i - 1]:
             lines.append(f"   💬 {notes[i - 1]}")
         lines.append(f"   {a['link']}")
-    lines += ["", "기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.", _disclaimer(settings), "",
+        gov = a.get("gov")
+        if gov:
+            lines.append(f"   📄 정부 발표: {gov['dept']} 「{gov['title']}」({gov['date_label']}) {gov['url']}")
+    extra = ["정부 발표 원문 출처: 대한민국 정책브리핑 www.korea.kr — 공공누리 제1유형"] if any(a.get("gov") for a in items) else []
+    lines += ["", "기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.", *extra, _disclaimer(settings), "",
               _tags(settings, ["부동산뉴스"])]
     return "\n".join(lines)[:MAX_CHARS]
 

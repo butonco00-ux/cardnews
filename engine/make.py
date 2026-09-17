@@ -13,7 +13,7 @@ import sys
 import traceback
 from datetime import date, datetime, timedelta
 
-from . import build, history, instagram, pages, sources_gov, sources_news
+from . import build, govlink, history, instagram, pages, sources_gov, sources_news, splitter
 from . import filter as flt
 from .common import data_dir, docs_dir, log, now_kst, read_json, write_json
 
@@ -24,6 +24,28 @@ def _window_start(today: date) -> date:
 
 
 # ---------------------------------------------------------------- 정책·세금(노트북)
+
+def _record_release(records: list[dict], rel: dict) -> None:
+    """뉴스 카드에 붙일 수 있게 보도자료 첫 문단을 모아 둔다(공공누리 제1유형만)."""
+    if not rel["license"]["usable"]:
+        return
+    try:
+        parsed = splitter.parse(rel["text"], page_title=rel["title"],
+                                hard_wrapped=rel.get("source_file", "").lower().endswith(".pdf"))
+    except Exception:
+        return
+    lead = next((it.text for it in parsed.items if it.level in (0, 1) and len(it.text) >= 30), "")
+    if lead:
+        records.append(govlink.release_record(rel, lead, parsed.subtitles))
+
+
+def _save_releases(day: str, records: list[dict]) -> None:
+    path = docs_dir() / day / "releases.json"
+    old = read_json(path, {}).get("releases", [])
+    urls = {r["url"] for r in records}
+    merged = records + [r for r in old if r["url"] not in urls]
+    write_json(path, {"date": day, "releases": merged})
+
 
 def make_gov(day: str, url: str | None, settings: dict) -> dict:
     today = date.fromisoformat(day)
@@ -38,6 +60,7 @@ def make_gov(day: str, url: str | None, settings: dict) -> dict:
         return _save_run(day, "gov", messages, candidates=candidates)
 
     chosen = None
+    records: list[dict] = []
     try:
         with sources_gov.client() as c:
             if url:
@@ -45,6 +68,7 @@ def make_gov(day: str, url: str | None, settings: dict) -> dict:
                 if not nid:
                     raise RuntimeError("정책브리핑 보도자료 주소가 아니에요(newsId가 없어요)")
                 rel = sources_gov.fetch_release(c, nid)
+                _record_release(records, rel)
                 s, tag, _ = flt.score(rel["title"], rel["text"], settings)
                 cand = {"title": rel["title"], "dept": rel["dept"], "url": rel["url"], "score": s}
                 if not rel["license"]["usable"]:
@@ -56,10 +80,12 @@ def make_gov(day: str, url: str | None, settings: dict) -> dict:
                     chosen = (rel, tag or "정책")
                 candidates.append(cand)
             else:
-                chosen = _pick(c, today, settings, posted, made_before, candidates, messages)
+                chosen = _pick(c, today, settings, posted, made_before, candidates, messages, records)
     except Exception as e:
         log(traceback.format_exc())
         messages.append({"level": "bad", "text": f"보도자료를 가져오다 문제가 생겼어요: {e}"})
+    if records:
+        _save_releases(day, records)
 
     if chosen:
         rel, tag = chosen
@@ -76,7 +102,7 @@ def make_gov(day: str, url: str | None, settings: dict) -> dict:
     return _save_run(day, "gov", messages, candidates=candidates[:80])
 
 
-def _pick(c, today, settings, posted, made_before, candidates, messages):
+def _pick(c, today, settings, posted, made_before, candidates, messages, records):
     start = _window_start(today)
     listed = []
     failed = 0
@@ -115,6 +141,7 @@ def _pick(c, today, settings, posted, made_before, candidates, messages):
         except Exception as e:
             cand["status"] = f"원문을 읽지 못함({e})"
             continue
+        _record_release(records, rel)
         s, tag, _ = flt.score(rel["title"], rel["text"], settings)
         cand["score"] = s
         if not rel["license"]["usable"]:
@@ -151,14 +178,32 @@ def make_news(day: str, settings: dict) -> dict:
             posted = history.posted_urls(h)
             items = [a for a in items if a["link"] not in posted][: int(settings.get("news_count", 5))]
             if len(items) >= 2:
+                items = govlink.attach(items, day, settings)
                 meta = build.build_news(items, day, 2, settings)
-                messages.append({"level": "ok", "text": f"뉴스 헤드라인 카드 {len(meta['cards'])}장을 만들었어요"})
+                linked = sum(1 for a in items if a.get("gov"))
+                messages.append({"level": "ok", "text": f"뉴스 헤드라인 카드 {len(meta['cards'])}장을 만들었어요"
+                                 + (f" (정부 발표 원문 {linked}건 붙임)" if linked else "")})
             else:
                 messages.append({"level": "warn", "text": "최근 24시간 부동산 뉴스가 2건보다 적어 만들지 않았어요"})
         except Exception as e:
             log(traceback.format_exc())
             messages.append({"level": "bad", "text": f"뉴스를 가져오다 문제가 생겼어요: {e}"})
     return _save_run(day, "news", messages, news_excluded=excluded)
+
+
+def refresh_news_gov(day: str, settings: dict) -> bool:
+    """노트북이 보도자료 목록을 늦게 올린 경우: 아직 안 올린 뉴스 카드에 정부 발표 원문을 다시 붙인다."""
+    meta = read_json(docs_dir() / day / "set-2" / "set.json", None)
+    if not meta or not meta.get("news_items") or history.find_post(history.load(), day, 2, "실제"):
+        return False
+    items = govlink.attach(meta["news_items"], day, settings)
+    before = [(a.get("gov") or {}).get("url") for a in meta["news_items"]]
+    after = [(a.get("gov") or {}).get("url") for a in items]
+    if before == after:
+        return False
+    build.build_news(items, day, 2, settings, meta.get("notes") or [])
+    log(f"{day} 뉴스 카드에 정부 발표 원문을 다시 붙였어요({sum(1 for u in after if u)}건)")
+    return True
 
 
 def _save_run(day: str, name: str, messages: list[dict], **extra) -> dict:
@@ -262,6 +307,9 @@ def main() -> int:
     day = (a.date or "").strip() or None
     if a.only == "pages":
         settings = read_json(data_dir() / "settings.json", {})
+        for p in sorted(docs_dir().glob("20*-*-*"))[-3:]:
+            if p.is_dir():
+                refresh_news_gov(p.name, settings)
         for p in sorted(docs_dir().glob("20*-*-*")):
             if p.is_dir():
                 pages.build_day(p.name, settings)

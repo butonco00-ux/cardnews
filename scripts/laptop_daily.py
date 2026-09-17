@@ -118,7 +118,7 @@ def main() -> int:
     for m in info["messages"]:
         log(f"{m['level']}: {m['text']}")
 
-    ok = push_paths([f"docs/{day}/set-1", f"docs/{day}/run-gov.json"], f"보도자료 카드 {day} (노트북)")
+    ok = push_paths([f"docs/{day}/set-1", f"docs/{day}/run-gov.json", f"docs/{day}/releases.json"], f"보도자료 카드 {day} (노트북)")
     if ok:
         log("GitHub에 올렸어요. 몇 분 뒤 확인 페이지에 나와요")
     return 0 if ok else 1

@@ -143,10 +143,18 @@ def _set_block(meta: dict, day: str, h: dict, info: dict, version: str) -> str:
                    f"<b>원문</b><span><a href='{e(meta.get('url'))}' target='_blank' rel='noopener'>정책브리핑에서 보기 ↗</a></span>"
                    "</div>")
     else:
+        def gov_cell(a):
+            g = a.get("gov")
+            if not g:
+                return "-"
+            emb = g.get("embargo")
+            wait = "" if not emb or embargo.is_open(emb, now_kst()) else f" ({embargo.describe(emb)}부터)"
+            return f"<a href='{e(g['url'])}' target='_blank' rel='noopener'>{e(g['dept'])}</a>{e(wait)}"
         rows = "".join(f"<tr><td>{i}</td><td><a href='{e(a['link'])}' target='_blank' rel='noopener'>{e(a['title'])}</a></td>"
-                       f"<td>{e(a['press'])}</td><td>{e(a['date_label'])}</td></tr>"
+                       f"<td>{e(a['press'])}</td><td>{e(a['date_label'])}</td><td>{gov_cell(a)}</td></tr>"
                        for i, a in enumerate(meta.get("news_items", []), 1))
-        out.append(f"<h3>기사 목록</h3><div class='tablewrap'><table><tr><th>#</th><th>제목</th><th>언론사</th><th>시각</th></tr>{rows}</table></div>")
+        out.append("<h3>기사 목록</h3><div class='tablewrap'><table><tr><th>#</th><th>제목</th><th>언론사</th><th>시각</th>"
+                   f"<th>정부 발표 원문</th></tr>{rows}</table></div>")
 
     cap_id = f"cap-{day}-{n}"
     out.append(f"<h3>캡션</h3><pre class='caption' id='{cap_id}'>{e(meta.get('caption'))}</pre>"

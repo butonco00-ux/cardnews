@@ -216,6 +216,30 @@ check("set-1" in after and (day_dir / "run-gov.json").read_text(encoding="utf-8"
 wf = (ROOT / ".github" / "workflows" / "make.yml").read_text(encoding="utf-8")
 check("--only news" in wf, "GitHub 매일 실행은 뉴스만(정부 사이트 해외 차단)")
 
+
+print("9-1. 뉴스 ↔ 정부 발표 원문")
+from engine import govlink  # noqa: E402
+lead = ("토지거래허가구역 내 주택 거래 시, 세입자가 거주하고 있어 매수자가 바로 입주하기 어려운 주택에 대해, 내년 말까지 실거주 유예를 신청할 수 있게 된다. "
+        "다만, 무주택 실수요자 요건과 입주 후 2년 거주의무는 그대로 유지 된다.")
+rec = govlink.release_record(rel, lead, ["임대 중인 주택에 대한 실거주 유예 신청 기한을 '27.12.31일까지 연장"])
+write_json(day_dir / "releases.json", {"date": "2026-09-17", "releases": [rec]})
+news_items = [
+    {"title": "토허구역 실거주 유예 내년 말까지 연장…임대차 갱신도 허용", "link": "https://www.joseilbo.com/1", "press": "조세일보", "published": "", "date_label": ""},
+    {"title": "대구 아파트값 2주째 보합…경북 매매·전세 동반 하락", "link": "https://www.kyongbuk.co.kr/2", "press": "경북일보", "published": "", "date_label": ""},
+]
+linked = govlink.attach(news_items, "2026-09-17", settings)
+check(bool(linked[0].get("gov")) and not linked[1].get("gov"), "같은 소식 기사에만 정부 발표 원문이 붙음")
+check(squash(linked[0]["gov"]["text"]) in squash(lead) and squash(lead) in squash(text), "붙인 글은 보도자료 원문 그대로")
+check(len(linked[0]["gov"]["text"]) <= govlink.MAX_CHARS + 60, "원문은 한두 문장만")
+bad_rec = dict(rec, url="https://x/2", license_usable=False)
+write_json(day_dir / "releases.json", {"date": "2026-09-17", "releases": [bad_rec]})
+check(not govlink.attach(news_items, "2026-09-17", settings)[0].get("gov"), "공공누리 제1유형이 아니면 붙이지 않음")
+nm = build.build_news(linked, "2026-09-17", 2, settings)
+check("정책브리핑" in nm["caption"] and "공공누리 제1유형" in nm["caption"], "뉴스 캡션에 정부 발표 출처")
+nm["news_items"][0]["gov"]["embargo"] = {"available_at": "2099-01-01T06:00:00+09:00", "raw": "", "rule": "", "certain": True}
+write_json(day_dir / "set-2" / "set.json", nm)
+check(publish.post("2026-09-17", 2, "연습", "", "") == 1, "붙인 정부 발표가 보도시점 전이면 뉴스 게시도 거부")
+
 print("10. 사용자 데이터 보호")
 check(not (ROOT / "data" / "history.json").exists() or os.environ["CARDNEWS_DATA"] != str(ROOT / "data"), "검사는 임시 폴더만 사용")
 req = (ROOT / "requirements.txt").read_bytes()

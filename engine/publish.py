@@ -91,6 +91,10 @@ def post(day: str, set_no: int, mode: str, confirm: str, caption_override: str) 
         problems.append("이 세트는 카드가 만들어지지 않았어요")
     if meta.get("embargo") and not embargo.is_open(meta["embargo"], now):
         problems.append(f"보도시점 전이에요. {embargo.describe(meta['embargo'])}부터 올릴 수 있어요")
+    for a in meta.get("news_items") or []:
+        gov = a.get("gov")
+        if gov and gov.get("embargo") and not embargo.is_open(gov["embargo"], now):
+            problems.append(f"뉴스에 붙인 정부 발표({gov['dept']})가 보도시점 전이에요. {embargo.describe(gov['embargo'])}부터 올릴 수 있어요")
     if meta["kind"] == "policy" and not (meta.get("license") or {}).get("usable"):
         problems.append("공공누리 제1유형이 아니라 올릴 수 없어요")
     if history.find_post(h, day, set_no, "실제"):

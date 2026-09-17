@@ -424,7 +424,7 @@ def draw_news_cover(date_label: str, count: int, settings: dict) -> Image.Image:
         tdraw(d, (MX, y), ln, font("extrabold", 104), "#FFFFFF")
         y += 136
     d.text((MX, y + 40), f"{date_label}  |  헤드라인 {count}건", font=font("bold", 44), fill="#FFFFFF")
-    note = "기사 제목과 언론사만 소개해요. 기사 전문은 캡션의 링크에서 확인하세요."
+    note = "기사는 제목과 언론사만 소개하고, 정부 발표가 있는 소식은 보도자료 원문을 함께 실었어요."
     y = 1010
     for ln in wrap(note, font("medium", 32), BODY_W):
         tdraw(d, (MX, y), ln, font("medium", 32), "#FFFFFFDD")
@@ -439,24 +439,50 @@ def draw_news_item(n: int, item: dict, note: str, settings: dict, page: int, tot
     c = colors_from(settings)
     img, d = _new(c["bg"])
     d.text((MX, 120), f"{n:02d}", font=font("extrabold", 96), fill=c["primary"])
-    f, lines, size = _fit_lines(item["title"], "bold", range(62, 43, -3), BODY_W, 5)
-    y = 300
-    for ln in lines:
+    gov = item.get("gov")
+    max_title_lines = 4 if (gov or note) else 5
+    f, lines, size = _fit_lines(item["title"], "bold", range(58, 41, -3), BODY_W, max_title_lines)
+    y = 290
+    for ln in lines[:max_title_lines]:
         tdraw(d, (MX, y), ln, f, c["text"])
-        y += int(size * 1.4)
-    y += 30
-    tdraw(d, (MX, y), f"{item.get('press', '')}  ·  {item.get('date_label', '')}", font("medium", 34), c["sub"])
-    y += 90
-    if note:
-        fn = font("regular", 36)
-        nl = wrap(note, fn, BODY_W - 60)[:6]
-        box_h = 70 + 56 * len(nl) + 30
-        d.rounded_rectangle((MX, y, W - MX, y + box_h), radius=24, fill="#FFFFFF", outline=c["line"], width=2)
-        d.text((MX + 30, y + 26), settings.get("note_label") or "중개사 한마디", font=font("bold", 30), fill=c["accent"])
+        y += int(size * 1.36)
+    y += 20
+    tdraw(d, (MX, y), f"{item.get('press', '')}  ·  {item.get('date_label', '')}", font("medium", 32), c["sub"])
+    y += 80
+
+    if gov:
+        from .splitter import _sentences
+        fg = font("regular", 34)
+        label = f"정부 발표 원문 · {gov['dept']} ({gov['date_label']})"
+        room = (BODY_BOTTOM - (150 if note else 0)) - y - 150
+        max_lines = max(2, room // 52)
+        sents = _sentences(gov["text"])
+        while len(sents) > 1 and len(wrap(" ".join(sents), fg, BODY_W - 64)) > max_lines:
+            sents = sents[:-1]          # 넘치면 뒤 문장을 뺀다(글자는 그대로)
+        glines = wrap(" ".join(sents), fg, BODY_W - 64)[:max_lines]
+        box_h = 76 + 52 * len(glines) + 60
+        d.rounded_rectangle((MX, y, W - MX, y + box_h), radius=22, fill="#FFFFFF", outline=c["primary"], width=3)
+        tdraw(d, (MX + 32, y + 24), label, font("bold", 29), c["accent"])
         yy = y + 76
+        for ln in glines:
+            _draw_highlighted(d, (MX + 32, yy), ln, fg, c["text"], c["accent"])
+            yy += 52
+        tdraw(d, (MX + 32, yy + 8), f"{gov.get('license_label', '공공누리 제1유형')} · 정책브리핑", font("regular", 24), c["sub"])
+        y += box_h + 26
+
+    if note:
+        fn = font("regular", 34)
+        nl = wrap(note, fn, BODY_W - 60)[:3]
+        box_h = 66 + 50 * len(nl) + 24
+        if y + box_h > BODY_BOTTOM + 30:
+            nl = nl[:1]
+            box_h = 66 + 50 + 24
+        d.rounded_rectangle((MX, y, W - MX, y + box_h), radius=22, fill="#FFFFFF", outline=c["line"], width=2)
+        d.text((MX + 30, y + 22), settings.get("note_label") or "중개사 한마디", font=font("bold", 28), fill=c["accent"])
+        yy = y + 66
         for ln in nl:
             tdraw(d, (MX + 30, yy), ln, fn, c["text"])
-            yy += 56
+            yy += 50
     _footer(d, c, settings, page, total, "원문 링크는 캡션에")
     return img
 
@@ -468,7 +494,8 @@ def draw_news_end(settings: dict, page: int, total: int) -> Image.Image:
     d.text((MX, y), "알려드려요", font=font("bold", 50), fill=c["text"])
     y += 110
     txt = ("이 카드는 기사 제목·언론사·날짜만 소개하며, 기사 내용의 저작권은 각 언론사에 있어요. "
-           "자세한 내용은 캡션에 있는 원문 링크로 해당 언론사에서 확인하세요.")
+           "'정부 발표 원문'은 정책브리핑(www.korea.kr) 보도자료를 공공누리 제1유형 조건에 따라 그대로 옮긴 거예요. "
+           "자세한 내용은 캡션의 링크에서 확인하세요.")
     for ln in wrap(txt, font("regular", 36), BODY_W):
         tdraw(d, (MX, y), ln, font("regular", 36), c["text"])
         y += 58
