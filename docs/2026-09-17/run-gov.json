@@ -1,0 +1,215 @@
+{
+  "date": "2026-09-17",
+  "finished_at": "2026-09-17T21:23:42.170059+09:00",
+  "messages": [
+    {
+      "level": "ok",
+      "text": "정책·세금 카드 9장을 만들었어요: 토지거래허가구역 내 실거주 유예, '27년 12월 31일까지 연장·확대"
+    }
+  ],
+  "candidates": [
+    {
+      "title": "궤도시설 재허가·안전관리 기준 강화한다",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782109",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "통합 고속철도, 첫 추석 앞두고 안전관리 전반 점검",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782111",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "토지거래허가구역 내 실거주 유예, '27년 12월 31일까지 연장·확대",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782110",
+      "score": 16,
+      "status": "선택됨 → 세트 1"
+    },
+    {
+      "title": "5극3특 국가균형발전 뒷받침할 초광역교통 전략 연내 마련",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782044",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "\"놀던 공간이 주민 소통 공간으로\" … 주민공동시설 활성화 주요 사례 소개",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156781864",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "강릉 찾는 글로벌 방문객, 철도·버스·택시 예약·결제 앱 하나로",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156781865",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "2026년도 국제항공운수권 수시 배분결과",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156781801",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "확대 거시경제금융회의 개최",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782077",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "지속가능성·AI·성과관리 등 OECD와 공공기관 정책 공유, 협력 강화",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156781961",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "역외 원화결제 시스템 구축을 위한 해외원화업무취급기관(RFI-K) 제도 도입",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156781825",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "한-우즈벡 핵심광물 공급망 MOU 체결 등 한-중앙아 경제협력 확대 추진",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156781974",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "세금포인트로 떠나는 게임과 바다 속 여행!",
+      "dept": "국세청",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782183",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "기술 강국 독일도 찾고 배우는 K-세정... 독일 연방하원 재정위원회 소속 여야 의원 국세청 방문",
+      "dept": "국세청",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156781964",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "「지방자치법」 개정안 국회 통과 자치분권·균형성장 제도적 기반 확대",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782203",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "재난안전관리본부장, 태풍 대응체계부터 추석 안전까지 빈틈없이 챙긴다",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782182",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "지역에 활력을, 경제에 온기를! '2026년 지역경제 혁신박람회' 개최",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782151",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "부처 간 칸막이는 허물고, 데이터는 막힘없이 「범정부 데이터 파이프라인」 개통",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782140",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "공무원 '난임 휴직' 운영기준 등 마련, 12월 시행",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782144",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "'2026 고향사랑페스타' 개최, 전국 답례품 만나고, 현장 기부까지",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782142",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "전북 농·특산품 최대 40% 할인에 무료 배송까지 지방자치인재개발원 한가위 장터 운영",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782117",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "지방자치인재개발원, 추석 명절맞이 복지시설 봉사활동으로 따뜻한 상생 나서",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782115",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "내 국민연금, 이제 'AI 국민비서'에게 물어보세요",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782086",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "8.15.~18. 호우 피해 복구에 총 2,308억 원 투입",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156781953",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "행안부, 인터넷은행으로 '전입세대정보' 온라인 연계 확대",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156781898",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "추석 연휴 안전한 거리환경 조성... 불법현수막 2주간 집중 점검",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156781896",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "햇빛소득마을, 3차 공모로 전국 확산 이어간다",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156781900",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "\"동료의 빈자리가 부담되지 않도록...\"걱정은 덜고 행복은 더하는 지방 인력운영 개선",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156781894",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "추석 연휴 범정부 안전관리 총력 대응",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156781878",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "50개 행정·공공정보시스템을 시작으로 민간 클라우드 이전 본격화",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156781838",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    }
+  ]
+}
