@@ -1,0 +1,6 @@
+preview/
+__pycache__/
+*.pyc
+*.tmp
+.env
+열쇠*.txt

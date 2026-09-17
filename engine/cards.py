@@ -1,0 +1,479 @@
+"""카드 그리기(Pillow). 1080×1350(4:5) JPEG.
+
+글자는 넘겨받은 그대로 그린다(바꾸지 않음). 숫자·금액·날짜만 색으로 강조.
+"""
+from __future__ import annotations
+
+import re
+from dataclasses import dataclass
+from functools import lru_cache
+from pathlib import Path
+
+from PIL import Image, ImageDraw, ImageFont
+
+from .common import FONTS
+
+W, H = 1080, 1350
+MX = 90                      # 좌우 여백
+BODY_TOP = 250
+BODY_BOTTOM = 1165
+BODY_W = W - MX * 2
+
+DEFAULT_COLORS = {
+    "primary": "#9E9577",     # 표지 배경·태그
+    "accent": "#955330",      # 숫자 강조·소제목
+    "bg": "#F7F5F2",          # 본문 배경
+    "text": "#2F2B28",
+    "sub": "#827E79",
+    "line": "#CEC1B6",
+    "badge": "#F2C94C",
+}
+
+WEIGHTS = {
+    "regular": "Pretendard-Regular.otf",
+    "medium": "Pretendard-Medium.otf",
+    "semibold": "Pretendard-SemiBold.otf",
+    "bold": "Pretendard-Bold.otf",
+    "extrabold": "Pretendard-ExtraBold.otf",
+}
+
+
+@lru_cache(maxsize=None)
+def font(weight: str, size: int) -> ImageFont.FreeTypeFont:
+    return ImageFont.truetype(str(FONTS / WEIGHTS[weight]), size)
+
+
+# ---------------------------------------------------------------- 글꼴에 없는 글자
+# Pretendard 에 없는 글자(｢｣ 같은 반각 괄호, 한자 同 등)는 모양만 대신 그린다(저장된 글자는 원문 그대로).
+import unicodedata
+
+FALLBACK_PATHS = [
+    FONTS / "fallback.otf",
+    Path("/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc"),
+    Path("/usr/share/fonts/noto-cjk/NotoSansCJK-Regular.ttc"),
+    Path("C:/Windows/Fonts/malgun.ttf"),
+]
+
+
+@lru_cache(maxsize=None)
+def _notdef() -> bytes:
+    return bytes(font("regular", 40).getmask("͸"))
+
+
+@lru_cache(maxsize=None)
+def _has(ch: str) -> bool:
+    if ch.isspace() or ord(ch) < 128:
+        return True
+    return bytes(font("regular", 40).getmask(ch)) != _notdef()
+
+
+@lru_cache(maxsize=None)
+def _fallback(size: int):
+    for p in FALLBACK_PATHS:
+        if p.exists():
+            try:
+                return ImageFont.truetype(str(p), size)
+            except OSError:
+                continue
+    return None
+
+
+def _runs(text: str, f):
+    """(글자들, 그릴 글꼴, 그릴 글자) 조각으로 나눈다."""
+    out = []
+    for ch in text:
+        if _has(ch):
+            item = (f, ch)
+        else:
+            alt = unicodedata.normalize("NFKC", ch)
+            if alt != ch and all(_has(a) for a in alt):
+                item = (f, alt)
+            else:
+                fb = _fallback(f.size)
+                item = (fb, ch) if fb else (f, ch)
+        if out and out[-1][0] is item[0]:
+            out[-1][1] += item[1]
+        else:
+            out.append([item[0], item[1]])
+    return out
+
+
+def tlen(text: str, f) -> float:
+    return sum(ff.getlength(t) for ff, t in _runs(text, f))
+
+
+def tdraw(d, xy, text: str, f, fill) -> float:
+    x, y = xy
+    for ff, t in _runs(text, f):
+        dy = 0
+        if ff is not f:
+            dy = (f.getbbox("가")[1] - ff.getbbox("가")[1])
+        d.text((x, y + dy), t, font=ff, fill=fill)
+        x += ff.getlength(t)
+    return x
+
+
+# 본문 줄 종류별 모양
+STYLES = {
+    # level: (weight, size, indent, color_key, gap_before)
+    "heading": ("bold", 46, 0, "accent", 34),
+    0: ("semibold", 42, 0, "text", 30),
+    1: ("regular", 39, 34, "text", 18),
+    2: ("regular", 37, 72, "text", 12),
+    "note": ("regular", 31, 72, "sub", 10),
+    "system": ("medium", 31, 0, "sub", 24),
+}
+LINE_SPACING = 1.52
+
+HIGHLIGHT = re.compile(
+    r"[’‘']?\d[\d,.]*\s*(?:%p|％p|%|％|조\s*원|억\s*원|만\s*원|천\s*원|원|조|억|만|천|"
+    r"년|개월|월|일|개|호|층|㎡|평|건|명|배|세대|가구|호실|채|곳|시간|분|주|차|회|km|m|p)?"
+)
+
+
+def colors_from(settings: dict) -> dict:
+    c = dict(DEFAULT_COLORS)
+    c.update({k: v for k, v in (settings.get("colors") or {}).items() if v})
+    return c
+
+
+# ---------------------------------------------------------------- 줄바꿈
+
+def wrap(text: str, f: ImageFont.FreeTypeFont, width: int) -> list[str]:
+    """띄어쓰기 단위로 줄바꿈. 한 단어가 너무 길면 글자 단위."""
+    lines: list[str] = []
+    cur = ""
+    for tok in re.split(r"(\s+)", text):
+        if not tok:
+            continue
+        if tok.isspace():
+            if cur:
+                cur += " "
+            continue
+        cand = cur + tok
+        if tlen(cand, f) <= width:
+            cur = cand
+            continue
+        if cur.strip():
+            lines.append(cur.rstrip())
+        cur = ""
+        if tlen(tok, f) <= width:
+            cur = tok
+        else:
+            for ch in tok:
+                if tlen(cur + ch, f) > width and cur:
+                    lines.append(cur)
+                    cur = ch
+                else:
+                    cur += ch
+    if cur.strip():
+        lines.append(cur.rstrip())
+    return lines or [""]
+
+
+@dataclass
+class Item:
+    """본문 한 줄(원문 한 항목)."""
+    level: object          # "heading" | 0 | 1 | 2 | "note" | "system"
+    marker: str
+    text: str
+    cont: bool = False     # 앞 카드에서 이어지는 문장(기호 생략)
+
+    def to_dict(self) -> dict:
+        return {"level": self.level, "marker": self.marker, "text": self.text, "cont": self.cont}
+
+    @staticmethod
+    def from_dict(d: dict) -> "Item":
+        return Item(d["level"], d.get("marker", ""), d["text"], d.get("cont", False))
+
+
+def _item_layout(item: Item):
+    weight, size, indent, color_key, gap = STYLES[item.level]
+    f = font(weight, size)
+    marker = "" if item.cont else item.marker
+    if marker and _circled_number(marker):
+        mw = int(size * 0.92 + f.getlength(" ") + 4)
+    else:
+        mw = int(f.getlength(marker + " ")) if marker else 0
+    width = BODY_W - indent - mw
+    lines = wrap(item.text, f, width)
+    line_h = int(size * LINE_SPACING)
+    return f, marker, mw, indent, lines, line_h, gap, color_key
+
+
+def item_height(item: Item, first: bool) -> int:
+    _, _, _, _, lines, line_h, gap, _ = _item_layout(item)
+    return (0 if first else gap) + line_h * len(lines)
+
+
+def items_height(items: list[Item]) -> int:
+    return sum(item_height(it, i == 0) for i, it in enumerate(items))
+
+
+BODY_H = BODY_BOTTOM - BODY_TOP
+
+
+# ---------------------------------------------------------------- 그리기 도우미
+
+def _draw_highlighted(d: ImageDraw.ImageDraw, xy, text: str, f, color, accent):
+    x, y = xy
+    pos = 0
+    for m in HIGHLIGHT.finditer(text):
+        if m.start() == m.end():
+            continue
+        if m.start() > pos:
+            x = tdraw(d, (x, y), text[pos:m.start()], f, color)
+        x = tdraw(d, (x, y), text[m.start():m.end()], f, accent)
+        pos = m.end()
+    if pos < len(text):
+        tdraw(d, (x, y), text[pos:], f, color)
+
+
+def _circled_number(marker: str) -> tuple[int, bool] | None:
+    """➊❶(채운 동그라미)·①(빈 동그라미) → (숫자, 채움). 글꼴에 ➊ 모양이 없어 직접 그린다."""
+    o = ord(marker[0]) if marker else 0
+    if 0x278A <= o <= 0x2793:
+        return o - 0x278A + 1, True
+    if 0x2776 <= o <= 0x277F:
+        return o - 0x2776 + 1, True
+    if 0x2460 <= o <= 0x2473:
+        return o - 0x2460 + 1, False
+    return None
+
+
+def _draw_circled(d, x, y, marker, f, color) -> bool:
+    cn = _circled_number(marker)
+    if not cn:
+        return False
+    n, filled = cn
+    size = f.size
+    r = size * 0.46
+    cx, cy = x + r + 1, y + size * 0.62
+    if filled:
+        d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=color)
+        d.text((cx, cy), str(n), font=font("bold", int(size * 0.62)), fill="#FFFFFF", anchor="mm")
+    else:
+        d.ellipse((cx - r, cy - r, cx + r, cy + r), outline=color, width=max(2, size // 16))
+        d.text((cx, cy), str(n), font=font("bold", int(size * 0.58)), fill=color, anchor="mm")
+    return True
+
+
+def _fit_lines(text: str, weight: str, sizes: range, width: int, max_lines: int):
+    for size in sizes:
+        f = font(weight, size)
+        lines = wrap(text, f, width)
+        if len(lines) <= max_lines:
+            return f, lines, size
+    f = font(weight, sizes[-1])
+    return f, wrap(text, f, width), sizes[-1]
+
+
+def _pill(d: ImageDraw.ImageDraw, x: int, y: int, text: str, f, fill, fg, outline=None) -> int:
+    tw = f.getlength(text)
+    h = int(f.size * 1.9)
+    d.rounded_rectangle((x, y, x + tw + f.size * 1.4, y + h), radius=h // 2, fill=fill, outline=outline, width=2)
+    d.text((x + f.size * 0.7, y + h / 2), text, font=f, fill=fg, anchor="lm")
+    return int(x + tw + f.size * 1.4)
+
+
+def _footer(d, c, settings: dict, page: int | None, total: int | None, source_short: str):
+    f = font("medium", 26)
+    d.line((MX, 1215, W - MX, 1215), fill=c["line"], width=2)
+    account = settings.get("account_name") or ""
+    if account:
+        d.text((MX, 1262), account, font=f, fill=c["sub"], anchor="lm")
+    right = source_short
+    if page and total:
+        right = f"{source_short}   {page} / {total}" if source_short else f"{page} / {total}"
+    if right:
+        d.text((W - MX, 1262), right, font=f, fill=c["sub"], anchor="rm")
+
+
+def _new(bg) -> tuple[Image.Image, ImageDraw.ImageDraw]:
+    img = Image.new("RGB", (W, H), bg)
+    return img, ImageDraw.Draw(img)
+
+
+def save(img: Image.Image, path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    img.save(path, "JPEG", quality=90, optimize=True, progressive=False)
+
+
+# ---------------------------------------------------------------- 정책·세금 세트
+
+def draw_cover(meta: dict, settings: dict) -> Image.Image:
+    c = colors_from(settings)
+    img, d = _new(c["primary"])
+    x = MX
+    _pill(d, x, 110, meta.get("tag", "정책"), font("bold", 32), None, "#FFFFFF", outline="#FFFFFF")
+
+    f, lines, size = _fit_lines(meta["title"], "extrabold", range(86, 55, -4), BODY_W, 3)
+    y = 300
+    for ln in lines:
+        tdraw(d, (x, y), ln, f, "#FFFFFF")
+        y += int(size * 1.32)
+
+    y += 30
+    fs = font("medium", 36)
+    for sub in meta.get("subtitles", [])[:3]:
+        for ln in wrap(sub, fs, BODY_W - 40):
+            tdraw(d, (x, y), ln, fs, "#FFFFFFDD")
+            y += 54
+        y += 10
+
+    if meta.get("badge"):
+        _pill(d, x, 960, meta["badge"], font("bold", 32), c["badge"], "#2F2B28")
+
+    fd = font("bold", 44)
+    tdraw(d, (x, 1090), f"{meta.get('dept', '')}  |  {meta.get('date_label', '')}", fd, "#FFFFFF")
+    account = settings.get("account_name") or ""
+    if account:
+        d.text((x, 1250), account, font=font("medium", 28), fill="#FFFFFFCC", anchor="lm")
+    d.text((W - MX, 1250), "보도자료 원문", font=font("medium", 28), fill="#FFFFFFCC", anchor="rm")
+    return img
+
+
+def draw_body(items: list[Item], meta: dict, settings: dict, page: int, total: int) -> Image.Image:
+    c = colors_from(settings)
+    img, d = _new(c["bg"])
+    _pill(d, MX, 90, meta.get("tag", "정책"), font("bold", 28), c["primary"], "#FFFFFF")
+    ft = font("semibold", 30)
+    title_line = wrap(meta["title"], ft, BODY_W)[0]
+    if title_line != meta["title"]:
+        while ft.getlength(title_line + "…") > BODY_W and title_line:
+            title_line = title_line[:-1]
+        title_line += "…"
+    tdraw(d, (MX, 175), title_line, ft, c["sub"])
+
+    y = BODY_TOP
+    for i, it in enumerate(items):
+        f, marker, mw, indent, lines, line_h, gap, color_key = _item_layout(it)
+        if i:
+            y += gap
+        color = c[color_key]
+        for j, ln in enumerate(lines):
+            if j == 0 and marker:
+                mcolor = c["accent"] if it.level in (0, "heading") else color
+                if not _draw_circled(d, MX + indent, y, marker, f, mcolor):
+                    tdraw(d, (MX + indent, y), marker, f, mcolor)
+            if it.level == "system":
+                tdraw(d, (MX + indent + mw, y), ln, f, color)
+            else:
+                _draw_highlighted(d, (MX + indent + mw, y), ln, f, color, c["accent"])
+            y += line_h
+    _footer(d, c, settings, page, total, f"출처: {meta.get('dept', '')} 보도자료")
+    return img
+
+
+def draw_source(meta: dict, settings: dict, page: int, total: int) -> Image.Image:
+    c = colors_from(settings)
+    img, d = _new(c["bg"])
+    y = 130
+    d.text((MX, y), "출처", font=font("bold", 50), fill=c["text"])
+    y += 100
+    fb = font("regular", 36)
+    src = f"{meta.get('dept', '')} 보도자료 「{meta['title']}」({meta.get('date_label', '')})"
+    for ln in wrap(src, fb, BODY_W):
+        tdraw(d, (MX, y), ln, fb, c["text"])
+        y += 56
+    y += 10
+    for ln in ("대한민국 정책브리핑 www.korea.kr", meta.get("license_label", "공공누리 제1유형(출처표시)")):
+        tdraw(d, (MX, y), ln, font("medium", 32), c["sub"])
+        y += 52
+    y += 14
+    note = "카드의 글은 보도자료 원문 그대로이며, 일부 내용은 생략했을 수 있어요. 전체 내용은 캡션의 원문 링크에서 확인하세요."
+    for ln in wrap(note, font("regular", 32), BODY_W):
+        tdraw(d, (MX, y), ln, font("regular", 32), c["sub"])
+        y += 50
+
+    y = max(y + 40, 760)
+    d.line((MX, y, W - MX, y), fill=c["line"], width=2)
+    y += 40
+    y = _disclaimer_and_office(d, c, settings, y)
+    _footer(d, c, settings, page, total, "")
+    return img
+
+
+def _disclaimer_and_office(d, c, settings: dict, y: int) -> int:
+    disc = settings.get("disclaimer") or "정보 제공용 콘텐츠입니다. 세금·대출은 반드시 전문가와 상담하세요."
+    for ln in wrap(disc, font("medium", 32), BODY_W):
+        tdraw(d, (MX, y), ln, font("medium", 32), c["text"])
+        y += 50
+    office = settings.get("office") or {}
+    rows = [office.get("name"), office.get("ceo") and f"대표 {office['ceo']}",
+            office.get("reg_no") and f"등록번호 {office['reg_no']}",
+            office.get("phone"), office.get("address")]
+    rows = [r for r in rows if r]
+    if rows:
+        y += 30
+        for r in rows:
+            for ln in wrap(r, font("regular", 30), BODY_W):
+                tdraw(d, (MX, y), ln, font("regular", 30), c["sub"])
+                y += 46
+    return y
+
+
+# ---------------------------------------------------------------- 뉴스 헤드라인 세트
+
+def draw_news_cover(date_label: str, count: int, settings: dict) -> Image.Image:
+    c = colors_from(settings)
+    img, d = _new(c["primary"])
+    _pill(d, MX, 110, "뉴스", font("bold", 32), None, "#FFFFFF", outline="#FFFFFF")
+    y = 340
+    for ln in ("오늘의", "부동산 뉴스"):
+        tdraw(d, (MX, y), ln, font("extrabold", 104), "#FFFFFF")
+        y += 136
+    d.text((MX, y + 40), f"{date_label}  |  헤드라인 {count}건", font=font("bold", 44), fill="#FFFFFF")
+    note = "기사 제목과 언론사만 소개해요. 기사 전문은 캡션의 링크에서 확인하세요."
+    y = 1010
+    for ln in wrap(note, font("medium", 32), BODY_W):
+        tdraw(d, (MX, y), ln, font("medium", 32), "#FFFFFFDD")
+        y += 50
+    account = settings.get("account_name") or ""
+    if account:
+        d.text((MX, 1250), account, font=font("medium", 28), fill="#FFFFFFCC", anchor="lm")
+    return img
+
+
+def draw_news_item(n: int, item: dict, note: str, settings: dict, page: int, total: int) -> Image.Image:
+    c = colors_from(settings)
+    img, d = _new(c["bg"])
+    d.text((MX, 120), f"{n:02d}", font=font("extrabold", 96), fill=c["primary"])
+    f, lines, size = _fit_lines(item["title"], "bold", range(62, 43, -3), BODY_W, 5)
+    y = 300
+    for ln in lines:
+        tdraw(d, (MX, y), ln, f, c["text"])
+        y += int(size * 1.4)
+    y += 30
+    tdraw(d, (MX, y), f"{item.get('press', '')}  ·  {item.get('date_label', '')}", font("medium", 34), c["sub"])
+    y += 90
+    if note:
+        fn = font("regular", 36)
+        nl = wrap(note, fn, BODY_W - 60)[:6]
+        box_h = 70 + 56 * len(nl) + 30
+        d.rounded_rectangle((MX, y, W - MX, y + box_h), radius=24, fill="#FFFFFF", outline=c["line"], width=2)
+        d.text((MX + 30, y + 26), settings.get("note_label") or "중개사 한마디", font=font("bold", 30), fill=c["accent"])
+        yy = y + 76
+        for ln in nl:
+            tdraw(d, (MX + 30, yy), ln, fn, c["text"])
+            yy += 56
+    _footer(d, c, settings, page, total, "원문 링크는 캡션에")
+    return img
+
+
+def draw_news_end(settings: dict, page: int, total: int) -> Image.Image:
+    c = colors_from(settings)
+    img, d = _new(c["bg"])
+    y = 130
+    d.text((MX, y), "알려드려요", font=font("bold", 50), fill=c["text"])
+    y += 110
+    txt = ("이 카드는 기사 제목·언론사·날짜만 소개하며, 기사 내용의 저작권은 각 언론사에 있어요. "
+           "자세한 내용은 캡션에 있는 원문 링크로 해당 언론사에서 확인하세요.")
+    for ln in wrap(txt, font("regular", 36), BODY_W):
+        tdraw(d, (MX, y), ln, font("regular", 36), c["text"])
+        y += 58
+    y = max(y + 50, 700)
+    d.line((MX, y, W - MX, y), fill=c["line"], width=2)
+    _disclaimer_and_office(d, c, settings, y + 40)
+    _footer(d, c, settings, page, total, "")
+    return img

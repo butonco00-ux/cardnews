@@ -1,0 +1,113 @@
+name: 인스타에 올리기
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "날짜 (확인 페이지에 적힌 그대로) 예) 2026-09-17"
+        required: true
+      set:
+        description: "세트 번호 (1 = 정책·세금, 2 = 뉴스)"
+        required: true
+        type: choice
+        options: ["1", "2"]
+      mode:
+        description: "모드 (처음엔 연습으로 해 보세요)"
+        required: true
+        type: choice
+        default: "연습"
+        options: ["연습", "실제"]
+      confirm:
+        description: "실제로 올릴 때만: 올립니다 라고 적기"
+        required: false
+        default: ""
+      caption:
+        description: "캡션 바꾸기 (비우면 확인 페이지의 캡션 그대로)"
+        required: false
+        default: ""
+      note1:
+        description: "뉴스 1번 한마디 (비우면 없음)"
+        required: false
+        default: ""
+      note2:
+        description: "뉴스 2번 한마디"
+        required: false
+        default: ""
+      note3:
+        description: "뉴스 3번 한마디"
+        required: false
+        default: ""
+      note4:
+        description: "뉴스 4번 한마디"
+        required: false
+        default: ""
+      note5:
+        description: "뉴스 5번 한마디"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cardnews-repo
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      TZ: Asia/Seoul
+      IN_DATE: ${{ inputs.date }}
+      IN_SET: ${{ inputs.set }}
+      IN_MODE: ${{ inputs.mode }}
+      IN_CONFIRM: ${{ inputs.confirm }}
+      IN_CAPTION: ${{ inputs.caption }}
+      N1: ${{ inputs.note1 }}
+      N2: ${{ inputs.note2 }}
+      N3: ${{ inputs.note3 }}
+      N4: ${{ inputs.note4 }}
+      N5: ${{ inputs.note5 }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: 한자 글꼴 설치
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk
+
+      - name: 부품 설치
+        run: pip install -q -r requirements.txt
+
+      - name: 준비(뉴스 한마디 반영)
+        run: python -m engine.publish prepare --date "$IN_DATE" --set "$IN_SET" --notes "$N1" "$N2" "$N3" "$N4" "$N5"
+
+      - name: 바뀐 카드 먼저 확인 페이지에 올리기
+        run: |
+          git config user.name "cardnews-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs data
+          if git diff --cached --quiet; then echo "바뀐 카드 없음"; exit 0; fi
+          git commit -q -m "한마디 반영 $IN_DATE 세트 $IN_SET"
+          for i in 1 2 3; do git pull -q --rebase && git push -q && exit 0; sleep 5; done
+          exit 1
+
+      - name: 인스타에 올리기
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          GH_REPO_NAME: ${{ github.repository }}
+        run: python -m engine.publish post --date "$IN_DATE" --set "$IN_SET" --mode "$IN_MODE" --confirm "$IN_CONFIRM" --caption "$IN_CAPTION"
+
+      - name: 결과 저장
+        if: always()
+        run: |
+          git add docs data
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -q -m "올리기 결과 $IN_DATE 세트 $IN_SET ($IN_MODE)"
+          for i in 1 2 3; do git pull -q --rebase && git push -q && exit 0; sleep 5; done
+          exit 1

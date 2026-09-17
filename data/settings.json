@@ -1,0 +1,30 @@
+{
+  "account_name": "",
+  "office": {
+    "name": "",
+    "ceo": "",
+    "reg_no": "",
+    "phone": "",
+    "address": ""
+  },
+  "colors": {
+    "primary": "#9E9577",
+    "accent": "#955330",
+    "bg": "#F7F5F2"
+  },
+  "hashtags": ["부동산", "부동산정책", "부동산세금", "부동산뉴스", "공인중개사", "카드뉴스"],
+  "disclaimer": "정보 제공용 콘텐츠입니다. 세금·대출은 반드시 전문가와 상담하세요.",
+  "note_label": "중개사 한마디",
+  "gov_departments": {
+    "A00006": "국토교통부",
+    "A00041": "재정경제부",
+    "B00004": "국세청",
+    "A00031": "행정안전부"
+  },
+  "min_score": 4,
+  "news_queries": ["부동산 정책", "주택 공급", "양도세", "종부세", "취득세", "전세", "주택담보대출", "아파트 가격", "재건축"],
+  "news_count": 5,
+  "github_repo": "",
+  "instagram_host": "graph.instagram.com",
+  "instagram_api_version": "v25.0"
+}
