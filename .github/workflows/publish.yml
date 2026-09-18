@@ -7,10 +7,10 @@ on:
         description: "날짜 (확인 페이지에 적힌 그대로) 예) 2026-09-17"
         required: true
       set:
-        description: "세트 번호 (1 = 정책·세금, 2 = 뉴스)"
+        description: "세트 번호 (1 = 정책·세금, 2 = 뉴스, 3 = 법령, 4 = 생활법령)"
         required: true
         type: choice
-        options: ["1", "2"]
+        options: ["1", "2", "3", "4"]
       style:
         description: "카드 스타일 (1 = 기본, 2 = Buto)"
         required: true

@@ -114,11 +114,13 @@ def main() -> int:
             log("오늘 보도자료 카드는 이미 만들었어요(건너뜀)")
             return 0
 
-    info = make.run(day, a.url.strip() or None, only="gov", build_pages=False)
+    info = make.run(day, a.url.strip() or None, only="gov" if a.url else "local", build_pages=False)
     for m in info["messages"]:
         log(f"{m['level']}: {m['text']}")
 
-    ok = push_paths([f"docs/{day}/set-1", f"docs/{day}/run-gov.json", f"docs/{day}/releases.json"], f"보도자료 카드 {day} (노트북)")
+    ok = push_paths([f"docs/{day}/set-1", f"docs/{day}/set-3", f"docs/{day}/set-4",
+                     f"docs/{day}/run-gov.json", f"docs/{day}/run-law.json", f"docs/{day}/run-easylaw.json",
+                     f"docs/{day}/releases.json"], f"보도자료·법령·생활법령 카드 {day} (노트북)")
     if ok:
         log("GitHub에 올렸어요. 몇 분 뒤 확인 페이지에 나와요")
     return 0 if ok else 1

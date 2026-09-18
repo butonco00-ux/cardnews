@@ -247,6 +247,27 @@ nm["news_items"][0]["gov"]["embargo"] = {"available_at": "2099-01-01T06:00:00+09
 write_json(day_dir / "set-2" / "set.json", nm)
 check(publish.post("2026-09-17", 2, "연습", "", "") == 1, "붙인 정부 발표가 보도시점 전이면 뉴스 게시도 거부")
 
+print("9-2. 법령·생활법령 세트")
+from engine import sources_law, sources_easylaw  # noqa: E402
+why = "[일부개정] ◇ 개정이유 및 주요내용 도심 공공주택 복합사업의 유효기간을 2029년 12월 31일까지로 3년 연장한다. 그 밖에 절차를 정비한다. ◇ 주요내용 가. 어쩌고"
+one = sources_law.first_reason_sentences(why)
+check(one.startswith("도심 공공주택") and "주요내용" not in one and squash(one) in squash(why), "법령 개정이유 앞 문장만 원문 그대로")
+law_items = [{"title": "주택법", "link": "https://www.law.go.kr/법령/주택법", "press": "국토교통부",
+              "published": "20260918", "date_label": "시행 2026.09.18",
+              "gov": {"dept": "국가법령정보센터", "title": "주택법", "url": "https://www.law.go.kr/법령/주택법",
+                      "date_label": "공포 2026.09.08", "text": one, "license_label": "법제처 국가법령정보센터", "embargo": None},
+              "source_note": "법령 출처: 국가법령정보센터(법제처)"}]
+lm = build.build_news(law_items, "2026-09-18", 3, settings, kind="law",
+                      cover={"tag": "법령", "lines": ("곧 시행되는", "부동산 법령"), "count_label": "법령 {n}건",
+                             "title": "곧 시행되는 부동산 법령", "caption_title": "곧 시행되는 부동산 법령"})
+check(lm["kind"] == "law" and len(lm["cards"]) == 2 and "국가법령정보센터" in lm["caption"], "법령 세트 카드·캡션")
+el_text = chr(10).join(["공인중개사의 개념", "“공인중개사”란 「공인중개사법」에 따른 자격을 취득한 사람을 말합니다.", "공인중개사가 되려는 사람은 시험에 합격해야 합니다."])
+rel_el = sources_easylaw.as_release("공인중개사", {"title": "공인중개사 개요", "url": "https://www.easylaw.go.kr/x"}, el_text, "2026-09-18")
+em = build.build_policy(rel_el, "생활법령", "2026-09-18", 4, settings, kind="easylaw")
+check(em["ok"] and em["kind"] == "easylaw", "생활법령 세트 만들기(기호 없는 글도 카드로)")
+check(all(squash(i["text"]) in squash(el_text) for c_ in em["card_items"] for i in c_ if i["level"] != "system"), "생활법령 카드도 원문 그대로")
+check("보도자료" not in (em.get("source_label") or ""), "법령·생활법령 카드에는 '보도자료' 표시 안 함")
+
 print("10. 사용자 데이터 보호")
 check(not (ROOT / "data" / "history.json").exists() or os.environ["CARDNEWS_DATA"] != str(ROOT / "data"), "검사는 임시 폴더만 사용")
 req = (ROOT / "requirements.txt").read_bytes()

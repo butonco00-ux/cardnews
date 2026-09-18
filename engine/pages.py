@@ -95,7 +95,8 @@ def _set_block(meta: dict, day: str, h: dict, info: dict, version: str) -> str:
     posted = history.find_post(h, day, n, "실제")
     practice = history.find_post(h, day, n, "연습")
     out = [f"<section class='box' id='set-{n}'>"]
-    out.append(f"<div class='sub'>세트 {n} · {'정책·세금 카드뉴스' if kind == 'policy' else '뉴스 헤드라인'}</div>")
+    kind_names = {"policy": "정책·세금 카드뉴스", "news": "뉴스 헤드라인", "law": "시행 법령", "easylaw": "생활법령"}
+    out.append(f"<div class='sub'>세트 {n} · {e(kind_names.get(kind, kind))}</div>")
     out.append(f"<h2>{e(meta.get('title'))}</h2>")
 
     chips = []
@@ -136,7 +137,7 @@ def _set_block(meta: dict, day: str, h: dict, info: dict, version: str) -> str:
         out.append(f"<h3>{e(style_names.get(key, key))}</h3><div class='slider'>{imgs}</div>"
                    f"<div class='sub'>옆으로 밀어서 넘겨 보세요 · {len(files)}장</div>")
 
-    if kind == "policy":
+    if kind in ("policy", "easylaw"):
         emb = meta.get("embargo") or {}
         out.append("<div class='kv' style='margin-top:10px'>"
                    f"<b>부처</b><span>{e(meta.get('dept'))}</span>"
@@ -156,7 +157,7 @@ def _set_block(meta: dict, day: str, h: dict, info: dict, version: str) -> str:
         rows = "".join(f"<tr><td>{i}</td><td><a href='{e(a['link'])}' target='_blank' rel='noopener'>{e(a['title'])}</a></td>"
                        f"<td>{e(a['press'])}</td><td>{e(a['date_label'])}</td><td>{gov_cell(a)}</td></tr>"
                        for i, a in enumerate(meta.get("news_items", []), 1))
-        out.append("<h3>기사 목록</h3><div class='tablewrap'><table><tr><th>#</th><th>제목</th><th>언론사</th><th>시각</th>"
+        out.append(f"<h3>{'법령 목록' if kind == 'law' else '기사 목록'}</h3><div class='tablewrap'><table><tr><th>#</th><th>제목</th><th>언론사</th><th>시각</th>"
                    f"<th>정부 발표 원문</th></tr>{rows}</table></div>")
 
     cap_id = f"cap-{day}-{n}"
@@ -199,7 +200,7 @@ def _set_block(meta: dict, day: str, h: dict, info: dict, version: str) -> str:
 def _merged_runs(root) -> dict:
     """노트북(run-gov)·GitHub(run-news)·올리기(run-publish) 기록을 합친다."""
     merged = {"messages": [], "candidates": [], "news_excluded": [], "finished_at": "", "has_gov": False}
-    for name in ("run.json", "run-gov.json", "run-news.json", "run-publish.json"):
+    for name in ("run.json", "run-gov.json", "run-law.json", "run-easylaw.json", "run-news.json", "run-publish.json"):
         r = read_json(root / name, None)
         if not r:
             continue

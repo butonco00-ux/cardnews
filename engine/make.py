@@ -13,7 +13,7 @@ import sys
 import traceback
 from datetime import date, datetime, timedelta
 
-from . import build, govlink, history, instagram, pages, sources_gov, sources_news, splitter
+from . import build, govlink, history, instagram, pages, sources_easylaw, sources_gov, sources_law, sources_news, splitter
 from . import filter as flt
 from .common import data_dir, docs_dir, log, now_kst, read_json, write_json
 
@@ -161,6 +161,110 @@ def _pick(c, today, settings, posted, made_before, candidates, messages, records
     return rel, tag
 
 
+# ---------------------------------------------------------------- 법령(노트북)
+
+def _used_urls(kind_set: int) -> set[str]:
+    """예전 세트에서 이미 쓴 자료 주소."""
+    urls: set[str] = set()
+    for p in docs_dir().glob(f"20*-*-*/set-{kind_set}/set.json"):
+        m = read_json(p, {})
+        urls.update(m.get("source_urls") or [])
+        for a in m.get("news_items") or []:
+            urls.add(a.get("link", ""))
+    return {u for u in urls if u}
+
+
+def make_law(day: str, settings: dict) -> dict:
+    """국가법령정보센터: 최근 공포·시행 부동산 법령 묶음(세트 3)."""
+    messages: list[dict] = []
+    if history.find_post(history.load(), day, 3, "실제"):
+        messages.append({"level": "warn", "text": "오늘 법령 세트는 이미 올려서 새로 만들지 않았어요"})
+        return _save_run(day, "law", messages)
+    used = _used_urls(3)
+    try:
+        laws = sources_law.search(day, settings)
+    except Exception as e:
+        log(traceback.format_exc())
+        messages.append({"level": "bad", "text": f"법령을 가져오다 문제가 생겼어요: {e}"})
+        return _save_run(day, "law", messages)
+
+    items, skipped = [], []
+    for law in laws:
+        if law["url"] in used:
+            skipped.append({"title": law["name"], "reason": "전에 소개한 법령"})
+            continue
+        try:
+            why = sources_law.reason(law["mst"], settings)
+        except Exception as e:
+            skipped.append({"title": law["name"], "reason": f"개정이유를 읽지 못함({e})"})
+            continue
+        keys = settings.get("law_queries") or []
+        why_hit = any(k in why for k in keys)
+        name_hit = any(k in law["name"] for k in keys)
+        if law["kind"] == "타법개정":
+            # 다른 법을 고치면서 딸려 바뀐 경우: 개정이유가 그 법 이야기라 카드로 쓰지 않는다
+            skipped.append({"title": law["name"], "reason": "다른 법 개정에 딸린 변경(타법개정)"})
+            continue
+        if not (why_hit or name_hit):
+            skipped.append({"title": law["name"], "reason": "부동산과 관련이 적음"})
+            continue
+        text = sources_law.first_reason_sentences(why)
+        if not text:
+            skipped.append({"title": law["name"], "reason": "개정이유 내용이 없음"})
+            continue
+        items.append({
+            "title": law["name"], "link": law["url"], "press": law["dept"] or "법제처",
+            "published": law["effective_raw"], "date_label": f"시행 {law['effective']}",
+            "gov": {"dept": "국가법령정보센터", "title": law["name"], "url": law["url"],
+                    "date_label": f"공포 {law['announced']}", "text": text,
+                    "license_label": "법제처 국가법령정보센터", "embargo": None},
+            "source_note": "법령 출처: 국가법령정보센터(법제처) — 법령은 저작권 보호 대상이 아닙니다.",
+        })
+        if len(items) >= int(settings.get("law_count", 5)):
+            break
+
+    if len(items) >= 1:
+        cover = {"tag": "법령", "lines": ("곧 시행되는", "부동산 법령"), "count_label": "법령 {n}건",
+                 "title": "곧 시행되는 부동산 법령", "caption_title": "곧 시행되는 부동산 법령",
+                 "note": "법령명·시행일과 개정이유 원문을 그대로 실었어요. 자세한 내용은 국가법령정보센터에서 확인하세요."}
+        meta = build.build_news(items, day, 3, settings, kind="law", cover=cover)
+        messages.append({"level": "ok", "text": f"법령 카드 {len(meta['cards'])}장을 만들었어요(법령 {len(items)}건)"})
+    else:
+        messages.append({"level": "warn", "text": "오늘은 새로 소개할 부동산 법령이 없어요"})
+    return _save_run(day, "law", messages, skipped=skipped[:40])
+
+
+# ---------------------------------------------------------------- 생활법령(노트북)
+
+def make_easylaw(day: str, settings: dict) -> dict:
+    """찾기쉬운 생활법령정보: 부동산·임대차 항목 하나를 원문 그대로(세트 4)."""
+    messages: list[dict] = []
+    if history.find_post(history.load(), day, 4, "실제"):
+        messages.append({"level": "warn", "text": "오늘 생활법령 세트는 이미 올려서 새로 만들지 않았어요"})
+        return _save_run(day, "easylaw", messages)
+    used = _used_urls(4)
+    try:
+        with sources_easylaw.client() as c:
+            got = sources_easylaw.pick(c, used, settings)
+    except Exception as e:
+        log(traceback.format_exc())
+        messages.append({"level": "bad", "text": f"생활법령을 가져오다 문제가 생겼어요: {e}"})
+        return _save_run(day, "easylaw", messages)
+
+    if not got:
+        messages.append({"level": "warn", "text": "새로 소개할 생활법령 항목을 찾지 못했어요"})
+        return _save_run(day, "easylaw", messages)
+
+    topic, section, text = got
+    rel = sources_easylaw.as_release(topic["title"], section, text, day)
+    meta = build.build_policy(rel, "생활법령", day, 4, settings, kind="easylaw")
+    if meta.get("ok"):
+        messages.append({"level": "ok", "text": f"생활법령 카드 {len(meta['cards'])}장을 만들었어요: {rel['title']}"})
+    else:
+        messages.append({"level": "bad", "text": "생활법령 카드를 만들지 못했어요: " + " / ".join(meta["problems"])})
+    return _save_run(day, "easylaw", messages)
+
+
 # ---------------------------------------------------------------- 뉴스(GitHub)
 
 def make_news(day: str, settings: dict) -> dict:
@@ -285,8 +389,13 @@ def run(day: str | None = None, url: str | None = None, only: str = "all", build
     settings = read_json(data_dir() / "settings.json", {})
     day = day or now_kst().strftime("%Y-%m-%d")
     results = {"date": day, "messages": []}
-    if only in ("all", "gov"):
+    # 노트북(한국)에서 하는 것: 보도자료·법령·생활법령
+    if only in ("all", "gov", "local"):
         results["messages"] += make_gov(day, url, settings)["messages"]
+    if only in ("all", "law", "local") and not url:
+        results["messages"] += make_law(day, settings)["messages"]
+    if only in ("all", "easylaw", "local") and not url:
+        results["messages"] += make_easylaw(day, settings)["messages"]
     if only in ("all", "news") and not url:
         results["messages"] += make_news(day, settings)["messages"]
     if only in ("all", "news"):
@@ -301,7 +410,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date")
     ap.add_argument("--url")
-    ap.add_argument("--only", choices=["all", "gov", "news", "pages"], default="all")
+    ap.add_argument("--only", choices=["all", "local", "gov", "law", "easylaw", "news", "pages"], default="all")
     ap.add_argument("--no-pages", action="store_true")
     a = ap.parse_args()
     day = (a.date or "").strip() or None

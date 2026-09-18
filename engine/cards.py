@@ -434,7 +434,7 @@ def draw_body(items: list[Item], meta: dict, settings: dict, page: int, total: i
             else:
                 _draw_highlighted(d, (MX + indent + mw, y), ln, f, color, c["accent"])
             y += line_h
-    _footer(d, c, settings, page, total, f"출처: {meta.get('dept', '')} 보도자료")
+    _footer(d, c, settings, page, total, meta.get("source_label") or f"출처: {meta.get('dept', '')} 보도자료")
     return img
 
 
@@ -445,7 +445,8 @@ def draw_source(meta: dict, settings: dict, page: int, total: int) -> Image.Imag
     d.text((MX, y), "출처", font=font("bold", 50), fill=c["text"])
     y += 100
     fb = font("regular", 36)
-    src = f"{meta.get('dept', '')} 보도자료 「{meta['title']}」({meta.get('date_label', '')})"
+    label = "보도자료 " if meta.get("kind", "policy") == "policy" else ""
+    src = f"{meta.get('dept', '')} {label}「{meta['title']}」({meta.get('date_label', '')})"
     for ln in wrap(src, fb, BODY_W):
         tdraw(d, (MX, y), ln, fb, c["text"])
         y += 56
@@ -481,20 +482,22 @@ def _office_rows(d, c, settings: dict, y: int) -> int:
 
 # ---------------------------------------------------------------- 뉴스 헤드라인 세트
 
-def draw_news_cover(date_label: str, count: int, settings: dict) -> Image.Image:
+def draw_news_cover(date_label: str, count: int, settings: dict, cover: dict | None = None) -> Image.Image:
     c = colors_from(settings)
     buto = _buto(settings)
     img, d = _new(c["bg"] if buto else c["primary"])
-    _tag(d, c, settings, MX, 110, "뉴스", 32, cover=True)
+    cover = cover or {}
+    _tag(d, c, settings, MX, 110, cover.get("tag", "뉴스"), 32, cover=True)
     f = font("extrabold", 104)
     y = 340
-    for i, ln in enumerate(("오늘의", "부동산 뉴스")):
+    for i, ln in enumerate(cover.get("lines") or ("오늘의", "부동산 뉴스")):
         if buto and i == 1:
             d.rectangle((MX - 6, y + 104 * 0.1, MX + tlen(ln, f) + 6, y + 104 * 1.22), fill=c["mark"])
         tdraw(d, (MX, y), ln, f, c["cover_text"])
         y += 136
-    d.text((MX, y + 40), f"{date_label}  |  헤드라인 {count}건", font=font("bold", 44), fill=c["cover_text"])
-    note = "기사는 제목과 언론사만 소개하고, 정부 발표가 있는 소식은 보도자료 원문을 함께 실었어요."
+    count_label = (cover.get("count_label") or "헤드라인 {n}건").replace("{n}", str(count))
+    d.text((MX, y + 40), f"{date_label}  |  {count_label}", font=font("bold", 44), fill=c["cover_text"])
+    note = cover.get("note") or "기사는 제목과 언론사만 소개하고, 정부 발표가 있는 소식은 보도자료 원문을 함께 실었어요."
     y = 1010
     for ln in wrap(note, font("medium", 32), BODY_W):
         tdraw(d, (MX, y), ln, font("medium", 32), c["cover_sub"])

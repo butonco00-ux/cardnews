@@ -40,8 +40,9 @@ def policy(meta: dict, first_paragraph: str, settings: dict) -> str:
     return text[:MAX_CHARS]
 
 
-def news(items: list[dict], date_label: str, settings: dict, notes: list[str] | None = None) -> str:
-    lines = [f"오늘의 부동산 뉴스 ({date_label})", ""]
+def news(items: list[dict], date_label: str, settings: dict, notes: list[str] | None = None,
+         title: str | None = None) -> str:
+    lines = [f"{title or '오늘의 부동산 뉴스'} ({date_label})", ""]
     for i, a in enumerate(items, 1):
         lines.append(f"{i}. {a['title']} — {a['press']}")
         if notes and i <= len(notes) and notes[i - 1]:
@@ -51,7 +52,12 @@ def news(items: list[dict], date_label: str, settings: dict, notes: list[str] | 
         if gov:
             lines.append(f"   📄 정부 발표: {gov['dept']} 「{gov['title']}」({gov['date_label']}) {gov['url']}")
     extra = ["정부 발표 원문 출처: 대한민국 정책브리핑 www.korea.kr — 공공누리 제1유형"] if any(a.get("gov") for a in items) else []
-    lines += ["", "기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.", *extra, _disclaimer(settings), "",
+    if any(a.get("source_note") for a in items):
+        extra = [a["source_note"] for a in items if a.get("source_note")][:1] + extra
+        head_note = "출처를 밝힌 공공 자료입니다."
+    else:
+        head_note = "기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다."
+    lines += ["", head_note, *extra, _disclaimer(settings), "",
               _tags(settings, ["부동산뉴스"])]
     return "\n".join(lines)[:MAX_CHARS]
 

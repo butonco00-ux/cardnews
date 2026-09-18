@@ -90,7 +90,8 @@ def parse(text: str, page_title: str = "", hard_wrapped: bool = True) -> Parsed:
             start = i
             break
     else:
-        start = len(lines)
+        # 기호(□ ㅇ -)가 전혀 없는 글(생활법령 등): 첫 줄만 제목, 나머지는 본문
+        start = 1 if len(lines) > 1 else len(lines)
     head = lines[:start]
     for ln in head:
         lv, mk, rest = _classify(ln)

@@ -8,6 +8,10 @@ on:
       - "docs/*/set-1/**"
       - "docs/*/run-gov.json"
       - "docs/*/releases.json"
+      - "docs/*/set-3/**"
+      - "docs/*/set-4/**"
+      - "docs/*/run-law.json"
+      - "docs/*/run-easylaw.json"
   workflow_dispatch:
 
 permissions:

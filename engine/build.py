@@ -46,7 +46,7 @@ def _date_label(iso: str) -> str:
     return f"{d.year}.{d.month:02d}.{d.day:02d}"
 
 
-def build_policy(rel: dict, tag: str, day: str, set_no: int, settings: dict) -> dict:
+def build_policy(rel: dict, tag: str, day: str, set_no: int, settings: dict, kind: str = "policy") -> dict:
     parsed = splitter.parse(rel["text"], page_title=rel["title"],
                             hard_wrapped=rel.get("source_file", "").lower().endswith(".pdf"))
     body_cards, info = splitter.build_cards(parsed.items, max_body=8)
@@ -56,12 +56,13 @@ def build_policy(rel: dict, tag: str, day: str, set_no: int, settings: dict) -> 
 
     badge = "확정 아님 · 정부안" if splitter.is_tentative(rel["title"], parsed.subtitles) else ""
     meta = {
-        "kind": "policy", "date": day, "set": set_no, "tag": tag,
+        "kind": kind, "date": day, "set": set_no, "tag": tag,
         "title": rel["title"], "subtitles": parsed.subtitles, "dept": rel["dept"],
         "date_label": _date_label(rel["list_date"]), "url": rel["url"],
         "license": rel["license"], "license_label": rel["license"]["label"],
         "embargo": rel["embargo"], "badge": badge, "source_file": rel.get("source_file", ""),
         "created_at": now_kst().isoformat(),
+        "source_label": f"출처: {rel['dept']} 보도자료" if kind == "policy" else f"출처: {rel['dept']}",
     }
     out = set_dir(day, set_no)
     if out.exists():
@@ -118,7 +119,8 @@ def _covered(s: str, used: list[str]) -> bool:
     return len(re.sub(r"^[□■◆◇ㅇ○◦•\-–*※➊-➓①-⑳]+", "", rest)) <= 2
 
 
-def build_news(items: list[dict], day: str, set_no: int, settings: dict, notes: list[str] | None = None) -> dict:
+def build_news(items: list[dict], day: str, set_no: int, settings: dict, notes: list[str] | None = None,
+               kind: str = "news", cover: dict | None = None) -> dict:
     notes = notes or []
     out = set_dir(day, set_no)
     if out.exists():
@@ -130,7 +132,7 @@ def build_news(items: list[dict], day: str, set_no: int, settings: dict, notes: 
         mod, folder, _ = STYLES[key]
         st = _style_settings(key, settings)
         files = []
-        cards.save(mod.draw_news_cover(dl, len(items), st), out / folder / "01.jpg")
+        cards.save(mod.draw_news_cover(dl, len(items), st, cover), out / folder / "01.jpg")
         files.append(f"{folder}/01.jpg")
         for i, a in enumerate(items, 1):
             note = notes[i - 1] if i <= len(notes) else ""
@@ -138,9 +140,11 @@ def build_news(items: list[dict], day: str, set_no: int, settings: dict, notes: 
             files.append(f"{folder}/{i + 1:02d}.jpg")
         styles[key] = files
     files = styles.get("1") or next(iter(styles.values()))
-    cap = caption.news(items, dl, settings, notes)
+    cap = caption.news(items, dl, settings, notes, cover.get("caption_title") if cover else None)
+    cover = cover or {}
     meta = {
-        "kind": "news", "date": day, "set": set_no, "tag": "뉴스", "title": f"오늘의 부동산 뉴스 ({dl})",
+        "kind": kind, "date": day, "set": set_no, "tag": cover.get("tag", "뉴스"),
+        "title": cover.get("title") or f"오늘의 부동산 뉴스 ({dl})",
         "date_label": dl, "news_items": items, "notes": notes, "ok": True, "problems": [],
         "cards": files, "styles": styles, "caption": cap, "caption_problems": caption.check(cap),
         "embargo": None, "license": None, "badge": "",
