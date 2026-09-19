@@ -47,7 +47,7 @@ def policy(meta: dict, first_paragraph: str, settings: dict) -> str:
 
 
 def news(items: list[dict], date_label: str, settings: dict, notes: list[str] | None = None,
-         title: str | None = None) -> str:
+         title: str | None = None, hashtag: str | None = None) -> str:
     lines = [f"{title or '오늘의 부동산 뉴스'} ({date_label})", ""]
     for i, a in enumerate(items, 1):
         lines.append(f"{i}. {a['title']} — {a['press']}")
@@ -64,7 +64,7 @@ def news(items: list[dict], date_label: str, settings: dict, notes: list[str] | 
     else:
         head_note = "기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다."
     lines += ["", head_note, *extra, "",
-              _tags(settings, ["부동산뉴스"])]
+              _tags(settings, [hashtag or "부동산뉴스"])]
     return "\n".join(lines)[:MAX_CHARS]
 
 

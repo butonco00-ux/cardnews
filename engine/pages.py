@@ -95,7 +95,8 @@ def _set_block(meta: dict, day: str, h: dict, info: dict, version: str) -> str:
     posted = history.find_post(h, day, n, "실제")
     practice = history.find_post(h, day, n, "연습")
     out = [f"<section class='box' id='set-{n}'>"]
-    kind_names = {"policy": "정책·세금 카드뉴스", "news": "뉴스 헤드라인", "law": "시행 법령", "easylaw": "생활법령"}
+    kind_names = {"policy": "정책·세금 카드뉴스", "news": "뉴스 헤드라인", "law": "시행 법령", "easylaw": "생활법령",
+                  "star": "스타 부동산"}
     out.append(f"<div class='sub'>세트 {n} · {e(kind_names.get(kind, kind))}</div>")
     out.append(f"<h2>{e(meta.get('title'))}</h2>")
 

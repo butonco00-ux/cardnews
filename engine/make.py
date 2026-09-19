@@ -292,7 +292,30 @@ def make_news(day: str, settings: dict) -> dict:
         except Exception as e:
             log(traceback.format_exc())
             messages.append({"level": "bad", "text": f"뉴스를 가져오다 문제가 생겼어요: {e}"})
+    if cid and secret:
+        messages += make_star(day, settings, cid, secret)
     return _save_run(day, "news", messages, news_excluded=excluded)
+
+
+def make_star(day: str, settings: dict, cid: str, secret: str) -> list[dict]:
+    """연예인 부동산 소식(세트 5). 기사 제목·언론사·날짜·링크만."""
+    h = history.load()
+    if history.find_post(h, day, 5, "실제"):
+        return [{"level": "warn", "text": "오늘 연예인 부동산 세트는 이미 올려서 새로 만들지 않았어요"}]
+    try:
+        items, _ = sources_news.fetch_star(cid, secret, settings, now_kst())
+    except Exception as e:
+        log(traceback.format_exc())
+        return [{"level": "bad", "text": f"연예인 부동산 뉴스를 가져오다 문제가 생겼어요: {e}"}]
+    used = _used_urls(5) | history.posted_urls(h)
+    items = [a for a in items if a["link"] not in used]
+    if not items:
+        return [{"level": "warn", "text": "최근 3일 새 연예인 부동산 소식이 없어요"}]
+    cover = {"tag": "스타", "lines": ("스타", "부동산 소식"), "count_label": "소식 {n}건",
+             "title": "스타 부동산 소식", "caption_title": "스타 부동산 소식", "hashtag": "연예인부동산",
+             "note": "기사 제목과 언론사만 소개해요. 자세한 내용은 캡션의 링크에서 확인하세요."}
+    meta = build.build_news(items, day, 5, settings, kind="star", cover=cover)
+    return [{"level": "ok", "text": f"스타 부동산 카드 {len(meta['cards'])}장을 만들었어요(기사 {len(items)}건)"}]
 
 
 def refresh_news_gov(day: str, settings: dict) -> bool:

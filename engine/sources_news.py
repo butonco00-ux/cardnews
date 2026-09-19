@@ -91,10 +91,76 @@ def press_name(url: str, settings: dict) -> str:
 
 def fetch(client_id: str, client_secret: str, settings: dict, now: datetime, hours: int = 24) -> tuple[list[dict], list[dict]]:
     """반환: (고른 기사, 제외 목록[제목·이유])."""
+    excluded: list[dict] = []
+    pool = fetch_pool(client_id, client_secret, settings, now, settings.get("news_queries") or DEFAULT_QUERIES, hours)
+    return select(pool, settings, excluded), excluded
+
+
+# ------------------------------------------------------------ 연예인 부동산(세트 5)
+STAR_QUERIES = ["연예인 건물", "연예인 빌딩 매입", "배우 건물 매입", "가수 빌딩 매입", "아이돌 건물",
+                "스타 건물주", "연예인 부동산", "연예인 빌딩 매각", "연예인 아파트 매입", "배우 빌딩 시세차익"]
+STAR_PERSON = ["연예인", "배우", "가수", "아이돌", "스타", "방송인", "개그맨", "개그우먼", "MC", "유튜버",
+               "모델", "셀럽", "아나운서", "골퍼", "야구선수", "축구선수", "감독", "멤버"]
+STAR_DEAL = ["매입", "매각", "샀", "팔았", "팔아", "사들", "시세차익", "차익", "건물주", "소유", "보유", "매수",
+             "매도", "투자", "낙찰", "경매"]
+STAR_PROPERTY = ["빌딩", "건물", "아파트", "주택", "펜트하우스", "부동산", "오피스텔", "토지", "땅", "상가", "꼬마빌딩"]
+STAR_EXCLUDE = ["구해줘", "홈즈", "나혼산", "나 혼자", "전참시", "예능", "드라마", "영화", "화보", "열애", "결혼", "이혼"]
+
+
+def fetch_star(client_id: str, client_secret: str, settings: dict, now: datetime, hours: int = 72) -> tuple[list[dict], list[dict]]:
+    """연예인·유명인이 부동산을 사고팔거나 가진 소식(제목·언론사·날짜·링크만)."""
+    excluded: list[dict] = []
+    pool = fetch_pool(client_id, client_secret, settings, now, settings.get("star_queries") or STAR_QUERIES, hours)
+    return select_star(pool, settings, excluded, int(settings.get("star_count", 5))), excluded
+
+
+def is_star_deal(title: str, settings: dict) -> bool:
+    if any(w in title for w in settings.get("star_exclude") or STAR_EXCLUDE):
+        return False
+    sold_bought = re.search(r"\d+억\S*\s*(에|원에)\s*(판|산|팔|사)", title)      # "166억에 판 강남빌딩"
+    if sold_bought and any(w in title for w in STAR_PROPERTY):
+        return True
+    # "손예진 244억 강남 빌딩, 반년 넘게 공실"처럼 보유 소식: 금액+건물 이 있고 시장·정책 기사 말이 없으면
+    market = ["아파트값", "집값", "평균", "중위", "시세", "매매가", "전세가", "거래량", "돌파", "정부", "대출", "청약",
+              "공급", "서울시", "국토부", "금리", "분양가", "경매 물건"]
+    if (re.search(r"\d+억", title) and any(w in title for w in ("빌딩", "건물", "펜트하우스", "꼬마빌딩"))
+            and not any(w in title for w in market)):
+        return True
+    has_deal = any(w in title for w in STAR_DEAL)
+    has_prop = any(w in title for w in STAR_PROPERTY)
+    has_person = any(w in title for w in STAR_PERSON) or "," in title[:12]   # "제니, 한남동 빌딩…" 처럼 이름으로 시작
+    return has_deal and has_prop and has_person
+
+
+def select_star(pool: list[dict], settings: dict, excluded: list[dict], count: int = 5) -> list[dict]:
+    allowed = settings.get("star_press_only") or settings.get("news_press_only") or []
+    cands = []
+    for a in pool:
+        if allowed and a["press"] not in allowed:
+            continue
+        if flt.is_ad(a["title"], settings):
+            continue
+        if not is_star_deal(a["title"], settings):
+            continue
+        cands.append(a)
+    cands.sort(key=lambda a: a["published"], reverse=True)
+    chosen: list[dict] = []
+    for a in cands:
+        if any(flt.similar(a["title"], b["title"]) for b in chosen):
+            excluded.append({"title": a["title"], "reason": "같은 소식 기사가 이미 있음"})
+            continue
+        chosen.append(a)
+        if len(chosen) >= count:
+            break
+    return chosen
+
+
+def fetch_pool(client_id: str, client_secret: str, settings: dict, now: datetime, queries: list[str],
+               hours: int = 24) -> list[dict]:
+    """네이버 뉴스 검색 결과 모으기(제목·언론사·날짜·링크만)."""
     client_id, client_secret = (client_id or "").strip(), (client_secret or "").strip()
     register_secret(client_id)
     register_secret(client_secret)
-    queries = settings.get("news_queries") or DEFAULT_QUERIES
     since = now - timedelta(hours=hours)
     seen_links: set[str] = set()
     pool: list[dict] = []
@@ -149,7 +215,7 @@ def fetch(client_id: str, client_secret: str, settings: dict, now: datetime, hou
                     "published": pub.isoformat(),
                     "date_label": f"{pub:%Y.%m.%d %H:%M}",
                 })
-    return select(pool, settings, excluded), excluded
+    return pool
 
 
 def select(pool: list[dict], settings: dict, excluded: list[dict], count: int = 5) -> list[dict]:

@@ -144,7 +144,8 @@ def build_news(items: list[dict], day: str, set_no: int, settings: dict, notes: 
             files.append(f"{folder}/{i + 1:02d}.jpg")
         styles[key] = files
     files = styles.get("1") or next(iter(styles.values()))
-    cap = caption.news(items, dl, settings, notes, cover.get("caption_title") if cover else None)
+    cap = caption.news(items, dl, settings, notes, cover.get("caption_title") if cover else None,
+                       cover.get("hashtag") if cover else None)
     cover = cover or {}
     meta = {
         "kind": kind, "date": day, "set": set_no, "tag": cover.get("tag", "뉴스"),
