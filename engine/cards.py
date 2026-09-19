@@ -575,7 +575,8 @@ def draw_news_item(n: int, item: dict, note: str, settings: dict, page: int, tot
     img, d = _new(c["bg"])
     d.text((MX, 120), f"{n:02d}", font=font("extrabold", 96), fill=c.get("number") or c["primary"])
     gov = item.get("gov")
-    max_title_lines = 4 if (gov or note) else 5
+    summary = item.get("summary") or []
+    max_title_lines = 3 if summary else (4 if (gov or note) else 5)
     f, lines, size = _fit_lines(item["title"], "bold", range(58, 41, -3), BODY_W, max_title_lines)
     y = 290
     for ln in lines[:max_title_lines]:
@@ -585,7 +586,27 @@ def draw_news_item(n: int, item: dict, note: str, settings: dict, page: int, tot
     tdraw(d, (MX, y), f"{item.get('press', '')}  ·  {item.get('date_label', '')}", font("medium", 32), c["sub"])
     y += 80
 
-    if gov:
+    if summary:
+        # AI 사실 정리(새로 쓴 문장). 기사 문장이 아님을 표시한다.
+        fs = font("regular", 35)
+        room = (BODY_BOTTOM - (150 if note else 0)) - y - 60
+        lines_out = []
+        for sent in summary:
+            lines_out += wrap(sent, fs, BODY_W)
+        max_l = max(3, room // 54)
+        if len(lines_out) > max_l:                      # 넘치면 뒤 문장부터 뺀다
+            keep = list(summary)
+            while len(keep) > 1 and sum(len(wrap(s_, fs, BODY_W)) for s_ in keep) > max_l:
+                keep = keep[:-1]
+            lines_out = [ln for s_ in keep for ln in wrap(s_, fs, BODY_W)]
+        for ln in lines_out:
+            _draw_highlighted(d, (MX, y), ln, fs, c.get("text2", c["text"]) if _buto(settings) else c["text"], c["accent"])
+            y += 54
+        tdraw(d, (MX, y + 10), f"{item.get('summary_note', 'AI 사실 정리')} · 기사 원문은 캡션 링크",
+              font("regular", 24), c["sub"])
+        y += 60
+
+    if gov and not summary:
         from .splitter import _sentences
         fg = font("regular", 34)
         label = f"정부 발표 원문 · {gov['dept']} ({gov['date_label']})"

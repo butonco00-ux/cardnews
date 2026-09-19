@@ -51,6 +51,8 @@ def news(items: list[dict], date_label: str, settings: dict, notes: list[str] | 
     lines = [f"{title or '오늘의 부동산 뉴스'} ({date_label})", ""]
     for i, a in enumerate(items, 1):
         lines.append(f"{i}. {a['title']} — {a['press']}")
+        if a.get("summary"):
+            lines.append("   " + " ".join(a["summary"]))
         if notes and i <= len(notes) and notes[i - 1]:
             lines.append(f"   💬 {notes[i - 1]}")
         lines.append(f"   {a['link']}")

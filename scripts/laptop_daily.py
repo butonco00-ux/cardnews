@@ -108,19 +108,30 @@ def main() -> int:
         log(f"GitHub에서 최신 내용을 받지 못했어요: {r.stderr.strip()[:200]}")
 
     run_file = docs_dir() / day / "run-gov.json"
+    skip_local = False
     if not a.force and not a.url and run_file.exists():
         prev = read_json(run_file, {})
         if not any(m.get("level") == "bad" for m in prev.get("messages", [])):
             log("오늘 보도자료 카드는 이미 만들었어요(건너뜀)")
-            return 0
+            skip_local = True
 
-    info = make.run(day, a.url.strip() or None, only="gov" if a.url else "local", build_pages=False)
-    for m in info["messages"]:
-        log(f"{m['level']}: {m['text']}")
+    if not skip_local:
+        info = make.run(day, a.url.strip() or None, only="gov" if a.url else "local", build_pages=False)
+        for m in info["messages"]:
+            log(f"{m['level']}: {m['text']}")
 
-    ok = push_paths([f"docs/{day}/set-1", f"docs/{day}/set-3", f"docs/{day}/set-4",
+    # 스타 부동산 사실 정리(GitHub 이 만든 세트 5 에, Claude 구독으로, 추가 비용 없이)
+    if not a.url:
+        from engine.common import read_json as _rj
+        settings = _rj(ROOT / "data" / "settings.json", {})
+        star = make.make_star_summaries(day, settings)
+        for m in star.get("messages", []):
+            log(f"{m['level']}: {m['text']}")
+
+    ok = push_paths([f"docs/{day}/set-1", f"docs/{day}/set-3", f"docs/{day}/set-4", f"docs/{day}/set-5",
                      f"docs/{day}/run-gov.json", f"docs/{day}/run-law.json", f"docs/{day}/run-easylaw.json",
-                     f"docs/{day}/releases.json"], f"보도자료·법령·생활법령 카드 {day} (노트북)")
+                     f"docs/{day}/run-star.json", f"docs/{day}/releases.json"],
+                    f"보도자료·법령·생활법령 카드, 스타 부동산 정리 {day} (노트북)")
     if ok:
         log("GitHub에 올렸어요. 몇 분 뒤 확인 페이지에 나와요")
     return 0 if ok else 1

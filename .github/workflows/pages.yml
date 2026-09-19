@@ -12,6 +12,8 @@ on:
       - "docs/*/set-4/**"
       - "docs/*/run-law.json"
       - "docs/*/run-easylaw.json"
+      - "docs/*/set-5/**"
+      - "docs/*/run-star.json"
   workflow_dispatch:
 
 permissions:

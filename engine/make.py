@@ -297,11 +297,19 @@ def make_news(day: str, settings: dict) -> dict:
     return _save_run(day, "news", messages, news_excluded=excluded)
 
 
+STAR_COVER = {"tag": "스타", "lines": ("스타", "부동산 소식"), "count_label": "소식 {n}건",
+              "title": "스타 부동산 소식", "caption_title": "스타 부동산 소식", "hashtag": "연예인부동산",
+              "note": "부동산 거래 사실만 새로 정리했어요. 기사 원문은 캡션의 링크에서 확인하세요."}
+
+
 def make_star(day: str, settings: dict, cid: str, secret: str) -> list[dict]:
-    """연예인 부동산 소식(세트 5). 기사 제목·언론사·날짜·링크만."""
+    """연예인 부동산 소식(세트 5). 기사 제목·언론사·날짜·링크(+노트북이 채우는 사실 정리)."""
     h = history.load()
     if history.find_post(h, day, 5, "실제"):
         return [{"level": "warn", "text": "오늘 연예인 부동산 세트는 이미 올려서 새로 만들지 않았어요"}]
+    old = read_json(docs_dir() / day / "set-5" / "set.json", None)
+    if old and any(a.get("summary") for a in old.get("news_items") or []):
+        return [{"level": "ok", "text": "사실 정리가 된 스타 부동산 세트를 그대로 두었어요"}]
     try:
         items, _ = sources_news.fetch_star(cid, secret, settings, now_kst())
     except Exception as e:
@@ -311,11 +319,40 @@ def make_star(day: str, settings: dict, cid: str, secret: str) -> list[dict]:
     items = [a for a in items if a["link"] not in used]
     if not items:
         return [{"level": "warn", "text": "최근 3일 새 연예인 부동산 소식이 없어요"}]
-    cover = {"tag": "스타", "lines": ("스타", "부동산 소식"), "count_label": "소식 {n}건",
-             "title": "스타 부동산 소식", "caption_title": "스타 부동산 소식", "hashtag": "연예인부동산",
-             "note": "기사 제목과 언론사만 소개해요. 자세한 내용은 캡션의 링크에서 확인하세요."}
-    meta = build.build_news(items, day, 5, settings, kind="star", cover=cover)
+    meta = build.build_news(items, day, 5, settings, kind="star", cover=STAR_COVER)
     return [{"level": "ok", "text": f"스타 부동산 카드 {len(meta['cards'])}장을 만들었어요(기사 {len(items)}건)"}]
+
+
+def make_star_summaries(day: str, settings: dict) -> dict:
+    """노트북: 스타 부동산 기사에 사실 정리(claude 구독, 추가 비용 없음)를 채우고 카드를 다시 그린다."""
+    from . import star_summary
+    messages: list[dict] = []
+    meta = read_json(docs_dir() / day / "set-5" / "set.json", None)
+    if not meta or not meta.get("news_items"):
+        return _save_run(day, "star", messages)
+    if history.find_post(history.load(), day, 5, "실제"):
+        return _save_run(day, "star", messages)
+    from .sources_news import STAR_EXCLUDE
+    kept = [a for a in meta["news_items"] if not any(w in a.get("title", "") for w in STAR_EXCLUDE)]
+    if len(kept) != len(meta["news_items"]):
+        messages.append({"level": "warn", "text": f"범죄·사건 기사 {len(meta['news_items']) - len(kept)}건을 스타 부동산 세트에서 뺐어요"})
+        meta["news_items"] = kept
+        if not kept:
+            return _save_run(day, "star", messages)
+    todo = [a for a in meta["news_items"] if not a.get("summary")]
+    if not todo:
+        return _save_run(day, "star", messages)
+    try:
+        items, notes = star_summary.fill(meta["news_items"])
+    except star_summary.Stop as e:
+        messages.append({"level": "bad", "text": f"AI 사실 정리를 멈췄어요: {e} (추가 비용이 생기지 않게 하려는 조치예요)"})
+        return _save_run(day, "star", messages)
+    done = sum(1 for a in items if a.get("summary"))
+    build.build_news(items, day, 5, settings, meta.get("notes") or [], kind="star", cover=STAR_COVER)
+    messages.append({"level": "ok", "text": f"스타 부동산 기사 {done}건에 사실 정리를 넣었어요(Claude 구독 사용, 추가 비용 없음)"})
+    for n in notes:
+        messages.append({"level": "warn", "text": n})
+    return _save_run(day, "star", messages)
 
 
 def refresh_news_gov(day: str, settings: dict) -> bool:

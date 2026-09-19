@@ -201,7 +201,8 @@ def _set_block(meta: dict, day: str, h: dict, info: dict, version: str) -> str:
 def _merged_runs(root) -> dict:
     """노트북(run-gov)·GitHub(run-news)·올리기(run-publish) 기록을 합친다."""
     merged = {"messages": [], "candidates": [], "news_excluded": [], "finished_at": "", "has_gov": False}
-    for name in ("run.json", "run-gov.json", "run-law.json", "run-easylaw.json", "run-news.json", "run-publish.json"):
+    for name in ("run.json", "run-gov.json", "run-law.json", "run-easylaw.json", "run-news.json", "run-star.json",
+                 "run-publish.json"):
         r = read_json(root / name, None)
         if not r:
             continue

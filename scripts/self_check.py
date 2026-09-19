@@ -269,6 +269,31 @@ check(em["ok"] and em["kind"] == "easylaw", "생활법령 세트 만들기(기�
 check(all(squash(i["text"]) in squash(el_text) for c_ in em["card_items"] for i in c_ if i["level"] != "system"), "생활법령 카드도 원문 그대로")
 check("보도자료" not in (em.get("source_label") or ""), "법령·생활법령 카드에는 '보도자료' 표시 안 함")
 
+print("9-3. 스타 부동산 AI 사실 정리(추가 비용 없음)")
+import subprocess as _sp
+from engine import star_summary as SS
+art = "배우 홍길동은 2021년 서울 강남구 역삼동 빌딩을 법인 명의로 50억원에 사들였고 올해 80억원에 되팔아 큰 차익을 남긴 것으로 확인됐다."
+check(SS.check(["홍길동은 2021년 역삼동 빌딩을 50억원에 샀다.", "올해 80억원에 매각했다.", "법인 명의 거래였다."], art) is None, "새로 쓴 사실 정리는 통과")
+check(SS.check(["배우 홍길동은 2021년 서울 강남구 역삼동 빌딩을 법인 명의로 50억원에 사들였다.", "b", "c"], art) is not None, "기사 문장 그대로면 거부")
+check(SS.check(["홍길동은 90억원에 팔았다.", "b는 c다.", "d는 e다."], art) is not None, "기사에 없는 숫자면 거부")
+_real = _sp.run
+def _fake(out, err="", rc=0):
+    return lambda *a, **k: _sp.CompletedProcess(a, rc, out, err)
+_sp.run = _fake('{"is_error": false, "result": "rate limit 이라는 단어가 든 정상 답"}')
+try:
+    ok_normal = SS._run_claude("x").startswith("rate limit")
+except Exception:
+    ok_normal = False
+check(ok_normal, "정상 답에 'limit' 글자가 있어도 멈추지 않음")
+_sp.run = _fake('{"is_error": true, "result": "Claude AI usage limit reached"}', rc=1)
+try:
+    SS._run_claude("x"); stopped = False
+except SS.Stop:
+    stopped = True
+check(stopped, "구독 한도에 걸리면 멈춤(추가 비용 방지)")
+_sp.run = _real
+check("ANTHROPIC_API_KEY" not in SS._env(), "API 키(유료)는 지우고 실행")
+
 print("10. 사용자 데이터 보호")
 check(not (ROOT / "data" / "history.json").exists() or os.environ["CARDNEWS_DATA"] != str(ROOT / "data"), "검사는 임시 폴더만 사용")
 req = (ROOT / "requirements.txt").read_bytes()
