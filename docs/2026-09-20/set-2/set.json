@@ -1,0 +1,60 @@
+{
+  "kind": "news",
+  "date": "2026-09-20",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.09.20)",
+  "date_label": "2026.09.20",
+  "news_items": [
+    {
+      "title": "[속보] 오세훈 “부동산이 대통령 지지율 하락 원인…전세난 책임져야”",
+      "link": "https://www.mk.co.kr/article/12157202",
+      "naver_link": "https://n.news.naver.com/mnews/article/024/0000108339?sid=102",
+      "press": "매일경제",
+      "published": "2026-09-19T20:17:00+09:00",
+      "date_label": "2026.09.19 20:17",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "“동탄 17% 올랐다는데 우리 아파트는 왜”…파주운정선 ‘9.5억→4.6억’...",
+      "link": "https://biz.heraldcorp.com/article/10878948?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002699747?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-09-20T07:00:00+09:00",
+      "date_label": "2026.09.20 07:00",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.09.20)\n\n1. [속보] 오세훈 “부동산이 대통령 지지율 하락 원인…전세난 책임져야” — 매일경제\n   https://www.mk.co.kr/article/12157202\n2. “동탄 17% 올랐다는데 우리 아파트는 왜”…파주운정선 ‘9.5억→4.6억’... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10878948?ref=naver\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.mk.co.kr/article/12157202",
+    "https://biz.heraldcorp.com/article/10878948?ref=naver"
+  ],
+  "created_at": "2026-09-20T08:49:23.649685+09:00"
+}
