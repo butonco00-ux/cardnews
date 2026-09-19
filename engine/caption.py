@@ -9,9 +9,15 @@ MAX_CHARS = 2200
 MAX_TAGS = 30
 
 
+# 세트 분야 태그 → 부동산 해시태그(부동산과 관련된 태그만 붙인다)
+TAG_TO_HASHTAG = {"정책": "부동산정책", "세금": "부동산세금", "시장": "부동산시장", "뉴스": "부동산뉴스",
+                  "법령": "부동산법", "생활법령": "부동산법률"}
+
+
 def _tags(settings: dict, extra: list[str] | None = None) -> str:
     tags = []
-    for t in (settings.get("hashtags") or []) + (extra or []):
+    extra = [TAG_TO_HASHTAG.get(e.lstrip("#"), e) for e in (extra or []) if e]
+    for t in (settings.get("hashtags") or []) + extra:
         t = "#" + t.lstrip("#").replace(" ", "")
         if t not in tags:
             tags.append(t)
