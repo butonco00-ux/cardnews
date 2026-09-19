@@ -195,6 +195,12 @@ def fetch_pool(client_id: str, client_secret: str, settings: dict, now: datetime
             except httpx.HTTPError as e:
                 log(f"네이버 뉴스 연결 실패({q}): {type(e).__name__}")
                 continue
+            if r.status_code == 402 or (r.status_code != 200 and re.search(
+                    r"billing|payment|charge|과금|요금|결제|유료", r.text, re.I)):
+                # 사용자 지시: 돈이 드는 순간 멈추고 먼저 알린다(평소 무료 사용은 막지 않음)
+                log(f"네이버 요금 관련 응답(HTTP {r.status_code}): {redact(r.text[:200])}")
+                raise RuntimeError("[비용 차단] 네이버 API HUB가 요금·결제 관련 응답을 보내 뉴스 수집을 멈췄어요. "
+                                   "유료로 바뀌었는지 확인이 필요해요")
             if r.status_code in (401, 403):
                 detail = redact(r.text[:300])
                 log(f"네이버 거절 이유({api.split('/')[2]}, HTTP {r.status_code}): {detail}")
