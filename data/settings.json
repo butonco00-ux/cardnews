@@ -80,5 +80,6 @@
   ],
   "github_repo": "butonco00-ux/cardnews",
   "instagram_host": "graph.instagram.com",
-  "instagram_api_version": "v25.0"
+  "instagram_api_version": "v25.0",
+  "star_press_only": []
 }

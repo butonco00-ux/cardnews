@@ -46,7 +46,11 @@ DEFAULT_PRESS = {
     "kyongbuk.co.kr": "경북일보", "imaeil.com": "매일신문", "yeongnam.com": "영남일보", "kado.net": "강원도민일보",
     "kwnews.co.kr": "강원일보", "jjan.kr": "전북일보", "kjdaily.com": "광주매일신문", "joongdo.co.kr": "중도일보",
     "daejonilbo.com": "대전일보", "kyeonggi.com": "경기일보", "kihoilbo.co.kr": "기호일보", "incheonilbo.com": "인천일보",
-    "housingherald.co.kr": "하우징헤럴드", "arunews.com": "한국주택경제", "rtimes.co.kr": "부동산타임스", "r114.com": "부동산R114",
+    "housingherald.co.kr": "하우징헤럴드", "arunews.com": "한국주택경제",
+    "sportsseoul.com": "스포츠서울", "sports.donga.com": "스포츠동아", "sportschosun.com": "스포츠조선",
+    "isplus.com": "일간스포츠", "osen.co.kr": "OSEN", "xportsnews.com": "엑스포츠뉴스", "tenasia.co.kr": "텐아시아",
+    "starnewskorea.com": "스타뉴스", "newsen.com": "뉴스엔", "mydaily.co.kr": "마이데일리", "dispatch.co.kr": "디스패치",
+    "sedaily.com/NewsView": "서울경제", "chosun.com/economy": "조선비즈", "hankyung.com/entertainment": "한국경제", "rtimes.co.kr": "부동산타임스", "r114.com": "부동산R114",
     "kpinews.kr": "KPI뉴스", "fntimes.com": "한국금융신문", "thebell.co.kr": "더벨", "mk.co.kr/news": "매일경제",
 }
 
@@ -133,10 +137,13 @@ def is_star_deal(title: str, settings: dict) -> bool:
 
 
 def select_star(pool: list[dict], settings: dict, excluded: list[dict], count: int = 5) -> list[dict]:
-    allowed = settings.get("star_press_only") or settings.get("news_press_only") or []
+    # 스타 부동산은 알려진 언론사 전체(설정 star_press_only 가 비어 있으면). 일반 뉴스의 7곳 제한은 따로.
+    allowed = settings.get("star_press_only") or []
     cands = []
     for a in pool:
         if allowed and a["press"] not in allowed:
+            continue
+        if not allowed and not known_press(a["link"], settings):
             continue
         if flt.is_ad(a["title"], settings):
             continue
