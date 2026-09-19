@@ -46,6 +46,20 @@
         "인스타 연결 확인 실패: 인스타가 거절했어요: API access blocked."
       ],
       "at": "2026-09-19T13:55:05.437104+09:00"
+    },
+    {
+      "date": "2026-09-19",
+      "set": 4,
+      "kind": "easylaw",
+      "mode": "연습",
+      "source_urls": [
+        "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=1171&ccfNo=1&cciNo=1&cnpClsNo=2"
+      ],
+      "problems": [],
+      "notes": [
+        "인스타 연결 확인 실패: 인스타가 거절했어요: API access blocked."
+      ],
+      "at": "2026-09-19T13:55:44.986629+09:00"
     }
   ]
 }
