@@ -303,6 +303,11 @@ check(_sm.get("ok") and _sm["kind"] == "star" and len(_sm["cards"]) == 3, "스�
 check("https://example.com/a1" in _sm["caption"] and "기사 속 사실" not in _sm["caption"] and "#연예인부동산" in _sm["caption"],
       "스타 캡션: 기사 링크·해시태그(안내 문장 없음)")
 
+check(SS.check(["가" * 95, "b는 c다.", "d는 e다."], art) is not None, "너무 긴 정리 문장은 거부(다시 쓰기)")
+from engine import caption as _C
+_nc = _C.news([dict(_it, summary=["홍길동은 빌딩을 팔았다.", "b", "c"])], "2026.01.02", settings)
+check("기사 제목·언론사만" not in _nc and "홍길동은 빌딩을 팔았다." in _nc, "뉴스 캡션에 사실 정리, 옛 안내 문장 없음")
+
 print("10. 사용자 데이터 보호")
 check(not (ROOT / "data" / "history.json").exists() or os.environ["CARDNEWS_DATA"] != str(ROOT / "data"), "검사는 임시 폴더만 사용")
 req = (ROOT / "requirements.txt").read_bytes()

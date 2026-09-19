@@ -127,8 +127,17 @@ def main() -> int:
         star = make.make_star_summaries(day, settings)
         for m in star.get("messages", []):
             log(f"{m['level']}: {m['text']}")
+        # 오늘의 부동산 뉴스(세트 2) 사실 정리도 같은 방식으로
+        news_msgs = make.make_news_summaries(day, settings)
+        for m in news_msgs:
+            log(f"{m['level']}: {m['text']}")
+        if news_msgs:
+            prev = read_json(docs_dir() / day / "run-star.json", {}) or {}
+            prev["messages"] = (prev.get("messages") or []) + news_msgs
+            from engine.common import write_json as _wj
+            _wj(docs_dir() / day / "run-star.json", prev)
 
-    ok = push_paths([f"docs/{day}/set-1", f"docs/{day}/set-3", f"docs/{day}/set-4",
+    ok = push_paths([f"docs/{day}/set-1", f"docs/{day}/set-2", f"docs/{day}/set-3", f"docs/{day}/set-4",
                      *[f"docs/{day}/set-{n}" for n in range(5, 10)], f"docs/{day}/star-items.json",
                      f"docs/{day}/run-gov.json", f"docs/{day}/run-law.json", f"docs/{day}/run-easylaw.json",
                      f"docs/{day}/run-star.json", f"docs/{day}/releases.json"],

@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - "docs/*/set-1/**"
+      - "docs/*/set-2/**"
       - "docs/*/run-gov.json"
       - "docs/*/releases.json"
       - "docs/*/set-3/**"

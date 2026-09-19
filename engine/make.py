@@ -302,6 +302,8 @@ def make_news(day: str, settings: dict) -> dict:
         messages.append({"level": "warn", "text": "네이버 검색 열쇠가 없어 뉴스 헤드라인은 건너뛰었어요(설정안내.md 5단계)"})
     elif history.find_post(h, day, 2, "실제"):
         messages.append({"level": "warn", "text": "오늘 뉴스 세트는 이미 올려서 새로 만들지 않았어요"})
+    elif any(a.get("summary") for a in (read_json(docs_dir() / day / "set-2" / "set.json", {}) or {}).get("news_items") or []):
+        messages.append({"level": "ok", "text": "사실 정리가 된 오늘 뉴스 세트를 그대로 두었어요"})
     else:
         try:
             items, excluded = sources_news.fetch(cid, secret, settings, now_kst())
@@ -403,6 +405,24 @@ def make_star_summaries(day: str, settings: dict) -> dict:
         messages.append({"level": "ok", "text": f"스타 부동산 카드 {made}세트를 만들었어요(기사 1건 = 세트 1개, "
                                                 f"세트 {STAR_FIRST_SET}~{STAR_FIRST_SET + len(items) - 1}) · Claude 구독 사용, 추가 비용 없음"})
     return _save_run(day, "star", messages)
+
+
+def make_news_summaries(day: str, settings: dict) -> list[dict]:
+    """노트북: 오늘의 부동산 뉴스(세트 2) 기사마다 사실 정리를 넣고 카드를 다시 그린다(claude 구독, 추가 비용 없음)."""
+    from . import star_summary
+    meta = read_json(docs_dir() / day / "set-2" / "set.json", None)
+    if not meta or not meta.get("news_items") or history.find_post(history.load(), day, 2, "실제"):
+        return []
+    if all(a.get("summary") for a in meta["news_items"]):
+        return []
+    try:
+        items, notes = star_summary.fill(meta["news_items"], star_summary.NEWS_PROMPT)
+    except star_summary.Stop as e:
+        return [{"level": "bad", "text": f"AI 사실 정리를 멈췄어요: {e} (추가 비용이 생기지 않게 하려는 조치예요)"}]
+    build.build_news(items, day, 2, settings, meta.get("notes") or [])
+    done = sum(1 for a in items if a.get("summary"))
+    out = [{"level": "ok", "text": f"오늘의 부동산 뉴스 {done}건에 사실 정리를 넣었어요(Claude 구독, 추가 비용 없음)"}]
+    return out + [{"level": "warn", "text": n} for n in notes]
 
 
 def refresh_news_gov(day: str, settings: dict) -> bool:

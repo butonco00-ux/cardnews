@@ -156,7 +156,10 @@ def build_news(items: list[dict], day: str, set_no: int, settings: dict, notes: 
         mod, folder, _ = STYLES[key]
         st = _style_settings(key, settings)
         files = []
-        cards.save(mod.draw_news_cover(dl, len(items), st, cover), out / folder / "01.jpg")
+        cv = cover
+        if not cover and any(a.get("summary") for a in items):
+            cv = {"note": ""}                    # 사실 정리가 있는 날은 표지 안내 문장 없음
+        cards.save(mod.draw_news_cover(dl, len(items), st, cv), out / folder / "01.jpg")
         files.append(f"{folder}/01.jpg")
         for i, a in enumerate(items, 1):
             note = notes[i - 1] if i <= len(notes) else ""

@@ -73,6 +73,8 @@ def news(items: list[dict], date_label: str, settings: dict, notes: list[str] | 
     if any(a.get("source_note") for a in items):
         extra = [a["source_note"] for a in items if a.get("source_note")][:1] + extra
         head_note = "출처를 밝힌 공공 자료입니다."
+    elif any(a.get("summary") for a in items):
+        head_note = "기사 저작권은 각 언론사에 있습니다."
     else:
         head_note = "기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다."
     lines += ["", head_note, *extra, "",

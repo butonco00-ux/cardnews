@@ -556,7 +556,9 @@ def draw_news_cover(date_label: str, count: int, settings: dict, cover: dict | N
         y += 136
     count_label = (cover.get("count_label") or "헤드라인 {n}건").replace("{n}", str(count))
     d.text((MX, y + 40), f"{date_label}  |  {count_label}", font=font("bold", 44), fill=c["cover_text"])
-    note = cover.get("note") or "기사는 제목과 언론사만 소개하고, 정부 발표가 있는 소식은 보도자료 원문을 함께 실었어요."
+    note = cover.get("note")
+    if note is None:
+        note = "기사는 제목과 언론사만 소개하고, 정부 발표가 있는 소식은 보도자료 원문을 함께 실었어요."
     y = 1010
     for ln in wrap(note, font("medium", 32), BODY_W):
         tdraw(d, (MX, y), ln, font("medium", 32), c["cover_sub"])

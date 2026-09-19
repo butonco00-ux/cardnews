@@ -131,6 +131,8 @@ def check(lines: list[str], article: str) -> str | None:
     """문제 있으면 이유, 없으면 None."""
     if not (3 <= len(lines) <= 8):
         return "문장 수가 맞지 않음"
+    if any(len(ln) > 90 for ln in lines):
+        return "문장이 너무 김"
     src = squash(article)
     for ln in lines:
         s = squash(ln)
@@ -146,16 +148,31 @@ def check(lines: list[str], article: str) -> str | None:
     return None
 
 
-def summarize(item: dict) -> list[str]:
+NEWS_PROMPT = """너는 부동산 뉴스 카드의 사실 정리 담당이다. 아래 기사에서 **사실만** 뽑아 한국어 기사체 문장 3~5개로 새로 써라.
+규칙:
+- 기사 문장을 그대로 옮기지 말고 새 문장으로 쓴다(8어절 이상 똑같이 쓰지 말 것).
+- 무엇이(정책·제도·시장 변화), 어디(지역), 얼마(금액·비율·건수), 언제(날짜·시행일), 누가(발표 기관) 중심.
+- 기사에 없는 숫자·추측·전망·평가·감정 표현 금지. 계산하지 말고 기사에 있는 숫자만.
+- 전문가 의견·인용은 넣지 말고 사실만.
+- 한 문장은 60자 안쪽. "~했다." "~이다." 체.
+출력은 JSON 한 줄만: {"lines": ["문장1", "문장2", ...]}
+
+기사 제목: {title}
+기사 본문:
+{body}
+"""
+
+
+def summarize(item: dict, prompt_template: str | None = None) -> list[str]:
     body = article_text(item["link"])
     if len(body) < 150:
         raise RuntimeError("기사 본문을 읽지 못함")
-    prompt = PROMPT.replace("{title}", item["title"]).replace("{body}", body)
+    prompt = (prompt_template or PROMPT).replace("{title}", item["title"]).replace("{body}", body)
     why = None
     for attempt in range(2):                      # 기사 문장과 비슷하면 한 번만 다시 쓰게 함
         if attempt:
-            prompt += ("\n\n[다시 쓰기] 앞의 답이 기사 문장을 너무 많이 그대로 썼습니다. "
-                       "사실(이름·날짜·금액)은 그대로 두고 문장 표현은 모두 새로 바꿔 쓰세요.")
+            prompt += ("\n\n[다시 쓰기] 앞의 답이 기사 문장을 너무 많이 그대로 썼거나 문장이 너무 깁니다. "
+                       "사실(이름·날짜·금액)은 그대로 두고 문장 표현은 모두 새로 바꿔 쓰고, 한 문장은 60자 안쪽으로 쓰세요.")
         out = _run_claude(prompt)
         m = re.search(r"\{.*\}", out, re.S)
         lines = json.loads(m.group(0)).get("lines", []) if m else []
@@ -163,12 +180,12 @@ def summarize(item: dict) -> list[str]:
         why = check(lines, body)
         if not why:
             return lines
-        if "비슷" not in why:
+        if "비슷" not in why and "너무 김" not in why:
             break
     raise RuntimeError(why)
 
 
-def fill(items: list[dict]) -> tuple[list[dict], list[str]]:
+def fill(items: list[dict], prompt_template: str | None = None) -> tuple[list[dict], list[str]]:
     """아직 정리 안 된 기사에 summary 채우기. 반환: (새 목록, 알림 문장들)."""
     cost_guard()                                   # 비용 조건이 안 맞으면 Stop
     notes, calls = [], 0
@@ -178,7 +195,7 @@ def fill(items: list[dict]) -> tuple[list[dict], list[str]]:
         if not a.get("summary") and calls < MAX_CALLS_PER_RUN:
             calls += 1
             try:
-                a["summary"] = summarize(a)
+                a["summary"] = summarize(a, prompt_template)
                 a["summary_note"] = "AI 사실 정리"
             except Stop:
                 raise
