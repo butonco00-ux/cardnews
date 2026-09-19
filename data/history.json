@@ -14,6 +14,20 @@
         "인스타 연결 정상(@buto.story), 오늘 게시 0/100"
       ],
       "at": "2026-09-17T22:07:39.222802+09:00"
+    },
+    {
+      "date": "2026-09-19",
+      "set": 1,
+      "kind": "policy",
+      "mode": "연습",
+      "source_urls": [
+        "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782442"
+      ],
+      "problems": [],
+      "notes": [
+        "인스타 연결 확인 실패: 인스타가 거절했어요: API access blocked."
+      ],
+      "at": "2026-09-19T13:54:20.080091+09:00"
     }
   ]
 }
