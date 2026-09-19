@@ -428,24 +428,20 @@ def draw_cover(meta: dict, settings: dict) -> Image.Image:
     x = MX
     _tag(d, c, settings, x, 110, meta.get("tag", "정책"), 32, cover=True)
 
-    # 표지 제목은 피드에서도 잘 보이게 크게(2026-09-20 사용자 요청: 86 → 최대 128)
-    f, lines, size = _fit_lines(meta["title"], "extrabold", range(128, 79, -4), BODY_W, 4)
-    y = _title_lines(d, c, settings, x, 250, lines, f, size, int(size * 1.26), c["cover_text"])
+    # 기사·보도자료 제목 표지는 원래 크기(2026-09-20 사용자 요청). 큰 제목은 뉴스·법령 표지만.
+    f, lines, size = _fit_lines(meta["title"], "extrabold", range(86, 55, -4), BODY_W, 3)
+    y = _title_lines(d, c, settings, x, 300, lines, f, size, int(size * 1.32), c["cover_text"])
 
     y += 30
-    fs = font("medium", 38)
-    stop = 1000 if meta.get("badge") else 1060          # 아래 발표처 줄과 겹치지 않게
+    fs = font("medium", 36)
     for sub in meta.get("subtitles", [])[:3]:
-        sub_lines = wrap(sub, fs, BODY_W - 40)
-        if y + len(sub_lines) * 56 > stop:
-            break
-        for ln in sub_lines:
+        for ln in wrap(sub, fs, BODY_W - 40):
             tdraw(d, (x, y), ln, fs, c["cover_sub"])
-            y += 56
+            y += 54
         y += 10
 
     if meta.get("badge"):
-        _pill(d, x, max(960, min(y + 10, 1000)), meta["badge"], font("bold", 32), c["badge"], c["badge_text"])
+        _pill(d, x, 960, meta["badge"], font("bold", 32), c["badge"], c["badge_text"])
 
     fd = font("bold", 44)
     tdraw(d, (x, 1090), f"{meta.get('dept', '')}  |  {meta.get('date_label', '')}", fd, c["cover_text"])
