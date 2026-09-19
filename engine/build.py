@@ -29,7 +29,9 @@ def _style_settings(key: str, settings: dict) -> dict:
         return settings
     colors = dict(BUTO_COLORS)
     colors.update(settings.get("style2_colors") or {})
-    return dict(settings, colors=colors, variant="buto")
+    finish = {"editorial": True, "mark": "under"}      # 2026-09-19 사용자 선택: A. 에디토리얼
+    finish.update(settings.get("style2_finish") or {})
+    return dict(settings, colors=colors, variant="buto", finish=finish)
 
 
 def _styles(settings: dict) -> list[str]:

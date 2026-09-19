@@ -295,10 +295,46 @@ def _pill(d: ImageDraw.ImageDraw, x: int, y: int, text: str, f, fill, fg, outlin
     return int(x + tw + f.size * 1.4)
 
 
+def _fin(settings: dict) -> dict:
+    """스타일 2 마감 옵션(settings["finish"]): editorial(얇은 선·라벨), mark("box"|"under"), cover_dark."""
+    return settings.get("finish") or {} if _buto(settings) else {}
+
+
+def _mark(d, c, settings: dict, x: float, y: float, w: float, size: float) -> None:
+    """형광펜. under 이면 글자 아래쪽 절반만 칠해 더 단정하게."""
+    if _fin(settings).get("cover_dark") and c.get("bg") == c.get("dark_bg", "#171717"):
+        # 어두운 표지: 형광펜 대신 글자 아래 노란 밑줄(흰 글자가 잘 읽히게)
+        d.rectangle((x, y + size * 1.14, x + w, y + size * 1.14 + max(5, size // 12)), fill=c["mark"])
+    elif _fin(settings).get("mark") == "under":
+        d.rectangle((x - 4, y + size * 0.66, x + w + 4, y + size * 1.16), fill=c["mark"])
+    else:
+        d.rectangle((x - 6, y + size * 0.1, x + w + 6, y + size * 1.22), fill=c["mark"])
+
+
+def _dark_cover(c: dict, settings: dict) -> dict:
+    """표지만 어둡게(다크 표지 옵션)."""
+    if not _fin(settings).get("cover_dark"):
+        return c
+    c = dict(c)
+    c["dark_bg"] = c.get("dark_bg", "#171717")
+    c.update(bg=c["dark_bg"], cover_text="#F3F0EA", cover_sub="#B9B3A8", text="#F3F0EA",
+             sub="#9D978D", line="#3A3835", primary="#F3F0EA", on_primary="#171717")
+    return c
+
+
 def _tag(d, c, settings: dict, x: int, y: int, text: str, size: int, cover: bool) -> None:
     """분야 태그. 스타일 1은 둥근 알약, 스타일 2는 검정 네모 상자."""
     f = font("bold", size)
-    if _buto(settings):
+    if _buto(settings) and _fin(settings).get("editorial"):
+        # 잡지식 라벨: 글자 사이를 넓힌 굵은 글씨 + 가는 선
+        fl = font("bold", int(size * 1.1))
+        xx = x
+        for ch in text:
+            tdraw(d, (xx, y + size * 0.35), ch, fl, c["text"] if not cover else c["cover_text"])
+            xx += tlen(ch, fl) + size * 0.22
+        yy = y + size * 0.35 + fl.size * 0.62
+        d.rectangle((xx + 16, yy, xx + 16 + 110, yy + 2), fill=c["cover_text"] if cover else c["text"])
+    elif _buto(settings):
         _pill(d, x, y, text, f, c["primary"], c["on_primary"])   # 1번과 같은 둥근 모양, 검정 바탕
     elif cover:
         _pill(d, x, y, text, f, None, c["cover_text"], outline=c["cover_text"])
@@ -313,7 +349,7 @@ def _title_lines(d, c, settings: dict, x: int, y: int, lines: list[str], f, size
         mark = next((i for i, ln in enumerate(lines) if any(ch.isdigit() for ch in ln)), 0)
     for i, ln in enumerate(lines):
         if i == mark:
-            d.rectangle((x - 6, y + size * 0.1, x + tlen(ln, f) + 6, y + size * 1.22), fill=c["mark"])
+            _mark(d, c, settings, x, y, tlen(ln, f), size)
         tdraw(d, (x, y), ln, f, color)
         y += lh
     return y
@@ -324,12 +360,14 @@ BUTO_FOOTER_Y = 1222
 
 def _buto_footer(d, c, settings: dict, page: int | None, total: int | None, source_short: str) -> None:
     fl = font("light", 28)
+    ed = _fin(settings).get("editorial")
     if source_short:
         tdraw(d, (MX, BUTO_FOOTER_Y - 48), source_short, fl, c["sub"])
     if page and total:
-        label = f"{page}/{total}"
-        tdraw(d, (W - 64 - tlen(label, fl), BUTO_FOOTER_Y - 48), label, fl, c["sub"])
-    d.rectangle((0, BUTO_FOOTER_Y, W, BUTO_FOOTER_Y + 2), fill=c["line"])
+        label = f"{page:02d} / {total:02d}" if ed else f"{page}/{total}"
+        fp = font("medium", 26) if ed else fl
+        tdraw(d, (W - 64 - tlen(label, fp), BUTO_FOOTER_Y - 48), label, fp, c["sub"])
+    d.rectangle((0, BUTO_FOOTER_Y, W, BUTO_FOOTER_Y + (1 if ed else 2)), fill=c["line"])
     brand = settings.get("brand_name") or settings.get("account_name") or ""
     right = W - 64
     if brand:
@@ -374,6 +412,8 @@ def save(img: Image.Image, path: Path) -> None:
 def draw_cover(meta: dict, settings: dict) -> Image.Image:
     c = colors_from(settings)
     buto = _buto(settings)
+    if buto:
+        c = _dark_cover(c, settings)
     img, d = _new(c["bg"] if buto else c["primary"])
     x = MX
     _tag(d, c, settings, x, 110, meta.get("tag", "정책"), 32, cover=True)
@@ -415,6 +455,8 @@ def draw_body(items: list[Item], meta: dict, settings: dict, page: int, total: i
             title_line = title_line[:-1]
         title_line += "…"
     tdraw(d, (MX, 175), title_line, ft, c["sub"])
+    if _fin(settings).get("editorial"):
+        d.rectangle((MX, 226, W - MX, 227), fill=c["line"])
 
     y = BODY_TOP
     for i, it in enumerate(items):
@@ -485,6 +527,8 @@ def _office_rows(d, c, settings: dict, y: int) -> int:
 def draw_news_cover(date_label: str, count: int, settings: dict, cover: dict | None = None) -> Image.Image:
     c = colors_from(settings)
     buto = _buto(settings)
+    if buto:
+        c = _dark_cover(c, settings)
     img, d = _new(c["bg"] if buto else c["primary"])
     cover = cover or {}
     _tag(d, c, settings, MX, 110, cover.get("tag", "뉴스"), 32, cover=True)
@@ -492,7 +536,7 @@ def draw_news_cover(date_label: str, count: int, settings: dict, cover: dict | N
     y = 340
     for i, ln in enumerate(cover.get("lines") or ("오늘의", "부동산 뉴스")):
         if buto and i == 1:
-            d.rectangle((MX - 6, y + 104 * 0.1, MX + tlen(ln, f) + 6, y + 104 * 1.22), fill=c["mark"])
+            _mark(d, c, settings, MX, y, tlen(ln, f), 104)
         tdraw(d, (MX, y), ln, f, c["cover_text"])
         y += 136
     count_label = (cover.get("count_label") or "헤드라인 {n}건").replace("{n}", str(count))
