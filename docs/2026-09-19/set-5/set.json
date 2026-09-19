@@ -1,0 +1,68 @@
+{
+  "kind": "star",
+  "date": "2026-09-19",
+  "set": 5,
+  "tag": "스타",
+  "title": "스타 부동산 소식",
+  "date_label": "2026.09.19",
+  "news_items": [
+    {
+      "title": "\"더 떨어질까봐…\" 강남 빌딩 10억 깎아 급매 후 쪽박 친 배우",
+      "link": "https://realty.chosun.com/site/data/html_dir/2026/09/18/2026091802065.html",
+      "naver_link": "https://realty.chosun.com/site/data/html_dir/2026/09/18/2026091802065.html",
+      "press": "조선일보",
+      "published": "2026-09-19T06:02:00+09:00",
+      "date_label": "2026.09.19 06:02"
+    },
+    {
+      "title": "‘연 매출 480억’ 이영혜 대표, 건물주 서장훈도 놀란 400평 사옥 “땅...",
+      "link": "https://www.tenasia.co.kr/article/2026091696404",
+      "naver_link": "https://m.entertain.naver.com/article/312/0000776431",
+      "press": "텐아시아",
+      "published": "2026-09-17T06:32:00+09:00",
+      "date_label": "2026.09.17 06:32"
+    },
+    {
+      "title": "얼마나 벌었으면…아이돌 공연 암표 팔아 '아파트 턱'",
+      "link": "https://news.jtbc.co.kr/article/NB12318658?influxDiv=NAVER",
+      "naver_link": "https://n.news.naver.com/mnews/article/437/0000511438?sid=102",
+      "press": "JTBC",
+      "published": "2026-09-16T19:36:00+09:00",
+      "date_label": "2026.09.16 19:36"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg"
+    ]
+  },
+  "caption": "스타 부동산 소식 (2026.09.19)\n\n1. \"더 떨어질까봐…\" 강남 빌딩 10억 깎아 급매 후 쪽박 친 배우 — 조선일보\n   https://realty.chosun.com/site/data/html_dir/2026/09/18/2026091802065.html\n2. ‘연 매출 480억’ 이영혜 대표, 건물주 서장훈도 놀란 400평 사옥 “땅... — 텐아시아\n   https://www.tenasia.co.kr/article/2026091696404\n3. 얼마나 벌었으면…아이돌 공연 암표 팔아 '아파트 턱' — JTBC\n   https://news.jtbc.co.kr/article/NB12318658?influxDiv=NAVER\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사 #연예인부동산",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://realty.chosun.com/site/data/html_dir/2026/09/18/2026091802065.html",
+    "https://www.tenasia.co.kr/article/2026091696404",
+    "https://news.jtbc.co.kr/article/NB12318658?influxDiv=NAVER"
+  ],
+  "created_at": "2026-09-19T15:13:15.280116+09:00"
+}
