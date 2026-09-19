@@ -602,9 +602,7 @@ def draw_news_item(n: int, item: dict, note: str, settings: dict, page: int, tot
         for ln in lines_out:
             _draw_highlighted(d, (MX, y), ln, fs, c.get("text2", c["text"]) if _buto(settings) else c["text"], c["accent"])
             y += 54
-        tdraw(d, (MX, y + 10), f"{item.get('summary_note', 'AI 사실 정리')} · 기사 원문은 캡션 링크",
-              font("regular", 24), c["sub"])
-        y += 60
+        y += 20
 
     if gov and not summary:
         from .splitter import _sentences

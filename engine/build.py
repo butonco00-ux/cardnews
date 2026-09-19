@@ -120,7 +120,7 @@ def build_policy(rel: dict, tag: str, day: str, set_no: int, settings: dict, kin
 
 
 STAR_LICENSE = {"type": 0, "usable": True, "text_only": True,
-                "label": "AI 사실 정리 · 기사 저작권은 언론사", "reason": None}
+                "label": "", "reason": None}
 
 
 def build_star_article(item: dict, day: str, set_no: int, settings: dict) -> dict:

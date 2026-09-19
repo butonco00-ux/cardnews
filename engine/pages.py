@@ -116,7 +116,8 @@ def _set_block(meta: dict, day: str, h: dict, info: dict, version: str) -> str:
             chips.append(("warn", f"{embargo.describe(emb)}부터 올릴 수 있어요"))
     if meta.get("license"):
         lic = meta["license"]
-        chips.append(("ok" if lic.get("usable") else "bad", lic.get("label", "")))
+        if lic.get("label") or not lic.get("usable"):
+            chips.append(("ok" if lic.get("usable") else "bad", lic.get("label", "")))
     if meta.get("badge"):
         chips.append(("warn", meta["badge"]))
     if meta.get("omitted"):
