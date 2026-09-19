@@ -27,7 +27,7 @@
   },
   "badge": "",
   "source_file": "260918(보도자료) 주택인 줄 알았는데 숙박시설 부동산 불법광고 1만여 건 적발(부동산소비자보호기획단).pdf",
-  "created_at": "2026-09-19T14:37:01.415525+09:00",
+  "created_at": "2026-09-19T14:38:06.342031+09:00",
   "source_label": "출처: 국토교통부 보도자료",
   "ok": true,
   "problems": [],
@@ -39,7 +39,8 @@
     "cards/05.jpg",
     "cards/06.jpg",
     "cards/07.jpg",
-    "cards/08.jpg"
+    "cards/08.jpg",
+    "cards/09.jpg"
   ],
   "styles": {
     "1": [
@@ -50,7 +51,8 @@
       "cards/05.jpg",
       "cards/06.jpg",
       "cards/07.jpg",
-      "cards/08.jpg"
+      "cards/08.jpg",
+      "cards/09.jpg"
     ],
     "2": [
       "cards-buto/01.jpg",
@@ -60,7 +62,8 @@
       "cards-buto/05.jpg",
       "cards-buto/06.jpg",
       "cards-buto/07.jpg",
-      "cards-buto/08.jpg"
+      "cards-buto/08.jpg",
+      "cards-buto/09.jpg"
     ]
   },
   "card_items": [
@@ -134,6 +137,14 @@
         "cont": false
       },
       {
+        "level": "table",
+        "marker": "",
+        "text": "⟦표5⟧",
+        "cont": false
+      }
+    ],
+    [
+      {
         "level": 0,
         "marker": "□",
         "text": "국토교통부는 이러한 위반 사례로 인한 피해를 예방하기 위해 거래 계약 전에,",
@@ -150,15 +161,15 @@
         "marker": "ㅇ",
         "text": "관할 지방정부, 브이월드(홈페이지 www.vworld.kr) 부동산중개업 조회 등을 통해 광고 게시자가 개업 공인중개사인지 여부를 확인하고,",
         "cont": false
-      }
-    ],
-    [
+      },
       {
         "level": 1,
         "marker": "ㅇ",
         "text": "주변 시세보다 지나치게 높거나 낮은 가격으로 광고된 매물은 허위·과장 광고일 가능성이 높으므로 각별한 주의를 기울여 줄 것을 당부했다.",
         "cont": false
-      },
+      }
+    ],
+    [
       {
         "level": 0,
         "marker": "□",
@@ -226,6 +237,10 @@
     },
     {
       "text": "⟦표4⟧",
+      "used": "all"
+    },
+    {
+      "text": "⟦표5⟧",
       "used": "all"
     },
     {
