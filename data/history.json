@@ -74,6 +74,20 @@
         "인스타 연결 정상(@buto.story), 오늘 게시 0/100"
       ],
       "at": "2026-09-19T14:28:15.793905+09:00"
+    },
+    {
+      "date": "2026-09-19",
+      "set": 1,
+      "kind": "policy",
+      "mode": "실제",
+      "source_urls": [
+        "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782442"
+      ],
+      "problems": [],
+      "notes": [],
+      "media_id": "17947222899322283",
+      "permalink": "https://www.instagram.com/p/DddSJy2m2jA/",
+      "at": "2026-09-19T14:41:55.187895+09:00"
     }
   ]
 }
