@@ -67,7 +67,6 @@ def build_policy(rel: dict, tag: str, day: str, set_no: int, settings: dict, kin
         "embargo": rel["embargo"], "badge": badge, "source_file": rel.get("source_file", ""),
         "created_at": now_kst().isoformat(),
         "source_label": (f"출처: {rel['dept']} 보도자료" if kind == "policy"
-                         else f"출처: {rel['dept']} 기사 · AI 사실 정리" if kind == "star"
                          else f"출처: {rel['dept']}"),
     }
     if rel.get("star_item"):
