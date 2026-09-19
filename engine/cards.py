@@ -455,8 +455,6 @@ def draw_body(items: list[Item], meta: dict, settings: dict, page: int, total: i
             title_line = title_line[:-1]
         title_line += "…"
     tdraw(d, (MX, 175), title_line, ft, c["sub"])
-    if _fin(settings).get("editorial"):
-        d.rectangle((MX, 226, W - MX, 227), fill=c["line"])
 
     y = BODY_TOP
     for i, it in enumerate(items):
