@@ -60,25 +60,38 @@ def too_wide(text: str) -> bool:
 
 # ------------------------------------------------------------ 배치 계산
 
-def _widths(rows, total: float) -> list[float]:
+def _widths(rows, total: float, font_fn=None) -> list[float]:
+    """칸 너비: 각 칸의 '끊으면 안 되는 가장 긴 덩어리'(숫자·짧은 단어·머리글)는 한 줄에 들어가게 하고,
+    남는 폭은 글자 양에 비례해 나눈다."""
     ncol = max(len(r) for r in rows)
+    f_head = font_fn("semibold", HEAD_SIZE) if font_fn else None
+    f_cell = font_fn("regular", CELL_SIZE) if font_fn else None
     need = [0.0] * ncol
-    for r in rows:
+    minw = [0.0] * ncol
+    for ri, r in enumerate(rows):
+        f = f_head if ri == 0 else f_cell
         for i, c in enumerate(r):
-            need[i] = max(need[i], min(len(c or ""), 40))
-    need = [max(n, 4) for n in need]
+            c = c or ""
+            need[i] = max(need[i], min(len(c), 40))
+            if f is None:
+                continue
+            short = c if (ri == 0 and len(c) <= 6) else ""
+            tokens = [short] + re.findall(r"[\d,.%]+[가-힣%]*|\S{1,5}", c) if c else [short]
+            longest = max((f.getlength(t) for t in tokens if t), default=0)
+            minw[i] = max(minw[i], longest + PAD_X * 2 + 2)
+    base = sum(minw)
+    if base >= total:                      # 최소 너비만으로도 꽉 차면 비율대로 줄임
+        return [m * total / base for m in minw] if base else [total / ncol] * ncol
+    need = [max(n, 1) for n in need]
+    rest = total - base
     s = sum(need)
-    w = [total * n / s for n in need]
-    mn = total * 0.12
-    w = [max(x, mn) for x in w]
-    s2 = sum(w)
-    return [x * total / s2 for x in w]
+    return [m + rest * n / s for m, n in zip(minw, need)]
 
 
 def _grid_rows(rows, a, b, width, font_fn, wrap):
     head_f = font_fn("semibold", HEAD_SIZE)
     cell_f = font_fn("regular", CELL_SIZE)
-    widths = _widths(rows, width)
+    widths = _widths(rows, width, font_fn)
     out = []
     for idx in [0] + list(range(a, b + 1)):
         r = rows[idx]

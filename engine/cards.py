@@ -85,12 +85,18 @@ def _fallback(size: int):
     return None
 
 
+# 글꼴에 없고 대신 그릴 글꼴도 없는 기호 → 비슷한 모양으로만 그림
+DRAW_AS = {"▸": "▶", "▹": "▷", "►": "▶", "▪": "■", "▫": "□", "‣": "▶"}
+
+
 def _runs(text: str, f):
     """(글자들, 그릴 글꼴, 그릴 글자) 조각으로 나눈다."""
     out = []
     for ch in text:
         if _has(ch):
             item = (f, ch)
+        elif ch in DRAW_AS and _has(DRAW_AS[ch]):
+            item = (f, DRAW_AS[ch])
         else:
             alt = unicodedata.normalize("NFKC", ch)
             if alt != ch and all(_has(a) for a in alt):

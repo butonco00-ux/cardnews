@@ -36,8 +36,8 @@ def pdf_text(data: bytes, with_info: bool = False):
                 if t.row_count < 2 or t.col_count < 2:
                     continue
                 rows = [[_clean_cell(c) for c in r] for r in t.extract()]
-                flat = " ".join(" ".join(r) for r in rows)
-                if any(w in flat for w in CONTACT_WORDS):
+                labels = {re.sub(r"\s+", "", c) for r in rows for c in r if c}
+                if any(re.sub(r"\s+", "", w) in labels for w in CONTACT_WORDS):
                     boxes.append((pymupdf.Rect(t.bbox), None))
                     tables_removed += 1
                     continue
