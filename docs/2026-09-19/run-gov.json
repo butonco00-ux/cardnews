@@ -1,0 +1,110 @@
+{
+  "date": "2026-09-19",
+  "finished_at": "2026-09-19T13:30:58.281202+09:00",
+  "messages": [
+    {
+      "level": "ok",
+      "text": "정책·세금 카드 7장을 만들었어요: \"주택인 줄 알았는데 숙박시설\" 부동산 불법 광고 1만여 건 적발"
+    }
+  ],
+  "candidates": [
+    {
+      "title": "\"주택인 줄 알았는데 숙박시설\" 부동산 불법 광고 1만여 건 적발",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782442",
+      "score": 7,
+      "status": "선택됨 → 세트 1"
+    },
+    {
+      "title": "가덕도신공항 사업추진협의체 출범, 정부-지방정부-사업시행자 협력 체계 가동",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782432",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[설명] 장교숙소5단지 파크골프장 철저한 보완 공사 및 운영준비를 통해 조속히 개장할 예정입니다",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782422",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "유류세 인하 연장, 추석연휴 고속도로 유류가격 및 전기차 충전요금 할인 등 민생안정에 총력",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782385",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "이형일 1차관, 공릉동 도깨비시장 현장방문",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782427",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "비상경제본부 회의 겸 경제관계장관회의 개최",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782356",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "금융정보분석원, 타지키스탄 국립은행과 정보교환 협력을 위한 양해각서(MOU) 체결",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782429",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "일일이 누리집 안 찾아도 된다 국가 기록·역사 자료, 인공지능으로 한곳에서 검색",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782460",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "한성숙 총리, \"철저한 준비와 반복적인 훈련이 국민의 생명과 안전 지키는 길\"",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782434",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "아이들의 안전한 학교생활 위해, 개학기 학교 주변 안전관리 현장 점검",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782426",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "8월 호우 피해 이재민, 추석 전 주거 안정 총력 지원",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782408",
+      "score": 6,
+      "status": "후보"
+    },
+    {
+      "title": "환희의 순간부터 변화한 도시와 일상까지 기록으로 다시 읽는 86·88 국제스포츠대회",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782410",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "따뜻한·안전한 추석대비 민생안정대책 논의, 2026년 제7회 중앙지방정책협의회 개최",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782394",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "8.28.~9.1. 호우 피해 특별재난지역 선포",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782374",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    }
+  ]
+}
