@@ -13,6 +13,11 @@ on:
       - "docs/*/run-law.json"
       - "docs/*/run-easylaw.json"
       - "docs/*/set-5/**"
+      - "docs/*/set-6/**"
+      - "docs/*/set-7/**"
+      - "docs/*/set-8/**"
+      - "docs/*/set-9/**"
+      - "docs/*/star-items.json"
       - "docs/*/run-star.json"
   workflow_dispatch:
 

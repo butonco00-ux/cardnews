@@ -128,7 +128,8 @@ def main() -> int:
         for m in star.get("messages", []):
             log(f"{m['level']}: {m['text']}")
 
-    ok = push_paths([f"docs/{day}/set-1", f"docs/{day}/set-3", f"docs/{day}/set-4", f"docs/{day}/set-5",
+    ok = push_paths([f"docs/{day}/set-1", f"docs/{day}/set-3", f"docs/{day}/set-4",
+                     *[f"docs/{day}/set-{n}" for n in range(5, 10)], f"docs/{day}/star-items.json",
                      f"docs/{day}/run-gov.json", f"docs/{day}/run-law.json", f"docs/{day}/run-easylaw.json",
                      f"docs/{day}/run-star.json", f"docs/{day}/releases.json"],
                     f"보도자료·법령·생활법령 카드, 스타 부동산 정리 {day} (노트북)")

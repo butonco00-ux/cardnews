@@ -46,6 +46,17 @@ def policy(meta: dict, first_paragraph: str, settings: dict) -> str:
     return text[:MAX_CHARS]
 
 
+def star(meta: dict, item: dict, settings: dict) -> str:
+    """스타 부동산(기사 1건): 제목 + AI 사실 정리 + 출처(언론사·기사 링크) + 해시태그."""
+    head = f"[스타] {meta['title']}"
+    body = " ".join(item.get("summary") or [])
+    source = "\n".join([f"출처: {item['press']} 「{item['title']}」({item.get('date_label', '')})",
+                         item["link"],
+                         "기사 속 사실을 AI가 새 문장으로 정리했어요. 기사 저작권은 언론사에 있습니다."])
+    tags = _tags(settings, ["연예인부동산"])
+    return "\n\n".join(p for p in [head, body, source, tags] if p)[:MAX_CHARS]
+
+
 def news(items: list[dict], date_label: str, settings: dict, notes: list[str] | None = None,
          title: str | None = None, hashtag: str | None = None) -> str:
     lines = [f"{title or '오늘의 부동산 뉴스'} ({date_label})", ""]

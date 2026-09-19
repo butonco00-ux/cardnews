@@ -66,8 +66,12 @@ def build_policy(rel: dict, tag: str, day: str, set_no: int, settings: dict, kin
         "license": rel["license"], "license_label": rel["license"]["label"],
         "embargo": rel["embargo"], "badge": badge, "source_file": rel.get("source_file", ""),
         "created_at": now_kst().isoformat(),
-        "source_label": f"출처: {rel['dept']} 보도자료" if kind == "policy" else f"출처: {rel['dept']}",
+        "source_label": (f"출처: {rel['dept']} 보도자료" if kind == "policy"
+                         else f"출처: {rel['dept']} 기사 · AI 사실 정리" if kind == "star"
+                         else f"출처: {rel['dept']}"),
     }
+    if rel.get("star_item"):
+        meta["news_items"] = [rel["star_item"]]
     out = set_dir(day, set_no)
     if out.exists():
         shutil.rmtree(out)
@@ -93,7 +97,8 @@ def build_policy(rel: dict, tag: str, day: str, set_no: int, settings: dict, kin
     files = styles.get("1") or next(iter(styles.values()))
 
     first_para = next((it.text for it in parsed.items if it.level in (0, 1)), "")
-    cap = caption.policy(meta, first_para, settings)
+    cap = (caption.star(meta, rel["star_item"], settings) if rel.get("star_item")
+           else caption.policy(meta, first_para, settings))
 
     used = [squash(it.text) for c in body_cards for it in c if it.level != "system"]
     original = []
@@ -113,6 +118,22 @@ def build_policy(rel: dict, tag: str, day: str, set_no: int, settings: dict, kin
     (out / "caption.txt").write_text(cap, encoding="utf-8")
     write_json(out / "set.json", meta)
     return meta
+
+
+STAR_LICENSE = {"type": 0, "usable": True, "text_only": True,
+                "label": "AI 사실 정리 · 기사 저작권은 언론사", "reason": None}
+
+
+def build_star_article(item: dict, day: str, set_no: int, settings: dict) -> dict:
+    """스타 부동산 기사 1건 → 정책 카드와 같은 모양(표지·○ 문단·출처). 글은 AI 사실 정리만."""
+    rel = {
+        "news_id": item["link"], "url": item["link"], "title": item["title"], "dept": item["press"],
+        "list_date": (item.get("published") or day)[:10],
+        "license": dict(STAR_LICENSE), "embargo": None, "source_file": "",
+        "text": "\n".join("○ " + s for s in item["summary"][:6]),   # 본문 1장에 맞게(캡션엔 전체)
+        "star_item": item,
+    }
+    return build_policy(rel, "스타", day, set_no, settings, kind="star")
 
 
 def _covered(s: str, used: list[str]) -> bool:
