@@ -51,8 +51,7 @@ def star(meta: dict, item: dict, settings: dict) -> str:
     head = f"[스타] {meta['title']}"
     body = " ".join(item.get("summary") or [])
     source = "\n".join([f"출처: {item['press']} 「{item['title']}」({item.get('date_label', '')})",
-                         item["link"],
-                         "기사 속 사실을 AI가 새 문장으로 정리했어요. 기사 저작권은 언론사에 있습니다."])
+                         item["link"]])
     tags = _tags(settings, ["연예인부동산"])
     return "\n\n".join(p for p in [head, body, source, tags] if p)[:MAX_CHARS]
 
@@ -74,8 +73,6 @@ def news(items: list[dict], date_label: str, settings: dict, notes: list[str] | 
     if any(a.get("source_note") for a in items):
         extra = [a["source_note"] for a in items if a.get("source_note")][:1] + extra
         head_note = "출처를 밝힌 공공 자료입니다."
-    elif any(a.get("summary") for a in items):
-        head_note = "기사 속 사실을 AI가 새 문장으로 정리했어요. 자세한 내용은 기사 원문 링크에서 확인하세요. 기사 저작권은 각 언론사에 있습니다."
     else:
         head_note = "기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다."
     lines += ["", head_note, *extra, "",

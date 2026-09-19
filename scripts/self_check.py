@@ -300,8 +300,8 @@ _it = {"title": "배우 홍길동, 역삼동 빌딩 매각", "press": "테스트
        "summary": ["홍길동은 2021년 역삼동 빌딩을 50억원에 샀다.", "올해 80억원에 매각했다.", "법인 명의 거래였다."]}
 _sm = _B.build_star_article(_it, "2026-01-02", 5, settings)
 check(_sm.get("ok") and _sm["kind"] == "star" and len(_sm["cards"]) == 3, "스타 기사 1건 = 정책 카드 모양 세트(표지·본문·출처)")
-check("https://example.com/a1" in _sm["caption"] and "AI" in _sm["caption"] and "#연예인부동산" in _sm["caption"],
-      "스타 캡션: 기사 링크·AI 정리 안내·해시태그")
+check("https://example.com/a1" in _sm["caption"] and "기사 속 사실" not in _sm["caption"] and "#연예인부동산" in _sm["caption"],
+      "스타 캡션: 기사 링크·해시태그(안내 문장 없음)")
 
 print("10. 사용자 데이터 보호")
 check(not (ROOT / "data" / "history.json").exists() or os.environ["CARDNEWS_DATA"] != str(ROOT / "data"), "검사는 임시 폴더만 사용")

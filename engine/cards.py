@@ -507,12 +507,6 @@ def draw_source(meta: dict, settings: dict, page: int, total: int) -> Image.Imag
     for ln in wrap(src, fb, BODY_W):
         tdraw(d, (MX, y), ln, fb, c["text"])
         y += 56
-    if meta.get("kind") == "star":
-        y += 24
-        fn = font("regular", 30)
-        for ln in wrap("기사 속 사실을 AI가 새 문장으로 정리했어요. 기사 원문 링크는 캡션에 있어요.", fn, BODY_W):
-            tdraw(d, (MX, y), ln, fn, c["sub"])
-            y += 46
     # 정책브리핑 주소·공공누리·면책 문구는 카드에서 빼고 캡션에만 둔다(사용자 요청)
     _office_rows(d, c, settings, max(y + 60, 760))
     _footer(d, c, settings, page, total, "")
