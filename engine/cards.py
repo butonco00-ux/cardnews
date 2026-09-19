@@ -428,19 +428,24 @@ def draw_cover(meta: dict, settings: dict) -> Image.Image:
     x = MX
     _tag(d, c, settings, x, 110, meta.get("tag", "정책"), 32, cover=True)
 
-    f, lines, size = _fit_lines(meta["title"], "extrabold", range(86, 55, -4), BODY_W, 3)
-    y = _title_lines(d, c, settings, x, 300, lines, f, size, int(size * 1.32), c["cover_text"])
+    # 표지 제목은 피드에서도 잘 보이게 크게(2026-09-20 사용자 요청: 86 → 최대 128)
+    f, lines, size = _fit_lines(meta["title"], "extrabold", range(128, 79, -4), BODY_W, 4)
+    y = _title_lines(d, c, settings, x, 250, lines, f, size, int(size * 1.26), c["cover_text"])
 
     y += 30
-    fs = font("medium", 36)
+    fs = font("medium", 38)
+    stop = 1000 if meta.get("badge") else 1060          # 아래 발표처 줄과 겹치지 않게
     for sub in meta.get("subtitles", [])[:3]:
-        for ln in wrap(sub, fs, BODY_W - 40):
+        sub_lines = wrap(sub, fs, BODY_W - 40)
+        if y + len(sub_lines) * 56 > stop:
+            break
+        for ln in sub_lines:
             tdraw(d, (x, y), ln, fs, c["cover_sub"])
-            y += 54
+            y += 56
         y += 10
 
     if meta.get("badge"):
-        _pill(d, x, 960, meta["badge"], font("bold", 32), c["badge"], c["badge_text"])
+        _pill(d, x, max(960, min(y + 10, 1000)), meta["badge"], font("bold", 32), c["badge"], c["badge_text"])
 
     fd = font("bold", 44)
     tdraw(d, (x, 1090), f"{meta.get('dept', '')}  |  {meta.get('date_label', '')}", fd, c["cover_text"])
@@ -547,13 +552,13 @@ def draw_news_cover(date_label: str, count: int, settings: dict, cover: dict | N
     img, d = _new(c["bg"] if buto else c["primary"])
     cover = cover or {}
     _tag(d, c, settings, MX, 110, cover.get("tag", "뉴스"), 32, cover=True)
-    f = font("extrabold", 104)
-    y = 340
+    f = font("extrabold", 140)                  # 피드에서 잘 보이게(104 → 140)
+    y = 300
     for i, ln in enumerate(cover.get("lines") or ("오늘의", "부동산 뉴스")):
         if buto and i == 1:
-            _mark(d, c, settings, MX, y, tlen(ln, f), 104)
+            _mark(d, c, settings, MX, y, tlen(ln, f), 140)
         tdraw(d, (MX, y), ln, f, c["cover_text"])
-        y += 136
+        y += 176
     count_label = (cover.get("count_label") or "헤드라인 {n}건").replace("{n}", str(count))
     d.text((MX, y + 40), f"{date_label}  |  {count_label}", font=font("bold", 44), fill=c["cover_text"])
     note = cover.get("note")
