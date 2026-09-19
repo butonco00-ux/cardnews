@@ -171,8 +171,6 @@ def draw(d, text: str, x: int, y: int, width: int, c: dict, font_fn, wrap, tdraw
     yy = y
     d.rectangle((x, yy, x + width, yy + 2), fill=ink)                  # 표 위 굵은 선
     for idx, f, lines, h in rs:
-        if idx == 0:
-            d.rectangle((x, yy + 2, x + width, yy + h), fill=c.get("box", "#FFFFFF"))
         xx = x
         for ls, w in zip(lines, widths):
             ty = yy + PAD_Y

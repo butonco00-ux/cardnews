@@ -115,7 +115,7 @@ def post(day: str, set_no: int, mode: str, confirm: str, caption_override: str, 
     if meta["kind"] == "policy" and "출처" not in cap:
         # 직접 쓴 캡션에도 출처는 꼭 붙인다
         auto = meta.get("caption", "")
-        i = auto.find("▶ 원문 보기")
+        i = auto.find("출처:")
         cap = cap.rstrip() + "\n\n" + (auto[i:] if i >= 0 else auto)
     problems += caption.check(cap)
 

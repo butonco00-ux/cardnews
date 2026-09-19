@@ -128,7 +128,8 @@ check(set(m.get("styles", {})) == {"1", "2"}, "스타일 1·2 모두 만들어�
 check(len(m["styles"]["1"]) == len(m["styles"]["2"]), "두 스타일의 장 수가 같음")
 check(all(Image.open(folder / f).size == (W, H) for f in m["styles"]["2"]), "스타일 2 카드도 1080×1350")
 check(caption.check(m["caption"]) == [], "캡션 2,200자·해시태그 30개 이내")
-check("출처" in m["caption"] and "공공누리 제1유형" in m["caption"], "캡션에 출처·공공누리 표시")
+check("출처: 국토교통부 보도자료" in m["caption"] and "원문 보기" not in m["caption"] and "상담하세요" not in m["caption"],
+      "캡션: 짧은 출처만(원문 보기·면책 문구 없음)")
 long_cap = caption.policy(dict(m), "가나다라마바사 다. " * 400, settings)
 check(len(long_cap) <= 2200 and "출처" in long_cap, "긴 첫 문단은 줄이고 출처는 유지")
 
@@ -242,7 +243,7 @@ bad_rec = dict(rec, url="https://x/2", license_usable=False)
 write_json(day_dir / "releases.json", {"date": "2026-09-17", "releases": [bad_rec]})
 check(not govlink.attach(news_items, "2026-09-17", settings)[0].get("gov"), "공공누리 제1유형이 아니면 붙이지 않음")
 nm = build.build_news(linked, "2026-09-17", 2, settings)
-check("정책브리핑" in nm["caption"] and "공공누리 제1유형" in nm["caption"], "뉴스 캡션에 정부 발표 출처")
+check("정책브리핑" in nm["caption"] and "상담하세요" not in nm["caption"], "뉴스 캡션에 정부 발표 출처, 면책 문구 없음")
 nm["news_items"][0]["gov"]["embargo"] = {"available_at": "2099-01-01T06:00:00+09:00", "raw": "", "rule": "", "certain": True}
 write_json(day_dir / "set-2" / "set.json", nm)
 check(publish.post("2026-09-17", 2, "연습", "", "") == 1, "붙인 정부 발표가 보도시점 전이면 뉴스 게시도 거부")

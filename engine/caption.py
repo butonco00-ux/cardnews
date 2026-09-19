@@ -23,12 +23,12 @@ def _disclaimer(settings: dict) -> str:
 
 
 def policy(meta: dict, first_paragraph: str, settings: dict) -> str:
+    """캡션: 제목 + 원문 첫 문단 + 짧은 출처 + 해시태그(사용자 요청: 원문 보기 링크·면책 문구 없음)."""
     head = f"[{meta.get('tag', '정책')}] {meta['title']}"
-    source = (f"출처: {meta.get('dept', '')} 보도자료 「{meta['title']}」({meta.get('date_label', '')}), "
-              f"대한민국 정책브리핑 www.korea.kr — {meta.get('license_label', '공공누리 제1유형')}")
-    link = f"▶ 원문 보기: {meta['url']}"
+    kind = meta.get("kind", "policy")
+    source = f"출처: {meta.get('dept', '')} 보도자료" if kind == "policy" else f"출처: {meta.get('dept', '')}"
     tags = _tags(settings, [meta.get("tag", "")])
-    tail = "\n\n".join([link, source, _disclaimer(settings), tags])
+    tail = "\n\n".join([source, tags])
 
     body_sentences = _sentences(first_paragraph) if first_paragraph else []
     while True:
@@ -57,7 +57,7 @@ def news(items: list[dict], date_label: str, settings: dict, notes: list[str] | 
         head_note = "출처를 밝힌 공공 자료입니다."
     else:
         head_note = "기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다."
-    lines += ["", head_note, *extra, _disclaimer(settings), "",
+    lines += ["", head_note, *extra, "",
               _tags(settings, ["부동산뉴스"])]
     return "\n".join(lines)[:MAX_CHARS]
 
