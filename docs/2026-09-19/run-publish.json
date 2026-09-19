@@ -31,7 +31,11 @@
     {
       "level": "ok",
       "text": "[09/20 00:00] 세트 3 실제 게시 완료: https://www.instagram.com/p/DdeSGDJFHnX/"
+    },
+    {
+      "level": "ok",
+      "text": "[09/20 00:02] 세트 4 실제 게시 완료: https://www.instagram.com/p/DdeSQQVlNB5/"
     }
   ],
-  "finished_at": "2026-09-20T00:00:32.512368+09:00"
+  "finished_at": "2026-09-20T00:02:03.168870+09:00"
 }
