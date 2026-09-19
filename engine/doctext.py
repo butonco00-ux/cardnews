@@ -1,7 +1,8 @@
 """보도자료 첨부 문서(PDF, 없으면 HWPX)에서 원문 글자를 뽑는다.
 
-PDF: 위→아래 순서로 읽고, 표(2줄×2칸 이상) 안의 글은 뺀다(표를 글로 풀면 순서가 섞여 뜻이 달라짐).
-뺀 표 개수는 돌려줘서 확인 페이지에 알린다.
+PDF: 위→아래 순서로 읽는다. 표(2줄×2칸 이상)는 본문 글로 풀지 않고(순서가 섞여 뜻이 달라짐)
+그 자리에 "⟦표N⟧" 표시 줄을 넣고, 표의 칸 글자는 따로 돌려준다(카드에 표로 다시 그림).
+담당부서·연락처 표는 버린다.
 """
 from __future__ import annotations
 
@@ -10,23 +11,42 @@ import io
 import re
 import zipfile
 
+TABLE_MARK = "⟦표{n}⟧"
+CONTACT_WORDS = ("담당 부서", "담당부서", "책임자", "담당자", "문의처", "연락처")
+
+
+def _clean_cell(c) -> str:
+    """칸 글자: 줄바꿈만 띄어쓰기로(글자는 그대로)."""
+    return re.sub(r"\s*\n\s*", " ", c or "").strip()
+
 
 def pdf_text(data: bytes, with_info: bool = False):
     import pymupdf
 
     doc = pymupdf.open(stream=data, filetype="pdf")
     out_pages: list[str] = []
+    raw_pages: list[str] = []
+    tables: list[list[list[str]]] = []
     tables_removed = 0
     for page in doc:
-        boxes = []
+        raw_pages.append(page.get_text())
+        boxes = []           # (Rect, 표 번호 또는 None=버림)
         try:
             for t in page.find_tables().tables:
-                if t.row_count >= 2 and t.col_count >= 2:
-                    boxes.append(pymupdf.Rect(t.bbox))
+                if t.row_count < 2 or t.col_count < 2:
+                    continue
+                rows = [[_clean_cell(c) for c in r] for r in t.extract()]
+                flat = " ".join(" ".join(r) for r in rows)
+                if any(w in flat for w in CONTACT_WORDS):
+                    boxes.append((pymupdf.Rect(t.bbox), None))
+                    tables_removed += 1
+                    continue
+                tables.append(rows)
+                boxes.append((pymupdf.Rect(t.bbox), len(tables)))
         except Exception:
             pass
-        tables_removed += len(boxes)
         rows = []
+        placed: set[int] = set()
         d = page.get_text("dict")
         for block in d["blocks"]:
             for line in block.get("lines", []):
@@ -35,21 +55,30 @@ def pdf_text(data: bytes, with_info: bool = False):
                     continue
                 r = pymupdf.Rect(line["bbox"])
                 center = pymupdf.Point((r.x0 + r.x1) / 2, (r.y0 + r.y1) / 2)
-                if any(b.contains(center) for b in boxes):
+                inside = [(b, n) for b, n in boxes if b.contains(center)]
+                if inside:
+                    b, n = inside[0]
+                    if n and n not in placed:           # 표 자리에 표시 줄 하나
+                        placed.add(n)
+                        rows.append((round(b.y0, 0), b.x0, TABLE_MARK.format(n=n)))
                     continue
                 rows.append((round(r.y0, 0), r.x0, text))
+        for b, n in boxes:                              # 글줄이 하나도 안 걸린 표
+            if n and n not in placed:
+                rows.append((round(b.y0, 0), b.x0, TABLE_MARK.format(n=n)))
         rows.sort(key=lambda x: (x[0], x[1]))
-        # 같은 높이(±2pt)에 나뉜 조각은 한 줄로
+        # 같은 높이(±2pt)에 나뉜 조각은 한 줄로(표시 줄은 따로)
         merged: list[list] = []
         for y, x, text in rows:
-            if merged and abs(merged[-1][0] - y) <= 2:
+            if merged and abs(merged[-1][0] - y) <= 2 and "⟦표" not in text and "⟦표" not in merged[-1][2]:
                 merged[-1][2] += text
             else:
                 merged.append([y, x, text])
         out_pages.append("\n".join(m[2] for m in merged))
     doc.close()
     text = "\n".join(out_pages)
-    return (text, {"tables_removed": tables_removed}) if with_info else text
+    info = {"tables_removed": tables_removed, "tables": tables, "raw_text": "\n".join(raw_pages)}
+    return (text, info) if with_info else text
 
 
 def hwpx_text(data: bytes, with_info: bool = False):
@@ -67,4 +96,4 @@ def hwpx_text(data: bytes, with_info: bool = False):
                 line = "".join(re.sub(r"<[^>]+>", "", t) for t in texts)
                 out.append(html.unescape(line))
     text = "\n".join(out)
-    return (text, {"tables_removed": tables}) if with_info else text
+    return (text, {"tables_removed": tables, "tables": [], "raw_text": text}) if with_info else text

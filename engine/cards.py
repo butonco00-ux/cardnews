@@ -129,6 +129,7 @@ STYLES = {
     2: ("regular", 37, 72, "text", 12),
     "note": ("regular", 31, 72, "sub", 10),
     "system": ("medium", 31, 0, "sub", 24),
+    "table": ("regular", 29, 0, "text", 26),     # 표(높이는 tables 모듈이 계산)
 }
 LINE_SPACING = 1.52
 
@@ -209,6 +210,9 @@ def _item_layout(item: Item):
 
 
 def item_height(item: Item, first: bool) -> int:
+    if item.level == "table":
+        from . import tables
+        return (0 if first else STYLES["table"][4]) + tables.height(item.text, BODY_W, font, wrap)
     _, _, _, _, lines, line_h, gap, _ = _item_layout(item)
     return (0 if first else gap) + line_h * len(lines)
 
@@ -458,6 +462,13 @@ def draw_body(items: list[Item], meta: dict, settings: dict, page: int, total: i
 
     y = BODY_TOP
     for i, it in enumerate(items):
+        if it.level == "table":
+            from . import tables
+            if i:
+                y += STYLES["table"][4]
+            y = tables.draw(d, it.text, MX, y, BODY_W, c, font, wrap, tdraw,
+                            _draw_highlighted, _buto(settings))
+            continue
         f, marker, mw, indent, lines, line_h, gap, color_key = _item_layout(it)
         if i:
             y += gap

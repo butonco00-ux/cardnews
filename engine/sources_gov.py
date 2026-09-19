@@ -108,11 +108,12 @@ def fetch_release(c: httpx.Client, news_id: str, fallback: dict | None = None) -
     pdfs = [f for f in files if f["name"].lower().endswith(".pdf")]
     hwpxs = [f for f in files if f["name"].lower().endswith(".hwpx")]
 
-    text, source_file = "", ""
+    text, source_file, info = "", "", {}
     for f in pdfs[:1] + hwpxs[:1]:
         try:
             data = _get(c, f["url"]).content
-            text = doctext.pdf_text(data) if f["name"].lower().endswith(".pdf") else doctext.hwpx_text(data)
+            text, info = (doctext.pdf_text(data, with_info=True) if f["name"].lower().endswith(".pdf")
+                          else doctext.hwpx_text(data, with_info=True))
             if len(text.strip()) > 100:
                 source_file = f["name"]
                 break
@@ -133,4 +134,6 @@ def fetch_release(c: httpx.Client, news_id: str, fallback: dict | None = None) -
         "embargo": emb,
         "source_file": source_file,
         "text": text,
+        "tables": info.get("tables", []),          # 표 칸 글자(카드에 표로 다시 그림)
+        "raw_text": info.get("raw_text", text),    # 표까지 포함한 원문 전체(원문 대조용)
     }

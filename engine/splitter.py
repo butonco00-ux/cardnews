@@ -14,6 +14,7 @@ from .cards import BODY_H, Item, item_height, items_height
 from .common import squash
 
 MARKERS = [
+    (re.compile(r"^(⟦표\d+(?::\d+-\d+)?⟧)\s*$"), "table"),
     (re.compile(r"^([➊-➓❶-❿])\s*"), "heading"),
     (re.compile(r"^(\d{1,2}\.)\s+"), "heading"),
     (re.compile(r"^([□■◆◇▣])\s*"), 0),
@@ -23,7 +24,9 @@ MARKERS = [
     (re.compile(r"^(\*{1,3}|※)\s*"), "note"),
 ]
 
-STOP = re.compile(r"^\s*(?:<?\s*담당\s*부서|담당\s*부서|\[?\s*붙임\s*\d*\s*\]?|별첨|참고\s*자료|문의\s*[:：])")
+STOP = re.compile(r"^\s*(?:<?\s*담당\s*부서|담당\s*부서|\[?\s*붙임\s*\d*\s*\]?|별첨|참고\s*자료|문의\s*[:：]"
+                  r"|[\[<〈(]?\s*참\s*고\s*\d*\s*[\]>〉)]?\s*$"            # '참고' 부록 제목 줄에서 본문 끝
+                  r"|[\[<〈]?\s*참\s*고\s*\d*\s*[\]>〉]?\s+(?!로|하|해|할|한)\S)")  # "참고 ○○ 개요" 형태
 DROP = re.compile(r"^\s*(?:-\s*\d+\s*-|보도자료|보\s*도\s*(?:시\s*점|일\s*시)\s*[:：].*|배\s*포\s*[:：].*)\s*$")
 
 TENTATIVE = re.compile(r"개정안|추진|예정|입법\s*예고|검토|정부안|발표안|계획안|방안|초안")
@@ -105,6 +108,9 @@ def parse(text: str, page_title: str = "", hard_wrapped: bool = True) -> Parsed:
         p.title = page_title
     for ln in lines[start:]:
         lv, mk, rest = _classify(ln)
+        if lv == "table":
+            p.items.append(Item("table", "", mk))
+            continue
         if lv is None:
             lv, mk = 1, ""
         rest = rest.strip()
@@ -167,9 +173,13 @@ def _sentences(text: str) -> list[str]:
 
 
 def _pieces(it: Item) -> list[Item]:
-    """한 카드에 안 들어가는 항목을 문장 단위로 나눈다."""
+    """한 카드에 안 들어가는 항목을 문장 단위로 나눈다(표는 줄 단위)."""
     if item_height(it, True) <= BODY_H:
         return [it]
+    if it.level == "table":
+        from . import tables
+        from .cards import BODY_W, font, wrap
+        return [Item("table", "", t) for t in tables.split(it.text, BODY_H, BODY_W, font, wrap)]
     out: list[Item] = []
     cur = ""
     for s in _sentences(it.text):
@@ -244,15 +254,22 @@ def build_cards(items: list[Item], max_body: int = 8) -> tuple[list[list[Item]],
     return cards, info
 
 
-def verify(cards: list[list[Item]], original: str) -> list[str]:
+def verify(cards: list[list[Item]], original: str, raw: str | None = None) -> list[str]:
     """카드 글자가 모두 원문 글자인지 확인. 문제 목록(비면 통과)."""
     # 쪽 번호("- 3 -")·머리글("보도자료") 줄은 빼고 비교(쪽을 넘어가는 문장도 원문 그대로 이어지게)
     kept = [ln for ln in original.replace(chr(13), "").split(chr(10)) if not DROP.match(ln)]
     src = squash(chr(10).join(kept))
     problems = []
+    raw_src = squash(raw or original)
     for n, card in enumerate(cards, 1):
         for it in card:
             if it.level == "system":
+                continue
+            if it.level == "table":
+                from . import tables
+                for cell in tables.cells(it.text):
+                    if squash(cell) not in raw_src:
+                        problems.append(f"{n}번째 카드: 표 칸 글자가 원문과 다름 → {cell[:20]}")
                 continue
             if squash(it.text) not in src:
                 problems.append(f"{n}번째 카드: 원문에 없는 글자 → {it.text[:30]}")

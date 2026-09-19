@@ -49,10 +49,12 @@ def _date_label(iso: str) -> str:
 
 
 def build_policy(rel: dict, tag: str, day: str, set_no: int, settings: dict, kind: str = "policy") -> dict:
+    from . import tables
+    tables.set_current(rel.get("tables"))
     parsed = splitter.parse(rel["text"], page_title=rel["title"],
                             hard_wrapped=rel.get("source_file", "").lower().endswith(".pdf"))
     body_cards, info = splitter.build_cards(parsed.items, max_body=8)
-    problems = splitter.verify(body_cards, rel["text"])
+    problems = splitter.verify(body_cards, rel["text"], rel.get("raw_text"))
     if not body_cards:
         problems.append("원문에서 카드로 만들 내용을 찾지 못했어요")
 
