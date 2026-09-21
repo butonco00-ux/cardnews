@@ -1,0 +1,114 @@
+{
+  "kind": "star",
+  "date": "2026-09-21",
+  "set": 5,
+  "tag": "스타",
+  "title": "\"17세 아들, 직접 운전해 등교\"…'430억 건물주' 권상우 사는 곳 어디?",
+  "subtitles": [],
+  "dept": "한국경제TV",
+  "date_label": "2026.09.21",
+  "url": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609210023&t=NN",
+  "license": {
+    "type": 0,
+    "usable": true,
+    "text_only": true,
+    "label": "",
+    "reason": null
+  },
+  "license_label": "",
+  "embargo": null,
+  "badge": "",
+  "source_file": "",
+  "created_at": "2026-09-21T19:04:53.834144+09:00",
+  "source_label": "출처: 한국경제TV",
+  "news_items": [
+    {
+      "title": "\"17세 아들, 직접 운전해 등교\"…'430억 건물주' 권상우 사는 곳 어디?",
+      "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609210023&t=NN",
+      "naver_link": "https://n.news.naver.com/mnews/article/215/0001266624?sid=103",
+      "press": "한국경제TV",
+      "published": "2026-09-21T07:05:00+09:00",
+      "date_label": "2026.09.21 07:05",
+      "summary": [
+        "권상우는 2015년 서울 성동구 성수동에서 약 946㎡ 규모 공장 부지를 80억원에 매입했다.",
+        "권상우는 이후 기존 건물을 철거하고 해당 부지에 신축 건물을 세웠다.",
+        "부동산 업계에 따르면 이 건물은 성수동 일대 땅값 상승에 힘입어 2025년 기준 약 430억원의 가치로 추산됐다.",
+        "매입가 80억원과 비교하면 약 350억원 오른 수준으로 나타났다."
+      ],
+      "summary_note": "AI 사실 정리"
+    }
+  ],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg"
+    ]
+  },
+  "card_items": [
+    [
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "권상우는 2015년 서울 성동구 성수동에서 약 946㎡ 규모 공장 부지를 80억원에 매입했다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "권상우는 이후 기존 건물을 철거하고 해당 부지에 신축 건물을 세웠다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "부동산 업계에 따르면 이 건물은 성수동 일대 땅값 상승에 힘입어 2025년 기준 약 430억원의 가치로 추산됐다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "매입가 80억원과 비교하면 약 350억원 오른 수준으로 나타났다.",
+        "cont": false
+      }
+    ]
+  ],
+  "omitted": false,
+  "skipped": [],
+  "original": [
+    {
+      "text": "○ 권상우는 2015년 서울 성동구 성수동에서 약 946㎡ 규모 공장 부지를 80억원에 매입했다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 권상우는 이후 기존 건물을 철거하고 해당 부지에 신축 건물을 세웠다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 부동산 업계에 따르면 이 건물은 성수동 일대 땅값 상승에 힘입어 2025년 기준 약 430억원의 가치로 추산됐다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 매입가 80억원과 비교하면 약 350억원 오른 수준으로 나타났다.",
+      "used": "all"
+    }
+  ],
+  "excluded_tail": "",
+  "caption": "[스타] \"17세 아들, 직접 운전해 등교\"…'430억 건물주' 권상우 사는 곳 어디?\n\n권상우는 2015년 서울 성동구 성수동에서 약 946㎡ 규모 공장 부지를 80억원에 매입했다. 권상우는 이후 기존 건물을 철거하고 해당 부지에 신축 건물을 세웠다. 부동산 업계에 따르면 이 건물은 성수동 일대 땅값 상승에 힘입어 2025년 기준 약 430억원의 가치로 추산됐다. 매입가 80억원과 비교하면 약 350억원 오른 수준으로 나타났다.\n\n출처: 한국경제TV 「\"17세 아들, 직접 운전해 등교\"…'430억 건물주' 권상우 사는 곳 어디?」(2026.09.21 07:05)\nhttp://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609210023&t=NN\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사 #연예인부동산",
+  "caption_problems": [],
+  "source_urls": [
+    "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609210023&t=NN"
+  ]
+}
