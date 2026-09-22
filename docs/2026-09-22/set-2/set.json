@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-09-22",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.09.22)",
+  "date_label": "2026.09.22",
+  "news_items": [
+    {
+      "title": "동작구, 재개발·재건축 속도전…'구역별 사업촉진 TFT' 가동",
+      "link": "https://view.asiae.co.kr/article/2026092208311104883",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005819593?sid=102",
+      "press": "아시아경제",
+      "published": "2026-09-22T08:31:00+09:00",
+      "date_label": "2026.09.22 08:31",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "오세훈 “李 주택공급 절벽 억지 주장 개탄” 정면 반박",
+      "link": "https://www.segye.com/newsView/20260921516339?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004160925?sid=102",
+      "press": "세계일보",
+      "published": "2026-09-22T06:03:00+09:00",
+      "date_label": "2026.09.22 06:03",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "현대건설, ‘사업비 3500억원’ 호주 초고층 아파트 개발한다",
+      "link": "https://biz.heraldcorp.com/article/10881513?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002700649?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-09-22T09:21:00+09:00",
+      "date_label": "2026.09.22 09:21",
+      "score": 3,
+      "tag": "정책"
+    },
+    {
+      "title": "해외인프라공사, 시드니 45층 아파트 개발…사업비 3천500억원",
+      "link": "https://www.yna.co.kr/view/AKR20260922038000003?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016328396?sid=101",
+      "press": "연합뉴스",
+      "published": "2026-09-22T09:07:00+09:00",
+      "date_label": "2026.09.22 09:07",
+      "score": 3,
+      "tag": "정책"
+    },
+    {
+      "title": "3분기 정비사업 누적액 37조원 돌파… 현대, 약 10조원 선두",
+      "link": "https://www.arunews.com/news/articleView.html?idxno=67471",
+      "naver_link": "https://www.arunews.com/news/articleView.html?idxno=67471",
+      "press": "한국주택경제",
+      "published": "2026-09-22T08:28:00+09:00",
+      "date_label": "2026.09.22 08:28",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.09.22)\n\n1. 동작구, 재개발·재건축 속도전…'구역별 사업촉진 TFT' 가동 — 아시아경제\n   https://view.asiae.co.kr/article/2026092208311104883\n2. 오세훈 “李 주택공급 절벽 억지 주장 개탄” 정면 반박 — 세계일보\n   https://www.segye.com/newsView/20260921516339?OutUrl=naver\n3. 현대건설, ‘사업비 3500억원’ 호주 초고층 아파트 개발한다 — 헤럴드경제\n   https://biz.heraldcorp.com/article/10881513?ref=naver\n4. 해외인프라공사, 시드니 45층 아파트 개발…사업비 3천500억원 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20260922038000003?input=1195m\n5. 3분기 정비사업 누적액 37조원 돌파… 현대, 약 10조원 선두 — 한국주택경제\n   https://www.arunews.com/news/articleView.html?idxno=67471\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://view.asiae.co.kr/article/2026092208311104883",
+    "https://www.segye.com/newsView/20260921516339?OutUrl=naver",
+    "https://biz.heraldcorp.com/article/10881513?ref=naver",
+    "https://www.yna.co.kr/view/AKR20260922038000003?input=1195m",
+    "https://www.arunews.com/news/articleView.html?idxno=67471"
+  ],
+  "created_at": "2026-09-22T09:27:17.594415+09:00"
+}
