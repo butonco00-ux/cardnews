@@ -1,0 +1,116 @@
+{
+  "kind": "news",
+  "date": "2026-09-23",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.09.23)",
+  "date_label": "2026.09.23",
+  "news_items": [
+    {
+      "title": "홍지선 국토장관 첫 행보는 공공주택지구 “주택공급, 계획보다 실행”",
+      "link": "https://biz.heraldcorp.com/article/10882587?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002701082?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-09-22T20:06:00+09:00",
+      "date_label": "2026.09.22 20:06",
+      "score": 12,
+      "tag": "정책",
+      "gov": {
+        "dept": "국토교통부",
+        "title": "수도권 우수 입지에 2.3만 가구 공급 추진",
+        "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782681",
+        "date_label": "2026.09.21",
+        "text": "국토교통부(장관 김윤덕)는 9월 22일(화) 경기도 고양시 대장동 일원 및 의왕시 오전동, 왕곡동 일원을 신규 공공주택지구로 지정하여 총 2.3만호 규모의 주택을 공급한다.",
+        "license_label": "공공누리 제1유형(텍스트에 한함)",
+        "embargo": {
+          "available_at": "2026-09-21T11:00:00+09:00",
+          "raw": "2026. 9. 21.(월) 11:00 이후(9. 22.(화) 조간)",
+          "rule": "적힌 시각",
+          "certain": true
+        }
+      }
+    },
+    {
+      "title": "서울 아파트값 상승 기대 여전...다주택자 10명 중 9명 집 안판다",
+      "link": "https://www.mk.co.kr/article/12159504",
+      "naver_link": "https://n.news.naver.com/mnews/article/024/0000108413?sid=101",
+      "press": "매일경제",
+      "published": "2026-09-22T16:45:00+09:00",
+      "date_label": "2026.09.22 16:45",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "한은 \"수도권 아파트 가격 상승세 지속…고가주택은 과세 영향\"",
+      "link": "https://www.yna.co.kr/view/AKR20260922058600002?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016328962?sid=101",
+      "press": "연합뉴스",
+      "published": "2026-09-22T11:00:00+09:00",
+      "date_label": "2026.09.22 11:00",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "소비심리, 한 달 만에 반등 \"정부 대책에도…주택가격전망CSI 안 떨어졌...",
+      "link": "https://view.asiae.co.kr/article/2026092216464317650",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005820205?sid=101",
+      "press": "아시아경제",
+      "published": "2026-09-23T06:00:00+09:00",
+      "date_label": "2026.09.23 06:00",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "[단독] 부동산원, 직원에 1.4억 저리 주택대출",
+      "link": "https://www.segye.com/newsView/20260922516040?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004161121?sid=101",
+      "press": "세계일보",
+      "published": "2026-09-22T17:49:00+09:00",
+      "date_label": "2026.09.22 17:49",
+      "score": 6,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.09.23)\n\n1. 홍지선 국토장관 첫 행보는 공공주택지구 “주택공급, 계획보다 실행” — 헤럴드경제\n   https://biz.heraldcorp.com/article/10882587?ref=naver\n   📄 정부 발표: 국토교통부 「수도권 우수 입지에 2.3만 가구 공급 추진」(2026.09.21) https://www.korea.kr/briefing/pressReleaseView.do?newsId=156782681\n2. 서울 아파트값 상승 기대 여전...다주택자 10명 중 9명 집 안판다 — 매일경제\n   https://www.mk.co.kr/article/12159504\n3. 한은 \"수도권 아파트 가격 상승세 지속…고가주택은 과세 영향\" — 연합뉴스\n   https://www.yna.co.kr/view/AKR20260922058600002?input=1195m\n4. 소비심리, 한 달 만에 반등 \"정부 대책에도…주택가격전망CSI 안 떨어졌... — 아시아경제\n   https://view.asiae.co.kr/article/2026092216464317650\n5. [단독] 부동산원, 직원에 1.4억 저리 주택대출 — 세계일보\n   https://www.segye.com/newsView/20260922516040?OutUrl=naver\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n정부 발표 원문 출처: 대한민국 정책브리핑 www.korea.kr — 공공누리 제1유형\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://biz.heraldcorp.com/article/10882587?ref=naver",
+    "https://www.mk.co.kr/article/12159504",
+    "https://www.yna.co.kr/view/AKR20260922058600002?input=1195m",
+    "https://view.asiae.co.kr/article/2026092216464317650",
+    "https://www.segye.com/newsView/20260922516040?OutUrl=naver"
+  ],
+  "created_at": "2026-09-23T08:56:14.656217+09:00"
+}
