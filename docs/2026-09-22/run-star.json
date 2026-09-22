@@ -1,0 +1,34 @@
+{
+  "date": "2026-09-22",
+  "finished_at": "2026-09-22T18:57:30.687099+09:00",
+  "messages": [
+    {
+      "level": "warn",
+      "text": "'‘40억 건물주’ 이해인 “노출 콘텐…' 정리 안 함: claude 오류: Failed to refresh OAuth token: another Claude Code process is refreshing it or exited mid-refresh. This is usually trans"
+    },
+    {
+      "level": "warn",
+      "text": "'[전문] '40억 건물주' 이해인, …' 정리 안 함: claude 오류: Failed to refresh OAuth token: another Claude Code process is refreshing it or exited mid-refresh. This is usually trans"
+    },
+    {
+      "level": "warn",
+      "text": "''40억 건물주' 이해인, 결국 '노…' 정리 안 함: 기사에 없는 숫자(9)"
+    },
+    {
+      "level": "ok",
+      "text": "스타 부동산 카드 2세트를 만들었어요(기사 1건 = 세트 1개, 세트 5~9) · Claude 구독 사용, 추가 비용 없음"
+    },
+    {
+      "level": "ok",
+      "text": "오늘의 부동산 뉴스 3건에 사실 정리를 넣었어요(Claude 구독, 추가 비용 없음)"
+    },
+    {
+      "level": "warn",
+      "text": "'동작구, 재개발·재건축 속도전…'구역…' 정리 안 함: 기사 문장과 너무 비슷함"
+    },
+    {
+      "level": "warn",
+      "text": "'현대건설, ‘사업비 3500억원’ 호…' 정리 안 함: 기사에 없는 숫자(1)"
+    }
+  ]
+}
