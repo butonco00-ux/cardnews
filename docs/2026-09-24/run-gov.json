@@ -1,0 +1,138 @@
+{
+  "date": "2026-09-24",
+  "finished_at": "2026-09-24T09:32:35.401996+09:00",
+  "messages": [
+    {
+      "level": "ok",
+      "text": "정책·세금 카드 5장을 만들었어요: [참고] 「외국인 부동산 거래」 더 촘촘히 들여다본다"
+    }
+  ],
+  "candidates": [
+    {
+      "title": "[장관동정] 추석 귀성길 안전·편의 빈틈없도록 … 주요 교통현장 집중 점검",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783160",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[설명] 국토교통부는 국민 안전을 최우선으로 조속히 대안을 결정할 계획입니다.",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783159",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[참고] 청약 예·부금 등 가입자, 종합저축 전환기회 1년 더",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783091",
+      "score": 4,
+      "status": "후보"
+    },
+    {
+      "title": "[참고] 「외국인 부동산 거래」 더 촘촘히 들여다본다",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783080",
+      "score": 9,
+      "status": "선택됨 → 세트 1"
+    },
+    {
+      "title": "철도역은 편리하게, 이동은 더 촘촘하게 …코레일 자회사 통합",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783024",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[보도참고] 경제협력개발기구, 9월 중간 경제전망 발표",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783154",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "아시아개발은행(ADB), 2026년 9월 아시아경제전망(ADO) 발표",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783068",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "가상자산시장 불공정거래 혐의자 수사기관 고발·통보 - 제16차 금융위원회 정례회의('26.9.23.) 의결 -",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783138",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "금융위원장, 「피지컬 AI 지역거점 발전 포럼」 참석, 피지컬 AI 지역거점 지원 의지 강조",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783036",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "Korea Premium Weeks 2026 Gateway to Asia's Most Dynamic Capital Market -아시아에서 가장 역동적인 자본시장을 향한 관문",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783089",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "온라인투자연계금융업의 포용금융 역할 강화와 신뢰 회복을 지원하겠습니다. - 중저신용자 자금공급 활성화를 위한 간담회 개최",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783038",
+      "score": 4,
+      "status": "후보"
+    },
+    {
+      "title": "메리츠증권㈜에 대한 종합금융투자사업자 지정 및 단기금융업 인가 ✓ 자기자본 4조원 이상의 종투사 지정 및 단기금융업 인가로 메리츠증권㈜은 발행어음 업무영위 예정",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783131",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "신라자산운용(주) 및 제니스투자자문(주)에 대한 금융투자업 인가(등록) 취소 - 제16차 금융위원회('26.9.23.) 조치 의결",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783121",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "기업의 가치를 보다 정확히 보여주기 위해 기업의 토지 '공시지가'가 주석에 공시됩니다.",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783129",
+      "score": 4,
+      "status": "후보"
+    },
+    {
+      "title": "골목길 안전부터 장바구니 온기까지,국민 모두가 안심하는 풍성한 한가위",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783114",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "윤호중 장관, UN 사회연대경제 고위급 회의 참석… 국제사회 협력 주도",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783098",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "행정안전부, 국민과 함께 '에스컬레이터 안전 이용 문화' 정착 나선다",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783085",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "｢생명안전기본법 시행령｣ 제정안 입법예고",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783059",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    }
+  ]
+}
