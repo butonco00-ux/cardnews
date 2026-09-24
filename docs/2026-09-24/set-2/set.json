@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-09-24",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.09.24)",
+  "date_label": "2026.09.24",
+  "news_items": [
+    {
+      "title": "성북 11억·동대문 10억…서울 아파트 임대차 절반이 월세로 밀렸다 [숫...",
+      "link": "https://www.segye.com/newsView/20260924501164?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004161458?sid=101",
+      "press": "세계일보",
+      "published": "2026-09-24T04:44:00+09:00",
+      "date_label": "2026.09.24 04:44",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "재건축·재개발로 공공임대 8.3만가구 공급",
+      "link": "https://www.hankyung.com/article/2026092339071",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005335741?sid=101",
+      "press": "한국경제",
+      "published": "2026-09-23T16:37:00+09:00",
+      "date_label": "2026.09.23 16:37",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "[영상] “25년 봤지만 내년 전월세가 최악” 부동산 전문가, 2030에 집부...",
+      "link": "https://biz.heraldcorp.com/article/10883484?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002701557?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-09-24T07:01:00+09:00",
+      "date_label": "2026.09.24 07:01",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "양천구, 내달 14일 양도세 등 부동산 세무설명회",
+      "link": "https://www.yna.co.kr/view/AKR20260923112800004?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016332765?sid=102",
+      "press": "연합뉴스",
+      "published": "2026-09-23T13:54:00+09:00",
+      "date_label": "2026.09.23 13:54",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "“월세 200만원이 기본 될라”…서울 실수요자 주거비 부담에 서민 ‘한...",
+      "link": "https://www.mk.co.kr/article/12160105",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005739367?sid=101",
+      "press": "매일경제",
+      "published": "2026-09-23T10:28:00+09:00",
+      "date_label": "2026.09.23 10:28",
+      "score": 6,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.09.24)\n\n1. 성북 11억·동대문 10억…서울 아파트 임대차 절반이 월세로 밀렸다 [숫... — 세계일보\n   https://www.segye.com/newsView/20260924501164?OutUrl=naver\n2. 재건축·재개발로 공공임대 8.3만가구 공급 — 한국경제\n   https://www.hankyung.com/article/2026092339071\n3. [영상] “25년 봤지만 내년 전월세가 최악” 부동산 전문가, 2030에 집부... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10883484?ref=naver\n4. 양천구, 내달 14일 양도세 등 부동산 세무설명회 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20260923112800004?input=1195m\n5. “월세 200만원이 기본 될라”…서울 실수요자 주거비 부담에 서민 ‘한... — 매일경제\n   https://www.mk.co.kr/article/12160105\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.segye.com/newsView/20260924501164?OutUrl=naver",
+    "https://www.hankyung.com/article/2026092339071",
+    "https://biz.heraldcorp.com/article/10883484?ref=naver",
+    "https://www.yna.co.kr/view/AKR20260923112800004?input=1195m",
+    "https://www.mk.co.kr/article/12160105"
+  ],
+  "created_at": "2026-09-24T09:09:22.378090+09:00"
+}
