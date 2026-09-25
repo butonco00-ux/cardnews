@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-09-25",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.09.25)",
+  "date_label": "2026.09.25",
+  "news_items": [
+    {
+      "title": "전세 1억→월세 연 100만원 부담 증가…“세입자, 실질적 소득감소”",
+      "link": "https://www.segye.com/newsView/20260924506965?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004161638?sid=101",
+      "press": "세계일보",
+      "published": "2026-09-24T23:02:00+09:00",
+      "date_label": "2026.09.24 23:02",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "“청약 되기도 어렵고 분양가 너무 높아” 올해만 44만명 이탈 [부동산...",
+      "link": "https://biz.heraldcorp.com/article/10883871?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002701693?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-09-24T17:01:00+09:00",
+      "date_label": "2026.09.24 17:01",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "서울 아파트는 신축보다 재건축…20년 초과, 매매가 상승폭 압도",
+      "link": "https://www.yna.co.kr/view/AKR20260924031200003?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016335481?sid=101",
+      "press": "연합뉴스",
+      "published": "2026-09-25T07:01:00+09:00",
+      "date_label": "2026.09.25 07:01",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "수도권 19개월 연속 집값 상승에도…인허가 줄고 미분양 늘어",
+      "link": "https://view.asiae.co.kr/article/2026092311215784708",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005820803?sid=101",
+      "press": "아시아경제",
+      "published": "2026-09-25T07:00:00+09:00",
+      "date_label": "2026.09.25 07:00",
+      "score": 6,
+      "tag": "시장"
+    },
+    {
+      "title": "같은 집에 서로 다른 보유세 '논란'…1주택자들 '불만 폭발'",
+      "link": "https://www.hankyung.com/article/202609245131i",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005335919?sid=101",
+      "press": "한국경제",
+      "published": "2026-09-24T16:54:00+09:00",
+      "date_label": "2026.09.24 16:54",
+      "score": 6,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.09.25)\n\n1. 전세 1억→월세 연 100만원 부담 증가…“세입자, 실질적 소득감소” — 세계일보\n   https://www.segye.com/newsView/20260924506965?OutUrl=naver\n2. “청약 되기도 어렵고 분양가 너무 높아” 올해만 44만명 이탈 [부동산... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10883871?ref=naver\n3. 서울 아파트는 신축보다 재건축…20년 초과, 매매가 상승폭 압도 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20260924031200003?input=1195m\n4. 수도권 19개월 연속 집값 상승에도…인허가 줄고 미분양 늘어 — 아시아경제\n   https://view.asiae.co.kr/article/2026092311215784708\n5. 같은 집에 서로 다른 보유세 '논란'…1주택자들 '불만 폭발' — 한국경제\n   https://www.hankyung.com/article/202609245131i\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.segye.com/newsView/20260924506965?OutUrl=naver",
+    "https://biz.heraldcorp.com/article/10883871?ref=naver",
+    "https://www.yna.co.kr/view/AKR20260924031200003?input=1195m",
+    "https://view.asiae.co.kr/article/2026092311215784708",
+    "https://www.hankyung.com/article/202609245131i"
+  ],
+  "created_at": "2026-09-25T09:11:56.125938+09:00"
+}
