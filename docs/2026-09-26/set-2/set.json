@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-09-26",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.09.26)",
+  "date_label": "2026.09.26",
+  "news_items": [
+    {
+      "title": "서울 재건축·재개발 아파트 분양가 5년만 2배↑…일반분양 비중은 줄어",
+      "link": "https://view.asiae.co.kr/article/2026092422011065531",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005820918?sid=101",
+      "press": "아시아경제",
+      "published": "2026-09-26T07:00:00+09:00",
+      "date_label": "2026.09.26 07:00",
+      "score": 12,
+      "tag": "정책"
+    },
+    {
+      "title": "“이러니 전세 찾기가 하늘의 별 따기”…서울 아파트 7개월째 월세 거...",
+      "link": "https://www.mk.co.kr/article/12161475",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005740029?sid=101",
+      "press": "매일경제",
+      "published": "2026-09-25T21:26:00+09:00",
+      "date_label": "2026.09.25 21:26",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "\"거품·폭락·평탄화\"…부동산 시장 흔든 李 대통령의 말 [청와대는 지금...",
+      "link": "https://www.hankyung.com/article/202609234101i",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005336098?sid=100",
+      "press": "한국경제",
+      "published": "2026-09-26T06:01:00+09:00",
+      "date_label": "2026.09.26 06:01",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "“집값 비싼 곳 청소년 자살률 낮아”…주거환경 따라 격차",
+      "link": "https://biz.heraldcorp.com/article/10884767?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002701950?sid=102",
+      "press": "헤럴드경제",
+      "published": "2026-09-26T08:59:00+09:00",
+      "date_label": "2026.09.26 08:59",
+      "score": 3,
+      "tag": "정책"
+    },
+    {
+      "title": "한국 3총사, 프레지던츠컵서 2승 합작…둘째날 전세 역전",
+      "link": "https://www.yna.co.kr/view/AKR20260926015200007?input=1195m",
+      "naver_link": "https://m.sports.naver.com/golf/article/001/0016336729",
+      "press": "연합뉴스",
+      "published": "2026-09-26T08:01:00+09:00",
+      "date_label": "2026.09.26 08:01",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.09.26)\n\n1. 서울 재건축·재개발 아파트 분양가 5년만 2배↑…일반분양 비중은 줄어 — 아시아경제\n   https://view.asiae.co.kr/article/2026092422011065531\n2. “이러니 전세 찾기가 하늘의 별 따기”…서울 아파트 7개월째 월세 거... — 매일경제\n   https://www.mk.co.kr/article/12161475\n3. \"거품·폭락·평탄화\"…부동산 시장 흔든 李 대통령의 말 [청와대는 지금... — 한국경제\n   https://www.hankyung.com/article/202609234101i\n4. “집값 비싼 곳 청소년 자살률 낮아”…주거환경 따라 격차 — 헤럴드경제\n   https://biz.heraldcorp.com/article/10884767?ref=naver\n5. 한국 3총사, 프레지던츠컵서 2승 합작…둘째날 전세 역전 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20260926015200007?input=1195m\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://view.asiae.co.kr/article/2026092422011065531",
+    "https://www.mk.co.kr/article/12161475",
+    "https://www.hankyung.com/article/202609234101i",
+    "https://biz.heraldcorp.com/article/10884767?ref=naver",
+    "https://www.yna.co.kr/view/AKR20260926015200007?input=1195m"
+  ],
+  "created_at": "2026-09-26T09:18:15.301961+09:00"
+}
