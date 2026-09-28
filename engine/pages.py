@@ -13,7 +13,7 @@ from .common import data_dir, docs_dir, now_kst, read_json
 CSS = """
 :root{--bg:#F7F5F2;--card:#fff;--text:#2F2B28;--sub:#827E79;--line:#E4DDD5;--primary:#9E9577;--accent:#955330;
 --ok:#2E7D4F;--warn:#B7791F;--bad:#B3261E}
-@media (prefers-color-scheme:dark){:root{--bg:#1C1A18;--card:#26231F;--text:#EFEAE4;--sub:#A9A29A;--line:#3A3530}}
+@media (prefers-color-scheme:dark){:root{--bg:#1C1A18;--card:#26231F;--text:#EFEAE4;--sub:#A9A29A;--line:#3A3530;--ok:#7BD4A0;--warn:#F0C674;--bad:#F2A7A1}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic",sans-serif;
 padding:16px;padding-bottom:80px}

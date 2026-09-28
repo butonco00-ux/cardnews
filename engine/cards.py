@@ -332,6 +332,8 @@ def _mark(d, c, settings: dict, x: float, y: float, w: float, size: float) -> No
         d.rectangle((x, y + size * 1.14, x + w, y + size * 1.14 + max(5, size // 12)), fill=c["mark"])
     elif _fin(settings).get("mark") == "under":
         d.rectangle((x - 2, y + size * 0.66, x + w, y + size * 1.16), fill=c["mark"])
+        # 노랑은 배경과 밝기 차이가 거의 없다 → 흑백·저시력에서도 읽히게 가는 밑줄을 함께
+        d.rectangle((x - 2, y + size * 1.16, x + w, y + size * 1.16 + 3), fill=c["text"])
     else:
         d.rectangle((x - 6, y + size * 0.1, x + w + 6, y + size * 1.22), fill=c["mark"])
 
@@ -371,7 +373,8 @@ def _title_lines(d, c, settings: dict, x: int, y: int, lines: list[str], f, size
     """표지 큰 제목. 스타일 2는 숫자가 든 줄(없으면 첫 줄)에 노란 형광펜."""
     mark = -1
     if _buto(settings):
-        mark = next((i for i, ln in enumerate(lines) if any(ch.isdigit() for ch in ln)), 0)
+        # 줄바꿈 위치에 따라 형광펜이 널뛰지 않게 '가장 긴 줄'로 고정한다
+        mark = max(range(len(lines)), key=lambda i: tlen(lines[i], f)) if lines else -1
     em = -0.022 if _buto(settings) else 0
     for i, ln in enumerate(lines):
         if i == mark:
@@ -385,17 +388,17 @@ BUTO_FOOTER_Y = 1222
 
 
 def _buto_footer(d, c, settings: dict, page: int | None, total: int | None, source_short: str) -> None:
-    fl = font("light", 28)
+    fl = font("light", 30)
     ed = _fin(settings).get("editorial")
     if source_short:
-        tdraw(d, (MX, BUTO_FOOTER_Y - 48), source_short, fl, c["sub"])
+        tdraw(d, (MX, BUTO_FOOTER_Y - 50), source_short, fl, c["sub"])
     if page and total:
         label = f"{page:02d} / {total:02d}" if ed else f"{page}/{total}"
-        fp = font("medium", 26) if ed else fl
-        tdraw(d, (W - 64 - tlen(label, fp), BUTO_FOOTER_Y - 48), label, fp, c["sub"])
+        fp = font("medium", 28) if ed else fl
+        tdraw(d, (W - MX - tlen(label, fp), BUTO_FOOTER_Y - 50), label, fp, c["sub"])
     d.rectangle((0, BUTO_FOOTER_Y, W, BUTO_FOOTER_Y + (1 if ed else 2)), fill=c["line"])
     brand = settings.get("brand_name") or settings.get("account_name") or ""
-    right = W - 64
+    right = W - MX
     if brand:
         fb = font("black", 54)
         bw = tlen(brand, fb)
@@ -403,8 +406,8 @@ def _buto_footer(d, c, settings: dict, page: int | None, total: int | None, sour
         right -= bw + 30
     note = settings.get("footer_note", "")
     if note:
-        fn = font("light", 27)
-        tdraw(d, (64, BUTO_FOOTER_Y + 50), wrap(note, fn, right - 64)[0], fn, c["sub"])
+        fn = font("light", 28)
+        tdraw(d, (MX, BUTO_FOOTER_Y + 50), wrap(note, fn, right - MX)[0], fn, c["sub"])
 
 
 def _footer(d, c, settings: dict, page: int | None, total: int | None, source_short: str):
@@ -452,7 +455,11 @@ def draw_cover(meta: dict, settings: dict) -> Image.Image:
     subs = [wrap(s_, fs, BODY_W - 40) for s_ in meta.get("subtitles", [])[:3]]
     if buto:
         # 제목 덩어리를 아래 판권 줄 위에 붙여 세운다(위쪽 여백이 지면처럼 남게)
-        block = len(lines) * lh + 46 + sum(len(ls) * sub_step + sub_gap for ls in subs)
+        def _block():
+            return len(lines) * lh + (46 + sum(len(ls) * sub_step + sub_gap for ls in subs) if subs else 0)
+        while subs and 286 + _block() > (940 if meta.get("badge") else 1000):
+            subs.pop()                      # 자리가 모자라면 부제부터 줄인다(원문 훼손 아님)
+        block = _block()
         start = max(286, 916 - block)
     else:
         start = 300
@@ -466,7 +473,8 @@ def draw_cover(meta: dict, settings: dict) -> Image.Image:
         y += sub_gap
 
     if meta.get("badge"):
-        _pill(d, x, 960, meta["badge"], font("bold", 32), c["badge"], c["badge_text"])
+        badge_y = min(max(960, y + 16), 1026 - 60 - 16) if buto else 960
+        _pill(d, x, badge_y, meta["badge"], font("bold", 32), c["badge"], c["badge_text"])
 
     if buto:
         # 아래쪽 판권 줄: 가는 선 → 부처 | 날짜(부처는 굵게, 날짜는 옅게)
@@ -492,17 +500,20 @@ def draw_body(items: list[Item], meta: dict, settings: dict, page: int, total: i
     c = colors_from(settings)
     img, d = _new(c["bg"])
     _tag(d, c, settings, MX, 90, meta.get("tag", "정책"), 28, cover=False)
-    ft = font("semibold", 30)
+    ft = font("medium", 28)
     title_line = wrap(meta["title"], ft, BODY_W)[0]
     if title_line != meta["title"]:
         while ft.getlength(title_line + "…") > BODY_W and title_line:
             title_line = title_line[:-1]
         title_line += "…"
-    tdraw_t(d, (MX, 175), title_line, ft, c.get("text2", c["sub"]) if _buto(settings) else c["sub"],
+    tdraw_t(d, (MX, 178), title_line, ft, c["sub"],
             -0.01 if _buto(settings) else 0)
 
     if _buto(settings):
         d.rectangle((MX, 224, W - MX, 225), fill=c["line"])
+    # 아주 긴 항목 하나가 한 장을 넘칠 때만 줄 간격을 살짝 좁혀서 담는다(글자는 그대로)
+    need = items_height(items)
+    squeeze = 1.0 if need <= BODY_H else max(0.86, BODY_H / need)
     y = BODY_TOP
     for i, it in enumerate(items):
         if it.level == "table":
@@ -513,6 +524,7 @@ def draw_body(items: list[Item], meta: dict, settings: dict, page: int, total: i
                             _draw_highlighted, _buto(settings))
             continue
         f, marker, mw, indent, lines, line_h, gap, color_key = _item_layout(it)
+        line_h, gap = int(line_h * squeeze), int(gap * squeeze)
         if i:
             y += gap
         color = c[color_key]
@@ -537,23 +549,29 @@ def draw_source(meta: dict, settings: dict, page: int, total: int) -> Image.Imag
     img, d = _new(c["bg"])
     y = 130
     if _buto(settings):
-        _tag(d, c, settings, MX, 96, "출 처", 30, cover=False)
-        y = 214
+        _tag(d, c, settings, MX, 96, "출처", 30, cover=False)
+        y = 268
     else:
         d.text((MX, y), "출처", font=font("bold", 50), fill=c["text"])
         y += 100
-    fb = font("medium", 38) if _buto(settings) else font("regular", 36)
+    fb = font("medium", 44) if _buto(settings) else font("regular", 36)
     label = "보도자료 " if meta.get("kind", "policy") == "policy" else ""
     src = f"{meta.get('dept', '')} {label}「{meta['title']}」({meta.get('date_label', '')})"
     src_lines = wrap(src, fb, BODY_W)
-    if _buto(settings):
-        y = 1000 - len(src_lines) * 62
-        d.rectangle((MX, y - 54, W - MX, y - 53), fill=c["line"])
     for ln in src_lines:
         tdraw_t(d, (MX, y), ln, fb, c["text"], -0.012 if _buto(settings) else 0)
-        y += 62 if _buto(settings) else 56
+        y += 68 if _buto(settings) else 56
     # 정책브리핑 주소·공공누리·면책 문구는 카드에서 빼고 캡션에만 둔다(사용자 요청)
-    _office_rows(d, c, settings, max(y + 60, 760))
+    if _buto(settings):
+        _office_rows(d, c, settings, y + 40, limit=980)
+        d.rectangle((MX, 1026, W - MX, 1027), fill=c["line"])       # 표지와 같은 자리의 판권 줄
+        fd, fdt = font("bold", 40), font("medium", 40)
+        xx = tdraw_t(d, (MX, 1066), meta.get("dept", ""), fd, c["text"], -0.015)
+        if meta.get("date_label"):
+            d.rectangle((xx + 26, 1076, xx + 27, 1112), fill=c["line"])
+            tdraw_t(d, (xx + 50, 1066), meta["date_label"], fdt, c["sub"], -0.01)
+    else:
+        _office_rows(d, c, settings, max(y + 60, 760))
     _footer(d, c, settings, page, total, "")
     return img
 
@@ -566,18 +584,21 @@ def _disclaimer_and_office(d, c, settings: dict, y: int) -> int:
     return _office_rows(d, c, settings, y)
 
 
-def _office_rows(d, c, settings: dict, y: int) -> int:
-    """중개사무소 정보(설정에 넣었을 때만)."""
+def _office_rows(d, c, settings: dict, y: int, limit: int = 1150) -> int:
+    """중개사무소 정보(설정에 넣었을 때만). 아래 띠에 닿을 줄은 그리지 않는다."""
     office = settings.get("office") or {}
     rows = [office.get("name"), office.get("ceo") and f"대표 {office['ceo']}",
             office.get("reg_no") and f"등록번호 {office['reg_no']}",
             office.get("phone"), office.get("address")]
     rows = [r for r in rows if r]
     if rows:
+        f = font("regular", 30)
         y += 30
         for r in rows:
-            for ln in wrap(r, font("regular", 30), BODY_W):
-                tdraw(d, (MX, y), ln, font("regular", 30), c["sub"])
+            for ln in wrap(r, f, BODY_W):
+                if y + 46 > limit:
+                    return y
+                tdraw(d, (MX, y), ln, f, c["sub"])
                 y += 46
     return y
 
@@ -596,17 +617,18 @@ def draw_news_cover(date_label: str, count: int, settings: dict, cover: dict | N
     y = 300
     for i, ln in enumerate(cover.get("lines") or ("오늘의", "부동산 뉴스")):
         if buto and i == 1:
-            _mark(d, c, settings, MX, y, tlen(ln, f), 140)
-        tdraw(d, (MX, y), ln, f, c["cover_text"])
+            _mark(d, c, settings, MX, y, tlen_t(ln, f, -0.022), 140)
+        tdraw_t(d, (MX, y), ln, f, c["cover_text"], -0.022 if buto else 0)
         y += 176
     count_label = (cover.get("count_label") or "헤드라인 {n}건").replace("{n}", str(count))
-    d.text((MX, y + 40), f"{date_label}  |  {count_label}", font=font("bold", 44), fill=c["cover_text"])
+    tdraw(d, (MX, y + 40), f"{date_label}  |  {count_label}", font("bold", 40), c["cover_text"])
     note = cover.get("note")
     if note is None:
         note = "기사는 제목과 언론사만 소개하고, 정부 발표가 있는 소식은 보도자료 원문을 함께 실었어요."
     y = 1010
-    for ln in wrap(note, font("medium", 32), BODY_W):
-        tdraw(d, (MX, y), ln, font("medium", 32), c["cover_sub"])
+    fnote = font("medium", 30)
+    for ln in wrap(note, fnote, BODY_W)[:3]:          # 아래 띠(1174)에 닿지 않게
+        tdraw(d, (MX, y), ln, fnote, c["cover_sub"])
         y += 50
     if buto:
         _buto_footer(d, c, settings, None, None, "")
@@ -620,23 +642,38 @@ def draw_news_cover(date_label: str, count: int, settings: dict, cover: dict | N
 def draw_news_item(n: int, item: dict, note: str, settings: dict, page: int, total: int) -> Image.Image:
     c = colors_from(settings)
     img, d = _new(c["bg"])
-    d.text((MX, 120), f"{n:02d}", font=font("extrabold", 96), fill=c.get("number") or c["primary"])
+    if _buto(settings):
+        _tag(d, c, settings, MX, 96, "뉴스", 28, cover=False)
+    tdraw(d, (MX, 160 if _buto(settings) else 120), f"{n:02d}", font("extrabold", 96),
+          c.get("number") or c["primary"])
     gov = item.get("gov")
     summary = item.get("summary") or []
+    fn = font("regular", 34)
+    note_lines = wrap(note, fn, BODY_W - 60)[:3] if note else []
+    note_h = (66 + 50 * len(note_lines) + 24) if note_lines else 0     # 실제 상자 높이를 미리 잡는다
     max_title_lines = 3 if summary else (4 if (gov or note) else 5)
     f, lines, size = _fit_lines(item["title"], "bold", range(58, 41, -3), BODY_W, max_title_lines)
-    y = 290
-    for ln in lines[:max_title_lines]:
+    shown = lines[:max_title_lines]
+    if len(lines) > max_title_lines and shown:                  # 잘렸으면 말줄임을 보인다
+        last = shown[-1]
+        while last and tlen(last + "…", f) > BODY_W:
+            last = last[:-1]
+        shown[-1] = last + "…"
+    y = 320 if _buto(settings) else 290
+    if not (summary or gov or note_lines):                      # 아래가 비면 글 덩어리를 가운데로
+        block = len(shown) * int(size * 1.36) + 100
+        y = max(y, int((BODY_TOP + BODY_BOTTOM) / 2 - block / 2))
+    for ln in shown:
         tdraw(d, (MX, y), ln, f, c["text"])
         y += int(size * 1.36)
     y += 20
-    tdraw(d, (MX, y), f"{item.get('press', '')}  ·  {item.get('date_label', '')}", font("medium", 32), c["sub"])
+    tdraw(d, (MX, y), f"{item.get('press', '')}  ·  {item.get('date_label', '')}", font("medium", 30), c["sub"])
     y += 80
 
     if summary:
         # AI 사실 정리(새로 쓴 문장). 기사 문장이 아님을 표시한다.
-        fs = font("regular", 35)
-        room = (BODY_BOTTOM - (150 if note else 0)) - y - 60
+        fs = font("regular", 34)
+        room = (BODY_BOTTOM - note_h) - y - 60
         lines_out = []
         for sent in summary:
             lines_out += wrap(sent, fs, BODY_W)
@@ -655,7 +692,7 @@ def draw_news_item(n: int, item: dict, note: str, settings: dict, page: int, tot
         from .splitter import _sentences
         fg = font("regular", 34)
         label = f"정부 발표 원문 · {gov['dept']} ({gov['date_label']})"
-        room = (BODY_BOTTOM - (150 if note else 0)) - y - 150
+        room = (BODY_BOTTOM - note_h) - y - 150
         max_lines = max(2, room // 52)
         sents = _sentences(gov["text"])
         while len(sents) > 1 and len(wrap(" ".join(sents), fg, BODY_W - 64)) > max_lines:
@@ -663,21 +700,22 @@ def draw_news_item(n: int, item: dict, note: str, settings: dict, page: int, tot
         glines = wrap(" ".join(sents), fg, BODY_W - 64)[:max_lines]
         box_h = 76 + 52 * len(glines) + 60
         d.rounded_rectangle((MX, y, W - MX, y + box_h), radius=22, fill=c["box"], outline=c["primary"], width=3)
-        tdraw(d, (MX + 32, y + 24), label, font("bold", 29), c["accent"])
+        tdraw(d, (MX + 32, y + 24), label, font("bold", 30), c["accent"])
         yy = y + 76
         for ln in glines:
             _draw_highlighted(d, (MX + 32, yy), ln, fg, c.get("text2", c["text"]) if _buto(settings) else c["text"], c["accent"])
             yy += 52
-        tdraw(d, (MX + 32, yy + 8), f"{gov.get('license_label', '공공누리 제1유형')} · 정책브리핑", font("regular", 24), c["sub"])
+        tdraw(d, (MX + 32, yy + 8), f"{gov.get('license_label', '공공누리 제1유형')} · 정책브리핑", font("regular", 27), c["sub"])
         y += box_h + 26
 
-    if note:
-        fn = font("regular", 34)
-        nl = wrap(note, fn, BODY_W - 60)[:3]
+    if note_lines:
+        nl = list(note_lines)
+        while nl and y + 66 + 50 * len(nl) + 24 > BODY_BOTTOM:      # 남는 자리에 맞춰 줄인다
+            nl = nl[:-1]
+        if not nl:
+            _footer(d, c, settings, page, total, "")
+            return img
         box_h = 66 + 50 * len(nl) + 24
-        if y + box_h > BODY_BOTTOM + 30:
-            nl = nl[:1]
-            box_h = 66 + 50 + 24
         d.rounded_rectangle((MX, y, W - MX, y + box_h), radius=22, fill=c["box"], outline=c["line"], width=2)
         d.text((MX + 30, y + 22), settings.get("note_label") or "중개사 한마디", font=font("bold", 28), fill=c["accent"])
         yy = y + 66

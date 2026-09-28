@@ -21,6 +21,7 @@ MARKERS = [
     (re.compile(r"^([①-⑳])\s*"), 0),
     (re.compile(r"^([ㅇ○◦•∙●])\s*"), 1),
     (re.compile(r"^([-–―‐])\s+"), 2),
+    (re.compile(r"^([▪▫‧])\s*"), 2),
     (re.compile(r"^(\*{1,3}|※)\s*"), "note"),
 ]
 

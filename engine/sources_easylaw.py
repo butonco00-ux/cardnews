@@ -53,30 +53,44 @@ def sections(c: httpx.Client, topic_url: str) -> list[dict]:
     return out
 
 
-def body(c: httpx.Client, url: str) -> tuple[str, str]:
-    """반환: (제목, 본문 원문). 본문은 줄 단위 그대로."""
+def body(c: httpx.Client, url: str) -> tuple[str, str, list]:
+    """반환: (제목, 본문 원문, 표 목록). 표는 "⟦표N⟧" 자리 표시로 바꿔 카드에서 표로 그린다."""
     s = BeautifulSoup(c.get(url).text, "html.parser")
     el = s.select_one("#ovDiv") or s.select_one(".ovDivbox1") or s.select_one(".ovDivbox")
     if not el:
-        return "", ""
+        return "", "", []
     for tag in el.select("script, style, button"):
         tag.decompose()
+    tables: list[list[list[str]]] = []
+    for t in el.select("table"):
+        rows = []
+        for tr in t.select("tr"):
+            cells = [re.sub(r"\s+", " ", td.get_text(" ", strip=True)).strip() for td in tr.select("th, td")]
+            if any(cells):
+                rows.append(cells)
+        if len(rows) < 2 or max(len(r) for r in rows) < 2:
+            continue                      # 표 모양이 아니면 글로 둔다
+        tables.append(rows)
+        t.replace_with("\n" + TABLE_MARK.format(n=len(tables)) + "\n")
     lines = [re.sub(r"\s+", " ", ln).strip() for ln in el.get_text("\n", strip=True).split("\n")]
     lines = [ln for ln in lines if ln and ln not in DROP_WORDS and len(ln) > 1]
     title = lines[0] if lines else ""
     body_lines = []
     for ln in lines[1:]:
         # 법 조문 인용이 줄로 쪼개져 있으면 앞 줄에 붙인다("「…법」 제3조" + "제1항")
-        cont = re.match(r"^(에|을|를|이|가|의|은|는|와|과|및|또는|에서|으로|로|한|할|다\)|\)|·|「|제\d)", ln)
-        prev_open = body_lines and body_lines[-1].rstrip().endswith(("「", "(", "," , "및", "또는"))
+        cont = re.match(r"^(에|을|를|이|가|의|은|는|와|과|및|또는|에서|으로|로|한|할|다\)|\)|·|「|』|」|제\d)", ln)
+        prev_open = body_lines and body_lines[-1].rstrip().endswith(("「", "『", "(", "," , "및", "또는"))
         if body_lines and ((cont and len(ln) < 60) or prev_open):
             body_lines[-1] = body_lines[-1] + " " + ln
         else:
             body_lines.append(ln)
-    return title, "\n".join(body_lines)
+    return title, "\n".join(body_lines), tables
 
 
-def as_release(topic: str, section: dict, text: str, day: str) -> dict:
+TABLE_MARK = "⟦표{n}⟧"
+
+
+def as_release(topic: str, section: dict, text: str, day: str, tables: list | None = None) -> dict:
     """보도자료와 같은 모양으로 바꿔 카드 만들기에 넘긴다."""
     return {
         "news_id": section["url"],
@@ -89,11 +103,14 @@ def as_release(topic: str, section: dict, text: str, day: str) -> dict:
         "embargo": None,
         "source_file": "",
         "text": text,
+        "tables": tables or [],
+        # 표 칸 글자까지 원문 대조에 쓰인다
+        "raw_text": text + "\n" + "\n".join(cell for rows in (tables or []) for r in rows for cell in r),
     }
 
 
-def pick(c: httpx.Client, used_urls: set[str], settings: dict) -> tuple[dict, dict, str] | None:
-    """아직 안 쓴 항목 하나 고르기 → (주제, 항목, 본문)."""
+def pick(c: httpx.Client, used_urls: set[str], settings: dict) -> tuple[dict, dict, str, list] | None:
+    """아직 안 쓴 항목 하나 고르기 → (주제, 항목, 본문, 표 목록)."""
     want = settings.get("easylaw_topics") or []
     ts = topics(c)
     if want:
@@ -107,11 +124,11 @@ def pick(c: httpx.Client, used_urls: set[str], settings: dict) -> tuple[dict, di
             if sec["url"] in used_urls:
                 continue
             try:
-                title, text = body(c, sec["url"])
+                title, text, tables = body(c, sec["url"])
             except httpx.HTTPError:
                 continue
             if len(text) < 300:        # 너무 짧은 항목은 건너뜀
                 continue
             sec = dict(sec, title=title or sec["title"])
-            return t, sec, text
+            return t, sec, text, tables
     return None

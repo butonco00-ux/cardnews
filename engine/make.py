@@ -281,8 +281,8 @@ def make_easylaw(day: str, settings: dict) -> dict:
         messages.append({"level": "warn", "text": "새로 소개할 생활법령 항목을 찾지 못했어요"})
         return _save_run(day, "easylaw", messages)
 
-    topic, section, text = got
-    rel = sources_easylaw.as_release(topic["title"], section, text, day)
+    topic, section, text, tables = got
+    rel = sources_easylaw.as_release(topic["title"], section, text, day, tables)
     meta = build.build_policy(rel, "생활법령", day, 4, settings, kind="easylaw")
     if meta.get("ok"):
         messages.append({"level": "ok", "text": f"생활법령 카드 {len(meta['cards'])}장을 만들었어요: {rel['title']}"})

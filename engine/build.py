@@ -16,7 +16,7 @@ STYLES = {
 
 # 스타일 2 기본 색: 검정·노랑·밝은 회색
 BUTO_COLORS = {
-    "primary": "#111111", "accent": "#111111", "bg": "#EDEBE8", "text": "#111111", "sub": "#6E6862",
+    "primary": "#111111", "accent": "#111111", "bg": "#EDEBE8", "text": "#111111", "sub": "#5F5A54",
     "line": "#CFC9C1", "badge": "#EEEA5E", "badge_text": "#111111", "number": "#111111",
     "cover_text": "#111111", "cover_sub": "#3A3A3A", "on_primary": "#FFFFFF", "box": "#FFFFFF",
     "mark": "#EEEA5E",          # 노란 형광펜은 표지에만
