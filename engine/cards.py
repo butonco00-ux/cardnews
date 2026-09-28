@@ -126,11 +126,26 @@ def tdraw(d, xy, text: str, f, fill) -> float:
     return x
 
 
+def tdraw_t(d, xy, text: str, f, fill, em: float = -0.02) -> float:
+    """자간을 조금 좁혀서 그린다. 큰 글씨는 살짝 좁혀야 덩어리로 또렷하게 보인다."""
+    if not em:
+        return tdraw(d, xy, text, f, fill)
+    x, y = xy
+    step = f.size * em
+    for ch in text:
+        x = tdraw(d, (x, y), ch, f, fill) + step
+    return x - step
+
+
+def tlen_t(text: str, f, em: float = -0.02) -> float:
+    return max(0.0, tlen(text, f) + f.size * em * max(0, len(text) - 1))
+
+
 # 본문 줄 종류별 모양
 STYLES = {
     # level: (weight, size, indent, color_key, gap_before)
-    "heading": ("bold", 46, 0, "accent", 34),
-    0: ("semibold", 42, 0, "text", 30),
+    "heading": ("bold", 46, 0, "accent", 46),
+    0: ("semibold", 42, 0, "text", 34),
     1: ("regular", 39, 34, "text", 18),
     2: ("regular", 37, 72, "text", 12),
     "note": ("regular", 31, 72, "sub", 10),
@@ -316,7 +331,7 @@ def _mark(d, c, settings: dict, x: float, y: float, w: float, size: float) -> No
         # 어두운 표지: 형광펜 대신 글자 아래 노란 밑줄(흰 글자가 잘 읽히게)
         d.rectangle((x, y + size * 1.14, x + w, y + size * 1.14 + max(5, size // 12)), fill=c["mark"])
     elif _fin(settings).get("mark") == "under":
-        d.rectangle((x - 4, y + size * 0.66, x + w + 4, y + size * 1.16), fill=c["mark"])
+        d.rectangle((x - 2, y + size * 0.66, x + w, y + size * 1.16), fill=c["mark"])
     else:
         d.rectangle((x - 6, y + size * 0.1, x + w + 6, y + size * 1.22), fill=c["mark"])
 
@@ -357,10 +372,11 @@ def _title_lines(d, c, settings: dict, x: int, y: int, lines: list[str], f, size
     mark = -1
     if _buto(settings):
         mark = next((i for i, ln in enumerate(lines) if any(ch.isdigit() for ch in ln)), 0)
+    em = -0.022 if _buto(settings) else 0
     for i, ln in enumerate(lines):
         if i == mark:
-            _mark(d, c, settings, x, y, tlen(ln, f), size)
-        tdraw(d, (x, y), ln, f, color)
+            _mark(d, c, settings, x, y, tlen_t(ln, f, em), size)
+        tdraw_t(d, (x, y), ln, f, color, em)
         y += lh
     return y
 
@@ -430,24 +446,41 @@ def draw_cover(meta: dict, settings: dict) -> Image.Image:
 
     # 기사·보도자료 제목 표지는 원래 크기(2026-09-20 사용자 요청). 큰 제목은 뉴스·법령 표지만.
     f, lines, size = _fit_lines(meta["title"], "extrabold", range(86, 55, -4), BODY_W, 3)
-    y = _title_lines(d, c, settings, x, 300, lines, f, size, int(size * 1.32), c["cover_text"])
+    lh = int(size * (1.26 if buto else 1.32))
+    fs = font("medium", 34 if buto else 36)
+    sub_step, sub_gap = (52, 14) if buto else (54, 10)
+    subs = [wrap(s_, fs, BODY_W - 40) for s_ in meta.get("subtitles", [])[:3]]
+    if buto:
+        # 제목 덩어리를 아래 판권 줄 위에 붙여 세운다(위쪽 여백이 지면처럼 남게)
+        block = len(lines) * lh + 46 + sum(len(ls) * sub_step + sub_gap for ls in subs)
+        start = max(286, 916 - block)
+    else:
+        start = 300
+    y = _title_lines(d, c, settings, x, start, lines, f, size, lh, c["cover_text"])
 
-    y += 30
-    fs = font("medium", 36)
-    for sub in meta.get("subtitles", [])[:3]:
-        for ln in wrap(sub, fs, BODY_W - 40):
+    y += 46 if buto else 30                      # 제목 덩어리와 부제 사이는 넉넉히
+    for ls in subs:
+        for ln in ls:
             tdraw(d, (x, y), ln, fs, c["cover_sub"])
-            y += 54
-        y += 10
+            y += sub_step
+        y += sub_gap
 
     if meta.get("badge"):
         _pill(d, x, 960, meta["badge"], font("bold", 32), c["badge"], c["badge_text"])
 
-    fd = font("bold", 44)
-    tdraw(d, (x, 1090), f"{meta.get('dept', '')}  |  {meta.get('date_label', '')}", fd, c["cover_text"])
     if buto:
+        # 아래쪽 판권 줄: 가는 선 → 부처 | 날짜(부처는 굵게, 날짜는 옅게)
+        d.rectangle((x, 1026, W - MX, 1027), fill=c["line"])
+        fd, fdt = font("bold", 40), font("medium", 40)
+        xx = tdraw_t(d, (x, 1066), meta.get("dept", ""), fd, c["cover_text"], -0.015)
+        if meta.get("date_label"):
+            d.rectangle((xx + 26, 1076, xx + 27, 1112), fill=c["line"])
+            tdraw_t(d, (xx + 50, 1066), meta["date_label"], fdt, c["cover_sub"], -0.01)
         _buto_footer(d, c, settings, None, None, "")
         return img
+
+    fd = font("bold", 44)
+    tdraw(d, (x, 1090), f"{meta.get('dept', '')}  |  {meta.get('date_label', '')}", fd, c["cover_text"])
     account = settings.get("account_name") or ""
     if account:
         d.text((x, 1250), account, font=font("medium", 28), fill=c["cover_sub"], anchor="lm")
@@ -465,8 +498,11 @@ def draw_body(items: list[Item], meta: dict, settings: dict, page: int, total: i
         while ft.getlength(title_line + "…") > BODY_W and title_line:
             title_line = title_line[:-1]
         title_line += "…"
-    tdraw(d, (MX, 175), title_line, ft, c["sub"])
+    tdraw_t(d, (MX, 175), title_line, ft, c.get("text2", c["sub"]) if _buto(settings) else c["sub"],
+            -0.01 if _buto(settings) else 0)
 
+    if _buto(settings):
+        d.rectangle((MX, 224, W - MX, 225), fill=c["line"])
     y = BODY_TOP
     for i, it in enumerate(items):
         if it.level == "table":
@@ -500,14 +536,22 @@ def draw_source(meta: dict, settings: dict, page: int, total: int) -> Image.Imag
     c = colors_from(settings)
     img, d = _new(c["bg"])
     y = 130
-    d.text((MX, y), "출처", font=font("bold", 50), fill=c["text"])
-    y += 100
-    fb = font("regular", 36)
+    if _buto(settings):
+        _tag(d, c, settings, MX, 96, "출 처", 30, cover=False)
+        y = 214
+    else:
+        d.text((MX, y), "출처", font=font("bold", 50), fill=c["text"])
+        y += 100
+    fb = font("medium", 38) if _buto(settings) else font("regular", 36)
     label = "보도자료 " if meta.get("kind", "policy") == "policy" else ""
     src = f"{meta.get('dept', '')} {label}「{meta['title']}」({meta.get('date_label', '')})"
-    for ln in wrap(src, fb, BODY_W):
-        tdraw(d, (MX, y), ln, fb, c["text"])
-        y += 56
+    src_lines = wrap(src, fb, BODY_W)
+    if _buto(settings):
+        y = 1000 - len(src_lines) * 62
+        d.rectangle((MX, y - 54, W - MX, y - 53), fill=c["line"])
+    for ln in src_lines:
+        tdraw_t(d, (MX, y), ln, fb, c["text"], -0.012 if _buto(settings) else 0)
+        y += 62 if _buto(settings) else 56
     # 정책브리핑 주소·공공누리·면책 문구는 카드에서 빼고 캡션에만 둔다(사용자 요청)
     _office_rows(d, c, settings, max(y + 60, 760))
     _footer(d, c, settings, page, total, "")
