@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-28",
+  "finished_at": "2026-09-28T19:22:50.659127+09:00",
+  "messages": [
+    {
+      "level": "ok",
+      "text": "오늘의 부동산 뉴스 3건에 사실 정리를 넣었어요(Claude 구독, 추가 비용 없음)"
+    },
+    {
+      "level": "warn",
+      "text": "'고덕강일·경희궁에피트 청약 나온다…1…' 정리 안 함: claude 오류: Failed to refresh OAuth token: another Claude Code process is refreshing it or exited mid-refresh. This is usually trans"
+    },
+    {
+      "level": "warn",
+      "text": "'李대통령, 5박7일 유엔·멕시코 순방…' 정리 안 함: 기사에 없는 숫자(9)"
+    }
+  ]
+}

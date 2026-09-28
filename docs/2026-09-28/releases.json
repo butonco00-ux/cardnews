@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-28",
+  "releases": [
+    {
+      "title": "[설명] 민간 토지매각 실적 감소를 주택공급 감소로 보는 것은 적절하지 않습니다.",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783325",
+      "dept": "국토교통부",
+      "list_date": "2026-09-28",
+      "date_label": "2026.09.28",
+      "subtitles": [],
+      "lead": "2026.9.27.(일) 매일경제 「“尹·吳 때 공급 줄었다”더니… LH 평가선 李정부 9·7 대책에 민간토지 공급 ‘축소’」 등 관련입니다.",
+      "license_usable": true,
+      "license_label": "공공누리 제1유형(텍스트에 한함)",
+      "embargo": {
+        "available_at": "2026-09-28T00:00:00+09:00",
+        "raw": "배포 즉시 보도 가능배포2026. 9. 28.(월)",
+        "rule": "배포 즉시 보도",
+        "certain": true
+      }
+    }
+  ]
+}
