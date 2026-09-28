@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-09-28",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.09.28)",
+  "date_label": "2026.09.28",
+  "news_items": [
+    {
+      "title": "고덕강일·경희궁에피트 청약 나온다…10월 전국 아파트 3.8만가구 분양...",
+      "link": "https://biz.heraldcorp.com/article/10885560?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002702321?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-09-28T08:32:00+09:00",
+      "date_label": "2026.09.28 08:32",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "\"다주택 규제 피하자\"…집합건물 다소유자 7년9개월만에 최저",
+      "link": "https://www.yna.co.kr/view/AKR20260926024500003?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016339500?sid=101",
+      "press": "연합뉴스",
+      "published": "2026-09-28T06:01:00+09:00",
+      "date_label": "2026.09.28 06:01",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "85주째 오른 서울 아파트… 무주택자, 사기도 버티기도 어렵다",
+      "link": "https://www.segye.com/newsView/20260927508481?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004162102?sid=101",
+      "press": "세계일보",
+      "published": "2026-09-27T18:42:00+09:00",
+      "date_label": "2026.09.27 18:42",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "[부동산 심머니] 62층 한강맨션·49층 신동아 …'한강뷰' 용산 재건축 다...",
+      "link": "https://www.mk.co.kr/article/12161960",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005740329?sid=101",
+      "press": "매일경제",
+      "published": "2026-09-27T16:40:00+09:00",
+      "date_label": "2026.09.27 16:40",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "李대통령, 5박7일 유엔·멕시코 순방 마치고 귀국…靑인선·통합·부동산...",
+      "link": "https://view.asiae.co.kr/article/2026092622210708622",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005821221?sid=100",
+      "press": "아시아경제",
+      "published": "2026-09-27T21:35:00+09:00",
+      "date_label": "2026.09.27 21:35",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.09.28)\n\n1. 고덕강일·경희궁에피트 청약 나온다…10월 전국 아파트 3.8만가구 분양... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10885560?ref=naver\n2. \"다주택 규제 피하자\"…집합건물 다소유자 7년9개월만에 최저 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20260926024500003?input=1195m\n3. 85주째 오른 서울 아파트… 무주택자, 사기도 버티기도 어렵다 — 세계일보\n   https://www.segye.com/newsView/20260927508481?OutUrl=naver\n4. [부동산 심머니] 62층 한강맨션·49층 신동아 …'한강뷰' 용산 재건축 다... — 매일경제\n   https://www.mk.co.kr/article/12161960\n5. 李대통령, 5박7일 유엔·멕시코 순방 마치고 귀국…靑인선·통합·부동산... — 아시아경제\n   https://view.asiae.co.kr/article/2026092622210708622\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://biz.heraldcorp.com/article/10885560?ref=naver",
+    "https://www.yna.co.kr/view/AKR20260926024500003?input=1195m",
+    "https://www.segye.com/newsView/20260927508481?OutUrl=naver",
+    "https://www.mk.co.kr/article/12161960",
+    "https://view.asiae.co.kr/article/2026092622210708622"
+  ],
+  "created_at": "2026-09-28T09:10:46.282842+09:00"
+}
