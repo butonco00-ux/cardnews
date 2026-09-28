@@ -109,3 +109,19 @@ def paste(img: Image.Image, flag: Image.Image, x: int, y: int, border: str = "#D
     """국기 붙이기(흰 바탕이 배경에 묻히지 않게 가는 테두리)."""
     img.paste(flag, (int(x), int(y)))
     ImageDraw.Draw(img).rectangle((x - 1, y - 1, x + flag.width, y + flag.height), outline=border, width=2)
+
+
+def circle(country: str, size: int, ring: str | None = None, ring_w: int = 3) -> Image.Image:
+    """동그란 국기 배지(그래프 끝점 대신 쓴다). 반환: RGBA."""
+    src = usa(int(size * 2.0)) if country == "미국" else korea(int(size * 1.6))
+    left = (src.width - src.height) // 2
+    box = src.crop((left, 0, left + src.height, src.height)).resize((size * SS, size * SS), Image.LANCZOS)
+    out = Image.new("RGBA", (size * SS, size * SS), (0, 0, 0, 0))
+    mask = Image.new("L", (size * SS, size * SS), 0)
+    ImageDraw.Draw(mask).ellipse((0, 0, size * SS - 1, size * SS - 1), fill=255)
+    out.paste(box, (0, 0), mask)
+    if ring:
+        ImageDraw.Draw(out).ellipse((ring_w * SS // 2, ring_w * SS // 2,
+                                     size * SS - 1 - ring_w * SS // 2, size * SS - 1 - ring_w * SS // 2),
+                                    outline=ring, width=ring_w * SS)
+    return out.resize((size, size), Image.LANCZOS)
