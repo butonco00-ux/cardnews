@@ -68,71 +68,84 @@ def _years_since_prev_hike(pts, when) -> str:
     if not ups:
         return ""
     yrs = (when - ups[-1]).days / 365.25
-    return f"{int(yrs)}년 만의 인상" if yrs >= 1 else ""
+    return f"{int(yrs)}년 만" if yrs >= 1 else ""
+
+
+DARK_BG, DARK_INK, DARK_SUB, DARK_LINE = "#000000", "#FFFFFF", "#9A9A9A", "#2A2A2A"
+GOLD, SKY = "#C9A227", "#7FA6E8"
+
+
+def _footer(d, img, settings: dict) -> None:
+    """검정 카드용 아래 띠(다른 카드와 같은 자리·같은 기준선)."""
+    F, T, MX, W = cards.font, cards.tdraw, cards.MX, cards.W
+    y = cards.BUTO_FOOTER_Y
+    d.rectangle((0, y, W, y + 1), fill=DARK_LINE)
+    right = W - MX
+    brand = settings.get("brand_name") or settings.get("account_name") or ""
+    if brand:
+        fb = F("black", 54)
+        bw = cards.tlen(brand, fb)
+        T(d, (right - bw, y + 34), brand, fb, DARK_INK)
+        right -= bw + 30
+    note = settings.get("footer_note", "")
+    if note:
+        fn = F("light", 28)
+        T(d, (MX, y + 50), cards.wrap(note, fn, right - MX)[0], fn, DARK_SUB)
 
 
 def draw(us, kr, settings: dict, country: str = "미국", move: str = "인상", step_pp: float = 0.25,
          when: date | None = None) -> Image.Image:
-    """에디토리얼 스타일: 라벨 → 제목 → 숫자 두 칸 → 꺾은선. 색은 최소로 쓴다."""
-    c = cards.colors_from(settings)
-    img, d = cards._new(c["bg"])
+    """검정 바탕 금리 카드: 라벨 → 큰 숫자 → 두 나라 비교 → 꺾은선(끝점은 동그란 국기)."""
     F, T, MX, W = cards.font, cards.tdraw, cards.MX, cards.W
+    img, d = cards._new(DARK_BG)
     when = when or us[-1][0]
-    up = move == "인상"
-    ACC = RED if up else BLUE
-    sub = c.get("text2", c["sub"])
+    main = us if country == "미국" else kr
+    other = kr if country == "미국" else us
 
-    cards._tag(d, c, settings, MX, 96, "금 리", 30, cover=False)
+    # 라벨 + 날짜
+    fl = F("bold", 28)
+    xx = MX
+    for ch in "금리":
+        T(d, (xx, 96), ch, fl, GOLD)
+        xx += cards.tlen(ch, fl) + 13
+    d.rectangle((xx + 14, 96 + 24, xx + 130, 96 + 26), fill=GOLD)
+    fdate = F("medium", 28)
+    T(d, (W - MX - cards.tlen(f"{when:%Y.%m.%d}", fdate), 96), f"{when:%Y.%m.%d}", fdate, DARK_SUB)
 
-    # 제목
-    T(d, (MX, 190), f"{country} 기준금리", F("extrabold", 92), INK)
-    line2 = f"{step_pp:.2f}%p {move}"
-    f2 = F("extrabold", 92)
-    bb = d.textbbox((MX, 296), line2, font=f2)
-    d.rectangle((bb[0] - 6, bb[3] - 26, bb[2] + 6, bb[3] - 4), fill=c.get("mark", "#EEEA5E"))
-    T(d, (MX, 296), line2, f2, INK)
-    note = _years_since_prev_hike(us if country == "미국" else kr, when)
-    T(d, (MX, 424), f"{when:%Y년 %m월 %d일}" + (f"  ·  {note}" if note else ""), F("medium", 34), sub)
+    # 큰 숫자
+    T(d, (MX, 176), f"{country} 기준금리", F("medium", 46), DARK_SUB)
+    big, val = F("black", 200), f"{main[-1][1]:.2f}%"
+    cards.tdraw_t(d, (MX - 8, 236), val, big, DARK_INK, -0.022)
+    note = _years_since_prev_hike(main, when)
+    T(d, (MX, 470), f"{step_pp:.2f}%p {move}" + (f" · {note}" if note else ""), F("bold", 40), GOLD)
 
-    # 숫자 두 칸
-    top, bot = 500, 660
-    d.rectangle((MX, top, W - MX, top + 1), fill=c["line"])
-    d.rectangle((MX, bot, W - MX, bot + 1), fill=c["line"])
-    d.rectangle((W // 2, top + 26, W // 2 + 1, bot - 26), fill=c["line"])
-    FW, FH = 54, 36
-    for i, (name, pts, col) in enumerate((("미국", us, RED), ("한국", kr, BLUE))):
-        x = MX + 4 + i * (W // 2 - MX + 26)
-        fimg = (flags.usa(FW) if i == 0 else flags.korea(FW)).resize((FW, FH), Image.LANCZOS)
-        flags.paste(img, fimg, x, top + 34)
-        T(d, (x + FW + 16, top + 30), name, F("bold", 34), INK)
-        fn = F("black", 76)
-        val = f"{pts[-1][1]:.2f}%"
-        T(d, (x, top + 84), val, fn, INK)
-        ch = last_change(pts)
-        if ch:
-            arrow = "▲" if ch[2] > ch[1] else "▼"
-            T(d, (x + cards.tlen(val, fn) + 22, top + 112), f"{arrow} {abs(ch[2] - ch[1]):.2f}%p",
-              F("bold", 28), RED if ch[2] > ch[1] else BLUE)
-    gapv = abs(us[-1][1] - kr[-1][1])
-    T(d, (MX, bot + 24), f"한미 금리 차이 {gapv:.2f}%p", F("medium", 30), sub)
+    # 두 나라 비교
+    d.rectangle((MX, 560, W - MX, 561), fill=DARK_LINE)
+    other_name = "한국" if country == "미국" else "미국"
+    T(d, (MX, 590), f"{other_name} 기준금리", F("medium", 32), DARK_SUB)
+    T(d, (MX, 630), f"{other[-1][1]:.2f}%", F("black", 72), DARK_INK)
+    fg = F("medium", 32)
+    gap_label, gap_val = "한미 금리 차이", f"{abs(us[-1][1] - kr[-1][1]):.2f}%p"
+    gx = W - MX - max(cards.tlen(gap_label, fg), cards.tlen(gap_val, F("black", 72)))
+    T(d, (gx, 590), gap_label, fg, DARK_SUB)
+    T(d, (gx, 630), gap_val, F("black", 72), GOLD)
+    d.rectangle((MX, 740, W - MX, 741), fill=DARK_LINE)
 
     # 꺾은선
-    x0, x1, y0, y1 = MX + 70, W - MX - 70, 780, 1090
-    vmin = -0.3
-    vmax = max(v for _, v in us + kr) + 0.7
+    x0, x1, y0, y1 = MX + 70, W - MX - 40, 820, 1100
+    vmin, vmax = -0.2, max(v for _, v in us + kr) + 0.6
     start = min(us[0][0], kr[0][0])
     t0, t1 = start.toordinal(), when.toordinal() + 20
     X = lambda dt: x0 + (dt.toordinal() - t0) / (t1 - t0) * (x1 - x0)
     Y = lambda v: y1 - (v - vmin) / (vmax - vmin) * (y1 - y0)
-    fa = F("medium", 24)
+    fa = F("medium", 28)
     for v in range(0, int(vmax) + 1, 2):
-        d.line((x0, Y(v), x1, Y(v)), fill=c["line"], width=1)
-        d.text((x0 - 16, Y(v)), f"{v}%", font=fa, fill=sub, anchor="rm")
+        d.line((x0, Y(v), x1, Y(v)), fill=DARK_LINE, width=1)
+        d.text((x0 - 16, Y(v)), f"{v}%", font=fa, fill=DARK_SUB, anchor="rm")
     for yy in range(start.year + 1, when.year + 1):
-        d.text((X(date(yy, 1, 1)), y1 + 16), f"{yy % 100:02d}", font=fa, fill=sub, anchor="mt")
-    d.line((x0, y1, x1, y1), fill=c["line"], width=1)
+        d.text((X(date(yy, 1, 1)), y1 + 16), f"'{yy % 100:02d}", font=fa, fill=DARK_SUB, anchor="mt")
 
-    def step(pts, col, width=5):
+    def step(pts, col, width):
         path = []
         for dt, v in pts:
             if path:
@@ -140,19 +153,22 @@ def draw(us, kr, settings: dict, country: str = "미국", move: str = "인상", 
             path.append((X(dt), Y(v)))
         path.append((x1, path[-1][1]))
         d.line(path, fill=col, width=width, joint="curve")
-        return path
 
-    step(kr, BLUE, 4)
-    p_us = step(us, RED, 5)
-    ex, ey = p_us[-1]
-    d.ellipse((ex - 9, ey - 9, ex + 9, ey + 9), fill=RED)
-    # 끝점 값(겹치면 위아래로 벌림)
-    fe = F("bold", 34)
-    ends = sorted(((us[-1][1], RED), (kr[-1][1], BLUE)), reverse=True)
-    spread = max(0, 44 - abs(Y(ends[0][0]) - Y(ends[1][0]))) / 2
-    for i, (v, col) in enumerate(ends):
-        d.text((x1 + 14, Y(v) + (-spread if i == 0 else spread)), f"{v:.2f}", font=fe, fill=col, anchor="lm")
+    step(kr, SKY, 4)
+    step(us, GOLD, 6)
 
-    T(d, (MX, 1140), "자료: 한국은행 ECOS · FRED(미국은 연방기금금리 목표범위 상한)", F("light", 24), c["sub"])
-    cards._buto_footer(d, c, settings, None, None, "")
+    # 선 끝 = 동그란 국기(겹치면 위아래로 벌린다)
+    SZ = 54
+    ys = {"미국": Y(us[-1][1]), "한국": Y(kr[-1][1])}
+    if abs(ys["미국"] - ys["한국"]) < SZ + 4:
+        mid = (ys["미국"] + ys["한국"]) / 2
+        hi = "미국" if us[-1][1] >= kr[-1][1] else "한국"
+        lo = "한국" if hi == "미국" else "미국"
+        ys = {hi: mid - (SZ + 4) / 2, lo: mid + (SZ + 4) / 2}
+    for name, ring in (("미국", GOLD), ("한국", SKY)):
+        b = flags.circle(name, SZ, ring=ring, ring_w=3)
+        img.paste(b, (int(x1 - SZ // 2), int(ys[name] - SZ // 2)), b)
+
+    T(d, (MX, 1150), "자료: 한국은행 ECOS · FRED(미국은 연방기금금리 목표범위 상한)", F("light", 28), DARK_SUB)
+    _footer(d, img, settings)
     return img

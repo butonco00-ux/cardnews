@@ -308,6 +308,21 @@ from engine import caption as _C
 _nc = _C.news([dict(_it, summary=["홍길동은 빌딩을 팔았다.", "b", "c"])], "2026.01.02", settings)
 check("기사 제목·언론사만" not in _nc and "홍길동은 빌딩을 팔았다." in _nc, "뉴스 캡션에 사실 정리, 옛 안내 문장 없음")
 
+print("9-4. 기준금리 카드")
+from datetime import date as _d
+from engine import rates as _R
+_us = [(_d(2021, 1, 1), 0.25), (_d(2022, 3, 17), 0.50), (_d(2023, 7, 27), 5.50), (_d(2026, 9, 17), 4.00)]
+_kr = [(_d(2021, 1, 1), 0.50), (_d(2022, 4, 1), 1.50), (_d(2023, 1, 13), 3.50), (_d(2026, 8, 1), 3.00)]
+_ch = _R.last_change(_us)
+check(_ch[0] == _d(2026, 9, 17) and _ch[1] == 5.50 and _ch[2] == 4.00, "금리 바뀐 날·이전 값 찾기")
+_im = _R.draw(_us, _kr, settings, "미국", "인하", 1.5, _ch[0])
+check(_im.size == (1080, 1350), "금리 카드 크기 1080x1350")
+_px = _im.convert("RGB").getpixel((5, 5))
+check(max(_px) < 20, "검정 바탕")
+from engine import flags as _F
+_b = _F.circle("한국", 54, ring="#7FA6E8")
+check(_b.size == (54, 54) and _b.mode == "RGBA", "동그란 국기 배지")
+
 print("10. 사용자 데이터 보호")
 check(not (ROOT / "data" / "history.json").exists() or os.environ["CARDNEWS_DATA"] != str(ROOT / "data"), "검사는 임시 폴더만 사용")
 req = (ROOT / "requirements.txt").read_bytes()
