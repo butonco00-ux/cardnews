@@ -12,6 +12,7 @@ from __future__ import annotations
 import csv
 import io
 import os
+import time
 from datetime import date
 
 import httpx
@@ -38,7 +39,13 @@ def fetch_kr(start: date, end: date, key: str = "") -> list[tuple[date, float]]:
         for a, b in (("01", "06"), ("07", "12")):
             u = (f"https://ecos.bok.or.kr/api/StatisticSearch/{key}/json/kr/1/10/722Y001/M/"
                  f"{y}{a}/{y}{b}/0101000")
-            j = httpx.get(u, timeout=30).json()
+            j = {}
+            for attempt in range(3):                      # 시험용 열쇠는 가끔 끊긴다 → 재시도
+                try:
+                    j = httpx.get(u, timeout=30).json()
+                    break
+                except Exception:
+                    time.sleep(1.5 * (attempt + 1))
             for row in (j.get("StatisticSearch") or {}).get("row", []):
                 t = row["TIME"]
                 out.append((date(int(t[:4]), int(t[4:]), 1), float(row["DATA_VALUE"])))
@@ -131,32 +138,48 @@ def draw(us, kr, settings: dict, country: str = "미국", move: str = "인상", 
     T(d, (MX, y + 176), f"{main[-1][1]:.2f}% · " + (f"{note} · " if note else "")
       + f"{other_name} {other[-1][1]:.2f}%", F("bold", 40), INK)
 
-    # 그래프: 선 두 개만, 움직인 나라만 색
-    x0, x1, y0, y1 = MX, W - MX - 210, 700, 1090
+    # 그래프: 옅은 면 + 선 두 개, 이번에 바뀐 지점만 표시
+    x0, x1, y0, y1 = MX, W - MX - 210, 700, 1086
     vmin, vmax = 0.0, max(v for _, v in us + kr) + 0.5
     start = min(us[0][0], kr[0][0])
     t0, t1 = start.toordinal(), when.toordinal() + 20
     X = lambda dt: x0 + (dt.toordinal() - t0) / (t1 - t0) * (x1 - x0)
     Y = lambda v: y1 - (v - vmin) / (vmax - vmin) * (y1 - y0)
-    fa = F("medium", 28)
-    for v in range(0, int(vmax) + 1, 2):
-        d.line((x0, Y(v), x1 + 120, Y(v)), fill=LINE, width=1)
-        if v:                                    # 0% 글자는 선과 겹쳐서 넣지 않는다
-            T(d, (x0, Y(v) - 38), f"{v}%", fa, SUB)
-    for yy in range(start.year + 1, when.year + 1, 1):
-        d.text((X(date(yy, 1, 1)), y1 + 16), str(yy), font=fa, fill=SUB, anchor="mt")
+
+    fa = F("medium", 24)
+    for v in range(2, int(vmax) + 1, 2):                 # 가로선은 2%마다 아주 옅게
+        d.line((x0, Y(v), x1 + 170, Y(v)), fill="#F0F0F0", width=1)
+        T(d, (x0, Y(v) - 34), f"{v}%", fa, "#B5B5B5")
+    d.line((x0, y1, x1 + 170, y1), fill="#E4E4E4", width=1)
+    for yy in range(start.year + 1, when.year + 1):
+        d.text((X(date(yy, 1, 1)), y1 + 14), str(yy), font=fa, fill="#B5B5B5", anchor="mt")
 
     main_pts, other_pts = (us, kr) if country == "미국" else (kr, us)
-    d.line(_path(other_pts, X, Y, x1), fill=MUTE, width=6, joint="curve")
-    d.line(_path(main_pts, X, Y, x1), fill=ACC, width=8, joint="curve")
+    p_main = _path(main_pts, X, Y, x1)
+    p_other = _path(other_pts, X, Y, x1)
+
+    tint = Image.new("RGBA", (W, cards.H), (0, 0, 0, 0))     # 움직인 나라 선 아래를 아주 옅게
+    rgb = tuple(int(ACC[i:i + 2], 16) for i in (1, 3, 5))
+    ImageDraw.Draw(tint).polygon(p_main + [(x1, y1), (x0, y1)], fill=rgb + (20,))
+    img.paste(Image.alpha_composite(img.convert("RGBA"), tint).convert("RGB"), (0, 0))
+    d = ImageDraw.Draw(img)
+
+    d.line(p_other, fill="#D2D2D2", width=5, joint="curve")
+    d.line(p_main, fill=ACC, width=7, joint="curve")
+
+    # 이번에 바뀐 지점: 가는 세로선 + 점
+    cx, cy = X(when), Y(main_pts[-1][1])
+    for yy in range(int(cy) + 14, int(y1), 16):              # 점선
+        d.line((cx, yy, cx, min(yy + 8, y1)), fill="#D8D8D8", width=2)
+    d.ellipse((cx - 11, cy - 11, cx + 11, cy + 11), fill=BG, outline=ACC, width=6)
 
     fv = F("black", 40)
     ym, yo = Y(main_pts[-1][1]), Y(other_pts[-1][1])
     if abs(ym - yo) < 52:
         mid = (ym + yo) / 2
         ym, yo = (mid - 26, mid + 26) if main_pts[-1][1] >= other_pts[-1][1] else (mid + 26, mid - 26)
-    d.text((x1 + 22, ym), f"{country} {main_pts[-1][1]:.2f}", font=fv, fill=ACC, anchor="lm")
-    d.text((x1 + 22, yo), f"{other_name} {other_pts[-1][1]:.2f}", font=fv, fill="#9A9A9A", anchor="lm")
+    d.text((x1 + 26, ym), f"{country} {main_pts[-1][1]:.2f}", font=fv, fill=ACC, anchor="lm")
+    d.text((x1 + 26, yo), f"{other_name} {other_pts[-1][1]:.2f}", font=fv, fill="#A3A3A3", anchor="lm")
 
     T(d, (MX, 1168), "자료: 한국은행 ECOS · FRED(미국은 연방기금금리 목표범위 상한)", F("light", 26), SUB)
     _footer(d, img, settings)
