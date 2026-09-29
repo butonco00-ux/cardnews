@@ -122,7 +122,7 @@ def _path(pts, X, Y, x1):
 
 
 def draw(us, kr, settings: dict, country: str = "미국", move: str = "인상", step_pp: float = 0.25,
-         when: date | None = None, theme: str = "light") -> Image.Image:
+         when: date | None = None, theme: str = "light", thin: bool = False) -> Image.Image:
     F, T, TR, MX, W = cards.font, cards.tdraw, cards.tdraw_t, cards.MX, cards.W
     t = THEMES.get(theme or "light", THEMES["light"])
     BG, INK, SUB = t["bg"], t["ink"], t["sub"]
@@ -177,8 +177,9 @@ def draw(us, kr, settings: dict, country: str = "미국", move: str = "인상", 
     img.paste(Image.alpha_composite(img.convert("RGBA"), tint).convert("RGB"), (0, 0))
     d = ImageDraw.Draw(img)
 
-    d.line(p_other, fill=t["other"], width=5, joint="curve")
-    d.line(p_main, fill=ACC, width=7, joint="curve")
+    w_main = w_other = 4 if thin else 6          # 두 나라 선 굵기는 같게(색으로만 구분)
+    d.line(p_other, fill=t["other"], width=w_other, joint="curve")
+    d.line(p_main, fill=ACC, width=w_main, joint="curve")
 
     # 이번에 바뀐 지점: 가는 세로선 + 점
     cx, cy = X(when), Y(main_pts[-1][1])
@@ -191,7 +192,7 @@ def draw(us, kr, settings: dict, country: str = "미국", move: str = "인상", 
     if abs(ym - yo) < 56:
         mid = (ym + yo) / 2
         ym, yo = (mid - 28, mid + 28) if main_pts[-1][1] >= other_pts[-1][1] else (mid + 28, mid - 28)
-    FSZ = 52                                             # 선이 끝나는 자리에 동그란 국기를 올린다
+    FSZ = 44 if thin else 52                                             # 선이 끝나는 자리에 동그란 국기를 올린다
     for name, ytxt, col, val, yend in ((country, ym, ACC, main_pts[-1][1], Y(main_pts[-1][1])),
                                        (other_name, yo, t["other_text"], other_pts[-1][1], Y(other_pts[-1][1]))):
         badge = flags.circle(name, FSZ, ring=col, ring_w=3)
