@@ -152,7 +152,7 @@ def draw(us, kr, settings: dict, country: str = "미국", move: str = "인상", 
       + f"{other_name} {other[-1][1]:.2f}%", F("bold", 40), INK)
 
     # 그래프: 옅은 면 + 선 두 개, 이번에 바뀐 지점만 표시
-    x0, x1, y0, y1 = MX, W - MX - 210, 700, 1086
+    x0, x1, y0, y1 = MX, W - MX - 278, 700, 1086
     vmin, vmax = 0.0, max(v for _, v in us + kr) + 0.5
     start = min(us[0][0], kr[0][0])
     t0, t1 = start.toordinal(), when.toordinal() + 20
@@ -186,13 +186,18 @@ def draw(us, kr, settings: dict, country: str = "미국", move: str = "인상", 
         d.line((cx, yy, cx, min(yy + 8, y1)), fill=t["dash"], width=2)
     d.ellipse((cx - 11, cy - 11, cx + 11, cy + 11), fill=BG, outline=ACC, width=6)
 
-    fv = F("black", 40)
+    fv = F("black", 38)
     ym, yo = Y(main_pts[-1][1]), Y(other_pts[-1][1])
-    if abs(ym - yo) < 52:
+    if abs(ym - yo) < 56:
         mid = (ym + yo) / 2
-        ym, yo = (mid - 26, mid + 26) if main_pts[-1][1] >= other_pts[-1][1] else (mid + 26, mid - 26)
-    d.text((x1 + 26, ym), f"{country} {main_pts[-1][1]:.2f}", font=fv, fill=ACC, anchor="lm")
-    d.text((x1 + 26, yo), f"{other_name} {other_pts[-1][1]:.2f}", font=fv, fill=t["other_text"], anchor="lm")
+        ym, yo = (mid - 28, mid + 28) if main_pts[-1][1] >= other_pts[-1][1] else (mid + 28, mid - 28)
+    FSZ = 42                                             # 선 끝 이름 앞에 동그란 국기
+    for name, yy, col, val in ((country, ym, ACC, main_pts[-1][1]),
+                               (other_name, yo, t["other_text"], other_pts[-1][1])):
+        badge = flags.circle(name, FSZ, ring=col, ring_w=2)
+        img.paste(badge, (int(x1 + 24), int(yy - FSZ / 2)), badge)
+        ImageDraw.Draw(img).text((x1 + 24 + FSZ + 14, yy), f"{name} {val:.2f}", font=fv, fill=col, anchor="lm")
+    d = ImageDraw.Draw(img)
 
     T(d, (MX, 1168), "자료: 한국은행 ECOS · FRED(미국은 연방기금금리 목표범위 상한)", F("light", 26), SUB)
     _footer(d, img, settings, t)
