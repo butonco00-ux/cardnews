@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-09-29",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.09.29)",
+  "date_label": "2026.09.29",
+  "news_items": [
+    {
+      "title": "강남·용산·강서·광진 정비사업 ‘속도’…4422가구 공급길 열렸다 [부...",
+      "link": "https://biz.heraldcorp.com/article/10886973?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002702969?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-09-29T10:01:00+09:00",
+      "date_label": "2026.09.29 10:01",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "강남 한솔·용산 반도아파트 재건축…서울시 도시계획위 의결",
+      "link": "https://www.yna.co.kr/view/AKR20260929029600004?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016342676?sid=102",
+      "press": "연합뉴스",
+      "published": "2026-09-29T10:00:00+09:00",
+      "date_label": "2026.09.29 10:00",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "'서울 집값 감당 안 되네'…인천 아파트 거래량 10% 증가",
+      "link": "https://www.hankyung.com/article/2026092910166",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005336985?sid=101",
+      "press": "한국경제",
+      "published": "2026-09-29T09:29:00+09:00",
+      "date_label": "2026.09.29 09:29",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "오세훈, 광진구 모아주택 첫 입주 현장 방문 \"2031년까지 4만 호 공급\"",
+      "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00009&news_seq_no=5221975",
+      "naver_link": "https://n.news.naver.com/mnews/article/057/0001971143?sid=102",
+      "press": "매일경제",
+      "published": "2026-09-29T09:21:00+09:00",
+      "date_label": "2026.09.29 09:21",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "세 부담에… 다주택자 비중 7년9개월來 최저 [뉴스 투데이]",
+      "link": "https://www.segye.com/newsView/20260928514917?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004162398?sid=101",
+      "press": "세계일보",
+      "published": "2026-09-28T19:02:00+09:00",
+      "date_label": "2026.09.28 19:02",
+      "score": 6,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.09.29)\n\n1. 강남·용산·강서·광진 정비사업 ‘속도’…4422가구 공급길 열렸다 [부... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10886973?ref=naver\n2. 강남 한솔·용산 반도아파트 재건축…서울시 도시계획위 의결 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20260929029600004?input=1195m\n3. '서울 집값 감당 안 되네'…인천 아파트 거래량 10% 증가 — 한국경제\n   https://www.hankyung.com/article/2026092910166\n4. 오세훈, 광진구 모아주택 첫 입주 현장 방문 \"2031년까지 4만 호 공급\" — 매일경제\n   http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00009&news_seq_no=5221975\n5. 세 부담에… 다주택자 비중 7년9개월來 최저 [뉴스 투데이] — 세계일보\n   https://www.segye.com/newsView/20260928514917?OutUrl=naver\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://biz.heraldcorp.com/article/10886973?ref=naver",
+    "https://www.yna.co.kr/view/AKR20260929029600004?input=1195m",
+    "https://www.hankyung.com/article/2026092910166",
+    "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00009&news_seq_no=5221975",
+    "https://www.segye.com/newsView/20260928514917?OutUrl=naver"
+  ],
+  "created_at": "2026-09-29T10:22:55.982420+09:00"
+}
