@@ -152,18 +152,29 @@ def draw(us, kr, settings: dict, country: str = "미국", move: str = "인상", 
       + f"{other_name} {other[-1][1]:.2f}%", F("bold", 40), INK)
 
     # 그래프: 옅은 면 + 선 두 개, 이번에 바뀐 지점만 표시
-    x0, x1, y0, y1 = MX, W - MX - 278, 700, 1086
+    x0, x1, y0, y1 = MX, W - MX - 34, 748, 1086
     vmin, vmax = 0.0, max(v for _, v in us + kr) + 0.5
     start = min(us[0][0], kr[0][0])
     t0, t1 = start.toordinal(), when.toordinal() + 20
     X = lambda dt: x0 + (dt.toordinal() - t0) / (t1 - t0) * (x1 - x0)
     Y = lambda v: y1 - (v - vmin) / (vmax - vmin) * (y1 - y0)
 
+    fleg, LSZ = F("black", 36), 40
+    lx = x0
+    for name, col, pts in ((country, ACC, us if country == "미국" else kr),
+                           (other_name, t["other_text"], kr if country == "미국" else us)):
+        badge = flags.circle(name, LSZ, ring=col, ring_w=3)
+        img.paste(badge, (int(lx), 624), badge)
+        txt = f"{name} {pts[-1][1]:.2f}%"
+        ImageDraw.Draw(img).text((lx + LSZ + 14, 624 + LSZ / 2), txt, font=fleg, fill=col, anchor="lm")
+        lx += LSZ + 14 + cards.tlen(txt, fleg) + 44
+    d = ImageDraw.Draw(img)
+
     fa = F("medium", 24)
     for v in range(2, int(vmax) + 1, 2):                 # 가로선은 2%마다 아주 옅게
-        d.line((x0, Y(v), x1 + 170, Y(v)), fill=t["grid"], width=1)
+        d.line((x0, Y(v), W - MX, Y(v)), fill=t["grid"], width=1)
         T(d, (x0, Y(v) - 34), f"{v}%", fa, t["tick"])
-    d.line((x0, y1, x1 + 170, y1), fill=t["axis"], width=1)
+    d.line((x0, y1, W - MX, y1), fill=t["axis"], width=1)
     for yy in range(start.year + 1, when.year + 1):
         d.text((X(date(yy, 1, 1)), y1 + 14), str(yy), font=fa, fill=t["tick"], anchor="mt")
 
@@ -187,17 +198,10 @@ def draw(us, kr, settings: dict, country: str = "미국", move: str = "인상", 
         d.line((cx, yy, cx, min(yy + 8, y1)), fill=t["dash"], width=2)
 
 
-    fv = F("black", 38)
-    ym, yo = Y(main_pts[-1][1]), Y(other_pts[-1][1])
-    if abs(ym - yo) < 56:
-        mid = (ym + yo) / 2
-        ym, yo = (mid - 28, mid + 28) if main_pts[-1][1] >= other_pts[-1][1] else (mid + 28, mid - 28)
-    FSZ = 44 if thin else 52                                             # 선이 끝나는 자리에 동그란 국기를 올린다
-    for name, ytxt, col, val, yend in ((country, ym, ACC, main_pts[-1][1], Y(main_pts[-1][1])),
-                                       (other_name, yo, t["other_text"], other_pts[-1][1], Y(other_pts[-1][1]))):
+    FSZ = 40 if thin else 46                        # 선이 끝나는 자리에 동그란 국기
+    for name, col, pts in ((country, ACC, main_pts), (other_name, t["other_text"], other_pts)):
         badge = flags.circle(name, FSZ, ring=col, ring_w=3)
-        img.paste(badge, (int(x1 - FSZ / 2), int(yend - FSZ / 2)), badge)
-        ImageDraw.Draw(img).text((x1 + FSZ / 2 + 18, ytxt), f"{name} {val:.2f}", font=fv, fill=col, anchor="lm")
+        img.paste(badge, (int(x1 - FSZ / 2), int(Y(pts[-1][1]) - FSZ / 2)), badge)
     d = ImageDraw.Draw(img)
 
     T(d, (MX, 1168), "자료: 한국은행 ECOS · FRED(미국은 연방기금금리 목표범위 상한)", F("light", 26), SUB)
