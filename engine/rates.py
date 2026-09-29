@@ -82,11 +82,22 @@ def _years_since_prev_hike(pts, when) -> str:
 BG, INK, SUB, LINE = "#FFFFFF", "#111111", "#8A8A8A", "#E2E2E2"
 RED, BLUE, MUTE = "#D6291E", "#1F4FD8", "#C9C9C9"
 
+# 밝은 버전 / 검정 버전 색(배치는 똑같다)
+THEMES = {
+    "light": {"bg": "#FFFFFF", "ink": "#111111", "sub": "#8A8A8A", "grid": "#F0F0F0", "axis": "#E4E4E4",
+              "tick": "#B5B5B5", "other": "#D2D2D2", "other_text": "#A3A3A3", "dash": "#D8D8D8",
+              "foot": "#D9D9D9", "up": "#D6291E", "down": "#1F4FD8", "tint": 20},
+    "dark": {"bg": "#000000", "ink": "#FFFFFF", "sub": "#8E8E8E", "grid": "#1C1C1C", "axis": "#2A2A2A",
+             "tick": "#6E6E6E", "other": "#4A4A4A", "other_text": "#8E8E8E", "dash": "#3A3A3A",
+             "foot": "#262626", "up": "#FF4A3D", "down": "#5B8CFF", "tint": 34},
+}
 
-def _footer(d, img, settings: dict) -> None:
+
+def _footer(d, img, settings: dict, t: dict) -> None:
     F, T, MX, W = cards.font, cards.tdraw, cards.MX, cards.W
+    INK, SUB = t["ink"], t["sub"]
     y = cards.BUTO_FOOTER_Y
-    d.rectangle((0, y, W, y + 1), fill="#D9D9D9")
+    d.rectangle((0, y, W, y + 1), fill=t["foot"])
     right = W - MX
     brand = settings.get("brand_name") or settings.get("account_name") or ""
     if brand:
@@ -111,12 +122,14 @@ def _path(pts, X, Y, x1):
 
 
 def draw(us, kr, settings: dict, country: str = "미국", move: str = "인상", step_pp: float = 0.25,
-         when: date | None = None) -> Image.Image:
+         when: date | None = None, theme: str = "light") -> Image.Image:
     F, T, TR, MX, W = cards.font, cards.tdraw, cards.tdraw_t, cards.MX, cards.W
+    t = THEMES.get(theme or "light", THEMES["light"])
+    BG, INK, SUB = t["bg"], t["ink"], t["sub"]
     img, d = cards._new(BG)
     when = when or us[-1][0]
     up = move == "인상"
-    ACC = RED if up else BLUE
+    ACC = t["up"] if up else t["down"]
     main = us if country == "미국" else kr
     other = kr if country == "미국" else us
     other_name = "한국" if country == "미국" else "미국"
@@ -148,11 +161,11 @@ def draw(us, kr, settings: dict, country: str = "미국", move: str = "인상", 
 
     fa = F("medium", 24)
     for v in range(2, int(vmax) + 1, 2):                 # 가로선은 2%마다 아주 옅게
-        d.line((x0, Y(v), x1 + 170, Y(v)), fill="#F0F0F0", width=1)
-        T(d, (x0, Y(v) - 34), f"{v}%", fa, "#B5B5B5")
-    d.line((x0, y1, x1 + 170, y1), fill="#E4E4E4", width=1)
+        d.line((x0, Y(v), x1 + 170, Y(v)), fill=t["grid"], width=1)
+        T(d, (x0, Y(v) - 34), f"{v}%", fa, t["tick"])
+    d.line((x0, y1, x1 + 170, y1), fill=t["axis"], width=1)
     for yy in range(start.year + 1, when.year + 1):
-        d.text((X(date(yy, 1, 1)), y1 + 14), str(yy), font=fa, fill="#B5B5B5", anchor="mt")
+        d.text((X(date(yy, 1, 1)), y1 + 14), str(yy), font=fa, fill=t["tick"], anchor="mt")
 
     main_pts, other_pts = (us, kr) if country == "미국" else (kr, us)
     p_main = _path(main_pts, X, Y, x1)
@@ -160,17 +173,17 @@ def draw(us, kr, settings: dict, country: str = "미국", move: str = "인상", 
 
     tint = Image.new("RGBA", (W, cards.H), (0, 0, 0, 0))     # 움직인 나라 선 아래를 아주 옅게
     rgb = tuple(int(ACC[i:i + 2], 16) for i in (1, 3, 5))
-    ImageDraw.Draw(tint).polygon(p_main + [(x1, y1), (x0, y1)], fill=rgb + (20,))
+    ImageDraw.Draw(tint).polygon(p_main + [(x1, y1), (x0, y1)], fill=rgb + (t["tint"],))
     img.paste(Image.alpha_composite(img.convert("RGBA"), tint).convert("RGB"), (0, 0))
     d = ImageDraw.Draw(img)
 
-    d.line(p_other, fill="#D2D2D2", width=5, joint="curve")
+    d.line(p_other, fill=t["other"], width=5, joint="curve")
     d.line(p_main, fill=ACC, width=7, joint="curve")
 
     # 이번에 바뀐 지점: 가는 세로선 + 점
     cx, cy = X(when), Y(main_pts[-1][1])
     for yy in range(int(cy) + 14, int(y1), 16):              # 점선
-        d.line((cx, yy, cx, min(yy + 8, y1)), fill="#D8D8D8", width=2)
+        d.line((cx, yy, cx, min(yy + 8, y1)), fill=t["dash"], width=2)
     d.ellipse((cx - 11, cy - 11, cx + 11, cy + 11), fill=BG, outline=ACC, width=6)
 
     fv = F("black", 40)
@@ -179,8 +192,8 @@ def draw(us, kr, settings: dict, country: str = "미국", move: str = "인상", 
         mid = (ym + yo) / 2
         ym, yo = (mid - 26, mid + 26) if main_pts[-1][1] >= other_pts[-1][1] else (mid + 26, mid - 26)
     d.text((x1 + 26, ym), f"{country} {main_pts[-1][1]:.2f}", font=fv, fill=ACC, anchor="lm")
-    d.text((x1 + 26, yo), f"{other_name} {other_pts[-1][1]:.2f}", font=fv, fill="#A3A3A3", anchor="lm")
+    d.text((x1 + 26, yo), f"{other_name} {other_pts[-1][1]:.2f}", font=fv, fill=t["other_text"], anchor="lm")
 
     T(d, (MX, 1168), "자료: 한국은행 ECOS · FRED(미국은 연방기금금리 목표범위 상한)", F("light", 26), SUB)
-    _footer(d, img, settings)
+    _footer(d, img, settings, t)
     return img

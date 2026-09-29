@@ -318,7 +318,9 @@ check(_ch[0] == _d(2026, 9, 17) and _ch[1] == 5.50 and _ch[2] == 4.00, "금리 �
 _im = _R.draw(_us, _kr, settings, "미국", "인하", 1.5, _ch[0])
 check(_im.size == (1080, 1350), "금리 카드 크기 1080x1350")
 _px = _im.convert("RGB").getpixel((5, 5))
-check(min(_px) > 230, "흰 바탕(아파트LAP 스타일)")
+check(min(_px) > 230, "밝은 버전은 흰 바탕")
+_imd = _R.draw(_us, _kr, settings, "미국", "인하", 1.5, _ch[0], theme="dark")
+check(max(_imd.convert("RGB").getpixel((5, 5))) < 20, "검정 버전은 검정 바탕")
 from engine import flags as _F
 _b = _F.circle("한국", 54, ring="#7FA6E8")
 check(_b.size == (54, 54) and _b.mode == "RGBA", "동그란 국기 배지")
