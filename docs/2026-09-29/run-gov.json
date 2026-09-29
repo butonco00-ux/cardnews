@@ -1,0 +1,243 @@
+{
+  "date": "2026-09-29",
+  "finished_at": "2026-09-29T19:04:34.750971+09:00",
+  "messages": [
+    {
+      "level": "ok",
+      "text": "정책·세금 카드 6장을 만들었어요: [설명] 민간 토지매각 실적 감소를 주택공급 감소로 보는 것은 적절하지 않습니다."
+    }
+  ],
+  "candidates": [
+    {
+      "title": "[참고] 추석 연휴기간 총 3,075만 명 이동",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783487",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[참고] 서소문고가 철거공사 붕괴사고, 건설사고조사위원회 조사기간 연장",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783478",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "\"고속도로 출구 잘못 나가도 15분 내 다시 들어오면 기본요금 면제\" 10월1일 시행",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783435",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "굴착 전 주소만 입력하면 지하시설물 바로 확인",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783436",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "철도 차량정리 작업, 위험구역 노출 줄이고 현장 안전체계 강화",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783437",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "사업에 맞는 공모방식 찾고 민간전문가 역할 넓힌다 설계공모 및 민간전문가 제도개선 토론회",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783382",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "글로벌 철도연수과정 본격 시작, 해외사업의 가교 역할을 지속 이어간다",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783381",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[차관동정] 김이탁 제1차관, \"현장의 목소리를 도시재생 정책 변화로 이어가겠다\"",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783374",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[설명] 민간 토지매각 실적 감소를 주택공급 감소로 보는 것은 적절하지 않습니다.",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783325",
+      "score": 11,
+      "status": "선택됨 → 세트 1"
+    },
+    {
+      "title": "모두의카드 출퇴근 시차시간 혜택 계속 이어간다",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783288",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "인공지능(AI) 도시·스마트 도시 석·박사 인재 키울 대학 4곳 선정",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783289",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "'26.2분기 건설공사 계약액",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783225",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "「소득세법 시행령」 등 4개 시행령 국무회의 의결",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783482",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "전략경제자문단 방산분과 현장 방문",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783495",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "2026년 2분기 해외직접투자 동향",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783412",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "수출플러스지원단, 경북지역 수출진흥 협력회의 개최",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783485",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "이형일 부총리, 한국은행 방문 및 신현송 한은총재 면담",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783297",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "이형일 부총리, 첫 경제현안간담회 개최",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783243",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "합동대응단은 명문대 경영동아리 출신 정보카르텔을 적발하여 압수수색을 실시하고 혐의자 재산을 동결하였습니다.",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783502",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "이억원 금융위원장 일본 금융청장 면담 - 한-일 금융시장 정책·동향을 공유하고, 양국 간 지속적인 금융 협력 강화를 약속",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783428",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "이억원 금융위원장, 골드만삭스(Goldman Sachs) 아·태 대표 및 블랙록(Blackrock) 글로벌 파트너스 공동 총괄 면담",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783346",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "이억원 금융위원장, 유엔 책임투자원칙(PRI) 이사회 의장 면담",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783372",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "｢금융소비자 보호에 관한 감독규정｣ 개정안 규정변경예고 ('26.9.28. ~ '26.11.9.)",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783278",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "골드만삭스, 블랙록, 日 금융청, UN PRI 등 글로벌 핵심 투자자·기관 등 한 자리에... 「Korea Premium Weeks 2026」 성황리 개막 - 금융위원회·한국거래소 공동으로 최초 개최, 3주간 K-자본시장 대표 IR 대장정 돌입",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783337",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "휴면자산 환급실적 등을 공개하고 금융회사의 휴면자산 관리체계를 강화합니다.",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783312",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "주민이 체감하는 지역 변화 이끈다 전국 시군구 부단체장 모여 지혜 모아",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783494",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "소상공인 가게 운영부터 지역 정착까지 맞춤형 AI 서비스가 돕는다",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783463",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "2026년('25년 기준) 자전거 이용 현황 국가승인통계 발표",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783467",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "범정부 AI·데이터행정 협력체계 본격 가동 \"AI·데이터행정을 이끌 책임관 한자리에\"",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783465",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "AI 정부 사절단, BSEC 회원국과 공공 혁신의 미래 논의",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783307",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "\"주민의 직접참여 확대, 지방정부와 함께 만든다\" 행안부, 주민참여제도 담당 공무원 워크숍 개최",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783309",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "일본 리스콘 한국관 3년 연속 운영, 한·일 재난안전산업 협력 강화",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783311",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "윤호중 장관, 사회연대경제 고위급 회의 참석하고 스페인·세네갈과 협력 양해각서 체결",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783244",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    }
+  ]
+}
