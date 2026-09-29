@@ -184,19 +184,19 @@ def draw(us, kr, settings: dict, country: str = "미국", move: str = "인상", 
     cx, cy = X(when), Y(main_pts[-1][1])
     for yy in range(int(cy) + 14, int(y1), 16):              # 점선
         d.line((cx, yy, cx, min(yy + 8, y1)), fill=t["dash"], width=2)
-    d.ellipse((cx - 11, cy - 11, cx + 11, cy + 11), fill=BG, outline=ACC, width=6)
+
 
     fv = F("black", 38)
     ym, yo = Y(main_pts[-1][1]), Y(other_pts[-1][1])
     if abs(ym - yo) < 56:
         mid = (ym + yo) / 2
         ym, yo = (mid - 28, mid + 28) if main_pts[-1][1] >= other_pts[-1][1] else (mid + 28, mid - 28)
-    FSZ = 42                                             # 선 끝 이름 앞에 동그란 국기
-    for name, yy, col, val in ((country, ym, ACC, main_pts[-1][1]),
-                               (other_name, yo, t["other_text"], other_pts[-1][1])):
-        badge = flags.circle(name, FSZ, ring=col, ring_w=2)
-        img.paste(badge, (int(x1 + 24), int(yy - FSZ / 2)), badge)
-        ImageDraw.Draw(img).text((x1 + 24 + FSZ + 14, yy), f"{name} {val:.2f}", font=fv, fill=col, anchor="lm")
+    FSZ = 52                                             # 선이 끝나는 자리에 동그란 국기를 올린다
+    for name, ytxt, col, val, yend in ((country, ym, ACC, main_pts[-1][1], Y(main_pts[-1][1])),
+                                       (other_name, yo, t["other_text"], other_pts[-1][1], Y(other_pts[-1][1]))):
+        badge = flags.circle(name, FSZ, ring=col, ring_w=3)
+        img.paste(badge, (int(x1 - FSZ / 2), int(yend - FSZ / 2)), badge)
+        ImageDraw.Draw(img).text((x1 + FSZ / 2 + 18, ytxt), f"{name} {val:.2f}", font=fv, fill=col, anchor="lm")
     d = ImageDraw.Draw(img)
 
     T(d, (MX, 1168), "자료: 한국은행 ECOS · FRED(미국은 연방기금금리 목표범위 상한)", F("light", 26), SUB)
