@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-01",
+  "releases": [
+    {
+      "title": "[설명] 정부는 주택건설실적 통계의 정확도 제고를 위해 통계 생산 및 공표방식을 '25.9월 기개선하였습니다",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783842",
+      "dept": "국토교통부",
+      "list_date": "2026-09-30",
+      "date_label": "2026.09.30",
+      "subtitles": [],
+      "lead": "2026.9.30.(수) 뉴스1 「“34만가구라더니 실제론 30만” … 지난해 주택 준공 4.2만가구 줄었다」 등 관련입니다.",
+      "license_usable": true,
+      "license_label": "공공누리 제1유형(텍스트에 한함)",
+      "embargo": {
+        "available_at": "2026-09-30T00:00:00+09:00",
+        "raw": "배포 즉시 보도 가능배포2026. 9. 30.(수)",
+        "rule": "배포 즉시 보도",
+        "certain": true
+      }
+    },
+    {
+      "title": "'도심 공공주택 복합사업' 서울 11곳(1.8만호) 신규 후보지 선정",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783661",
+      "dept": "국토교통부",
+      "list_date": "2026-09-30",
+      "date_label": "2026.09.30",
+      "subtitles": [
+        "3년여 만의 신규 후보지 선정으로, 용산구·마포구·서초구 등 10개 자치구 선정"
+      ],
+      "lead": "국토교통부(장관 홍지선)는 도심 공공주택 복합사업(이하 “도심복합사업”)신규 후보지로 총 11곳을 선정했다고 밝혔다. 이는 국민의 주거 안정과 주택 공급 촉진을 위한 ｢주택 신속공급 방안｣(8.13)의 후속조치다.",
+      "license_usable": true,
+      "license_label": "공공누리 제1유형(텍스트에 한함)",
+      "embargo": {
+        "available_at": "2026-09-30T11:00:00+09:00",
+        "raw": "2026. 9. 30.(수) 11:00 이후(10. 1.(목) 조간)",
+        "rule": "적힌 시각",
+        "certain": true
+      }
+    },
+    {
+      "title": "'26년 8월 주택통계 및 '25년 주택건설실적 통계 확정치 공표",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783581",
+      "dept": "국토교통부",
+      "list_date": "2026-09-30",
+      "date_label": "2026.09.30",
+      "subtitles": [],
+      "lead": "국토교통부(장관 홍지선)는 ’26년 8월 기준 주택통계 및 ’25년 주택건설실적 통계(인허가, 착공, 준공)의 확정치를 공표하였다.",
+      "license_usable": true,
+      "license_label": "공공누리 제1유형(텍스트에 한함)",
+      "embargo": {
+        "available_at": "2026-09-30T06:00:00+09:00",
+        "raw": "2026. 9. 30.(수) 06:00 이후(9. 30.(수) 석간)",
+        "rule": "적힌 시각",
+        "certain": true
+      }
+    }
+  ]
+}
