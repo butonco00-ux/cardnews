@@ -112,16 +112,23 @@ def paste(img: Image.Image, flag: Image.Image, x: int, y: int, border: str = "#D
 
 
 def circle(country: str, size: int, ring: str | None = None, ring_w: int = 3) -> Image.Image:
-    """동그란 국기 배지(그래프 끝점 대신 쓴다). 반환: RGBA."""
-    src = usa(int(size * 2.0)) if country == "미국" else korea(int(size * 1.6))
+    """동그란 국기 배지. 테두리는 선으로 긋지 않고 '원판을 칠하고 그 안에 국기를 얹는' 방식이라
+    가장자리가 울퉁불퉁해지지 않는다. 반환: RGBA."""
+    S, rw = size * SS, max(0, ring_w) * SS
+    inner = max(4, S - rw * 2)
+    src = usa(max(8, int(size * 2.0))) if country == "미국" else korea(max(8, int(size * 1.6)))
     left = (src.width - src.height) // 2
-    box = src.crop((left, 0, left + src.height, src.height)).resize((size * SS, size * SS), Image.LANCZOS)
-    out = Image.new("RGBA", (size * SS, size * SS), (0, 0, 0, 0))
-    mask = Image.new("L", (size * SS, size * SS), 0)
-    ImageDraw.Draw(mask).ellipse((0, 0, size * SS - 1, size * SS - 1), fill=255)
-    out.paste(box, (0, 0), mask)
-    if ring:
-        ImageDraw.Draw(out).ellipse((ring_w * SS // 2, ring_w * SS // 2,
-                                     size * SS - 1 - ring_w * SS // 2, size * SS - 1 - ring_w * SS // 2),
-                                    outline=ring, width=ring_w * SS)
+    face = src.crop((left, 0, left + src.height, src.height)).resize((inner, inner), Image.LANCZOS)
+
+    out = Image.new("RGBA", (S, S), (0, 0, 0, 0))
+    if ring and rw:
+        ImageDraw.Draw(out).ellipse((0, 0, S - 1, S - 1), fill=ring)     # 원판(=테두리)
+    mask_in = Image.new("L", (inner, inner), 0)
+    ImageDraw.Draw(mask_in).ellipse((0, 0, inner - 1, inner - 1), fill=255)
+    out.paste(face, (rw, rw), mask_in)                                   # 국기는 원 안쪽에만
+
+    outer = Image.new("L", (S, S), 0)
+    ImageDraw.Draw(outer).ellipse((0, 0, S - 1, S - 1), fill=255)        # 바깥도 정확히 원으로 자른다
+    a = out.getchannel("A").point(lambda v: v)
+    out.putalpha(Image.composite(a, Image.new("L", (S, S), 0), outer))
     return out.resize((size, size), Image.LANCZOS)
