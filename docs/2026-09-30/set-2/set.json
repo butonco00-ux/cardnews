@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-09-30",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.09.30)",
+  "date_label": "2026.09.30",
+  "news_items": [
+    {
+      "title": "지난해 전국 주택 준공, 확정치 까보니 4만가구가 줄었다[부동산360]",
+      "link": "https://biz.heraldcorp.com/article/10887737?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002703372?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-09-30T06:00:00+09:00",
+      "date_label": "2026.09.30 06:00",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "'주택공급 선행지표' 서울 인허가 올들어 개선 추세",
+      "link": "https://www.yna.co.kr/view/AKR20260929143100003?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016345205?sid=101",
+      "press": "연합뉴스",
+      "published": "2026-09-30T06:00:00+09:00",
+      "date_label": "2026.09.30 06:00",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "\"지금 안 지으면 손해\" 사업자들 속도전…서울 주택 인허가·착공 40% 넘...",
+      "link": "https://view.asiae.co.kr/article/2026092920255087485",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005822433?sid=101",
+      "press": "아시아경제",
+      "published": "2026-09-30T06:00:00+09:00",
+      "date_label": "2026.09.30 06:00",
+      "score": 9,
+      "tag": "시장"
+    },
+    {
+      "title": "똑같은 부동산 증여세 차이나는 이유…'순서의 비밀' [더 머니이스트-정...",
+      "link": "https://www.hankyung.com/article/202609289228Q",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005337415?sid=101",
+      "press": "한국경제",
+      "published": "2026-09-30T06:31:00+09:00",
+      "date_label": "2026.09.30 06:31",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "내년이 마지막 골든타임…줄줄이 일몰 맞는 임대주택·상생임대 혜택",
+      "link": "https://www.mk.co.kr/article/12163851",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005741444?sid=101",
+      "press": "매일경제",
+      "published": "2026-09-29T16:47:00+09:00",
+      "date_label": "2026.09.29 16:47",
+      "score": 6,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.09.30)\n\n1. 지난해 전국 주택 준공, 확정치 까보니 4만가구가 줄었다[부동산360] — 헤럴드경제\n   https://biz.heraldcorp.com/article/10887737?ref=naver\n2. '주택공급 선행지표' 서울 인허가 올들어 개선 추세 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20260929143100003?input=1195m\n3. \"지금 안 지으면 손해\" 사업자들 속도전…서울 주택 인허가·착공 40% 넘... — 아시아경제\n   https://view.asiae.co.kr/article/2026092920255087485\n4. 똑같은 부동산 증여세 차이나는 이유…'순서의 비밀' [더 머니이스트-정... — 한국경제\n   https://www.hankyung.com/article/202609289228Q\n5. 내년이 마지막 골든타임…줄줄이 일몰 맞는 임대주택·상생임대 혜택 — 매일경제\n   https://www.mk.co.kr/article/12163851\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://biz.heraldcorp.com/article/10887737?ref=naver",
+    "https://www.yna.co.kr/view/AKR20260929143100003?input=1195m",
+    "https://view.asiae.co.kr/article/2026092920255087485",
+    "https://www.hankyung.com/article/202609289228Q",
+    "https://www.mk.co.kr/article/12163851"
+  ],
+  "created_at": "2026-09-30T09:56:27.570315+09:00"
+}
