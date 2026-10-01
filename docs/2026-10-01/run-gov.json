@@ -1,13 +1,34 @@
 {
   "date": "2026-10-01",
-  "finished_at": "2026-10-01T01:02:31.322679+09:00",
+  "finished_at": "2026-10-01T19:15:50.363281+09:00",
   "messages": [
     {
       "level": "bad",
-      "text": "카드를 만들지 못했어요: 5번째 카드: 표 칸 글자가 원문과 다름 → 1 고은산 서측 서대문구 2 목4동  / 5번째 카드: 표 칸 글자가 원문과 다름 → 114,035㎡ 190,317.7㎡  / 5번째 카드: 표 칸 글자가 원문과 다름 → 2,577호 4,209호 1,083호 / 5번째 카드: 표 칸 글자가 원문과 다름 → 9월4일(금) 9월30일(수)"
+      "text": "카드를 만들지 못했어요: 4번째 카드: 표 칸 글자가 원문과 다름 → 1주택자 이주 또는 세입자 임대보증금 / 4번째 카드: 표 칸 글자가 원문과 다름 → 금융기관을 통한 기본이주비 대출금 한"
     }
   ],
   "candidates": [
+    {
+      "title": "차세대중형위성 2호(국토위성2호)·4호(농림위성) 초기운영 성과 공개",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783979",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "하나 된 철도, 국민의 일상을 바꾸다",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783911",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "<주택 신속공급 방안(8.13) 후속조치> 공공재개발 이주비 및 사업비 이차보전 지원 확대",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783910",
+      "score": 13,
+      "status": "선택됨 → 세트 1"
+    },
     {
       "title": "[설명] 정부는 주택건설실적 통계의 정확도 제고를 위해 통계 생산 및 공표방식을 '25.9월 기개선하였습니다",
       "dept": "국토교통부",
@@ -27,7 +48,14 @@
       "dept": "국토교통부",
       "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783661",
       "score": 10,
-      "status": "선택됨 → 세트 1"
+      "status": "후보"
+    },
+    {
+      "title": "'26년 8월 주택통계 및 '25년 주택건설실적 통계 확정치 공표",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783581",
+      "score": 13,
+      "status": "후보 (전에 만든 적 있음)"
     },
     {
       "title": "전국 건축물 총 7,438,642동 / 43억 75백만㎡",
@@ -37,11 +65,53 @@
       "status": "부동산 관련 단어가 제목에 없음"
     },
     {
-      "title": "'26년 8월 주택통계 및 '25년 주택건설실적 통계 확정치 공표",
-      "dept": "국토교통부",
-      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783581",
-      "score": 13,
-      "status": "후보 (전에 만든 적 있음)"
+      "title": "비상경제본부 회의 겸 경제관계장관회의 개최",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783864",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "「\"막힌 투자는 뚫고, 현장의 애로는 풉니다\" 현장중심 기업투자·혁신 지원방안(2차)」 발표",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783859",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "한미 전략투자 프로젝트 추진 계획 발표",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783867",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "재정경제부 유관기관 간담회 개최",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784020",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "26.10월 국고채, 재정증권, 원화표시 외평채 발행 계획",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784015",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "2026년 중앙-지방 국유재산정책협의회 개최",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784007",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "허장 제2차관, 뉴욕한인금융인협회(KFS) 2026 한국 포럼 축사",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783981",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
     },
     {
       "title": "외환자본시장 제도개선 설명 및 현장안착 점검을 위한 제2차 글로벌 핵심 투자자 협의체 개최",
@@ -54,6 +124,13 @@
       "title": "확대 거시재정금융간담회 개최",
       "dept": "재정경제부",
       "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783623",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "'26.8월 산업활동동향 및 평가",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783599",
       "score": 0,
       "status": "부동산 관련 단어가 제목에 없음"
     },
@@ -72,16 +149,58 @@
       "status": "부동산 관련 단어가 제목에 없음"
     },
     {
-      "title": "'26.8월 산업활동동향 및 평가",
-      "dept": "재정경제부",
-      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783599",
+      "title": "법인 대표이사의 시세조종행위 등 불공정거래 행위에 대한 적발·조치(3건) - 제17차 증권선물위원회(9.30.) 의결",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783976",
       "score": 0,
       "status": "부동산 관련 단어가 제목에 없음"
     },
     {
-      "title": "제2차 국민참여성장펀드 판매 결과 잔여물량 현황(9.30일)",
+      "title": "｢금융시장 상황점검회의｣ 개최",
       "dept": "금융위원회",
-      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783847",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783888",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "대형 IB의 모험자본 공급 현황을 점검하고 리서치보고서의 독립성·신뢰성 제고 및 중소형주 커버리지 확대 방안을 마련하였습니다.",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783900",
+      "score": 3,
+      "status": "관련도 낮음(3점)"
+    },
+    {
+      "title": "모태펀드와 국민성장펀드가 협력하여첨단혁신기업의 지속성장을 지원하는 '이어달리기'를 이어갑니다.",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783961",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "'26년 상반기 가상자산사업자 실태조사 결과",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783949",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "토큰증권 관련 전자증권법·자본시장법 하위법규 개정안 입법예고 실시 ※예고기간 '26.10.2일 ~ 11.11일",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783954",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "의료계·플랫폼 협력으로 \"실손24\" 연계율 제고 나선다.",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783656",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "권대영 부위원장,제2차 국민참여성장펀드 출시 첫날펀드가입 및 현장점검",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783667",
       "score": 0,
       "status": "부동산 관련 단어가 제목에 없음"
     },
@@ -93,9 +212,9 @@
       "status": "부동산 관련 단어가 제목에 없음"
     },
     {
-      "title": "의료계·플랫폼 협력으로 \"실손24\" 연계율 제고 나선다.",
+      "title": "전남광주에서 서민·취약계층과 소상공인을 위한 희망사다리를 놓겠습니다 - 이억원 금융위원장, 「전남광주 서민금융 복합지원센터」 개소식 및 지역 소상공인 현장 간담회 참석",
       "dept": "금융위원회",
-      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783656",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783717",
       "score": 0,
       "status": "부동산 관련 단어가 제목에 없음"
     },
@@ -114,16 +233,44 @@
       "status": "부동산 관련 단어가 제목에 없음"
     },
     {
-      "title": "전남광주에서 서민·취약계층과 소상공인을 위한 희망사다리를 놓겠습니다 - 이억원 금융위원장, 「전남광주 서민금융 복합지원센터」 개소식 및 지역 소상공인 현장 간담회 참석",
+      "title": "제2차 국민참여성장펀드 판매 결과 잔여물량 현황(9.30일)",
       "dept": "금융위원회",
-      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783717",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783847",
       "score": 0,
       "status": "부동산 관련 단어가 제목에 없음"
     },
     {
-      "title": "권대영 부위원장,제2차 국민참여성장펀드 출시 첫날펀드가입 및 현장점검",
-      "dept": "금융위원회",
-      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783667",
+      "title": "중수청, 10월 2일 개청 앞두고 막바지 준비에 만전",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784005",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "노인의 날, 어르신 교통사고 예방 홍보 캠페인 실시",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783944",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "인공지능(AI) 시대 안전한 개인정보 보호·활용 방안, 국민 의견 모은다",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783940",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "부산 동래온천지구,전국 네 번째 '온천도시'로 지정",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783942",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "공공부문 사이버보안 징계기준 강화, 기관장 엄중 책임",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783895",
       "score": 0,
       "status": "부동산 관련 단어가 제목에 없음"
     },
@@ -142,16 +289,16 @@
       "status": "부동산 관련 단어가 제목에 없음"
     },
     {
-      "title": "국민과 함께 만드는 더 투명한 정부 '제7차 열린정부 실행계획' 대국민 공모",
+      "title": "\"모바일신분증으로 여는 새로운 일상\" 행안부, 모바일신분증 아이디어 공모",
       "dept": "행정안전부",
-      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783688",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783690",
       "score": 0,
       "status": "부동산 관련 단어가 제목에 없음"
     },
     {
-      "title": "\"모바일신분증으로 여는 새로운 일상\" 행안부, 모바일신분증 아이디어 공모",
+      "title": "국민과 함께 만드는 더 투명한 정부 '제7차 열린정부 실행계획' 대국민 공모",
       "dept": "행정안전부",
-      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783690",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783688",
       "score": 0,
       "status": "부동산 관련 단어가 제목에 없음"
     },
