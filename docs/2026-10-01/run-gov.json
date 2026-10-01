@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "finished_at": "2026-10-01T19:15:50.363281+09:00",
+  "finished_at": "2026-10-01T21:01:34.873011+09:00",
   "messages": [
     {
       "level": "bad",
@@ -240,9 +240,23 @@
       "status": "부동산 관련 단어가 제목에 없음"
     },
     {
+      "title": "'공공부문 AI 윤리기준' 최종 확정, 공공분야 인공지능 신뢰성 확보한다",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784032",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
       "title": "중수청, 10월 2일 개청 앞두고 막바지 준비에 만전",
       "dept": "행정안전부",
       "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784005",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "부산 동래온천지구,전국 네 번째 '온천도시'로 지정",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783942",
       "score": 0,
       "status": "부동산 관련 단어가 제목에 없음"
     },
@@ -257,13 +271,6 @@
       "title": "인공지능(AI) 시대 안전한 개인정보 보호·활용 방안, 국민 의견 모은다",
       "dept": "행정안전부",
       "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783940",
-      "score": 0,
-      "status": "부동산 관련 단어가 제목에 없음"
-    },
-    {
-      "title": "부산 동래온천지구,전국 네 번째 '온천도시'로 지정",
-      "dept": "행정안전부",
-      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783942",
       "score": 0,
       "status": "부동산 관련 단어가 제목에 없음"
     },
