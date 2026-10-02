@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-10-02",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.10.02)",
+  "date_label": "2026.10.02",
+  "news_items": [
+    {
+      "title": "'아산탕정2 도시개발사업' 착공…주택 2만1천35가구 공급",
+      "link": "https://www.yna.co.kr/view/AKR20261002029900063?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016352393?sid=101",
+      "press": "연합뉴스",
+      "published": "2026-10-02T08:45:00+09:00",
+      "date_label": "2026.10.02 08:45",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "[단독]공공주택 119만호 짓는다는데…기금 여유자금 6년 새 ‘49조→14조...",
+      "link": "https://biz.heraldcorp.com/article/10891247?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002704682?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-10-02T09:30:00+09:00",
+      "date_label": "2026.10.02 09:30",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "\"20년 숙원 재개발 현실화… 山·水 품은 주거명작 짓겠다\"",
+      "link": "https://www.arunews.com/news/articleView.html?idxno=67759",
+      "naver_link": "https://www.arunews.com/news/articleView.html?idxno=67759",
+      "press": "한국주택경제",
+      "published": "2026-10-02T09:18:00+09:00",
+      "date_label": "2026.10.02 09:18",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "건원엔지니어링, 목동4단지 재건축 CM 우선협상대상자 선정",
+      "link": "https://magazine.hankyung.com/money/article/202610029562c",
+      "naver_link": "https://magazine.hankyung.com/money/article/202610029562c",
+      "press": "한국경제",
+      "published": "2026-10-02T09:48:00+09:00",
+      "date_label": "2026.10.02 09:48",
+      "score": 3,
+      "tag": "정책"
+    },
+    {
+      "title": "강남 10억씩 빠질때, 강북 굳건…대출 더 나오는 '중저가 아파트' 쏠림",
+      "link": "https://www.mk.co.kr/article/12166391",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005742904?sid=101",
+      "press": "매일경제",
+      "published": "2026-10-01T17:41:00+09:00",
+      "date_label": "2026.10.01 17:41",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.10.02)\n\n1. '아산탕정2 도시개발사업' 착공…주택 2만1천35가구 공급 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261002029900063?input=1195m\n2. [단독]공공주택 119만호 짓는다는데…기금 여유자금 6년 새 ‘49조→14조... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10891247?ref=naver\n3. \"20년 숙원 재개발 현실화… 山·水 품은 주거명작 짓겠다\" — 한국주택경제\n   https://www.arunews.com/news/articleView.html?idxno=67759\n4. 건원엔지니어링, 목동4단지 재건축 CM 우선협상대상자 선정 — 한국경제\n   https://magazine.hankyung.com/money/article/202610029562c\n5. 강남 10억씩 빠질때, 강북 굳건…대출 더 나오는 '중저가 아파트' 쏠림 — 매일경제\n   https://www.mk.co.kr/article/12166391\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.yna.co.kr/view/AKR20261002029900063?input=1195m",
+    "https://biz.heraldcorp.com/article/10891247?ref=naver",
+    "https://www.arunews.com/news/articleView.html?idxno=67759",
+    "https://magazine.hankyung.com/money/article/202610029562c",
+    "https://www.mk.co.kr/article/12166391"
+  ],
+  "created_at": "2026-10-02T10:13:26.592273+09:00"
+}
