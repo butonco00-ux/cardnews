@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-10-04",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.10.04)",
+  "date_label": "2026.10.04",
+  "news_items": [
+    {
+      "title": "‘김구라 아들’ 28세 그리…“전세끼고 2.5억에 산 아파트, 지금은 10억...",
+      "link": "https://biz.heraldcorp.com/article/10892771?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002705268?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-10-04T08:56:00+09:00",
+      "date_label": "2026.10.04 08:56",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "89만 가구 공공임대가 전세난 해법?…필요한 건 서울 아파트[아기곰의 ...",
+      "link": "https://magazine.hankyung.com/business/article/202610017597b",
+      "naver_link": "https://n.news.naver.com/mnews/article/050/0000111600?sid=101",
+      "press": "한국경제",
+      "published": "2026-10-03T11:36:00+09:00",
+      "date_label": "2026.10.03 11:36",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "중기부, 정책자금 받아 부동산 사업 벌인 업체 40곳 적발",
+      "link": "https://www.yna.co.kr/view/AKR20261002165600030?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016356209?sid=101",
+      "press": "연합뉴스",
+      "published": "2026-10-04T06:11:00+09:00",
+      "date_label": "2026.10.04 06:11",
+      "score": 3,
+      "tag": "정책"
+    },
+    {
+      "title": "트럼프 압박도 버틴 스페인 총리, 부동산 논란에 낙마 위기 [이 사람@Wo...",
+      "link": "https://www.segye.com/newsView/20261003505046?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004163809?sid=104",
+      "press": "세계일보",
+      "published": "2026-10-03T16:17:00+09:00",
+      "date_label": "2026.10.03 16:17",
+      "score": 3,
+      "tag": "정책"
+    },
+    {
+      "title": "방 한 칸인데 20억?...강남 초소형 아파트값 ‘불기둥’",
+      "link": "https://www.mk.co.kr/article/12167119",
+      "naver_link": "https://n.news.naver.com/mnews/article/024/0000108672?sid=101",
+      "press": "매일경제",
+      "published": "2026-10-03T13:01:00+09:00",
+      "date_label": "2026.10.03 13:01",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.10.04)\n\n1. ‘김구라 아들’ 28세 그리…“전세끼고 2.5억에 산 아파트, 지금은 10억... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10892771?ref=naver\n2. 89만 가구 공공임대가 전세난 해법?…필요한 건 서울 아파트[아기곰의 ... — 한국경제\n   https://magazine.hankyung.com/business/article/202610017597b\n3. 중기부, 정책자금 받아 부동산 사업 벌인 업체 40곳 적발 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261002165600030?input=1195m\n4. 트럼프 압박도 버틴 스페인 총리, 부동산 논란에 낙마 위기 [이 사람@Wo... — 세계일보\n   https://www.segye.com/newsView/20261003505046?OutUrl=naver\n5. 방 한 칸인데 20억?...강남 초소형 아파트값 ‘불기둥’ — 매일경제\n   https://www.mk.co.kr/article/12167119\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://biz.heraldcorp.com/article/10892771?ref=naver",
+    "https://magazine.hankyung.com/business/article/202610017597b",
+    "https://www.yna.co.kr/view/AKR20261002165600030?input=1195m",
+    "https://www.segye.com/newsView/20261003505046?OutUrl=naver",
+    "https://www.mk.co.kr/article/12167119"
+  ],
+  "created_at": "2026-10-04T09:17:30.399137+09:00"
+}
