@@ -1,0 +1,136 @@
+{
+  "kind": "star",
+  "date": "2026-10-04",
+  "set": 6,
+  "tag": "스타",
+  "title": "하석진 “17억에 산 아파트, 56억”…10년 만에 시세차익만 40억, 어디길...",
+  "subtitles": [],
+  "dept": "헤럴드경제",
+  "date_label": "2026.10.04",
+  "url": "https://biz.heraldcorp.com/article/10892757?ref=naver",
+  "license": {
+    "type": 0,
+    "usable": true,
+    "text_only": true,
+    "label": "",
+    "reason": null
+  },
+  "license_label": "",
+  "embargo": null,
+  "badge": "",
+  "source_file": "",
+  "created_at": "2026-10-04T14:01:15.005210+09:00",
+  "source_label": "출처: 헤럴드경제",
+  "news_items": [
+    {
+      "title": "하석진 “17억에 산 아파트, 56억”…10년 만에 시세차익만 40억, 어디길...",
+      "link": "https://biz.heraldcorp.com/article/10892757?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002705259?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-10-04T08:20:00+09:00",
+      "date_label": "2026.10.04 08:20",
+      "summary": [
+        "배우 하석진은 2013년 서울 강남구 청담자이 전용 71㎡에 전세로 입주했다.",
+        "이후 하석진은 청담자이 전용 119㎡ 상층부 가구를 17억원에 매입했다.",
+        "해당 가구는 거실과 침실에서 한강이 보이는 로열층이다.",
+        "같은 평형 동일 세대의 최근 거래가는 56억원으로 전해졌다.",
+        "하석진은 10년 넘게 해당 아파트에 거주 중이다.",
+        "청담동 일대는 다수 연예인이 거주하거나 부동산을 보유한 지역으로 알려졌다."
+      ],
+      "summary_note": "AI 사실 정리"
+    }
+  ],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg"
+    ]
+  },
+  "card_items": [
+    [
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "배우 하석진은 2013년 서울 강남구 청담자이 전용 71㎡에 전세로 입주했다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "이후 하석진은 청담자이 전용 119㎡ 상층부 가구를 17억원에 매입했다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "해당 가구는 거실과 침실에서 한강이 보이는 로열층이다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "같은 평형 동일 세대의 최근 거래가는 56억원으로 전해졌다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "하석진은 10년 넘게 해당 아파트에 거주 중이다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "청담동 일대는 다수 연예인이 거주하거나 부동산을 보유한 지역으로 알려졌다.",
+        "cont": false
+      }
+    ]
+  ],
+  "omitted": false,
+  "skipped": [],
+  "original": [
+    {
+      "text": "○ 배우 하석진은 2013년 서울 강남구 청담자이 전용 71㎡에 전세로 입주했다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 이후 하석진은 청담자이 전용 119㎡ 상층부 가구를 17억원에 매입했다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 해당 가구는 거실과 침실에서 한강이 보이는 로열층이다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 같은 평형 동일 세대의 최근 거래가는 56억원으로 전해졌다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 하석진은 10년 넘게 해당 아파트에 거주 중이다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 청담동 일대는 다수 연예인이 거주하거나 부동산을 보유한 지역으로 알려졌다.",
+      "used": "all"
+    }
+  ],
+  "excluded_tail": "",
+  "caption": "[스타] 하석진 “17억에 산 아파트, 56억”…10년 만에 시세차익만 40억, 어디길...\n\n배우 하석진은 2013년 서울 강남구 청담자이 전용 71㎡에 전세로 입주했다. 이후 하석진은 청담자이 전용 119㎡ 상층부 가구를 17억원에 매입했다. 해당 가구는 거실과 침실에서 한강이 보이는 로열층이다. 같은 평형 동일 세대의 최근 거래가는 56억원으로 전해졌다. 하석진은 10년 넘게 해당 아파트에 거주 중이다. 청담동 일대는 다수 연예인이 거주하거나 부동산을 보유한 지역으로 알려졌다.\n\n출처: 헤럴드경제 「하석진 “17억에 산 아파트, 56억”…10년 만에 시세차익만 40억, 어디길...」(2026.10.04 08:20)\nhttps://biz.heraldcorp.com/article/10892757?ref=naver\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사 #연예인부동산",
+  "caption_problems": [],
+  "source_urls": [
+    "https://biz.heraldcorp.com/article/10892757?ref=naver"
+  ]
+}
