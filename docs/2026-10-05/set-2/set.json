@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-10-05",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.10.05)",
+  "date_label": "2026.10.05",
+  "news_items": [
+    {
+      "title": "\"한국 아파트 가격 맞아?\"...실거래가 '263억' 찍었다",
+      "link": "https://magazine.hankyung.com/business/article/202610053029b",
+      "naver_link": "https://n.news.naver.com/mnews/article/050/0000111633?sid=101",
+      "press": "한국경제",
+      "published": "2026-10-05T07:59:00+09:00",
+      "date_label": "2026.10.05 07:59",
+      "score": 9,
+      "tag": "시장"
+    },
+    {
+      "title": "“상속세 ‘0원’이라 신고 안해? 양도세에 발등 찍혀…6개월 안에 꼭 해...",
+      "link": "https://biz.heraldcorp.com/article/10893050?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002705413?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-10-05T08:01:00+09:00",
+      "date_label": "2026.10.05 08:01",
+      "score": 6,
+      "tag": "세금"
+    },
+    {
+      "title": "[2026국감]주택공급·용산공원 與野 샅바싸움 예고…테슬라 안전성 따진...",
+      "link": "https://view.asiae.co.kr/article/2026100318334136050",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005824541?sid=101",
+      "press": "아시아경제",
+      "published": "2026-10-05T06:30:00+09:00",
+      "date_label": "2026.10.05 06:30",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "“월급 절반이 월세” 분노한 세입자 50만 모였다…정치권까지 뒤흔든 ...",
+      "link": "https://www.mk.co.kr/article/12168028",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005743737?sid=104",
+      "press": "매일경제",
+      "published": "2026-10-04T14:47:00+09:00",
+      "date_label": "2026.10.04 14:47",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "푸틴, 대규모 징집 강행하나…2030男 부동산 거래도 제한",
+      "link": "https://www.yna.co.kr/view/AKR20261004013600009?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016356445?sid=104",
+      "press": "연합뉴스",
+      "published": "2026-10-04T11:21:00+09:00",
+      "date_label": "2026.10.04 11:21",
+      "score": 6,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.10.05)\n\n1. \"한국 아파트 가격 맞아?\"...실거래가 '263억' 찍었다 — 한국경제\n   https://magazine.hankyung.com/business/article/202610053029b\n2. “상속세 ‘0원’이라 신고 안해? 양도세에 발등 찍혀…6개월 안에 꼭 해... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10893050?ref=naver\n3. [2026국감]주택공급·용산공원 與野 샅바싸움 예고…테슬라 안전성 따진... — 아시아경제\n   https://view.asiae.co.kr/article/2026100318334136050\n4. “월급 절반이 월세” 분노한 세입자 50만 모였다…정치권까지 뒤흔든 ... — 매일경제\n   https://www.mk.co.kr/article/12168028\n5. 푸틴, 대규모 징집 강행하나…2030男 부동산 거래도 제한 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261004013600009?input=1195m\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://magazine.hankyung.com/business/article/202610053029b",
+    "https://biz.heraldcorp.com/article/10893050?ref=naver",
+    "https://view.asiae.co.kr/article/2026100318334136050",
+    "https://www.mk.co.kr/article/12168028",
+    "https://www.yna.co.kr/view/AKR20261004013600009?input=1195m"
+  ],
+  "created_at": "2026-10-05T09:21:13.040954+09:00"
+}
