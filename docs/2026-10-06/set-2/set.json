@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-10-06",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.10.06)",
+  "date_label": "2026.10.06",
+  "news_items": [
+    {
+      "title": "목동12단지아파트 재건축조합 국공유지 무상양도 및 임대주택 매각 관련...",
+      "link": "https://www.arunews.com/news/articleView.html?idxno=67805",
+      "naver_link": "https://www.arunews.com/news/articleView.html?idxno=67805",
+      "press": "한국주택경제",
+      "published": "2026-10-06T10:48:00+09:00",
+      "date_label": "2026.10.06 10:48",
+      "score": 12,
+      "tag": "정책"
+    },
+    {
+      "title": "올해 청약 경쟁률 5.6대 1…분양가 고공행진에 '반토막'",
+      "link": "https://www.hankyung.com/article/202610064867i",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005339458?sid=101",
+      "press": "한국경제",
+      "published": "2026-10-06T10:39:00+09:00",
+      "date_label": "2026.10.06 10:39",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "공공택지 내 '민간분양' 아파트 '구리갈매역세권 신안인스빌 디센트' 관...",
+      "link": "https://view.asiae.co.kr/article/2026100610102082230",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005824919?sid=101",
+      "press": "아시아경제",
+      "published": "2026-10-06T10:10:00+09:00",
+      "date_label": "2026.10.06 10:10",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "전국 주택시장 ‘대단지 쏠림’… 집값 상승폭 3배 차이에 공급도 감소",
+      "link": "https://biz.heraldcorp.com/article/10893830?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002705725?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-10-06T10:04:00+09:00",
+      "date_label": "2026.10.06 10:04",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "LH, 서울대와 기숙사형 전세임대 공급…2030년까지 200가구",
+      "link": "https://www.yna.co.kr/view/AKR20261006037400003?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016358628?sid=101",
+      "press": "연합뉴스",
+      "published": "2026-10-06T09:12:00+09:00",
+      "date_label": "2026.10.06 09:12",
+      "score": 6,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.10.06)\n\n1. 목동12단지아파트 재건축조합 국공유지 무상양도 및 임대주택 매각 관련... — 한국주택경제\n   https://www.arunews.com/news/articleView.html?idxno=67805\n2. 올해 청약 경쟁률 5.6대 1…분양가 고공행진에 '반토막' — 한국경제\n   https://www.hankyung.com/article/202610064867i\n3. 공공택지 내 '민간분양' 아파트 '구리갈매역세권 신안인스빌 디센트' 관... — 아시아경제\n   https://view.asiae.co.kr/article/2026100610102082230\n4. 전국 주택시장 ‘대단지 쏠림’… 집값 상승폭 3배 차이에 공급도 감소 — 헤럴드경제\n   https://biz.heraldcorp.com/article/10893830?ref=naver\n5. LH, 서울대와 기숙사형 전세임대 공급…2030년까지 200가구 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261006037400003?input=1195m\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.arunews.com/news/articleView.html?idxno=67805",
+    "https://www.hankyung.com/article/202610064867i",
+    "https://view.asiae.co.kr/article/2026100610102082230",
+    "https://biz.heraldcorp.com/article/10893830?ref=naver",
+    "https://www.yna.co.kr/view/AKR20261006037400003?input=1195m"
+  ],
+  "created_at": "2026-10-06T11:00:25.172371+09:00"
+}
