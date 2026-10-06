@@ -1,0 +1,138 @@
+{
+  "date": "2026-10-06",
+  "finished_at": "2026-10-06T19:04:27.827229+09:00",
+  "messages": [
+    {
+      "level": "ok",
+      "text": "정책·세금 카드 10장을 만들었어요: 「전세사기특별법」 시행령 개정안,6일 국무회의 의결"
+    }
+  ],
+  "candidates": [
+    {
+      "title": "「전세사기특별법」 시행령 개정안,6일 국무회의 의결",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784399",
+      "score": 12,
+      "status": "선택됨 → 세트 1"
+    },
+    {
+      "title": "[설명] 부정청약에 대하여는 형사처벌, 계약취소 및 계약금 몰수, 청약제한 등 엄중 조치하고 있습니다",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784261",
+      "score": 6,
+      "status": "후보"
+    },
+    {
+      "title": "2026년 11월 물가연동국고채 종목별 연동계수",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784418",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "경제현안간담회 개최",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784295",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[보도참고] 아세안+3 거시경제조사기구(AMRO) 지역경제전망 보고서 수정전망 발표",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784447",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "최근 금융권 개인정보 유출사고에 따른 보이스피싱·스미싱 등 피해에 주의하세요.",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784414",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "제2차 국민참여성장펀드 판매 결과 잔여물량 현황(10.2일)",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784327",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "청년미래적금 2차 가입기간 운영, 10월 7일부터 16일까지 가입신청",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784397",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "신협의 부실채권 관리체계를 고도화합니다 신용협동조합법 시행령 개정안 국무회의 의결",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784400",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "全금융권이 비상한 경각심을 갖고 침해위협에 대응해 나가겠습니다. - 금융위원장 주재 금융위·금감원 합동 「全금융권 긴급 점검회의」 개최",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784329",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "현황 조사부터 과학적 진단까지공유재산 관리 체계 전면 강화한다",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784386",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "공인재난관리사 제1차 시험 면제 범위 근거 마련, 응시자 간 형평성 확보",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784388",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "행정·공공기관의 합리적 클라우드 선정 지원을 위한 클라우드서비스 제공기업(CSP) 서비스 설명회 개최",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784378",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "과학으로 다시 이어진 가족 국과수, 가족관계 확인 1,000례 달성",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784380",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "'10·29이태원참사 4주기 기억식' 참석자 사전신청 접수",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784317",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "행안부-문체부, 지역관광을 통한 지역경제 활성화 뒷받침 위해 재정인센티브 지원",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784315",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "공공데이터×AI로 창업 도전, 역대 최고 경쟁률 뚫고 왕중왕전 진출",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784313",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "행정안전부 장관, 제주 차귀도 서방 인근 어선 전복사고 관련 긴급지시",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784309",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    }
+  ]
+}

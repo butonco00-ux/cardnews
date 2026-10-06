@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-06",
+  "finished_at": "2026-10-06T19:06:46.859067+09:00",
+  "messages": [
+    {
+      "level": "ok",
+      "text": "오늘의 부동산 뉴스 1건에 사실 정리를 넣었어요(Claude 구독, 추가 비용 없음)"
+    },
+    {
+      "level": "warn",
+      "text": "'목동12단지아파트 재건축조합 국공유지…' 정리 안 함: 기사 본문을 읽지 못함"
+    },
+    {
+      "level": "warn",
+      "text": "'올해 청약 경쟁률 5.6대 1…분양가…' 정리 안 함: claude 오류: Failed to refresh OAuth token: another Claude Code process is refreshing it or exited mid-refresh. This is usually trans"
+    },
+    {
+      "level": "warn",
+      "text": "'공공택지 내 '민간분양' 아파트 '구…' 정리 안 함: claude 오류: Failed to refresh OAuth token: another Claude Code process is refreshing it or exited mid-refresh. This is usually trans"
+    },
+    {
+      "level": "warn",
+      "text": "'전국 주택시장 ‘대단지 쏠림’… 집값…' 정리 안 함: claude 오류: Failed to refresh OAuth token: another Claude Code process is refreshing it or exited mid-refresh. This is usually trans"
+    }
+  ]
+}
