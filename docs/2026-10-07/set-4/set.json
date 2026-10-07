@@ -1,0 +1,352 @@
+{
+  "kind": "easylaw",
+  "date": "2026-10-07",
+  "set": 4,
+  "tag": "생활법령",
+  "title": "공인중개사 1 — 지역권",
+  "subtitles": [],
+  "dept": "찾기쉬운 생활법령정보",
+  "date_label": "2026.10.07",
+  "url": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=1171&ccfNo=3&cciNo=4&cnpClsNo=2",
+  "license": {
+    "type": 0,
+    "usable": true,
+    "text_only": true,
+    "label": "법제처 찾기쉬운 생활법령정보(영리 목적 포함 자유 이용)",
+    "reason": null
+  },
+  "license_label": "법제처 찾기쉬운 생활법령정보(영리 목적 포함 자유 이용)",
+  "embargo": null,
+  "badge": "",
+  "source_file": "",
+  "created_at": "2026-10-07T19:15:49.731377+09:00",
+  "source_label": "출처: 찾기쉬운 생활법령정보",
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg",
+    "cards/07.jpg",
+    "cards/08.jpg",
+    "cards/09.jpg",
+    "cards/10.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg",
+      "cards/07.jpg",
+      "cards/08.jpg",
+      "cards/09.jpg",
+      "cards/10.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg",
+      "cards-buto/07.jpg",
+      "cards-buto/08.jpg",
+      "cards-buto/09.jpg",
+      "cards-buto/10.jpg"
+    ]
+  },
+  "card_items": [
+    [
+      {
+        "level": 1,
+        "marker": "",
+        "text": "지역권의 개념",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "",
+        "text": "“지역권”이란 설정행위에서 정한 일정한 목적을 위해 타인의 토지(승역지)를 자기의 토지(요역지)의 편익에 이용하는 용익물권을 말합니다. 지역권은 요역지의 편익을 위해 승역지에 설정하는 권리로 주로 통행·인수를 위한 권리를 의미합니다(『 국가법령정보센터, 법령용어사전 』 참조).",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "",
+        "text": "상린관계와의 차이점",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "",
+        "text": "지역권은 2개의 토지 사이의 이용 조절을 목적으로 한다는 점에서 상린관계와 비슷하나, 상린관계가 최소한도의 이용 조절을 목적으로 법률상 당연히 생기는 것임에 대하여, 지역권은 원칙적으로 계약으로 설정합니다(『 국가법령정보센터, 법령용어사전 』 참조).",
+        "cont": false
+      }
+    ],
+    [
+      {
+        "level": "table",
+        "marker": "",
+        "text": "⟦표1⟧",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "",
+        "text": "지역권의 특성",
+        "cont": false
+      }
+    ],
+    [
+      {
+        "level": "table",
+        "marker": "",
+        "text": "⟦표2⟧",
+        "cont": false
+      }
+    ],
+    [
+      {
+        "level": 1,
+        "marker": "",
+        "text": "지역권의 취득 및 효력",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "",
+        "text": "지역권의 취득",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "",
+        "text": "지역권의 취득은 일반적으로 단독행위이지만, 설정계약에 의한 취득으로 ① 설정계약과 등기 ② 유언·양도·상속 ③ 요역지의 소유권이나 사용권의 이전에 수반하여 이전합니다(『 국가법령정보센터, 법령용어사전 』 참조).",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "",
+        "text": "또한 지역권은 계속되고 표현된 것에 한하여 취득시효에 관한 「민법」 제245조 의 규정을 준용하므로, 지역권을 시효로 취득하는 것도 가능합니다( 「민법」 제294조 ).",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "",
+        "text": "지역권의 효력",
+        "cont": false
+      }
+    ],
+    [
+      {
+        "level": "table",
+        "marker": "",
+        "text": "⟦표3:1-1⟧",
+        "cont": false
+      }
+    ],
+    [
+      {
+        "level": "table",
+        "marker": "",
+        "text": "⟦표3:2-2⟧",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "",
+        "text": "지역권의 소멸 및 특수지역권",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "",
+        "text": "지역권의 소멸",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "",
+        "text": "지역권은 물권의 일반적인 소멸원인에 의해 소멸하며, 승역지의 시효취득이나 지역권의 소멸시효 등에 의해서도 소멸합니다(『 국가법령정보센터, 법령용어사전 』 참조).",
+        "cont": false
+      }
+    ],
+    [
+      {
+        "level": 1,
+        "marker": "",
+        "text": "특수지역권",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "",
+        "text": "어느 지역의 주민이 집합체의 관계로 각자가 타인의 토지에서 초목, 야생물 및 토사의 채취, 방목이나 기타 수익을 하는 권리가 있는 경우에는 관습에 의하는 외에 지역권에 관한 규정을 준용합니다( 「민법」 제302조 ). 이 정보는",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "",
+        "text": "2026년 9월 15일",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "",
+        "text": "기준으로 작성된 것입니다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "",
+        "text": "생활법령정보는 법적 효력을 갖는 유권해석(결정, 판단)의 근거가 되지 않고, 각종 신고, 불복 청구 등의 증거자료로서의 효력은 없습니다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "",
+        "text": "구체적인 법령에 대한 질의는 담당기관이나",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "",
+        "text": "국민신문고 에 문의하시기 바랍니다.",
+        "cont": false
+      }
+    ],
+    [
+      {
+        "level": 1,
+        "marker": "",
+        "text": "위 내용에 대한 홈페이지 개선의견은",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "",
+        "text": "홈페이지 개선의견 을 이용해 주시기 바랍니다.",
+        "cont": false
+      }
+    ]
+  ],
+  "omitted": false,
+  "skipped": [],
+  "original": [
+    {
+      "text": "지역권의 의의",
+      "used": "no"
+    },
+    {
+      "text": "지역권의 개념",
+      "used": "all"
+    },
+    {
+      "text": "“지역권”이란 설정행위에서 정한 일정한 목적을 위해 타인의 토지(승역지)를 자기의 토지(요역지)의 편익에 이용하는 용익물권을 말합니다. 지역권은 요역지의 편익을 위해 승역지에 설정하는 권리로 주로 통행·인수를 위한 권리를 의미합니다(『 국가법령정보센터, 법령용어사전 』 참조).",
+      "used": "all"
+    },
+    {
+      "text": "상린관계와의 차이점",
+      "used": "all"
+    },
+    {
+      "text": "지역권은 2개의 토지 사이의 이용 조절을 목적으로 한다는 점에서 상린관계와 비슷하나, 상린관계가 최소한도의 이용 조절을 목적으로 법률상 당연히 생기는 것임에 대하여, 지역권은 원칙적으로 계약으로 설정합니다(『 국가법령정보센터, 법령용어사전 』 참조).",
+      "used": "all"
+    },
+    {
+      "text": "⟦표1⟧",
+      "used": "all"
+    },
+    {
+      "text": "지역권의 특성",
+      "used": "all"
+    },
+    {
+      "text": "⟦표2⟧",
+      "used": "all"
+    },
+    {
+      "text": "지역권의 취득 및 효력",
+      "used": "all"
+    },
+    {
+      "text": "지역권의 취득",
+      "used": "all"
+    },
+    {
+      "text": "지역권의 취득은 일반적으로 단독행위이지만, 설정계약에 의한 취득으로 ① 설정계약과 등기 ② 유언·양도·상속 ③ 요역지의 소유권이나 사용권의 이전에 수반하여 이전합니다(『 국가법령정보센터, 법령용어사전 』 참조).",
+      "used": "part"
+    },
+    {
+      "text": "또한 지역권은 계속되고 표현된 것에 한하여 취득시효에 관한 「민법」 제245조 의 규정을 준용하므로, 지역권을 시효로 취득하는 것도 가능합니다( 「민법」 제294조 ).",
+      "used": "all"
+    },
+    {
+      "text": "지역권의 효력",
+      "used": "all"
+    },
+    {
+      "text": "⟦표3⟧",
+      "used": "no"
+    },
+    {
+      "text": "지역권의 소멸 및 특수지역권",
+      "used": "all"
+    },
+    {
+      "text": "지역권의 소멸",
+      "used": "all"
+    },
+    {
+      "text": "지역권은 물권의 일반적인 소멸원인에 의해 소멸하며, 승역지의 시효취득이나 지역권의 소멸시효 등에 의해서도 소멸합니다(『 국가법령정보센터, 법령용어사전 』 참조).",
+      "used": "part"
+    },
+    {
+      "text": "특수지역권",
+      "used": "all"
+    },
+    {
+      "text": "어느 지역의 주민이 집합체의 관계로 각자가 타인의 토지에서 초목, 야생물 및 토사의 채취, 방목이나 기타 수익을 하는 권리가 있는 경우에는 관습에 의하는 외에 지역권에 관한 규정을 준용합니다( 「민법」 제302조 ). 이 정보는",
+      "used": "all"
+    },
+    {
+      "text": "2026년 9월 15일",
+      "used": "all"
+    },
+    {
+      "text": "기준으로 작성된 것입니다.",
+      "used": "all"
+    },
+    {
+      "text": "생활법령정보는 법적 효력을 갖는 유권해석(결정, 판단)의 근거가 되지 않고, 각종 신고, 불복 청구 등의 증거자료로서의 효력은 없습니다.",
+      "used": "all"
+    },
+    {
+      "text": "구체적인 법령에 대한 질의는 담당기관이나",
+      "used": "all"
+    },
+    {
+      "text": "국민신문고 에 문의하시기 바랍니다.",
+      "used": "all"
+    },
+    {
+      "text": "위 내용에 대한 홈페이지 개선의견은",
+      "used": "all"
+    },
+    {
+      "text": "홈페이지 개선의견 을 이용해 주시기 바랍니다.",
+      "used": "all"
+    }
+  ],
+  "excluded_tail": "",
+  "caption": "[생활법령] 공인중개사 1 — 지역권\n\n지역권의 개념\n\n출처: 찾기쉬운 생활법령정보\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사 #부동산법률",
+  "caption_problems": [],
+  "source_urls": [
+    "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=1171&ccfNo=3&cciNo=4&cnpClsNo=2"
+  ]
+}

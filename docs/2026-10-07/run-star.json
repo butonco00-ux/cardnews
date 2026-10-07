@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-07",
+  "finished_at": "2026-10-07T19:15:51.940943+09:00",
+  "messages": [
+    {
+      "level": "ok",
+      "text": "오늘의 부동산 뉴스 0건에 사실 정리를 넣었어요(Claude 구독, 추가 비용 없음)"
+    },
+    {
+      "level": "warn",
+      "text": "'\"잔금 앞두고 8억이나 깎아달라니\"……' 정리 안 함: claude 오류: Failed to authenticate: OAuth session expired and could not be refreshed"
+    },
+    {
+      "level": "warn",
+      "text": "'신이문역세권, 최고 40층 아파트 1…' 정리 안 함: claude 오류: Failed to authenticate: OAuth session expired and could not be refreshed"
+    },
+    {
+      "level": "warn",
+      "text": "'탄탄한 주거여건을 갖춘 연산동…‘신축…' 정리 안 함: claude 오류: Failed to authenticate: OAuth session expired and could not be refreshed"
+    },
+    {
+      "level": "warn",
+      "text": "'전세사기 보증금 ‘3분의 1’ 국가 …' 정리 안 함: claude 오류: Failed to authenticate: OAuth session expired and could not be refreshed"
+    },
+    {
+      "level": "warn",
+      "text": "'충남도, 청년 전세대출 이자 최대 5…' 정리 안 함: claude 오류: Failed to authenticate: OAuth session expired and could not be refreshed"
+    }
+  ]
+}
