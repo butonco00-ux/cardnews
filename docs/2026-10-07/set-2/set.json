@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-10-07",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.10.07)",
+  "date_label": "2026.10.07",
+  "news_items": [
+    {
+      "title": "\"잔금 앞두고 8억이나 깎아달라니\"…부동산 시장에 무슨 일이",
+      "link": "https://www.hankyung.com/article/202610077482i",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005339929?sid=101",
+      "press": "한국경제",
+      "published": "2026-10-07T09:54:00+09:00",
+      "date_label": "2026.10.07 09:54",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "신이문역세권, 최고 40층 아파트 1,201세대로 재개발",
+      "link": "https://www.arunews.com/news/articleView.html?idxno=67773",
+      "naver_link": "https://www.arunews.com/news/articleView.html?idxno=67773",
+      "press": "한국주택경제",
+      "published": "2026-10-07T09:46:00+09:00",
+      "date_label": "2026.10.07 09:46",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "탄탄한 주거여건을 갖춘 연산동…‘신축’ 연산센텀 월드메르디앙 공급",
+      "link": "https://view.asiae.co.kr/article/2026100615125486396",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005825434?sid=101",
+      "press": "아시아경제",
+      "published": "2026-10-07T09:20:00+09:00",
+      "date_label": "2026.10.07 09:20",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "전세사기 보증금 ‘3분의 1’ 국가 보장",
+      "link": "https://www.segye.com/newsView/20261006515770?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004164652?sid=101",
+      "press": "세계일보",
+      "published": "2026-10-07T06:05:00+09:00",
+      "date_label": "2026.10.07 06:05",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "충남도, 청년 전세대출 이자 최대 50% 지원…330명 모집",
+      "link": "https://www.yna.co.kr/view/AKR20261007035100063?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016361324?sid=101",
+      "press": "연합뉴스",
+      "published": "2026-10-07T08:57:00+09:00",
+      "date_label": "2026.10.07 08:57",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.10.07)\n\n1. \"잔금 앞두고 8억이나 깎아달라니\"…부동산 시장에 무슨 일이 — 한국경제\n   https://www.hankyung.com/article/202610077482i\n2. 신이문역세권, 최고 40층 아파트 1,201세대로 재개발 — 한국주택경제\n   https://www.arunews.com/news/articleView.html?idxno=67773\n3. 탄탄한 주거여건을 갖춘 연산동…‘신축’ 연산센텀 월드메르디앙 공급 — 아시아경제\n   https://view.asiae.co.kr/article/2026100615125486396\n4. 전세사기 보증금 ‘3분의 1’ 국가 보장 — 세계일보\n   https://www.segye.com/newsView/20261006515770?OutUrl=naver\n5. 충남도, 청년 전세대출 이자 최대 50% 지원…330명 모집 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261007035100063?input=1195m\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.hankyung.com/article/202610077482i",
+    "https://www.arunews.com/news/articleView.html?idxno=67773",
+    "https://view.asiae.co.kr/article/2026100615125486396",
+    "https://www.segye.com/newsView/20261006515770?OutUrl=naver",
+    "https://www.yna.co.kr/view/AKR20261007035100063?input=1195m"
+  ],
+  "created_at": "2026-10-07T10:10:00.779937+09:00"
+}
