@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-09",
+  "finished_at": "2026-10-09T08:42:28.918304+09:00",
+  "messages": [
+    {
+      "level": "ok",
+      "text": "정책·세금 카드 8장을 만들었어요: [장관동정] 홍지선 장관, 공공에 이어 민간까지… 주택공급 현장 직접 챙긴다"
+    }
+  ],
+  "candidates": [
+    {
+      "title": "[장관동정] 홍지선 장관, 공공에 이어 민간까지… 주택공급 현장 직접 챙긴다",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784648",
+      "score": 14,
+      "status": "선택됨 → 세트 1"
+    },
+    {
+      "title": "택시업종 노동환경 실태, 노 · 사 · 정이 함께 살핀다",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784603",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "'생활비 경감 정책 아이디어 공모전' 시상",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784659",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "관계부처 합동 10월 일자리전담반(TF) 개최",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784628",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "제2차 국민참여성장펀드 첫 5영업일간 판매 현황(9.30일~10.7일)",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784623",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "제2차 국민참여성장펀드 판매 결과 잔여물량 현황(10.6일)",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784610",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "'내 곁에 한글' 주제로 580돌 한글날 경축식 개최",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784641",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    }
+  ]
+}
