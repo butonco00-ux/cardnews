@@ -1,0 +1,114 @@
+{
+  "kind": "star",
+  "date": "2026-10-08",
+  "set": 5,
+  "tag": "스타",
+  "title": "\"회식비 1000만원도 가능\"…서장훈, '700억 건물주'의 압도적 클래스 ('비...",
+  "subtitles": [],
+  "dept": "스포츠조선",
+  "date_label": "2026.10.07",
+  "url": "https://www.sportschosun.com/entertainment/2026-10-07/202610070100049450003178",
+  "license": {
+    "type": 0,
+    "usable": true,
+    "text_only": true,
+    "label": "",
+    "reason": null
+  },
+  "license_label": "",
+  "embargo": null,
+  "badge": "",
+  "source_file": "",
+  "created_at": "2026-10-08T20:18:19.815074+09:00",
+  "source_label": "출처: 스포츠조선",
+  "news_items": [
+    {
+      "title": "\"회식비 1000만원도 가능\"…서장훈, '700억 건물주'의 압도적 클래스 ('비...",
+      "link": "https://www.sportschosun.com/entertainment/2026-10-07/202610070100049450003178",
+      "naver_link": "https://m.entertain.naver.com/article/076/0004453982",
+      "press": "스포츠조선",
+      "published": "2026-10-07T16:51:00+09:00",
+      "date_label": "2026.10.07 16:51",
+      "summary": [
+        "방송인 서장훈이 소유한 건물의 부동산 가치가 총 700억 원 상당으로 추정된다.",
+        "서장훈은 최근 자신이 보유한 건물을 매물로 내놓은 것으로 알려졌다.",
+        "SBS 유튜브 채널 '무엇이든 해줄지니 - 비서진' 영상에서 이서진이 이를 언급하며 매각 이유를 물었다.",
+        "서장훈은 질문에 즉답을 피하고 말을 돌렸다."
+      ],
+      "summary_note": "AI 사실 정리"
+    }
+  ],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg"
+    ]
+  },
+  "card_items": [
+    [
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "방송인 서장훈이 소유한 건물의 부동산 가치가 총 700억 원 상당으로 추정된다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "서장훈은 최근 자신이 보유한 건물을 매물로 내놓은 것으로 알려졌다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "SBS 유튜브 채널 '무엇이든 해줄지니 - 비서진' 영상에서 이서진이 이를 언급하며 매각 이유를 물었다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "서장훈은 질문에 즉답을 피하고 말을 돌렸다.",
+        "cont": false
+      }
+    ]
+  ],
+  "omitted": false,
+  "skipped": [],
+  "original": [
+    {
+      "text": "○ 방송인 서장훈이 소유한 건물의 부동산 가치가 총 700억 원 상당으로 추정된다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 서장훈은 최근 자신이 보유한 건물을 매물로 내놓은 것으로 알려졌다.",
+      "used": "all"
+    },
+    {
+      "text": "○ SBS 유튜브 채널 '무엇이든 해줄지니 - 비서진' 영상에서 이서진이 이를 언급하며 매각 이유를 물었다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 서장훈은 질문에 즉답을 피하고 말을 돌렸다.",
+      "used": "all"
+    }
+  ],
+  "excluded_tail": "",
+  "caption": "[스타] \"회식비 1000만원도 가능\"…서장훈, '700억 건물주'의 압도적 클래스 ('비...\n\n방송인 서장훈이 소유한 건물의 부동산 가치가 총 700억 원 상당으로 추정된다. 서장훈은 최근 자신이 보유한 건물을 매물로 내놓은 것으로 알려졌다. SBS 유튜브 채널 '무엇이든 해줄지니 - 비서진' 영상에서 이서진이 이를 언급하며 매각 이유를 물었다. 서장훈은 질문에 즉답을 피하고 말을 돌렸다.\n\n출처: 스포츠조선 「\"회식비 1000만원도 가능\"…서장훈, '700억 건물주'의 압도적 클래스 ('비...」(2026.10.07 16:51)\nhttps://www.sportschosun.com/entertainment/2026-10-07/202610070100049450003178\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사 #연예인부동산",
+  "caption_problems": [],
+  "source_urls": [
+    "https://www.sportschosun.com/entertainment/2026-10-07/202610070100049450003178"
+  ]
+}
