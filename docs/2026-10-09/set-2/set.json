@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-10-09",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.10.09)",
+  "date_label": "2026.10.09",
+  "news_items": [
+    {
+      "title": "서울 아파트 전셋값 상승에 주거 선택지 변화… 도심형 시니어 레지던스...",
+      "link": "https://biz.heraldcorp.com/article/10897073?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002707272?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-10-09T09:01:00+09:00",
+      "date_label": "2026.10.09 09:01",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "LH, 수도권 미분양 주택 최대 1만8000호 매입확약…연말까지 접수",
+      "link": "https://www.segye.com/newsView/20261009503677?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004165348?sid=101",
+      "press": "세계일보",
+      "published": "2026-10-09T10:26:00+09:00",
+      "date_label": "2026.10.09 10:26",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "서울서 아파트 살 때 빚, 역대 최저수준이라는데…[부동산AtoZ]",
+      "link": "https://view.asiae.co.kr/article/2026100823372436787",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005826513?sid=101",
+      "press": "아시아경제",
+      "published": "2026-10-09T07:30:00+09:00",
+      "date_label": "2026.10.09 07:30",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "박홍근 “초과세수로 공공주택 추가 투자 논의”",
+      "link": "https://www.mk.co.kr/article/12171900",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005746196?sid=101",
+      "press": "매일경제",
+      "published": "2026-10-08T18:35:00+09:00",
+      "date_label": "2026.10.08 18:35",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "꼬마빌딩 양도세, 10년 전 공사비 영수증이 수천만원을 가른다",
+      "link": "https://www.hankyung.com/article/202610020995O",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005340795?sid=101",
+      "press": "한국경제",
+      "published": "2026-10-09T10:33:00+09:00",
+      "date_label": "2026.10.09 10:33",
+      "score": 3,
+      "tag": "세금"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.10.09)\n\n1. 서울 아파트 전셋값 상승에 주거 선택지 변화… 도심형 시니어 레지던스... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10897073?ref=naver\n2. LH, 수도권 미분양 주택 최대 1만8000호 매입확약…연말까지 접수 — 세계일보\n   https://www.segye.com/newsView/20261009503677?OutUrl=naver\n3. 서울서 아파트 살 때 빚, 역대 최저수준이라는데…[부동산AtoZ] — 아시아경제\n   https://view.asiae.co.kr/article/2026100823372436787\n4. 박홍근 “초과세수로 공공주택 추가 투자 논의” — 매일경제\n   https://www.mk.co.kr/article/12171900\n5. 꼬마빌딩 양도세, 10년 전 공사비 영수증이 수천만원을 가른다 — 한국경제\n   https://www.hankyung.com/article/202610020995O\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://biz.heraldcorp.com/article/10897073?ref=naver",
+    "https://www.segye.com/newsView/20261009503677?OutUrl=naver",
+    "https://view.asiae.co.kr/article/2026100823372436787",
+    "https://www.mk.co.kr/article/12171900",
+    "https://www.hankyung.com/article/202610020995O"
+  ],
+  "created_at": "2026-10-09T10:36:13.414325+09:00"
+}
