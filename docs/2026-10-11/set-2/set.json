@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-10-11",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.10.11)",
+  "date_label": "2026.10.11",
+  "news_items": [
+    {
+      "title": "성동구, 15일·29일 청년 ‘주거 특강’…청약부터 전세사기 대응까지",
+      "link": "https://view.asiae.co.kr/article/2026101107154547789",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005826702?sid=102",
+      "press": "아시아경제",
+      "published": "2026-10-11T07:15:00+09:00",
+      "date_label": "2026.10.11 07:15",
+      "score": 12,
+      "tag": "정책"
+    },
+    {
+      "title": "전세 놓고 주소만 옮겼다간 과태료…강남3구·용산 실거주 ‘신고제’ ...",
+      "link": "https://biz.heraldcorp.com/article/10898220?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002707571?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-10-11T07:01:00+09:00",
+      "date_label": "2026.10.11 07:01",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "대구시, '지방 주택시장 맞춤형 처방' 정부에 건의",
+      "link": "https://www.yna.co.kr/view/AKR20261011013200053?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016368797?sid=102",
+      "press": "연합뉴스",
+      "published": "2026-10-11T09:10:00+09:00",
+      "date_label": "2026.10.11 09:10",
+      "score": 3,
+      "tag": "정책"
+    },
+    {
+      "title": "“70억 트리마제도 안 통했다”…초고가 아파트도 경매시장서 굴욕",
+      "link": "https://www.mk.co.kr/article/12172814",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005746617?sid=101",
+      "press": "매일경제",
+      "published": "2026-10-11T06:22:00+09:00",
+      "date_label": "2026.10.11 06:22",
+      "score": 3,
+      "tag": "정책"
+    },
+    {
+      "title": "아이파크현대산업개발, 삼성물산과 용산 숙대입구역세권 재개발 조경 특...",
+      "link": "https://www.segye.com/newsView/20261009505626?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004165528?sid=101",
+      "press": "세계일보",
+      "published": "2026-10-10T20:32:00+09:00",
+      "date_label": "2026.10.10 20:32",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.10.11)\n\n1. 성동구, 15일·29일 청년 ‘주거 특강’…청약부터 전세사기 대응까지 — 아시아경제\n   https://view.asiae.co.kr/article/2026101107154547789\n2. 전세 놓고 주소만 옮겼다간 과태료…강남3구·용산 실거주 ‘신고제’ ... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10898220?ref=naver\n3. 대구시, '지방 주택시장 맞춤형 처방' 정부에 건의 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261011013200053?input=1195m\n4. “70억 트리마제도 안 통했다”…초고가 아파트도 경매시장서 굴욕 — 매일경제\n   https://www.mk.co.kr/article/12172814\n5. 아이파크현대산업개발, 삼성물산과 용산 숙대입구역세권 재개발 조경 특... — 세계일보\n   https://www.segye.com/newsView/20261009505626?OutUrl=naver\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://view.asiae.co.kr/article/2026101107154547789",
+    "https://biz.heraldcorp.com/article/10898220?ref=naver",
+    "https://www.yna.co.kr/view/AKR20261011013200053?input=1195m",
+    "https://www.mk.co.kr/article/12172814",
+    "https://www.segye.com/newsView/20261009505626?OutUrl=naver"
+  ],
+  "created_at": "2026-10-11T09:36:25.735026+09:00"
+}
