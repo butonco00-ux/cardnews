@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-12",
+  "finished_at": "2026-10-12T18:58:44.476225+09:00",
+  "messages": [
+    {
+      "level": "ok",
+      "text": "정책·세금 카드 9장을 만들었어요: 9월중 전세사기피해자등 623건 추가 결정"
+    }
+  ],
+  "candidates": [
+    {
+      "title": "[참고] 청년주택드림 청약통장, 연 소득 7천만원까지 가입 문턱 낮춘다",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784858",
+      "score": 9,
+      "status": "후보"
+    },
+    {
+      "title": "9월중 전세사기피해자등 623건 추가 결정",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784785",
+      "score": 12,
+      "status": "선택됨 → 세트 1"
+    },
+    {
+      "title": "이형일 부총리, K-뉴딜 아카데미를 방문하여 AI 시대 청년고용 제고 노력",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784890",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "경제현안간담회 개최",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784801",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "제274차 대외경제장관회의 개최",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784794",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "제11차 공급망안정화위원회 개최",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784807",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "이억원 금융위원장, SC그룹 CFO·CRO 면담",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784866",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "청년미래적금, 10월 12일부터 16일까지 출생연도와 관계없이 가입신청 가능",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784805",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "제2차 국민참여성장펀드 판매 결과 잔여물량 현황(10.8일)",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784803",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "금융권의 소멸시효 연장 관행을 개선하기 위해 조건부 대손인정제도가 시행됩니다. - 「금융기관채권대손인정업무세칙」 개정안 시행(10.12.)",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784878",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "(보도참고자료) 행정안전부 장관, 광주지방중대범죄수사청장 대상 감찰 지시",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784884",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "'2026 자전거 사진·영상 공모전' 수상작 발표 자전거로 에너지 절약과 건강을 동시에!",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784848",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "행안부, 지역의 임신·출산·보육 서비스 등 지역 맞춤형 인프라로 채운다",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784846",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "행안부, 미래 재난안전을 이끌 인재 대학과 함께 키운다",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784850",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "지방소멸대응기금 광역지원계정, 평가 기반 차등 배분 도입으로 성과 높인다",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784796",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    }
+  ]
+}
