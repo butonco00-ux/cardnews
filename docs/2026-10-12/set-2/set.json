@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-10-12",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.10.12)",
+  "date_label": "2026.10.12",
+  "news_items": [
+    {
+      "title": "인천도시공사, 구월2 공공주택지구 손실보상 협의 시작",
+      "link": "https://www.yna.co.kr/view/AKR20261012046400065?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016370012?sid=101",
+      "press": "연합뉴스",
+      "published": "2026-10-12T09:42:00+09:00",
+      "date_label": "2026.10.12 09:42",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "[속보] 李대통령 “서울·수도권 인허가·착공 회복세…주택 공급 조만...",
+      "link": "https://www.segye.com/newsView/20261011513820?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004165675?sid=100",
+      "press": "세계일보",
+      "published": "2026-10-11T18:07:00+09:00",
+      "date_label": "2026.10.11 18:07",
+      "score": 12,
+      "tag": "정책"
+    },
+    {
+      "title": "이 대통령 \"주택 공급, 조만간 정상화된다…인허가 공백 회복\"",
+      "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00006&news_seq_no=5224145",
+      "naver_link": "https://n.news.naver.com/mnews/article/057/0001972809?sid=100",
+      "press": "매일경제",
+      "published": "2026-10-11T15:38:00+09:00",
+      "date_label": "2026.10.11 15:38",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "9월 전세사기 피해자 623건 추가…누적 4만1559건 인정",
+      "link": "https://biz.heraldcorp.com/article/10898782?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002707763?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-10-12T06:39:00+09:00",
+      "date_label": "2026.10.12 06:39",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "李대통령 \"2022년 이후 차질 빚은 주택 공급 조만간 정상화\"",
+      "link": "https://view.asiae.co.kr/article/2026101114225731102",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005826787?sid=100",
+      "press": "아시아경제",
+      "published": "2026-10-11T14:22:00+09:00",
+      "date_label": "2026.10.11 14:22",
+      "score": 6,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.10.12)\n\n1. 인천도시공사, 구월2 공공주택지구 손실보상 협의 시작 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261012046400065?input=1195m\n2. [속보] 李대통령 “서울·수도권 인허가·착공 회복세…주택 공급 조만... — 세계일보\n   https://www.segye.com/newsView/20261011513820?OutUrl=naver\n3. 이 대통령 \"주택 공급, 조만간 정상화된다…인허가 공백 회복\" — 매일경제\n   http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00006&news_seq_no=5224145\n4. 9월 전세사기 피해자 623건 추가…누적 4만1559건 인정 — 헤럴드경제\n   https://biz.heraldcorp.com/article/10898782?ref=naver\n5. 李대통령 \"2022년 이후 차질 빚은 주택 공급 조만간 정상화\" — 아시아경제\n   https://view.asiae.co.kr/article/2026101114225731102\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.yna.co.kr/view/AKR20261012046400065?input=1195m",
+    "https://www.segye.com/newsView/20261011513820?OutUrl=naver",
+    "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00006&news_seq_no=5224145",
+    "https://biz.heraldcorp.com/article/10898782?ref=naver",
+    "https://view.asiae.co.kr/article/2026101114225731102"
+  ],
+  "created_at": "2026-10-12T09:52:59.122847+09:00"
+}
