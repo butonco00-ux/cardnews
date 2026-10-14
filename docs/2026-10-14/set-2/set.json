@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-10-14",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.10.14)",
+  "date_label": "2026.10.14",
+  "news_items": [
+    {
+      "title": "“3기 신도시 용적률 높여 6.4만가구 더…수도권 주택 공급·이주 수요 ...",
+      "link": "https://www.mk.co.kr/article/12174873",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005748075?sid=101",
+      "press": "매일경제",
+      "published": "2026-10-13T19:55:00+09:00",
+      "date_label": "2026.10.13 19:55",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "서울 장기전세 만기 앞둔 우선공급 가구 20%가 장애인·고령자 등",
+      "link": "https://www.yna.co.kr/view/AKR20261014041600004?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016375029?sid=102",
+      "press": "연합뉴스",
+      "published": "2026-10-14T09:32:00+09:00",
+      "date_label": "2026.10.14 09:32",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "\"재개발·재건축 이주민 중개보수 최대 20% 깎아준다\"…노원구, 중개사...",
+      "link": "https://view.asiae.co.kr/article/2026101408432824299",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005828118?sid=102",
+      "press": "아시아경제",
+      "published": "2026-10-14T08:43:00+09:00",
+      "date_label": "2026.10.14 08:43",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "\"비아파트 '주택 수 제외' 혜택 상시화해야\"",
+      "link": "https://www.hankyung.com/article/2026101394741",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005342139?sid=101",
+      "press": "한국경제",
+      "published": "2026-10-13T18:06:00+09:00",
+      "date_label": "2026.10.13 18:06",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "2채 이상 다주택자 비중 8년만 최저",
+      "link": "https://biz.heraldcorp.com/article/10900837?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002708600?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-10-13T11:23:00+09:00",
+      "date_label": "2026.10.13 11:23",
+      "score": 6,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.10.14)\n\n1. “3기 신도시 용적률 높여 6.4만가구 더…수도권 주택 공급·이주 수요 ... — 매일경제\n   https://www.mk.co.kr/article/12174873\n2. 서울 장기전세 만기 앞둔 우선공급 가구 20%가 장애인·고령자 등 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261014041600004?input=1195m\n3. \"재개발·재건축 이주민 중개보수 최대 20% 깎아준다\"…노원구, 중개사... — 아시아경제\n   https://view.asiae.co.kr/article/2026101408432824299\n4. \"비아파트 '주택 수 제외' 혜택 상시화해야\" — 한국경제\n   https://www.hankyung.com/article/2026101394741\n5. 2채 이상 다주택자 비중 8년만 최저 — 헤럴드경제\n   https://biz.heraldcorp.com/article/10900837?ref=naver\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.mk.co.kr/article/12174873",
+    "https://www.yna.co.kr/view/AKR20261014041600004?input=1195m",
+    "https://view.asiae.co.kr/article/2026101408432824299",
+    "https://www.hankyung.com/article/2026101394741",
+    "https://biz.heraldcorp.com/article/10900837?ref=naver"
+  ],
+  "created_at": "2026-10-14T09:47:05.443191+09:00"
+}
