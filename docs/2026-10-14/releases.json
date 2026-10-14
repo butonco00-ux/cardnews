@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-14",
+  "releases": [
+    {
+      "title": "정비사업 조합 위법행위 특별현장점검 실시",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785139",
+      "dept": "국토교통부",
+      "list_date": "2026-10-14",
+      "date_label": "2026.10.14",
+      "subtitles": [
+        "공사비 산정·증액 과정의 적정성과 투명성 확보 및 법령 이행여부 확인 목적",
+        "10.19(월)~10.30(금), 11.9(월)~11.20(금) 2차에 걸쳐 16개 조합 대상 점검 진행"
+      ],
+      "lead": "국토교통부(장관 홍지선)는 재개발·재건축 사업 과정에서의 공사비 산정 및 조합 운영 관련 위법·부당행위를 근절하고 조합원 피해를 예방하기 위해 10월 19일부터 관계기관 합동 특별현장점검에 착수한다.",
+      "license_usable": true,
+      "license_label": "공공누리 제1유형(텍스트에 한함)",
+      "embargo": {
+        "available_at": "2026-10-14T15:00:00+09:00",
+        "raw": "2026. 10. 14.(수) 15:00 이후(10. 15.(목) 조간)",
+        "rule": "적힌 시각",
+        "certain": true
+      }
+    },
+    {
+      "title": "[장관동정] 홍지선 장관, 신축매입 현장점검  \"제도개선이 실제 공급으로 이어지도록\"",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785117",
+      "dept": "국토교통부",
+      "list_date": "2026-10-14",
+      "date_label": "2026.10.14",
+      "subtitles": [
+        "공공·민간에 이은 세 번째 주택공급현장, 마포 성산동 청년 기숙사형 매입임대 방문",
+        "LH에 착공·약정 목표 달성과 신속한 공급 당부"
+      ],
+      "lead": "홍지선 국토교통부 장관은 10월 14일 서울 마포구 성산동의 신축 매입임대주택 현장을 방문해 공급 현황을 점검했다.",
+      "license_usable": true,
+      "license_label": "공공누리 제1유형(텍스트에 한함)",
+      "embargo": {
+        "available_at": "2026-10-14T00:00:00+09:00",
+        "raw": "배포 즉시 보도 가능",
+        "rule": "배포 즉시 보도",
+        "certain": true
+      }
+    },
+    {
+      "title": "부동산 프로젝트 금융(PF) 상황 점검회의 겸 주택공급 촉진을 위한 금융지원 대책 점검회의 개최",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784974",
+      "dept": "금융위원회",
+      "list_date": "2026-10-13",
+      "date_label": "2026.10.13",
+      "subtitles": [],
+      "lead": "’26.6월말 PF 익스포저는 168.8조원*으로 전분기 대비 소폭 감소(△1.0조원)",
+      "license_usable": true,
+      "license_label": "공공누리 제1유형(텍스트에 한함)",
+      "embargo": {
+        "available_at": "2026-10-14T06:00:00+09:00",
+        "raw": "2026. 10. 14.(수) 조간배포2026. 10. 13.(화)  10:00",
+        "rule": "조간 → 그날 06:00",
+        "certain": true
+      }
+    }
+  ]
+}
