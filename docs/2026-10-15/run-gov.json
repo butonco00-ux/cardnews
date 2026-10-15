@@ -1,0 +1,236 @@
+{
+  "date": "2026-10-15",
+  "finished_at": "2026-10-15T19:12:59.215097+09:00",
+  "messages": [
+    {
+      "level": "ok",
+      "text": "정책·세금 카드 9장을 만들었어요: 정비사업 조합 위법행위 특별현장점검 실시"
+    }
+  ],
+  "candidates": [
+    {
+      "title": "[장관동정] 홍지선 장관, 3대 메가프로젝트 이행을 위한 호남권 반도체 첨단 국가산단 현장점검",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785349",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[설명] 도시재생사업을 통해 조성된 거점시설의 사후관리 및 지원을 강화해 나가겠습니다.",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785320",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[설명] '전세계약 5건 중 1건이 보증금 먹튀·바가지 의심'이라고 보는 것은 적절하지 않습니다.",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785228",
+      "score": 6,
+      "status": "후보"
+    },
+    {
+      "title": "정비사업 조합 위법행위 특별현장점검 실시",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785139",
+      "score": 8,
+      "status": "선택됨 → 세트 1"
+    },
+    {
+      "title": "[장관동정] 홍지선 장관, 신축매입 현장점검 \"제도개선이 실제 공급으로 이어지도록\"",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785117",
+      "score": 12,
+      "status": "후보 (전에 만든 적 있음)"
+    },
+    {
+      "title": "이형일 부총리, 日 가타야마 재무장관 면담에서 한일 통화스왑 연장에 합의",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785351",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[보도참고] 공급망안정화기금은 공급망 위기 대응을 위한 금융지원을 확대해 왔으며, 앞으로 중소·중견기업 지원도 강화하겠습니다.",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785191",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "비상경제본부 회의, 경제관계장관회의 겸 서비스산업발전 TF 개최",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785051",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "「AI·융복합 K-뷰티 서비스 지원방안」 발표",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785048",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "이형일 부총리, 국제통화기금(IMF)·세계은행 연차 총회 및 주요 20개국(G20), 주요 7개국(G7) 재무장관회의 참석 위해 출국",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785196",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "이형일 부총리, 베센트 美 재무장관과 화상면담",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785115",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "2026년도 하반기 공급망안정화 선도사업자 선정 계획",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785146",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "이형일 부총리, 통상 분야 전문가 간담회 개최",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785109",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "｢유관기관 증시상황 긴급 점검회의｣ 개최",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785325",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "제2차 국민참여성장펀드 판매 결과 잔여물량 현황(10.14일)",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785238",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "2026년 9월 가계대출 동향(잠정) 및 ｢가계부채 점검회의｣ 개최",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785312",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "잠든 선불충전금, 잊지 말고 사용하세요. - 빅테크 3개사, 장기간 미사용 선불의 이용자 통지 및 환급 촉진",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785310",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "청년미래적금 2차 가입신청 기간 10월 16일(금) 18시 30분 종료",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785240",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "금융정보분석원장, 국제자금세탁방지기구(FATF) 운영위원회(Steering Committee) 참여",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785063",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "제2차 국민참여성장펀드 판매가 내일(10.15일) 17시에 마감됩니다.",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785094",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "제2차 국민참여성장펀드 판매 결과 잔여물량 현황(10.13일)",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785059",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "사업보고서 등에 대한 조사·감리결과 조치 - 제18차 증권선물위원회(10.14.) 조치 의결",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785192",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "금융권 침해사고 재발방지를 위해 금융보안 관리체계를 전면 강화하겠습니다. 금융위 사무처장 주재, 「제2차 긴급 상황대응 회의」 개최",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785147",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "금융위원회 안창국 상임위원, 금융안정위원회(FSB) 규제·감독협력상임위(SRC) 및 ｢KOOM Week 2026｣ 참석",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785065",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "국민성장펀드 초장기기술투자펀드('26년), 7개 운용사 선정",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785194",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "세계 각국의 사회연대경제 리더들, 한국에 모여 지속가능한 성장을 논의한다",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785336",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "올여름 풍수해 인명·재산피해 대폭감소, 현장 중심 선제 대피로 피해 최소화",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785302",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "리스콘 한국관 운영 성황리에 마무리,한일 안전산업 협력 강화",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785300",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "행안부, 따뜻한 변화 만든 공익활동 발굴, '제1회 대한민국 공익활동 임팩트 어워드' 개최",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785168",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "가을 단풍철, 등산사고에 주의하세요!",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785106",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "2026년 집중안전점검 우수기관 17곳 선정",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785108",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "행정안전부 장관, 울산 울주군 공장 화재 관련 긴급 지시",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785093",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    }
+  ]
+}
