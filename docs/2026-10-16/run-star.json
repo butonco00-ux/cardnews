@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-16",
+  "finished_at": "2026-10-16T19:10:16.359426+09:00",
+  "messages": [
+    {
+      "level": "warn",
+      "text": "'‘17억→56억’ 하석진, 청담 한강…' 정리 안 함: claude 오류: Failed to refresh OAuth token: another Claude Code process is refreshing it or exited mid-refresh. This is usually trans"
+    },
+    {
+      "level": "warn",
+      "text": "'“200억 건물주 위엄?”… 이정현,…' 정리 안 함: claude 오류: Failed to refresh OAuth token: another Claude Code process is refreshing it or exited mid-refresh. This is usually trans"
+    },
+    {
+      "level": "warn",
+      "text": "'이정현, 194억 건물에 남편 병원 …' 정리 안 함: claude 오류: Failed to refresh OAuth token: another Claude Code process is refreshing it or exited mid-refresh. This is usually trans"
+    },
+    {
+      "level": "warn",
+      "text": "''100억 건물주' 장성규, ♥아내에…' 정리 안 함: claude 오류: Failed to refresh OAuth token: another Claude Code process is refreshing it or exited mid-refresh. This is usually trans"
+    },
+    {
+      "level": "ok",
+      "text": "오늘의 부동산 뉴스 3건에 사실 정리를 넣었어요(Claude 구독, 추가 비용 없음)"
+    },
+    {
+      "level": "warn",
+      "text": "'“재건축 장밋빛 환상 버릴 때…거래량…' 정리 안 함: claude 오류: Failed to refresh OAuth token: another Claude Code process is refreshing it or exited mid-refresh. This is usually trans"
+    },
+    {
+      "level": "warn",
+      "text": "'종부세, 이젠 뭣이 중헌디?…주택 수…' 정리 안 함: claude 오류: Failed to refresh OAuth token: another Claude Code process is refreshing it or exited mid-refresh. This is usually trans"
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "date": "2026-10-16",
+  "finished_at": "2026-10-16T19:09:21.678067+09:00",
+  "messages": [
+    {
+      "level": "ok",
+      "text": "정책·세금 카드 10장을 만들었어요: \"내 집 어디에, 언제 공급되나\" 주택공급, 계획부터 성과까지 정례적으로 공개합니다"
+    }
+  ],
+  "candidates": [
+    {
+      "title": "\"내 집 어디에, 언제 공급되나\" 주택공급, 계획부터 성과까지 정례적으로 공개합니다",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785505",
+      "score": 15,
+      "status": "후보"
+    },
+    {
+      "title": "[장관동정] 홍지선 장관, 3대 메가프로젝트 이행을 위한 호남권 반도체 첨단 국가산단 현장점검",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785349",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[설명] 도시재생사업을 통해 조성된 거점시설의 사후관리 및 지원을 강화해 나가겠습니다.",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785320",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "제11차 관계부처 합동 일자리전담반(TF) 개최",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785401",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[보도참고] '26.9월 고용동향 및 평가",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785395",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "한미 재무·통화당국 2+2 면담 개최",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785528",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "주요 20개국(G20)·주요 7개국(G7) 재무장관회의 참석 및 주요인사 면담 결과",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785438",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "시장상황점검회의 개최",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785420",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[보도참고] 2026년 10월 최근 경제동향",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785426",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "이형일 부총리, 日 가타야마 재무장관 면담에서 한일 통화스왑 연장에 합의",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785351",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "\"내 집 어디에, 언제 공급되나\" 주택공급, 계획부터 성과까지 정례적으로 공개합니다",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785511",
+      "score": 16,
+      "status": "선택됨 → 세트 1"
+    },
+    {
+      "title": "제2차 국민참여성장펀드, 5,198억원을 모집하고 판매종료",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785402",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "금융위원회 인사보도(3급·4급 전보)",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785514",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "'무기한 선물' 이용자 유의사항 안내 - 최근 글로벌 가상자산플랫폼 등에서 거래되는 '무기한 선물'은 국내법의 투자자 보호가 적용되지 않아 각별한 주의 필요",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785509",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "제2차 국민참여성장펀드 판매 결과 잔여물량 현황(10.14일)",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785238",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "청년미래적금 2차 가입신청 기간 10월 16일(금) 18시 30분 종료",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785240",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "2026년 9월 가계대출 동향(잠정) 및 ｢가계부채 점검회의｣ 개최",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785312",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "잠든 선불충전금, 잊지 말고 사용하세요. - 빅테크 3개사, 장기간 미사용 선불의 이용자 통지 및 환급 촉진",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785310",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "｢유관기관 증시상황 긴급 점검회의｣ 개최",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785325",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "'다시 시월, 꺼지지 않는 불꽃'... 행안부, '제47주년 부마민주항쟁 기념식' 개최",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785464",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "'평화를 향한 여정, 화합을 위한 광장' 제44회 대통령기 이북도민 체육대회 개최",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785437",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "행정안전부, 15일 전국서 자동차세 등 상습 체납 차량 합동단속 실시",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785419",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "세계 각국의 사회연대경제 리더들, 한국에 모여 지속가능한 성장을 논의한다",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785336",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "올여름 풍수해 인명·재산피해 대폭감소, 현장 중심 선제 대피로 피해 최소화",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785302",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "리스콘 한국관 운영 성황리에 마무리,한일 안전산업 협력 강화",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785300",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    }
+  ]
+}
