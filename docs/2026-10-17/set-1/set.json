@@ -1,0 +1,36 @@
+{
+  "kind": "policy",
+  "date": "2026-10-17",
+  "set": 1,
+  "tag": "정책",
+  "title": "\"내 집 어디에, 언제 공급되나\" 주택공급, 계획부터 성과까지 정례적으로 공개합니다",
+  "subtitles": [],
+  "dept": "국토교통부",
+  "date_label": "2026.10.16",
+  "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785505",
+  "license": {
+    "type": 1,
+    "text_only": true,
+    "label": "공공누리 제1유형(텍스트에 한함)",
+    "usable": true,
+    "reason": null
+  },
+  "license_label": "공공누리 제1유형(텍스트에 한함)",
+  "embargo": {
+    "available_at": "2026-10-17T06:00:00+09:00",
+    "raw": "",
+    "rule": "보도시점을 읽지 못해 다음 날 06:00부터로 정했어요",
+    "certain": false
+  },
+  "badge": "",
+  "source_file": "(별첨2)_전월세시장 안정과제 추진상황.pdf",
+  "created_at": "2026-10-17T11:25:55.387009+09:00",
+  "source_label": "출처: 국토교통부 보도자료",
+  "ok": false,
+  "problems": [
+    "3번째 카드: 표 칸 글자가 원문과 다름 → 구분 ‘22 ‘23 ‘24 ‘25 ‘",
+    "3번째 카드: 표 칸 글자가 원문과 다름 → 구분 ‘22 ‘23 ‘24 ‘25 ‘"
+  ],
+  "cards": [],
+  "card_items": []
+}

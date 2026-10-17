@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-17",
+  "releases": [
+    {
+      "title": "\"내 집 어디에, 언제 공급되나\" 주택공급, 계획부터 성과까지 정례적으로 공개합니다",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785505",
+      "dept": "국토교통부",
+      "list_date": "2026-10-16",
+      "date_label": "2026.10.16",
+      "subtitles": [],
+      "lead": "(그간 추진과제) 일반주택 금융지원 확대, 도생주 건축규제 개선, 신축매입 가격산정방식 개선 등 통해 민간·공공의 신속공급 여건 마련",
+      "license_usable": true,
+      "license_label": "공공누리 제1유형(텍스트에 한함)",
+      "embargo": {
+        "available_at": "2026-10-17T06:00:00+09:00",
+        "raw": "",
+        "rule": "보도시점을 읽지 못해 다음 날 06:00부터로 정했어요",
+        "certain": false
+      }
+    },
+    {
+      "title": "\"내 집 어디에, 언제 공급되나\" 주택공급, 계획부터 성과까지 정례적으로 공개합니다",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785511",
+      "dept": "금융위원회",
+      "list_date": "2026-10-16",
+      "date_label": "2026.10.16",
+      "subtitles": [],
+      "lead": "아울러, 국민이 필요한 공급 정보를 한 번에, 한눈에 확인할 수 있도록 보도자료｢디지털 주택공급 상황판｣을 구축하여 공급계획과 실적뿐만 아니라 정책 소식, 분양 및 임대 계획 등 관련 정보들을 통합 제공할 예정이다.",
+      "license_usable": true,
+      "license_label": "공공누리 제1유형(텍스트에 한함)",
+      "embargo": {
+        "available_at": "2026-10-16T16:00:00+09:00",
+        "raw": "2026. 10. 16.(금) 16:00 이후",
+        "rule": "적힌 시각",
+        "certain": true
+      }
+    }
+  ]
+}
