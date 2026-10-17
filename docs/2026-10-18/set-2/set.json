@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-10-18",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.10.18)",
+  "date_label": "2026.10.18",
+  "news_items": [
+    {
+      "title": "부동산 거래 '부동의 1위' 바뀌었다…강남 역전한 송파[부동산AtoZ]",
+      "link": "https://view.asiae.co.kr/article/2026101610222303502",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005829784?sid=101",
+      "press": "아시아경제",
+      "published": "2026-10-18T06:00:00+09:00",
+      "date_label": "2026.10.18 06:00",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "지금처럼 집값 오르면…2030년 재산세 54% 뛴다 [김경민의 부동산NOW]",
+      "link": "https://www.mk.co.kr/article/12177965",
+      "naver_link": "https://n.news.naver.com/mnews/article/024/0000108988?sid=101",
+      "press": "매일경제",
+      "published": "2026-10-17T17:01:00+09:00",
+      "date_label": "2026.10.17 17:01",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "망리단길은 남기고 아파트를 짓는다…망원1구역 재개발의 선택",
+      "link": "https://www.hankyung.com/article/202610142382O",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005343536?sid=101",
+      "press": "한국경제",
+      "published": "2026-10-17T09:59:00+09:00",
+      "date_label": "2026.10.17 09:59",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "주담대 변동금리 상단 6% 줄줄이 돌파…연말까지 165조원 금리 바뀐다",
+      "link": "https://www.segye.com/newsView/20261017509806?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004167487?sid=101",
+      "press": "세계일보",
+      "published": "2026-10-18T07:02:00+09:00",
+      "date_label": "2026.10.18 07:02",
+      "score": 3,
+      "tag": "정책"
+    },
+    {
+      "title": "유럽 시위 들불…고물가·주택난·부실교육에 '못 살겠다' 폭발",
+      "link": "https://www.yna.co.kr/view/AKR20261018003500098?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016383258?sid=104",
+      "press": "연합뉴스",
+      "published": "2026-10-18T07:00:00+09:00",
+      "date_label": "2026.10.18 07:00",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.10.18)\n\n1. 부동산 거래 '부동의 1위' 바뀌었다…강남 역전한 송파[부동산AtoZ] — 아시아경제\n   https://view.asiae.co.kr/article/2026101610222303502\n2. 지금처럼 집값 오르면…2030년 재산세 54% 뛴다 [김경민의 부동산NOW] — 매일경제\n   https://www.mk.co.kr/article/12177965\n3. 망리단길은 남기고 아파트를 짓는다…망원1구역 재개발의 선택 — 한국경제\n   https://www.hankyung.com/article/202610142382O\n4. 주담대 변동금리 상단 6% 줄줄이 돌파…연말까지 165조원 금리 바뀐다 — 세계일보\n   https://www.segye.com/newsView/20261017509806?OutUrl=naver\n5. 유럽 시위 들불…고물가·주택난·부실교육에 '못 살겠다' 폭발 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261018003500098?input=1195m\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://view.asiae.co.kr/article/2026101610222303502",
+    "https://www.mk.co.kr/article/12177965",
+    "https://www.hankyung.com/article/202610142382O",
+    "https://www.segye.com/newsView/20261017509806?OutUrl=naver",
+    "https://www.yna.co.kr/view/AKR20261018003500098?input=1195m"
+  ],
+  "created_at": "2026-10-18T08:40:46.240861+09:00"
+}
