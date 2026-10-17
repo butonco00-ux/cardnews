@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-10-17",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.10.17)",
+  "date_label": "2026.10.17",
+  "news_items": [
+    {
+      "title": "“내 집 마련보다 주거비 관리”…미래 계획 세우는 임대주택 수요",
+      "link": "https://biz.heraldcorp.com/article/10904750?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002710209?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-10-16T10:35:00+09:00",
+      "date_label": "2026.10.16 10:35",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "1기 신도시 정비사업 요청 쇄도하는데…국토부 '쿼터제'가 발목",
+      "link": "https://view.asiae.co.kr/article/2026101509115449835",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005829698?sid=101",
+      "press": "아시아경제",
+      "published": "2026-10-17T07:00:00+09:00",
+      "date_label": "2026.10.17 07:00",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "올해 착공 목표치에 한참 미달…인허가 늘어 선행지표는 회복",
+      "link": "https://www.mk.co.kr/article/12178077",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005749778?sid=101",
+      "press": "매일경제",
+      "published": "2026-10-16T17:42:00+09:00",
+      "date_label": "2026.10.16 17:42",
+      "score": 6,
+      "tag": "시장"
+    },
+    {
+      "title": "수도권 주택 착공 달성률 37% 그쳐…정부 “연말까지 23만 5000호 속도전...",
+      "link": "https://www.segye.com/newsView/20261016516771?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004167294?sid=101",
+      "press": "세계일보",
+      "published": "2026-10-16T17:21:00+09:00",
+      "date_label": "2026.10.16 17:21",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "천호A1-2구역, 재개발 시공자 현설에 3개사 참석",
+      "link": "https://www.arunews.com/news/articleView.html?idxno=68254",
+      "naver_link": "https://www.arunews.com/news/articleView.html?idxno=68254",
+      "press": "한국주택경제",
+      "published": "2026-10-16T21:46:00+09:00",
+      "date_label": "2026.10.16 21:46",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.10.17)\n\n1. “내 집 마련보다 주거비 관리”…미래 계획 세우는 임대주택 수요 — 헤럴드경제\n   https://biz.heraldcorp.com/article/10904750?ref=naver\n2. 1기 신도시 정비사업 요청 쇄도하는데…국토부 '쿼터제'가 발목 — 아시아경제\n   https://view.asiae.co.kr/article/2026101509115449835\n3. 올해 착공 목표치에 한참 미달…인허가 늘어 선행지표는 회복 — 매일경제\n   https://www.mk.co.kr/article/12178077\n4. 수도권 주택 착공 달성률 37% 그쳐…정부 “연말까지 23만 5000호 속도전... — 세계일보\n   https://www.segye.com/newsView/20261016516771?OutUrl=naver\n5. 천호A1-2구역, 재개발 시공자 현설에 3개사 참석 — 한국주택경제\n   https://www.arunews.com/news/articleView.html?idxno=68254\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://biz.heraldcorp.com/article/10904750?ref=naver",
+    "https://view.asiae.co.kr/article/2026101509115449835",
+    "https://www.mk.co.kr/article/12178077",
+    "https://www.segye.com/newsView/20261016516771?OutUrl=naver",
+    "https://www.arunews.com/news/articleView.html?idxno=68254"
+  ],
+  "created_at": "2026-10-17T09:05:14.852968+09:00"
+}
