@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-10-19",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.10.19)",
+  "date_label": "2026.10.19",
+  "news_items": [
+    {
+      "title": "\"한 번도 경험해 보지 못한 부동산 시장 온다\" 무주택자들 '날벼락' 맞을...",
+      "link": "https://view.asiae.co.kr/article/2026101816335353389",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005829930?sid=101",
+      "press": "아시아경제",
+      "published": "2026-10-18T16:44:00+09:00",
+      "date_label": "2026.10.18 16:44",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "고민 많은 다주택자 …\"팔려면 지금, 버티려면 종부세 계산을\"",
+      "link": "https://www.mk.co.kr/article/12178858",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005750126?sid=101",
+      "press": "매일경제",
+      "published": "2026-10-18T15:47:00+09:00",
+      "date_label": "2026.10.18 15:47",
+      "score": 9,
+      "tag": "세금"
+    },
+    {
+      "title": "28억 전세 끼고 39억 아파트 사더니…나연이 청담동 95억 건물까지 산 이...",
+      "link": "https://www.segye.com/newsView/20260901516450?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004167658?sid=101",
+      "press": "세계일보",
+      "published": "2026-10-19T05:11:00+09:00",
+      "date_label": "2026.10.19 05:11",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "정부 \"주택 공급·시장동향 지표 개선…중장기 안정화 전망\"",
+      "link": "https://www.yna.co.kr/view/AKR20261018042600003?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016384060?sid=101",
+      "press": "연합뉴스",
+      "published": "2026-10-18T17:05:00+09:00",
+      "date_label": "2026.10.18 17:05",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "\"전셋값 또 오르겠네\"…수도권 11월 아파트 입주 절반으로 '뚝'",
+      "link": "https://www.hankyung.com/article/2026101994816",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005343819?sid=101",
+      "press": "한국경제",
+      "published": "2026-10-19T08:48:00+09:00",
+      "date_label": "2026.10.19 08:48",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.10.19)\n\n1. \"한 번도 경험해 보지 못한 부동산 시장 온다\" 무주택자들 '날벼락' 맞을... — 아시아경제\n   https://view.asiae.co.kr/article/2026101816335353389\n2. 고민 많은 다주택자 …\"팔려면 지금, 버티려면 종부세 계산을\" — 매일경제\n   https://www.mk.co.kr/article/12178858\n3. 28억 전세 끼고 39억 아파트 사더니…나연이 청담동 95억 건물까지 산 이... — 세계일보\n   https://www.segye.com/newsView/20260901516450?OutUrl=naver\n4. 정부 \"주택 공급·시장동향 지표 개선…중장기 안정화 전망\" — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261018042600003?input=1195m\n5. \"전셋값 또 오르겠네\"…수도권 11월 아파트 입주 절반으로 '뚝' — 한국경제\n   https://www.hankyung.com/article/2026101994816\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://view.asiae.co.kr/article/2026101816335353389",
+    "https://www.mk.co.kr/article/12178858",
+    "https://www.segye.com/newsView/20260901516450?OutUrl=naver",
+    "https://www.yna.co.kr/view/AKR20261018042600003?input=1195m",
+    "https://www.hankyung.com/article/2026101994816"
+  ],
+  "created_at": "2026-10-19T08:49:55.655935+09:00"
+}
