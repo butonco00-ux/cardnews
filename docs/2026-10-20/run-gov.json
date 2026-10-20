@@ -1,0 +1,173 @@
+{
+  "date": "2026-10-20",
+  "finished_at": "2026-10-20T19:07:13.206610+09:00",
+  "messages": [
+    {
+      "level": "ok",
+      "text": "정책·세금 카드 7장을 만들었어요: 서울 동자동 쪽방촌 공공주택지구 지정,  도심 속 2,150호 규모의 주택공급 추진"
+    }
+  ],
+  "candidates": [
+    {
+      "title": "[차관동정] 김이탁 제1차관, \"로봇의 건설현장 확산으로 혁신 앞당길 것\"",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785840",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "「민간임대주택에 관한 특별법」 시행령 개정안, 20일 국무회의 의결",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785839",
+      "score": 8,
+      "status": "후보"
+    },
+    {
+      "title": "서울 동자동 쪽방촌 공공주택지구 지정, 도심 속 2,150호 규모의 주택공급 추진",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785796",
+      "score": 17,
+      "status": "선택됨 → 세트 1"
+    },
+    {
+      "title": "밤에도 산불 끄는 드론, 도로 공사장 지키는 로봇 실증한다",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785797",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "모두의카드 카드정보 현행화하지 않은 이용자는 10월 26일까지 현행화하세요!",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785731",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "채권 발행기관 협의체 제4차 회의 개최",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785855",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "가상자산 과세 관련 현장 간담회 개최",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785835",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "글로벌 AI 디지털 서밋 개최",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785795",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "국제통화위원회(IMFC) 참석 및 주요 인사 면담 결과",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785693",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "금융현장의 불편, 제3자의 눈으로 살핀다. - 제6기 금융위원회 옴부즈만 출범",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785842",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "보험업권과 복지부 산하 노인지원기관이 손잡고 65만명의 취약어르신에게 낙상사고 치료비, 치매배상책임보험을 무료로 제공하겠습니다.",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785679",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "청년미래적금, 2차 가입 신청자 68.8만명 - 10.12~11.13일 가입심사, 11.16일부터 계좌개설 시작",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785685",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "행안부 차관, '2026여수세계섬박람회' 현장 점검... 폐막까지 안정적 마무리 당부",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785853",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "행정안전부, 핼러윈 앞두고 다중운집인파 안전관리 총력 대응",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785846",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "지방에 더 두터운 지원 객관적 기준의 '지방우대지수' 마련",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785814",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "행정안전부, 삼성·LG와 협력해 재난 피해 가전 무상수리 지원 범위 확대",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785664",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "행안부, 1,658개 행정서비스 제출서류 간소화 완료... 국민 불편 대폭 해소",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785662",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "현장의 불편, 공무원이 AI로 직접 해결한다 현업 공무원이 바이브 코딩으로 구현한 「국정ON」, 공무원 주도 AI 업무혁신 사례",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785660",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "범정부 재난역량 총결집!! 2026 하반기 재난대응 안전한국훈련 실시",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785606",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "지방세입 체납관리단, 지역 주민 2천 명과 함께 \"세금은 공정하게 걷고, 어려운 분은 함께 돕습니다.\"",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785602",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "\"지진 땐 이렇게\" 전국이 함께하는 2026년 지진안전주간",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785604",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "묻고 답하며, 국민과 함께 완성하는 정부혁신 '2026 왕중왕전' 온라인 정책소통 시작",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785598",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "제78회 여순사건 합동추념식 개최",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785600",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    }
+  ]
+}
