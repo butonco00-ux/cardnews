@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-10-22",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.10.22)",
+  "date_label": "2026.10.22",
+  "news_items": [
+    {
+      "title": "국토장관 \"전월세 상승 원인은 입주물량 감소…공급이 근본해법\"",
+      "link": "https://www.yna.co.kr/view/AKR20261022034300003?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016392975?sid=101",
+      "press": "연합뉴스",
+      "published": "2026-10-22T09:01:00+09:00",
+      "date_label": "2026.10.22 09:01",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "서울 아파트 실거래가 '급등'…문재인 정부 이후 최대 상승",
+      "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00003&news_seq_no=5226436",
+      "naver_link": "https://n.news.naver.com/mnews/article/057/0001974608?sid=101",
+      "press": "매일경제",
+      "published": "2026-10-22T08:56:00+09:00",
+      "date_label": "2026.10.22 08:56",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "서울 아파트 1년 새 15.5% 상승…거래는 3000건 아래로 [부동산360]",
+      "link": "https://biz.heraldcorp.com/article/10910546?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002712640?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-10-22T06:01:00+09:00",
+      "date_label": "2026.10.22 06:01",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "경기 규제지역 확대에도 서울 거주자 원정 매입 4년 만에 최고[부동산A...",
+      "link": "https://view.asiae.co.kr/article/2026101920104221463",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005831347?sid=101",
+      "press": "아시아경제",
+      "published": "2026-10-21T10:03:00+09:00",
+      "date_label": "2026.10.21 10:03",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "홍지선 장관 “청년월세 소득기준 내년 완화…전월세 안심신탁 연내 공...",
+      "link": "https://www.hankyung.com/article/202610227719i",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005345256?sid=101",
+      "press": "한국경제",
+      "published": "2026-10-22T09:17:00+09:00",
+      "date_label": "2026.10.22 09:17",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.10.22)\n\n1. 국토장관 \"전월세 상승 원인은 입주물량 감소…공급이 근본해법\" — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261022034300003?input=1195m\n2. 서울 아파트 실거래가 '급등'…문재인 정부 이후 최대 상승 — 매일경제\n   http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00003&news_seq_no=5226436\n3. 서울 아파트 1년 새 15.5% 상승…거래는 3000건 아래로 [부동산360] — 헤럴드경제\n   https://biz.heraldcorp.com/article/10910546?ref=naver\n4. 경기 규제지역 확대에도 서울 거주자 원정 매입 4년 만에 최고[부동산A... — 아시아경제\n   https://view.asiae.co.kr/article/2026101920104221463\n5. 홍지선 장관 “청년월세 소득기준 내년 완화…전월세 안심신탁 연내 공... — 한국경제\n   https://www.hankyung.com/article/202610227719i\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.yna.co.kr/view/AKR20261022034300003?input=1195m",
+    "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00003&news_seq_no=5226436",
+    "https://biz.heraldcorp.com/article/10910546?ref=naver",
+    "https://view.asiae.co.kr/article/2026101920104221463",
+    "https://www.hankyung.com/article/202610227719i"
+  ],
+  "created_at": "2026-10-22T09:20:48.070054+09:00"
+}
