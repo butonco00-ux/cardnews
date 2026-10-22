@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-23",
+  "finished_at": "2026-10-23T07:00:12.905522+09:00",
+  "messages": [
+    {
+      "level": "warn",
+      "text": "오늘은 조건에 맞는 정책·세금 보도자료가 없어요"
+    }
+  ],
+  "candidates": [
+    {
+      "title": "[참고] 국제교통포럼(ITF) 김영태 사무총장 3연임 가능성 열려",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156786213",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "(보도설명) 정부는 할당관세의 물가안정 효과를 높이기 위한 제도개선을 지속 추진 중입니다.",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156786177",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "우주항공 · 양자 산업을 국민성장펀드의 지원대상산업에 추가하고자 합니다. - 한국산업은행법 시행령 개정령안 입법예고(10.22~12.1일)",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156786095",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "지방세 환급금, 이제 평소 쓰던 민간 앱에서 간편하게 확인하고 신청까지 한 번에!",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156786158",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "국민 목소리로 정책 만든다 행안부, '알기 쉬운 정책소통 매뉴얼' 배포",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156786129",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "내수면 선박 운영 및 레저활동 숨은 위험, 미리 찾아 대비한다",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156786131",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "10·29이태원참사 4주기 시민추모대회 개최",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156786133",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    }
+  ]
+}
