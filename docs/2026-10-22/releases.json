@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-22",
+  "releases": [
+    {
+      "title": "[차관동정] 김이탁 제1차관, \"행복기숙사 지속 공급 확대\" 강조",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156786004",
+      "dept": "국토교통부",
+      "list_date": "2026-10-21",
+      "date_label": "2026.10.21",
+      "subtitles": [
+        "21일 경인여대 행복기숙사 개관식 찾아 청년 주거안정 위한 지원 노력 밝혀"
+      ],
+      "lead": "김이탁 국토교통부 제1차관은 10월 21일 오후 인천 계양구 경인여대 행복기숙사 ‘루디아 하우스’ 개관식에 참석해 시설을 점검하고 청년 주거비 부담 완화를 위한 지원 의지를 밝혔다.",
+      "license_usable": true,
+      "license_label": "공공누리 제1유형(텍스트에 한함)",
+      "embargo": {
+        "available_at": "2026-10-21T00:00:00+09:00",
+        "raw": "배포 즉시 보도 가능",
+        "rule": "배포 즉시 보도",
+        "certain": true
+      }
+    }
+  ]
+}
