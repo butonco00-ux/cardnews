@@ -1,6 +1,6 @@
 {
   "date": "2026-10-23",
-  "finished_at": "2026-10-23T19:17:57.622633+09:00",
+  "finished_at": "2026-10-23T22:34:11.065947+09:00",
   "messages": [
     {
       "level": "ok",
@@ -12,15 +12,15 @@
     },
     {
       "level": "warn",
-      "text": "'용산 한강변 '산호아파트' 최고 47…' 정리 안 함: 기사 문장과 너무 비슷함"
+      "text": "'용산 한강변 '산호아파트' 최고 47…' 정리 안 함: claude 오류: You've hit your session limit · resets 12:10am (Asia/Seoul)"
     },
     {
       "level": "warn",
-      "text": "'일본도 부동산 투기와의 전쟁…'단기 …' 정리 안 함: 기사에 없는 숫자(21)"
+      "text": "'일본도 부동산 투기와의 전쟁…'단기 …' 정리 안 함: claude 오류: You've hit your session limit · resets 12:10am (Asia/Seoul)"
     },
     {
       "level": "warn",
-      "text": "'아파트 문턱 높아지니 빌라값도 고공행…' 정리 안 함: 기사에 없는 숫자(10)"
+      "text": "'아파트 문턱 높아지니 빌라값도 고공행…' 정리 안 함: claude 오류: You've hit your session limit · resets 12:10am (Asia/Seoul)"
     }
   ]
 }
