@@ -1,0 +1,88 @@
+{
+  "kind": "news",
+  "date": "2026-10-23",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.10.23)",
+  "date_label": "2026.10.23",
+  "news_items": [
+    {
+      "title": "용산 한강변 '산호아파트' 최고 47층 666세대로 재건축 추진",
+      "link": "https://www.yna.co.kr/view/AKR20261023037500004?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016395836?sid=102",
+      "press": "연합뉴스",
+      "published": "2026-10-23T09:05:00+09:00",
+      "date_label": "2026.10.23 09:05",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "AI가 추천한 '서울 실거주 가성비 아파트' 10선 [더 머니이스트-최원철...",
+      "link": "https://www.hankyung.com/article/202610114696Q",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005345649?sid=101",
+      "press": "한국경제",
+      "published": "2026-10-23T06:31:00+09:00",
+      "date_label": "2026.10.23 06:31",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "일본도 부동산 투기와의 전쟁…'단기 매매 52% 양도세 중과' 검토",
+      "link": "https://view.asiae.co.kr/article/2026102214282180991",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005832152?sid=104",
+      "press": "아시아경제",
+      "published": "2026-10-22T14:43:00+09:00",
+      "date_label": "2026.10.22 14:43",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "아파트 문턱 높아지니 빌라값도 고공행진…핀셋 규제 회피 움직임도",
+      "link": "https://www.mk.co.kr/article/12183767",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005752850?sid=101",
+      "press": "매일경제",
+      "published": "2026-10-23T08:18:00+09:00",
+      "date_label": "2026.10.23 08:18",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.10.23)\n\n1. 용산 한강변 '산호아파트' 최고 47층 666세대로 재건축 추진 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261023037500004?input=1195m\n2. AI가 추천한 '서울 실거주 가성비 아파트' 10선 [더 머니이스트-최원철... — 한국경제\n   https://www.hankyung.com/article/202610114696Q\n3. 일본도 부동산 투기와의 전쟁…'단기 매매 52% 양도세 중과' 검토 — 아시아경제\n   https://view.asiae.co.kr/article/2026102214282180991\n4. 아파트 문턱 높아지니 빌라값도 고공행진…핀셋 규제 회피 움직임도 — 매일경제\n   https://www.mk.co.kr/article/12183767\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.yna.co.kr/view/AKR20261023037500004?input=1195m",
+    "https://www.hankyung.com/article/202610114696Q",
+    "https://view.asiae.co.kr/article/2026102214282180991",
+    "https://www.mk.co.kr/article/12183767"
+  ],
+  "created_at": "2026-10-23T09:29:12.645005+09:00"
+}
