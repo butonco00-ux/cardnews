@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-10-24",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.10.24)",
+  "date_label": "2026.10.24",
+  "news_items": [
+    {
+      "title": "국토부, 국감서 주택공급 차질·전월세난 뭇매…홍지선 “내년 만회할 ...",
+      "link": "https://www.segye.com/newsView/20261023509422?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004169196?sid=100",
+      "press": "세계일보",
+      "published": "2026-10-23T17:15:00+09:00",
+      "date_label": "2026.10.23 17:15",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "홍지선 \"주택 인허가·착공 감소가 전세난 원인\"",
+      "link": "https://www.hankyung.com/article/2026102316861",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005345872?sid=101",
+      "press": "한국경제",
+      "published": "2026-10-23T17:14:00+09:00",
+      "date_label": "2026.10.23 17:14",
+      "score": 12,
+      "tag": "정책"
+    },
+    {
+      "title": "오세훈 ‘2심 무죄’ 재개발·재건축도 안도…서울 ‘31만호 착공’ 탄...",
+      "link": "https://biz.heraldcorp.com/article/10913093?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002713668?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-10-23T16:05:00+09:00",
+      "date_label": "2026.10.23 16:05",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "[2026국감]국토장관 \"주택시장 안정\" 전망에도…여야 \"전월세 보완책 시...",
+      "link": "https://view.asiae.co.kr/article/2026102323321050984",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005832862?sid=101",
+      "press": "아시아경제",
+      "published": "2026-10-23T23:32:00+09:00",
+      "date_label": "2026.10.23 23:32",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "LH 사장 “집값 상승은 前정부 공급부족 탓…공급 본격화하면 폭락”",
+      "link": "https://www.mk.co.kr/article/12184564",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005753334?sid=101",
+      "press": "매일경제",
+      "published": "2026-10-23T21:35:00+09:00",
+      "date_label": "2026.10.23 21:35",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.10.24)\n\n1. 국토부, 국감서 주택공급 차질·전월세난 뭇매…홍지선 “내년 만회할 ... — 세계일보\n   https://www.segye.com/newsView/20261023509422?OutUrl=naver\n2. 홍지선 \"주택 인허가·착공 감소가 전세난 원인\" — 한국경제\n   https://www.hankyung.com/article/2026102316861\n3. 오세훈 ‘2심 무죄’ 재개발·재건축도 안도…서울 ‘31만호 착공’ 탄... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10913093?ref=naver\n4. [2026국감]국토장관 \"주택시장 안정\" 전망에도…여야 \"전월세 보완책 시... — 아시아경제\n   https://view.asiae.co.kr/article/2026102323321050984\n5. LH 사장 “집값 상승은 前정부 공급부족 탓…공급 본격화하면 폭락” — 매일경제\n   https://www.mk.co.kr/article/12184564\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.segye.com/newsView/20261023509422?OutUrl=naver",
+    "https://www.hankyung.com/article/2026102316861",
+    "https://biz.heraldcorp.com/article/10913093?ref=naver",
+    "https://view.asiae.co.kr/article/2026102323321050984",
+    "https://www.mk.co.kr/article/12184564"
+  ],
+  "created_at": "2026-10-24T09:20:22.355245+09:00"
+}
