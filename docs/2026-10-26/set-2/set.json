@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-10-26",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.10.26)",
+  "date_label": "2026.10.26",
+  "news_items": [
+    {
+      "title": "재경위 “종부세율 인상, 임차인에 세 부담 가능성…‘주택가격 하락 효...",
+      "link": "https://www.segye.com/newsView/20261025504150?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004169437?sid=101",
+      "press": "세계일보",
+      "published": "2026-10-25T10:57:00+09:00",
+      "date_label": "2026.10.25 10:57",
+      "score": 12,
+      "tag": "정책"
+    },
+    {
+      "title": "주거비 부담 속 오피스텔 '실거주용 중형' 수요↑",
+      "link": "https://view.asiae.co.kr/article/2026102608391344638",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005833222?sid=101",
+      "press": "아시아경제",
+      "published": "2026-10-26T08:39:00+09:00",
+      "date_label": "2026.10.26 08:39",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "상하위 20% 집값 격차 290배로 상승…다주택 등 포함시 더 확대",
+      "link": "https://www.yna.co.kr/view/AKR20261023150200002?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016399414?sid=101",
+      "press": "연합뉴스",
+      "published": "2026-10-26T05:51:00+09:00",
+      "date_label": "2026.10.26 05:51",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "현대차, 울산공장 재건축 최종 합의…美 생산 이관 물량 7.4만대 확정",
+      "link": "https://biz.heraldcorp.com/article/10914184?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002714118?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-10-26T08:24:00+09:00",
+      "date_label": "2026.10.26 08:24",
+      "score": 3,
+      "tag": "정책"
+    },
+    {
+      "title": "“고가 주택 가격 급등 영향”…자산 상하위 집값 격차 290배",
+      "link": "https://www.mk.co.kr/article/12185354",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005753770?sid=101",
+      "press": "매일경제",
+      "published": "2026-10-26T08:09:00+09:00",
+      "date_label": "2026.10.26 08:09",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.10.26)\n\n1. 재경위 “종부세율 인상, 임차인에 세 부담 가능성…‘주택가격 하락 효... — 세계일보\n   https://www.segye.com/newsView/20261025504150?OutUrl=naver\n2. 주거비 부담 속 오피스텔 '실거주용 중형' 수요↑ — 아시아경제\n   https://view.asiae.co.kr/article/2026102608391344638\n3. 상하위 20% 집값 격차 290배로 상승…다주택 등 포함시 더 확대 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261023150200002?input=1195m\n4. 현대차, 울산공장 재건축 최종 합의…美 생산 이관 물량 7.4만대 확정 — 헤럴드경제\n   https://biz.heraldcorp.com/article/10914184?ref=naver\n5. “고가 주택 가격 급등 영향”…자산 상하위 집값 격차 290배 — 매일경제\n   https://www.mk.co.kr/article/12185354\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.segye.com/newsView/20261025504150?OutUrl=naver",
+    "https://view.asiae.co.kr/article/2026102608391344638",
+    "https://www.yna.co.kr/view/AKR20261023150200002?input=1195m",
+    "https://biz.heraldcorp.com/article/10914184?ref=naver",
+    "https://www.mk.co.kr/article/12185354"
+  ],
+  "created_at": "2026-10-26T08:42:24.165350+09:00"
+}
