@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-10-27",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.10.27)",
+  "date_label": "2026.10.27",
+  "news_items": [
+    {
+      "title": "\"오피스텔 분양가가 11억이라고?\"…아파트값 뛰자 벌어진 일",
+      "link": "https://www.hankyung.com/article/202610276978i",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005346872?sid=101",
+      "press": "한국경제",
+      "published": "2026-10-27T09:38:00+09:00",
+      "date_label": "2026.10.27 09:38",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "LH, 4분기 건설형 임대주택 4천663가구 입주자 모집",
+      "link": "https://www.yna.co.kr/view/AKR20261027037700003?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016401965?sid=101",
+      "press": "연합뉴스",
+      "published": "2026-10-27T09:08:00+09:00",
+      "date_label": "2026.10.27 09:08",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "재건축·재개발 ‘물딱지’ 막는다…황희, 실수요자 조합원 지위 허용법...",
+      "link": "https://www.mk.co.kr/article/12186182",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005754381?sid=101",
+      "press": "매일경제",
+      "published": "2026-10-27T08:01:00+09:00",
+      "date_label": "2026.10.27 08:01",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "LH, 4분기 건설형임대 4663가구 공급…과천지식정보타운·구리갈매 등",
+      "link": "https://biz.heraldcorp.com/article/10915672?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002714723?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-10-27T09:22:00+09:00",
+      "date_label": "2026.10.27 09:22",
+      "score": 3,
+      "tag": "정책"
+    },
+    {
+      "title": "박운기 서대문구청장, 정비사업 조합 13곳과 구역별 면담 갖는다",
+      "link": "https://view.asiae.co.kr/article/2026102709084878463",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005833799?sid=102",
+      "press": "아시아경제",
+      "published": "2026-10-27T09:08:00+09:00",
+      "date_label": "2026.10.27 09:08",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.10.27)\n\n1. \"오피스텔 분양가가 11억이라고?\"…아파트값 뛰자 벌어진 일 — 한국경제\n   https://www.hankyung.com/article/202610276978i\n2. LH, 4분기 건설형 임대주택 4천663가구 입주자 모집 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261027037700003?input=1195m\n3. 재건축·재개발 ‘물딱지’ 막는다…황희, 실수요자 조합원 지위 허용법... — 매일경제\n   https://www.mk.co.kr/article/12186182\n4. LH, 4분기 건설형임대 4663가구 공급…과천지식정보타운·구리갈매 등 — 헤럴드경제\n   https://biz.heraldcorp.com/article/10915672?ref=naver\n5. 박운기 서대문구청장, 정비사업 조합 13곳과 구역별 면담 갖는다 — 아시아경제\n   https://view.asiae.co.kr/article/2026102709084878463\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.hankyung.com/article/202610276978i",
+    "https://www.yna.co.kr/view/AKR20261027037700003?input=1195m",
+    "https://www.mk.co.kr/article/12186182",
+    "https://biz.heraldcorp.com/article/10915672?ref=naver",
+    "https://view.asiae.co.kr/article/2026102709084878463"
+  ],
+  "created_at": "2026-10-27T10:01:52.968888+09:00"
+}
