@@ -1,0 +1,137 @@
+{
+  "kind": "star",
+  "date": "2026-10-28",
+  "set": 5,
+  "tag": "스타",
+  "title": "24억 건물 샀는데 월세 포기…권은비가 2층·4층 통째로 내준 이유",
+  "subtitles": [],
+  "dept": "세계일보",
+  "date_label": "2026.10.28",
+  "url": "https://www.segye.com/newsView/20261027518460?OutUrl=naver",
+  "license": {
+    "type": 0,
+    "usable": true,
+    "text_only": true,
+    "label": "",
+    "reason": null
+  },
+  "license_label": "",
+  "embargo": null,
+  "badge": "",
+  "source_file": "",
+  "created_at": "2026-10-28T19:10:56.326451+09:00",
+  "source_label": "출처: 세계일보",
+  "news_items": [
+    {
+      "title": "24억 건물 샀는데 월세 포기…권은비가 2층·4층 통째로 내준 이유",
+      "link": "https://www.segye.com/newsView/20261027518460?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004170309?sid=101",
+      "press": "세계일보",
+      "published": "2026-10-28T05:16:00+09:00",
+      "date_label": "2026.10.28 05:16",
+      "summary": [
+        "가수 권은비는 2024년 서울 성동구 송정동의 건물을 24억원에 매입했다.",
+        "이 건물은 성수동 카페거리 근처에 있는 4층짜리 단독주택이다.",
+        "1층에는 권은비가 직접 운영하는 카페가 있다.",
+        "3층은 일반 세입자에게 임대하고 있다.",
+        "2층과 4층은 권은비의 매니저들이 거주하는 공간으로 쓰인다.",
+        "권은비는 매니저들에게 월세를 받지 않고 최소 관리비 수준만 받는다.",
+        "권은비는 노후 대비를 위해 서울 여러 지역을 직접 둘러본 뒤 이 건물을 매입했다."
+      ],
+      "summary_note": "AI 사실 정리"
+    }
+  ],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg"
+    ]
+  },
+  "card_items": [
+    [
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "가수 권은비는 2024년 서울 성동구 송정동의 건물을 24억원에 매입했다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "이 건물은 성수동 카페거리 근처에 있는 4층짜리 단독주택이다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "1층에는 권은비가 직접 운영하는 카페가 있다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "3층은 일반 세입자에게 임대하고 있다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "2층과 4층은 권은비의 매니저들이 거주하는 공간으로 쓰인다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "권은비는 매니저들에게 월세를 받지 않고 최소 관리비 수준만 받는다.",
+        "cont": false
+      }
+    ]
+  ],
+  "omitted": false,
+  "skipped": [],
+  "original": [
+    {
+      "text": "○ 가수 권은비는 2024년 서울 성동구 송정동의 건물을 24억원에 매입했다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 이 건물은 성수동 카페거리 근처에 있는 4층짜리 단독주택이다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 1층에는 권은비가 직접 운영하는 카페가 있다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 3층은 일반 세입자에게 임대하고 있다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 2층과 4층은 권은비의 매니저들이 거주하는 공간으로 쓰인다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 권은비는 매니저들에게 월세를 받지 않고 최소 관리비 수준만 받는다.",
+      "used": "all"
+    }
+  ],
+  "excluded_tail": "",
+  "caption": "[스타] 24억 건물 샀는데 월세 포기…권은비가 2층·4층 통째로 내준 이유\n\n가수 권은비는 2024년 서울 성동구 송정동의 건물을 24억원에 매입했다. 이 건물은 성수동 카페거리 근처에 있는 4층짜리 단독주택이다. 1층에는 권은비가 직접 운영하는 카페가 있다. 3층은 일반 세입자에게 임대하고 있다. 2층과 4층은 권은비의 매니저들이 거주하는 공간으로 쓰인다. 권은비는 매니저들에게 월세를 받지 않고 최소 관리비 수준만 받는다. 권은비는 노후 대비를 위해 서울 여러 지역을 직접 둘러본 뒤 이 건물을 매입했다.\n\n출처: 세계일보 「24억 건물 샀는데 월세 포기…권은비가 2층·4층 통째로 내준 이유」(2026.10.28 05:16)\nhttps://www.segye.com/newsView/20261027518460?OutUrl=naver\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사 #연예인부동산",
+  "caption_problems": [],
+  "source_urls": [
+    "https://www.segye.com/newsView/20261027518460?OutUrl=naver"
+  ]
+}

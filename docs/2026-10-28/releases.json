@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-28",
+  "releases": [
+    {
+      "title": "3기 신도시 광역교통시설 적기 구축에 총력",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156786822",
+      "dept": "국토교통부",
+      "list_date": "2026-10-28",
+      "date_label": "2026.10.28",
+      "subtitles": [
+        "3기 신도시 교통대책 전수점검 계획... 신속추진 TF 통해 사업 지연 최소화"
+      ],
+      "lead": "국토교통부(장관 홍지선) 대도시권광역교통위원회(위원장 김용석, 이하 대광위)는 3기 신도시 입주민의 교통불편을 최소화하기 위해 광역교통개선대책 추진상황을 전수점검하고, 사업별 지연 요인을 집중 관리할 계획이다.",
+      "license_usable": true,
+      "license_label": "공공누리 제1유형(텍스트에 한함)",
+      "embargo": {
+        "available_at": "2026-10-28T14:00:00+09:00",
+        "raw": "2026. 10. 28.(수) 14:00 이후(10. 29.(목) 조간)",
+        "rule": "적힌 시각",
+        "certain": true
+      }
+    },
+    {
+      "title": "[참고] 정부는 구룡마을 이재민분들의 주거안정을 위해 적극 지원해 나가겠습니다.",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156786810",
+      "dept": "국토교통부",
+      "list_date": "2026-10-28",
+      "date_label": "2026.10.28",
+      "subtitles": [],
+      "lead": "정부는 구룡마을 화재(10.27)로 인해 피해를 입은 이재민분들의 주거안정을 위해 적극 지원해 나가겠습니다.",
+      "license_usable": true,
+      "license_label": "공공누리 제1유형(텍스트에 한함)",
+      "embargo": {
+        "available_at": "2026-10-28T00:00:00+09:00",
+        "raw": "배포 즉시 보도 가능",
+        "rule": "배포 즉시 보도",
+        "certain": true
+      }
+    },
+    {
+      "title": "[차관동정] 김이탁 제1차관,모듈러주택 활성화를 위한 협의체 개최",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156786656",
+      "dept": "국토교통부",
+      "list_date": "2026-10-27",
+      "date_label": "2026.10.27",
+      "subtitles": [
+        "8.13대책의 차질 없는 이행을 통한 시장 활성화와 정책 지원 약속"
+      ],
+      "lead": "김이탁 국토교통부 제1차관은 10월 27일(화) 오후 국토발전전시관에서 한국토지주택공사(LH), 경기주택도시공사(GH), 한국건설기술연구원, 업계와의 협의체를 개최하여 모듈러주택* 활성화 방안에 대해 논의했다.",
+      "license_usable": true,
+      "license_label": "공공누리 제1유형(텍스트에 한함)",
+      "embargo": {
+        "available_at": "2026-10-27T00:00:00+09:00",
+        "raw": "배포 즉시 보도 가능",
+        "rule": "배포 즉시 보도",
+        "certain": true
+      }
+    }
+  ]
+}
