@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-10-28",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.10.28)",
+  "date_label": "2026.10.28",
+  "news_items": [
+    {
+      "title": "‘제주서 살해 위협’ 성현우, 전세사기 고통…“세입자 구해달라더라...",
+      "link": "https://biz.heraldcorp.com/article/10916798?ref=naver",
+      "naver_link": "https://m.entertain.naver.com/article/016/0002715176",
+      "press": "헤럴드경제",
+      "published": "2026-10-27T22:00:00+09:00",
+      "date_label": "2026.10.27 22:00",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "모듈러 공공주택 2만가구 발주…정부, 가구당 3500만원 지원",
+      "link": "https://www.segye.com/newsView/20261027520197?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004170355?sid=101",
+      "press": "세계일보",
+      "published": "2026-10-28T06:05:00+09:00",
+      "date_label": "2026.10.28 06:05",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "분양가 상승이 바꾼 후기 재개발의 셈법",
+      "link": "https://magazine.hankyung.com/money/article/202609169625c",
+      "naver_link": "https://magazine.hankyung.com/money/article/202609169625c",
+      "press": "한국경제",
+      "published": "2026-10-28T06:02:00+09:00",
+      "date_label": "2026.10.28 06:02",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "경기도 월세도 200만원이 ‘뉴노멀’…강남 집값 약세는 지속 [부동산 손...",
+      "link": "https://www.mk.co.kr/article/12187348",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005754819?sid=101",
+      "press": "매일경제",
+      "published": "2026-10-27T17:30:00+09:00",
+      "date_label": "2026.10.27 17:30",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "대보건설, 대전 가오동1구역 재건축 시공권 확보",
+      "link": "https://www.arunews.com/news/articleView.html?idxno=68717",
+      "naver_link": "https://www.arunews.com/news/articleView.html?idxno=68717",
+      "press": "한국주택경제",
+      "published": "2026-10-28T09:40:00+09:00",
+      "date_label": "2026.10.28 09:40",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.10.28)\n\n1. ‘제주서 살해 위협’ 성현우, 전세사기 고통…“세입자 구해달라더라... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10916798?ref=naver\n2. 모듈러 공공주택 2만가구 발주…정부, 가구당 3500만원 지원 — 세계일보\n   https://www.segye.com/newsView/20261027520197?OutUrl=naver\n3. 분양가 상승이 바꾼 후기 재개발의 셈법 — 한국경제\n   https://magazine.hankyung.com/money/article/202609169625c\n4. 경기도 월세도 200만원이 ‘뉴노멀’…강남 집값 약세는 지속 [부동산 손... — 매일경제\n   https://www.mk.co.kr/article/12187348\n5. 대보건설, 대전 가오동1구역 재건축 시공권 확보 — 한국주택경제\n   https://www.arunews.com/news/articleView.html?idxno=68717\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://biz.heraldcorp.com/article/10916798?ref=naver",
+    "https://www.segye.com/newsView/20261027520197?OutUrl=naver",
+    "https://magazine.hankyung.com/money/article/202609169625c",
+    "https://www.mk.co.kr/article/12187348",
+    "https://www.arunews.com/news/articleView.html?idxno=68717"
+  ],
+  "created_at": "2026-10-28T09:52:44.174183+09:00"
+}
