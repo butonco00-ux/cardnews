@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-10-29",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.10.29)",
+  "date_label": "2026.10.29",
+  "news_items": [
+    {
+      "title": "서울시, 공공임대 2.7만호 공급에 1.1조…청년 주거비 낮추고 정비사업...",
+      "link": "https://biz.heraldcorp.com/article/10918393?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002715898?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-10-29T10:01:00+09:00",
+      "date_label": "2026.10.29 10:01",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "'서울서 5㎞' 하남·구리 등 6곳에 신규택지…7만6700호 공급",
+      "link": "https://www.hankyung.com/article/202610292687i",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005347910?sid=101",
+      "press": "한국경제",
+      "published": "2026-10-29T10:08:00+09:00",
+      "date_label": "2026.10.29 10:08",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "금천 무지개아파트, 재건축 시공자 2차 현설에 4곳",
+      "link": "https://www.arunews.com/news/articleView.html?idxno=68778",
+      "naver_link": "https://www.arunews.com/news/articleView.html?idxno=68778",
+      "press": "한국주택경제",
+      "published": "2026-10-29T10:08:00+09:00",
+      "date_label": "2026.10.29 10:08",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "\"서울 84㎡ 아파트 3분기 매매가 2.5% 내리고 전세 3.8% 올라\"",
+      "link": "https://www.yna.co.kr/view/AKR20261029026800003?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016407575?sid=101",
+      "press": "연합뉴스",
+      "published": "2026-10-29T08:16:00+09:00",
+      "date_label": "2026.10.29 08:16",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "구룡마을은 이주 문제, 서리풀·염창공원은 주민 반발…서울 주택공급 ...",
+      "link": "https://www.segye.com/newsView/20261028515091?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004170678?sid=101",
+      "press": "세계일보",
+      "published": "2026-10-29T06:03:00+09:00",
+      "date_label": "2026.10.29 06:03",
+      "score": 6,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.10.29)\n\n1. 서울시, 공공임대 2.7만호 공급에 1.1조…청년 주거비 낮추고 정비사업... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10918393?ref=naver\n2. '서울서 5㎞' 하남·구리 등 6곳에 신규택지…7만6700호 공급 — 한국경제\n   https://www.hankyung.com/article/202610292687i\n3. 금천 무지개아파트, 재건축 시공자 2차 현설에 4곳 — 한국주택경제\n   https://www.arunews.com/news/articleView.html?idxno=68778\n4. \"서울 84㎡ 아파트 3분기 매매가 2.5% 내리고 전세 3.8% 올라\" — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261029026800003?input=1195m\n5. 구룡마을은 이주 문제, 서리풀·염창공원은 주민 반발…서울 주택공급 ... — 세계일보\n   https://www.segye.com/newsView/20261028515091?OutUrl=naver\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://biz.heraldcorp.com/article/10918393?ref=naver",
+    "https://www.hankyung.com/article/202610292687i",
+    "https://www.arunews.com/news/articleView.html?idxno=68778",
+    "https://www.yna.co.kr/view/AKR20261029026800003?input=1195m",
+    "https://www.segye.com/newsView/20261028515091?OutUrl=naver"
+  ],
+  "created_at": "2026-10-29T10:28:56.907472+09:00"
+}
