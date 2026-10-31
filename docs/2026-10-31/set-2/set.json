@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-10-31",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.10.31)",
+  "date_label": "2026.10.31",
+  "news_items": [
+    {
+      "title": "반도건설, '계양신도시 카이브 유보라' 청약 진행…3기 신도시 첫 민간...",
+      "link": "https://www.hankyung.com/article/202610306343O",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005348741?sid=101",
+      "press": "한국경제",
+      "published": "2026-10-31T10:01:00+09:00",
+      "date_label": "2026.10.31 10:01",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "은마아파트 단지 내 795㎡, 정태수 상속인에…“재건축 사업 지장 없어...",
+      "link": "https://biz.heraldcorp.com/article/10921066?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002716880?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-10-30T20:33:00+09:00",
+      "date_label": "2026.10.30 20:33",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "서울 연말까지 3만 1000가구 착공… 국토부, 상계2구역 찾아 공급 점검",
+      "link": "https://www.segye.com/newsView/20261030513599?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004171185?sid=101",
+      "press": "세계일보",
+      "published": "2026-10-30T19:36:00+09:00",
+      "date_label": "2026.10.30 19:36",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "“재개발 1순위는 단연 이곳이죠”…부동산 고수가 찍은 서울 알짜 지역...",
+      "link": "https://www.mk.co.kr/article/12191838",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005756814?sid=101",
+      "press": "매일경제",
+      "published": "2026-10-30T18:16:00+09:00",
+      "date_label": "2026.10.30 18:16",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "국토장관 \"연말까지 서울 민간정비사업 3만1천가구 착공\"(종합)",
+      "link": "https://www.yna.co.kr/view/AKR20261030091151003?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016412116?sid=101",
+      "press": "연합뉴스",
+      "published": "2026-10-30T15:24:00+09:00",
+      "date_label": "2026.10.30 15:24",
+      "score": 6,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.10.31)\n\n1. 반도건설, '계양신도시 카이브 유보라' 청약 진행…3기 신도시 첫 민간... — 한국경제\n   https://www.hankyung.com/article/202610306343O\n2. 은마아파트 단지 내 795㎡, 정태수 상속인에…“재건축 사업 지장 없어... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10921066?ref=naver\n3. 서울 연말까지 3만 1000가구 착공… 국토부, 상계2구역 찾아 공급 점검 — 세계일보\n   https://www.segye.com/newsView/20261030513599?OutUrl=naver\n4. “재개발 1순위는 단연 이곳이죠”…부동산 고수가 찍은 서울 알짜 지역... — 매일경제\n   https://www.mk.co.kr/article/12191838\n5. 국토장관 \"연말까지 서울 민간정비사업 3만1천가구 착공\"(종합) — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261030091151003?input=1195m\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.hankyung.com/article/202610306343O",
+    "https://biz.heraldcorp.com/article/10921066?ref=naver",
+    "https://www.segye.com/newsView/20261030513599?OutUrl=naver",
+    "https://www.mk.co.kr/article/12191838",
+    "https://www.yna.co.kr/view/AKR20261030091151003?input=1195m"
+  ],
+  "created_at": "2026-10-31T10:18:55.582522+09:00"
+}
