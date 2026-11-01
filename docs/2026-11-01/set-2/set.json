@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-11-01",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.11.01)",
+  "date_label": "2026.11.01",
+  "news_items": [
+    {
+      "title": "'60억 관악구 전세사기' 前경찰관 2심 10년→8년 감형…\"일부 변제\"",
+      "link": "https://www.yna.co.kr/view/AKR20261031046300004?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016413691?sid=102",
+      "press": "연합뉴스",
+      "published": "2026-11-01T09:00:00+09:00",
+      "date_label": "2026.11.01 09:00",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "부동산 세제개편안...우리 아파트 부담은 얼마나?",
+      "link": "https://biz.heraldcorp.com/article/10921465?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002717065?sid=102",
+      "press": "헤럴드경제",
+      "published": "2026-11-01T07:43:00+09:00",
+      "date_label": "2026.11.01 07:43",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "“재건축 소식에 집값 좀 뛰었거든요”…강남 아파트로 눈돌리는 분당 ...",
+      "link": "https://www.mk.co.kr/article/12192394",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005756912?sid=101",
+      "press": "매일경제",
+      "published": "2026-10-31T10:33:00+09:00",
+      "date_label": "2026.10.31 10:33",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "반도건설, '계양신도시 카이브 유보라' 청약 진행…3기 신도시 첫 민간...",
+      "link": "https://www.hankyung.com/article/202610306343O",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005348741?sid=101",
+      "press": "한국경제",
+      "published": "2026-10-31T10:01:00+09:00",
+      "date_label": "2026.10.31 10:01",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "'부동산 정상화'…李대통령 \"인내의 시간 지나면 알게 될 것\"",
+      "link": "https://view.asiae.co.kr/article/2026103116575266074",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005836161?sid=100",
+      "press": "아시아경제",
+      "published": "2026-10-31T16:57:00+09:00",
+      "date_label": "2026.10.31 16:57",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.11.01)\n\n1. '60억 관악구 전세사기' 前경찰관 2심 10년→8년 감형…\"일부 변제\" — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261031046300004?input=1195m\n2. 부동산 세제개편안...우리 아파트 부담은 얼마나? — 헤럴드경제\n   https://biz.heraldcorp.com/article/10921465?ref=naver\n3. “재건축 소식에 집값 좀 뛰었거든요”…강남 아파트로 눈돌리는 분당 ... — 매일경제\n   https://www.mk.co.kr/article/12192394\n4. 반도건설, '계양신도시 카이브 유보라' 청약 진행…3기 신도시 첫 민간... — 한국경제\n   https://www.hankyung.com/article/202610306343O\n5. '부동산 정상화'…李대통령 \"인내의 시간 지나면 알게 될 것\" — 아시아경제\n   https://view.asiae.co.kr/article/2026103116575266074\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.yna.co.kr/view/AKR20261031046300004?input=1195m",
+    "https://biz.heraldcorp.com/article/10921465?ref=naver",
+    "https://www.mk.co.kr/article/12192394",
+    "https://www.hankyung.com/article/202610306343O",
+    "https://view.asiae.co.kr/article/2026103116575266074"
+  ],
+  "created_at": "2026-11-01T09:35:41.317734+09:00"
+}
