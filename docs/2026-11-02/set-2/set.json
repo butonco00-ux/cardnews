@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-11-02",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.11.02)",
+  "date_label": "2026.11.02",
+  "news_items": [
+    {
+      "title": "면목6구역 가로주택, 최고 33층 아파트 419세대로 재건축",
+      "link": "https://www.arunews.com/news/articleView.html?idxno=68888",
+      "naver_link": "https://www.arunews.com/news/articleView.html?idxno=68888",
+      "press": "한국주택경제",
+      "published": "2026-11-02T10:08:00+09:00",
+      "date_label": "2026.11.02 10:08",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "공급 위축에 미분양 줄었지만… 살 사람이 없다 [심층기획-지방 주택시...",
+      "link": "https://www.segye.com/newsView/20261101508755?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004171587?sid=101",
+      "press": "세계일보",
+      "published": "2026-11-02T06:02:00+09:00",
+      "date_label": "2026.11.02 06:02",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "LH·HUG, 민간참여 공공주택 첫 금융지원…연 4.7% 대출",
+      "link": "https://www.yna.co.kr/view/AKR20261102039800003?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016414922?sid=101",
+      "press": "연합뉴스",
+      "published": "2026-11-02T09:44:00+09:00",
+      "date_label": "2026.11.02 09:44",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "신계용 과천시장, \"법무부·경마공원 이전 및 주택 공급 철회\"",
+      "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00009&news_seq_no=5228435",
+      "naver_link": "https://n.news.naver.com/mnews/article/057/0001976242?sid=102",
+      "press": "매일경제",
+      "published": "2026-11-02T09:17:00+09:00",
+      "date_label": "2026.11.02 09:17",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "산업단지 인접 주거단지 관심…GS건설 ‘음성자이 센트럴시티’ 공급",
+      "link": "https://biz.heraldcorp.com/article/10920544?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002717369?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-11-02T09:01:00+09:00",
+      "date_label": "2026.11.02 09:01",
+      "score": 6,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.11.02)\n\n1. 면목6구역 가로주택, 최고 33층 아파트 419세대로 재건축 — 한국주택경제\n   https://www.arunews.com/news/articleView.html?idxno=68888\n2. 공급 위축에 미분양 줄었지만… 살 사람이 없다 [심층기획-지방 주택시... — 세계일보\n   https://www.segye.com/newsView/20261101508755?OutUrl=naver\n3. LH·HUG, 민간참여 공공주택 첫 금융지원…연 4.7% 대출 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261102039800003?input=1195m\n4. 신계용 과천시장, \"법무부·경마공원 이전 및 주택 공급 철회\" — 매일경제\n   http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00009&news_seq_no=5228435\n5. 산업단지 인접 주거단지 관심…GS건설 ‘음성자이 센트럴시티’ 공급 — 헤럴드경제\n   https://biz.heraldcorp.com/article/10920544?ref=naver\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.arunews.com/news/articleView.html?idxno=68888",
+    "https://www.segye.com/newsView/20261101508755?OutUrl=naver",
+    "https://www.yna.co.kr/view/AKR20261102039800003?input=1195m",
+    "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00009&news_seq_no=5228435",
+    "https://biz.heraldcorp.com/article/10920544?ref=naver"
+  ],
+  "created_at": "2026-11-02T10:09:39.135722+09:00"
+}
