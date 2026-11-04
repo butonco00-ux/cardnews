@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-11-04",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.11.04)",
+  "date_label": "2026.11.04",
+  "news_items": [
+    {
+      "title": "포스코이앤씨, ‘더샵 일산센트로’ 장기일반민간임대주택 공급",
+      "link": "https://www.mk.co.kr/article/12194972",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005758368?sid=101",
+      "press": "매일경제",
+      "published": "2026-11-03T16:52:00+09:00",
+      "date_label": "2026.11.03 16:52",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "작전우영아파트 재건축사업 건설사업관리(CM)용역업체 선정 입찰공고",
+      "link": "https://www.arunews.com/news/articleView.html?idxno=69039",
+      "naver_link": "https://www.arunews.com/news/articleView.html?idxno=69039",
+      "press": "한국주택경제",
+      "published": "2026-11-04T10:32:00+09:00",
+      "date_label": "2026.11.04 10:32",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "GH 전국 최초 '지분적립형 분양주택'…9일부터 청약",
+      "link": "https://view.asiae.co.kr/article/2026110409014886107",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005837746?sid=101",
+      "press": "아시아경제",
+      "published": "2026-11-04T09:23:00+09:00",
+      "date_label": "2026.11.04 09:23",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "LH, 5년간 모듈러주택 1.8만호 발주한다…내년만 3500호 이상 [부동산360...",
+      "link": "https://biz.heraldcorp.com/article/10924947?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002718520?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-11-04T09:22:00+09:00",
+      "date_label": "2026.11.04 09:22",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "울산·인천마저 \"전세 없어요\"…LH는 \"윤석열 정부 탓\"[아기곰의 부동산...",
+      "link": "https://magazine.hankyung.com/business/article/202610281017b",
+      "naver_link": "https://n.news.naver.com/mnews/article/050/0000112791?sid=101",
+      "press": "한국경제",
+      "published": "2026-11-04T07:00:00+09:00",
+      "date_label": "2026.11.04 07:00",
+      "score": 6,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.11.04)\n\n1. 포스코이앤씨, ‘더샵 일산센트로’ 장기일반민간임대주택 공급 — 매일경제\n   https://www.mk.co.kr/article/12194972\n2. 작전우영아파트 재건축사업 건설사업관리(CM)용역업체 선정 입찰공고 — 한국주택경제\n   https://www.arunews.com/news/articleView.html?idxno=69039\n3. GH 전국 최초 '지분적립형 분양주택'…9일부터 청약 — 아시아경제\n   https://view.asiae.co.kr/article/2026110409014886107\n4. LH, 5년간 모듈러주택 1.8만호 발주한다…내년만 3500호 이상 [부동산360... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10924947?ref=naver\n5. 울산·인천마저 \"전세 없어요\"…LH는 \"윤석열 정부 탓\"[아기곰의 부동산... — 한국경제\n   https://magazine.hankyung.com/business/article/202610281017b\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.mk.co.kr/article/12194972",
+    "https://www.arunews.com/news/articleView.html?idxno=69039",
+    "https://view.asiae.co.kr/article/2026110409014886107",
+    "https://biz.heraldcorp.com/article/10924947?ref=naver",
+    "https://magazine.hankyung.com/business/article/202610281017b"
+  ],
+  "created_at": "2026-11-04T10:47:00.391147+09:00"
+}
