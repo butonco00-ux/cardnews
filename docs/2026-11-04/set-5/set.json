@@ -1,0 +1,114 @@
+{
+  "kind": "star",
+  "date": "2026-11-04",
+  "set": 5,
+  "tag": "스타",
+  "title": "300억 건물주 고소영, 10년 공백에 통장 잔고 비상? “쓸 틈 없이 일해야...",
+  "subtitles": [],
+  "dept": "뉴스엔",
+  "date_label": "2026.11.04",
+  "url": "https://www.newsen.com/news_view.php?uid=202611040900215710",
+  "license": {
+    "type": 0,
+    "usable": true,
+    "text_only": true,
+    "label": "",
+    "reason": null
+  },
+  "license_label": "",
+  "embargo": null,
+  "badge": "",
+  "source_file": "",
+  "created_at": "2026-11-04T20:00:24.838340+09:00",
+  "source_label": "출처: 뉴스엔",
+  "news_items": [
+    {
+      "title": "300억 건물주 고소영, 10년 공백에 통장 잔고 비상? “쓸 틈 없이 일해야...",
+      "link": "https://www.newsen.com/news_view.php?uid=202611040900215710",
+      "naver_link": "https://m.entertain.naver.com/article/609/0001184305",
+      "press": "뉴스엔",
+      "published": "2026-11-04T10:09:00+09:00",
+      "date_label": "2026.11.04 10:09",
+      "summary": [
+        "배우 고소영은 서울 용산구 한남동에 건물을 보유하고 있다.",
+        "해당 건물은 2011년 6월 약 126억 원에 매입됐다.",
+        "이 건물은 2025년 5월 부동산 업계에서 약 300억 원 가치로 평가됐다.",
+        "매입가와 비교하면 약 174억 원 오른 것으로 알려졌다."
+      ],
+      "summary_note": "AI 사실 정리"
+    }
+  ],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg"
+    ]
+  },
+  "card_items": [
+    [
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "배우 고소영은 서울 용산구 한남동에 건물을 보유하고 있다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "해당 건물은 2011년 6월 약 126억 원에 매입됐다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "이 건물은 2025년 5월 부동산 업계에서 약 300억 원 가치로 평가됐다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "매입가와 비교하면 약 174억 원 오른 것으로 알려졌다.",
+        "cont": false
+      }
+    ]
+  ],
+  "omitted": false,
+  "skipped": [],
+  "original": [
+    {
+      "text": "○ 배우 고소영은 서울 용산구 한남동에 건물을 보유하고 있다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 해당 건물은 2011년 6월 약 126억 원에 매입됐다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 이 건물은 2025년 5월 부동산 업계에서 약 300억 원 가치로 평가됐다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 매입가와 비교하면 약 174억 원 오른 것으로 알려졌다.",
+      "used": "all"
+    }
+  ],
+  "excluded_tail": "",
+  "caption": "[스타] 300억 건물주 고소영, 10년 공백에 통장 잔고 비상? “쓸 틈 없이 일해야...\n\n배우 고소영은 서울 용산구 한남동에 건물을 보유하고 있다. 해당 건물은 2011년 6월 약 126억 원에 매입됐다. 이 건물은 2025년 5월 부동산 업계에서 약 300억 원 가치로 평가됐다. 매입가와 비교하면 약 174억 원 오른 것으로 알려졌다.\n\n출처: 뉴스엔 「300억 건물주 고소영, 10년 공백에 통장 잔고 비상? “쓸 틈 없이 일해야...」(2026.11.04 10:09)\nhttps://www.newsen.com/news_view.php?uid=202611040900215710\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사 #연예인부동산",
+  "caption_problems": [],
+  "source_urls": [
+    "https://www.newsen.com/news_view.php?uid=202611040900215710"
+  ]
+}
