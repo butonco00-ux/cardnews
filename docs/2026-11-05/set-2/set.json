@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-11-05",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.11.05)",
+  "date_label": "2026.11.05",
+  "news_items": [
+    {
+      "title": "용산구, 24일 재개발·재건축 '정비사업 아카데미'",
+      "link": "https://view.asiae.co.kr/article/2026110509415047379",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005838368?sid=102",
+      "press": "아시아경제",
+      "published": "2026-11-05T09:41:00+09:00",
+      "date_label": "2026.11.05 09:41",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "전셋값·월세 부담 상승에… 서울 인접 수도권 '계양신도시' 주목",
+      "link": "https://magazine.hankyung.com/business/article/202611057703b",
+      "naver_link": "https://n.news.naver.com/mnews/article/050/0000112854?sid=101",
+      "press": "한국경제",
+      "published": "2026-11-05T10:37:00+09:00",
+      "date_label": "2026.11.05 10:37",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "공무원 1만명 오는 세종, 전월세 부족할라…오송까지 주거대책 확대 [부...",
+      "link": "https://biz.heraldcorp.com/article/10926443?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002719114?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-11-05T09:06:00+09:00",
+      "date_label": "2026.11.05 09:06",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "성남시, 국토부에 '닭죽촌 일대' 공공주택사업 제안",
+      "link": "https://www.yna.co.kr/view/AKR20261105030300061?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016423020?sid=101",
+      "press": "연합뉴스",
+      "published": "2026-11-05T08:46:00+09:00",
+      "date_label": "2026.11.05 08:46",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "서울 6억 미만 아파트…그곳엔 있다 [감평사의 부동산 현장진단]",
+      "link": "https://www.mk.co.kr/article/12191387",
+      "naver_link": "https://n.news.naver.com/mnews/article/024/0000109397?sid=101",
+      "press": "매일경제",
+      "published": "2026-11-04T21:01:00+09:00",
+      "date_label": "2026.11.04 21:01",
+      "score": 6,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.11.05)\n\n1. 용산구, 24일 재개발·재건축 '정비사업 아카데미' — 아시아경제\n   https://view.asiae.co.kr/article/2026110509415047379\n2. 전셋값·월세 부담 상승에… 서울 인접 수도권 '계양신도시' 주목 — 한국경제\n   https://magazine.hankyung.com/business/article/202611057703b\n3. 공무원 1만명 오는 세종, 전월세 부족할라…오송까지 주거대책 확대 [부... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10926443?ref=naver\n4. 성남시, 국토부에 '닭죽촌 일대' 공공주택사업 제안 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261105030300061?input=1195m\n5. 서울 6억 미만 아파트…그곳엔 있다 [감평사의 부동산 현장진단] — 매일경제\n   https://www.mk.co.kr/article/12191387\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://view.asiae.co.kr/article/2026110509415047379",
+    "https://magazine.hankyung.com/business/article/202611057703b",
+    "https://biz.heraldcorp.com/article/10926443?ref=naver",
+    "https://www.yna.co.kr/view/AKR20261105030300061?input=1195m",
+    "https://www.mk.co.kr/article/12191387"
+  ],
+  "created_at": "2026-11-05T10:55:48.650763+09:00"
+}
