@@ -1,18 +1,10 @@
 {
   "date": "2026-11-05",
-  "finished_at": "2026-11-05T19:02:49.549082+09:00",
+  "finished_at": "2026-11-05T19:07:21.460013+09:00",
   "messages": [
     {
-      "level": "warn",
-      "text": "''재혼' 서인영, 자가 마련했다…\"아…' 정리 안 함: claude 오류: Failed to authenticate: OAuth session expired and could not be refreshed"
-    },
-    {
-      "level": "warn",
-      "text": "'이정현, 194억 건물주도 힘드네…둘…' 정리 안 함: claude 오류: Failed to authenticate: OAuth session expired and could not be refreshed"
-    },
-    {
-      "level": "warn",
-      "text": "'김구라의 폭로, 일산 100평 펜트하…' 정리 안 함: claude 오류: Failed to authenticate: OAuth session expired and could not be refreshed"
+      "level": "bad",
+      "text": "AI 사실 정리를 멈췄어요: claude 가 Claude 구독(claude.ai)으로 로그인돼 있지 않아요 — 요금이 생길 수 있어 멈췄어요 (추가 비용이 생기지 않게 하려는 조치예요)"
     },
     {
       "level": "bad",
