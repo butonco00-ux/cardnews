@@ -1,0 +1,180 @@
+{
+  "date": "2026-11-05",
+  "finished_at": "2026-11-05T19:02:03.375079+09:00",
+  "messages": [
+    {
+      "level": "ok",
+      "text": "정책·세금 카드 10장을 만들었어요: 연체 걱정 없이 세 놓으세요, 월세 부담 없는 집에서 사세요. 전월세 안심신탁 첫 임대인 모집 공고"
+    }
+  ],
+  "candidates": [
+    {
+      "title": "김용석 대광위원장,\"하남교산 주요 교통시설 적기 구축에 총력\"",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788116",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "다세대·오피스텔 층간소음 차단 기준 강화",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788052",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "'26년도 제2회 건축사 자격시험 합격예정자 발표",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788051",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "고속철도 통합 60일, 하루 32.2만 명 이용 … 예매·객실 서비스 개선 이어간다",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787999",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "이 땅에 집 지을 수 있나요? \"복잡한 인허가, 인공지능(AI)으로 쉽게\"",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787948",
+      "score": 3,
+      "status": "관련도 낮음(3점)"
+    },
+    {
+      "title": "분양가의 25%로 입주하는 LH 공공분양주택, 금년 12월 고양창릉서 첫 분양",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787896",
+      "score": 16,
+      "status": "후보 (전에 만든 적 있음)"
+    },
+    {
+      "title": "인공지능(AI)·드론 활용해 토지행정 혁신 … 제49회 지적세미나 개최",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787895",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "연체 걱정 없이 세 놓으세요, 월세 부담 없는 집에서 사세요. 전월세 안심신탁 첫 임대인 모집 공고",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787894",
+      "score": 13,
+      "status": "선택됨 → 세트 1"
+    },
+    {
+      "title": "권대영 1차관, 「기업활력 제고 TF」 첫 회의 개최",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788055",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "이형일 부총리, Fitch 연례협의단과 면담",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788118",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "가상자산 과세 관련 부총리 브리핑",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788110",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "범부처 민생안정지원단, 소상공인 재기 지원 현장 방문",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788111",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "시장상황점검회의 개최",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788086",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "허장 차관, 방글라데시 차우두리 재무장관 면담",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787933",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "기업지배구조보고서 공시를 통해 상장회사의 주주보호와 주주환원 노력을 확대해 나가겠습니다.",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788071",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "AI시대, 거세지는 침해위협에 맞서 全 금융권이 튼튼한 보안체계로 무장하도록 혁신적인 정책과제를 적극 추진하겠습니다.",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788025",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "｢\"취재정보로 매매해 ○○억 부당이득\"···○○신문 조사 마무리｣ 보도 관련",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788022",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "홍콩 H지수 ELS 관련 은행·증권사 검사 결과 조치 - 제19차 금융위원회(11.4.) 의결",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787946",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "계리가정보고서 도입 등 ｢보험업감독규정｣ 개정안 금융위원회 의결",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787941",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "한국, 아시아지배구조협회(ACGA) 기업지배구조 순위 역대급 '5위' 달성",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787970",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "국민의 알 권리 보장은 두텁게 정보공개 문화는 건전하게",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788065",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "지구촌 학생 765명, 조선왕조실록 읽고 '미래의 나'에게 기록 남긴다",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787915",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "사회적 고립, 국민과 함께 고민하고 답을 찾는다... 제4회 '모두의 토론회' 참가자 모집",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787911",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "행안부, 'K-주소' 첫 해외 수익형 수주... 유럽 강국 제치고 우즈베키스탄 국가주소등록부 구축 기술지원 사업 선정",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787913",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    }
+  ]
+}
