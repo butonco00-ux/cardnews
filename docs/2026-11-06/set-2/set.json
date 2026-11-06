@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-11-06",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.11.06)",
+  "date_label": "2026.11.06",
+  "news_items": [
+    {
+      "title": "국토부, 민간 착공 돕는 '주택공급 통합지원센터' 신설 추진",
+      "link": "https://view.asiae.co.kr/article/2026110608570582009",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005838967?sid=101",
+      "press": "아시아경제",
+      "published": "2026-11-06T09:20:00+09:00",
+      "date_label": "2026.11.06 09:20",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "여의도 목화, 최고 49층 아파트 416세대로 재건축",
+      "link": "https://www.arunews.com/news/articleView.html?idxno=69137",
+      "naver_link": "https://www.arunews.com/news/articleView.html?idxno=69137",
+      "press": "한국주택경제",
+      "published": "2026-11-06T10:44:00+09:00",
+      "date_label": "2026.11.06 10:44",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "“그 많은 정비사업 이주수요 어떡해”…서울 아파트 전셋값 전고점 눈...",
+      "link": "https://www.mk.co.kr/article/12200251",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005759934?sid=101",
+      "press": "매일경제",
+      "published": "2026-11-06T10:18:00+09:00",
+      "date_label": "2026.11.06 10:18",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "군포·병점·권선 등 경기 34곳, 투기과열지구 지정 기준 넘었다[부동산...",
+      "link": "https://biz.heraldcorp.com/article/10928147?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002719786?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-11-06T10:11:00+09:00",
+      "date_label": "2026.11.06 10:11",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "성북구 전세사기 집주인 \"팔면 된다고 생각\"…징역 8년 구형",
+      "link": "https://www.segye.com/newsView/20261105519570?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004172908?sid=102",
+      "press": "세계일보",
+      "published": "2026-11-05T21:35:00+09:00",
+      "date_label": "2026.11.05 21:35",
+      "score": 6,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.11.06)\n\n1. 국토부, 민간 착공 돕는 '주택공급 통합지원센터' 신설 추진 — 아시아경제\n   https://view.asiae.co.kr/article/2026110608570582009\n2. 여의도 목화, 최고 49층 아파트 416세대로 재건축 — 한국주택경제\n   https://www.arunews.com/news/articleView.html?idxno=69137\n3. “그 많은 정비사업 이주수요 어떡해”…서울 아파트 전셋값 전고점 눈... — 매일경제\n   https://www.mk.co.kr/article/12200251\n4. 군포·병점·권선 등 경기 34곳, 투기과열지구 지정 기준 넘었다[부동산... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10928147?ref=naver\n5. 성북구 전세사기 집주인 \"팔면 된다고 생각\"…징역 8년 구형 — 세계일보\n   https://www.segye.com/newsView/20261105519570?OutUrl=naver\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://view.asiae.co.kr/article/2026110608570582009",
+    "https://www.arunews.com/news/articleView.html?idxno=69137",
+    "https://www.mk.co.kr/article/12200251",
+    "https://biz.heraldcorp.com/article/10928147?ref=naver",
+    "https://www.segye.com/newsView/20261105519570?OutUrl=naver"
+  ],
+  "created_at": "2026-11-06T10:57:14.941761+09:00"
+}
