@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-11-08",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.11.08)",
+  "date_label": "2026.11.08",
+  "news_items": [
+    {
+      "title": "서울 아파트값 91주 연속 올랐다...강남은 ‘뚝뚝’ [김경민의 부동산N...",
+      "link": "https://www.mk.co.kr/article/12200542",
+      "naver_link": "https://n.news.naver.com/mnews/article/024/0000109469?sid=101",
+      "press": "매일경제",
+      "published": "2026-11-07T17:01:00+09:00",
+      "date_label": "2026.11.07 17:01",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "HS화성, 부산 범천동 공공지원 민간임대주택 사업 수주",
+      "link": "https://biz.heraldcorp.com/article/10929261?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002720241?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-11-07T16:35:00+09:00",
+      "date_label": "2026.11.07 16:35",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "40년 된 서울 아파트촌 갈아엎는다…신도시급으로 '천지개벽'",
+      "link": "https://www.hankyung.com/article/202611020763i",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005351376?sid=101",
+      "press": "한국경제",
+      "published": "2026-11-07T14:01:00+09:00",
+      "date_label": "2026.11.07 14:01",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "용인 ‘1호 가로주택정비사업’ 물꼬…‘중앙하이츠 구성 플랫폼시티’...",
+      "link": "https://www.segye.com/newsView/20261106511903?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004173236?sid=102",
+      "press": "세계일보",
+      "published": "2026-11-07T11:22:00+09:00",
+      "date_label": "2026.11.07 11:22",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "경기 아파트값 상승률 8주째 서울 상회…주도지역 서울→경기",
+      "link": "https://www.yna.co.kr/view/AKR20261108006100003?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016428542?sid=101",
+      "press": "연합뉴스",
+      "published": "2026-11-08T08:47:00+09:00",
+      "date_label": "2026.11.08 08:47",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.11.08)\n\n1. 서울 아파트값 91주 연속 올랐다...강남은 ‘뚝뚝’ [김경민의 부동산N... — 매일경제\n   https://www.mk.co.kr/article/12200542\n2. HS화성, 부산 범천동 공공지원 민간임대주택 사업 수주 — 헤럴드경제\n   https://biz.heraldcorp.com/article/10929261?ref=naver\n3. 40년 된 서울 아파트촌 갈아엎는다…신도시급으로 '천지개벽' — 한국경제\n   https://www.hankyung.com/article/202611020763i\n4. 용인 ‘1호 가로주택정비사업’ 물꼬…‘중앙하이츠 구성 플랫폼시티’... — 세계일보\n   https://www.segye.com/newsView/20261106511903?OutUrl=naver\n5. 경기 아파트값 상승률 8주째 서울 상회…주도지역 서울→경기 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261108006100003?input=1195m\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.mk.co.kr/article/12200542",
+    "https://biz.heraldcorp.com/article/10929261?ref=naver",
+    "https://www.hankyung.com/article/202611020763i",
+    "https://www.segye.com/newsView/20261106511903?OutUrl=naver",
+    "https://www.yna.co.kr/view/AKR20261108006100003?input=1195m"
+  ],
+  "created_at": "2026-11-08T09:59:05.348092+09:00"
+}
