@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-11-09",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.11.09)",
+  "date_label": "2026.11.09",
+  "news_items": [
+    {
+      "title": "“목동 첫 래미안 브랜드 아파트”…삼성물산, 목동13단지 재건축 수주",
+      "link": "https://www.mk.co.kr/article/12202079",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005760776?sid=101",
+      "press": "매일경제",
+      "published": "2026-11-09T09:48:00+09:00",
+      "date_label": "2026.11.09 09:48",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "[그래픽] 서울 중·소형 아파트 가격차",
+      "link": "https://www.yna.co.kr/view/GYH20261109000200044?input=1363m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016430313?sid=101",
+      "press": "연합뉴스",
+      "published": "2026-11-09T09:40:00+09:00",
+      "date_label": "2026.11.09 09:40",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "‘분당 못가자 산본’ 거래량 108% 급증 [부동산360]",
+      "link": "https://biz.heraldcorp.com/article/10930096?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002720603?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-11-09T09:27:00+09:00",
+      "date_label": "2026.11.09 09:27",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "민주당, 종부세 공제 ‘실거주 관계없이 14억’ 요구…靑 “기존 입장 ...",
+      "link": "https://www.segye.com/newsView/20261109502477?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004173555?sid=100",
+      "press": "세계일보",
+      "published": "2026-11-09T08:32:00+09:00",
+      "date_label": "2026.11.09 08:32",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "\"전세요? 요즘 누가 해요\"…월세 비중 85% 찍은 동네 어디 [시장톡]",
+      "link": "https://www.hankyung.com/article/2026110608116",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005351630?sid=101",
+      "press": "한국경제",
+      "published": "2026-11-09T06:31:00+09:00",
+      "date_label": "2026.11.09 06:31",
+      "score": 6,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.11.09)\n\n1. “목동 첫 래미안 브랜드 아파트”…삼성물산, 목동13단지 재건축 수주 — 매일경제\n   https://www.mk.co.kr/article/12202079\n2. [그래픽] 서울 중·소형 아파트 가격차 — 연합뉴스\n   https://www.yna.co.kr/view/GYH20261109000200044?input=1363m\n3. ‘분당 못가자 산본’ 거래량 108% 급증 [부동산360] — 헤럴드경제\n   https://biz.heraldcorp.com/article/10930096?ref=naver\n4. 민주당, 종부세 공제 ‘실거주 관계없이 14억’ 요구…靑 “기존 입장 ... — 세계일보\n   https://www.segye.com/newsView/20261109502477?OutUrl=naver\n5. \"전세요? 요즘 누가 해요\"…월세 비중 85% 찍은 동네 어디 [시장톡] — 한국경제\n   https://www.hankyung.com/article/2026110608116\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.mk.co.kr/article/12202079",
+    "https://www.yna.co.kr/view/GYH20261109000200044?input=1363m",
+    "https://biz.heraldcorp.com/article/10930096?ref=naver",
+    "https://www.segye.com/newsView/20261109502477?OutUrl=naver",
+    "https://www.hankyung.com/article/2026110608116"
+  ],
+  "created_at": "2026-11-09T10:20:21.839247+09:00"
+}
