@@ -1,0 +1,166 @@
+{
+  "date": "2026-11-10",
+  "finished_at": "2026-11-10T19:06:06.655367+09:00",
+  "messages": [
+    {
+      "level": "ok",
+      "text": "정책·세금 카드 8장을 만들었어요: 부정청약 관계부처 합동점검 결과"
+    }
+  ],
+  "candidates": [
+    {
+      "title": "[차관동정] 정의경 제2차관, \"수도권 서부지역 교통난 해소, 철도·도로사업 조기 완공에 속도 내야\"",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788616",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[참고] 행복주택 공실 해소를 위해 적극 노력해 나가겠습니다.",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788610",
+      "score": 9,
+      "status": "후보"
+    },
+    {
+      "title": "겨울철 도로안전 빈틈없이 … 15일부터 24시간 제설대응체계 가동",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788583",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "신도시 교통대책 속도 높인다 … 도로사업 16곳 집중 점검",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788553",
+      "score": 6,
+      "status": "후보"
+    },
+    {
+      "title": "「철도차량 형식승인제도 개선방안」 추진 \"철도차량 안전은 꼼꼼하게, 검사는 효율적으로\"",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788554",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "부정청약 관계부처 합동점검 결과",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788524",
+      "score": 11,
+      "status": "선택됨 → 세트 1"
+    },
+    {
+      "title": "전남광주 어르신, 카드 한 장으로 도시철도 무료·교통비 환급",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788462",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "도심항공교통(UAM) 실증, 기술검증 넘어 지역 상용화로 확대",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788425",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "전세사기피해자 최소보장제 시행, 10일부터 최소지원금 신청하세요!",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788424",
+      "score": 14,
+      "status": "후보 (전에 만든 적 있음)"
+    },
+    {
+      "title": "[참고] 가덕도신공항 부지조성공사 실시설계 착수",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788398",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "제19회 아시아 고위공무원 초청연수 실시",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788428",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "다음 금융은 이미 시작됐다 「코리아 핀테크 위크 2026」, 11월 25일 개막",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788415",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "폭설에도 제설제 공급 차질 없도록,민관 협력체계 가동",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788615",
+      "score": 3,
+      "status": "공공누리 표시를 찾지 못해 쓸 수 없어요"
+    },
+    {
+      "title": "우체국과 함께 따뜻하고 안전한 겨울나기",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788599",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "'2026년 시·도교육청 등 230개 공공기관 기록관리 기관평가 결과' 공개",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788570",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "'차세대 지방행정공통시스템 구축 통합사업 설명회' 개최",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788442",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "행정안전부, '2027년 생활권 보행환경 종합정비사업' 대상지 5곳 선정",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788444",
+      "score": 3,
+      "status": "공공누리 표시를 찾지 못해 쓸 수 없어요"
+    },
+    {
+      "title": "산불 대비 태세 강화에 재난특교세 150억 원 지원",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788418",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "보행안전주간(11.9.~11.13.), 전국에 안전한 보행문화를 정착시킨다",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788380",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "아세안 4개국 공무원, 한국의 재난관리 정책 배운다",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788382",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "행안부-기아 신선식품 배송서비스로 전북 순창까지 먹거리 접근성 높인다",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788376",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "폐교의 새로운 시작, 지역의 가능성을 열다.",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788378",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    }
+  ]
+}
