@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-11-11",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.11.11)",
+  "date_label": "2026.11.11",
+  "news_items": [
+    {
+      "title": "돌곶이·상월곡역세권 장기전세주택 도시정비형 재개발조합 협력업체(측...",
+      "link": "https://www.arunews.com/news/articleView.html?idxno=69375",
+      "naver_link": "https://www.arunews.com/news/articleView.html?idxno=69375",
+      "press": "한국주택경제",
+      "published": "2026-11-11T10:36:00+09:00",
+      "date_label": "2026.11.11 10:36",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "“닥치고 공급” 외치는데…지방 아파트 착공은 5년 만에 ‘최저’",
+      "link": "https://www.mk.co.kr/article/12205093",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005761993?sid=101",
+      "press": "매일경제",
+      "published": "2026-11-11T10:14:00+09:00",
+      "date_label": "2026.11.11 10:14",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "마래푸 34평 보유세 777만원→605만원→520만원…당정 ‘종부세’ 충돌...",
+      "link": "https://biz.heraldcorp.com/article/10933263?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002721859?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-11-11T10:10:00+09:00",
+      "date_label": "2026.11.11 10:10",
+      "score": 6,
+      "tag": "세금"
+    },
+    {
+      "title": "가리봉 옛 시장 부지, 공공임대주택 181호로 탈바꿈",
+      "link": "https://view.asiae.co.kr/article/2026111108115816219",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005841044?sid=101",
+      "press": "아시아경제",
+      "published": "2026-11-11T10:00:00+09:00",
+      "date_label": "2026.11.11 10:00",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "\"몇 년 뒤 새 아파트 씨 마르나\"…지방 5곳 착공 '반토막'",
+      "link": "https://www.hankyung.com/article/2026111190536",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005352579?sid=101",
+      "press": "한국경제",
+      "published": "2026-11-11T08:38:00+09:00",
+      "date_label": "2026.11.11 08:38",
+      "score": 6,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.11.11)\n\n1. 돌곶이·상월곡역세권 장기전세주택 도시정비형 재개발조합 협력업체(측... — 한국주택경제\n   https://www.arunews.com/news/articleView.html?idxno=69375\n2. “닥치고 공급” 외치는데…지방 아파트 착공은 5년 만에 ‘최저’ — 매일경제\n   https://www.mk.co.kr/article/12205093\n3. 마래푸 34평 보유세 777만원→605만원→520만원…당정 ‘종부세’ 충돌... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10933263?ref=naver\n4. 가리봉 옛 시장 부지, 공공임대주택 181호로 탈바꿈 — 아시아경제\n   https://view.asiae.co.kr/article/2026111108115816219\n5. \"몇 년 뒤 새 아파트 씨 마르나\"…지방 5곳 착공 '반토막' — 한국경제\n   https://www.hankyung.com/article/2026111190536\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.arunews.com/news/articleView.html?idxno=69375",
+    "https://www.mk.co.kr/article/12205093",
+    "https://biz.heraldcorp.com/article/10933263?ref=naver",
+    "https://view.asiae.co.kr/article/2026111108115816219",
+    "https://www.hankyung.com/article/2026111190536"
+  ],
+  "created_at": "2026-11-11T10:38:03.597554+09:00"
+}
