@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-11-12",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.11.12)",
+  "date_label": "2026.11.12",
+  "news_items": [
+    {
+      "title": "“이사하려니 2억 더” 서울 아파트 세입자 절반이 눌러앉았다[부동산3...",
+      "link": "https://biz.heraldcorp.com/article/10934508?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002722390?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-11-12T08:49:00+09:00",
+      "date_label": "2026.11.12 08:49",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "\"비거주 1주택 규제 재검토\"·\"실거주 우대\"…與부동산 강온대립(종합)",
+      "link": "https://www.yna.co.kr/view/AKR20261111091251001?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016436689?sid=100",
+      "press": "연합뉴스",
+      "published": "2026-11-11T17:19:00+09:00",
+      "date_label": "2026.11.11 17:19",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "노들역 앞 저층주거지, 42층 938가구로…목동 CBS부지엔 시니어주택",
+      "link": "https://www.hankyung.com/article/202611122275i",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005353110?sid=101",
+      "press": "한국경제",
+      "published": "2026-11-12T11:11:00+09:00",
+      "date_label": "2026.11.12 11:11",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "‘삼성전자 후광’도 무색…평택 고덕 신규 분양 아파트 대규모 청약 미...",
+      "link": "https://www.mk.co.kr/article/12206170",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005762616?sid=101",
+      "press": "매일경제",
+      "published": "2026-11-12T11:00:00+09:00",
+      "date_label": "2026.11.12 11:00",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "목동 CBS 부지에 시니어주택 조성…노들역세권엔 장기전세주택",
+      "link": "https://view.asiae.co.kr/article/2026111208501962018",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005841643?sid=101",
+      "press": "아시아경제",
+      "published": "2026-11-12T10:00:00+09:00",
+      "date_label": "2026.11.12 10:00",
+      "score": 6,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.11.12)\n\n1. “이사하려니 2억 더” 서울 아파트 세입자 절반이 눌러앉았다[부동산3... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10934508?ref=naver\n2. \"비거주 1주택 규제 재검토\"·\"실거주 우대\"…與부동산 강온대립(종합) — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261111091251001?input=1195m\n3. 노들역 앞 저층주거지, 42층 938가구로…목동 CBS부지엔 시니어주택 — 한국경제\n   https://www.hankyung.com/article/202611122275i\n4. ‘삼성전자 후광’도 무색…평택 고덕 신규 분양 아파트 대규모 청약 미... — 매일경제\n   https://www.mk.co.kr/article/12206170\n5. 목동 CBS 부지에 시니어주택 조성…노들역세권엔 장기전세주택 — 아시아경제\n   https://view.asiae.co.kr/article/2026111208501962018\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://biz.heraldcorp.com/article/10934508?ref=naver",
+    "https://www.yna.co.kr/view/AKR20261111091251001?input=1195m",
+    "https://www.hankyung.com/article/202611122275i",
+    "https://www.mk.co.kr/article/12206170",
+    "https://view.asiae.co.kr/article/2026111208501962018"
+  ],
+  "created_at": "2026-11-12T11:38:26.565635+09:00"
+}
