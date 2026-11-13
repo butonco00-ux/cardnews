@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-11-13",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.11.13)",
+  "date_label": "2026.11.13",
+  "news_items": [
+    {
+      "title": "서울 양천·중랑 모아주택 2741가구…‘구역 분리 후 확대’로 공급 확...",
+      "link": "https://biz.heraldcorp.com/article/10935772?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002723042?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-11-13T11:16:00+09:00",
+      "date_label": "2026.11.13 11:16",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "서울 신월·중화동 모아주택 2천741세대…2028년 착공",
+      "link": "https://www.yna.co.kr/view/AKR20261113051100004?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016440327?sid=102",
+      "press": "연합뉴스",
+      "published": "2026-11-13T11:15:00+09:00",
+      "date_label": "2026.11.13 11:15",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "[사설]집값은 하락 조짐, 전·월세는 급등…엇갈린 주택시장",
+      "link": "https://view.asiae.co.kr/article/2026111309440783536",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005842262?sid=110",
+      "press": "아시아경제",
+      "published": "2026-11-13T11:00:00+09:00",
+      "date_label": "2026.11.13 11:00",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "주택공급에는 흑백논리 없어야",
+      "link": "https://www.arunews.com/news/articleView.html?idxno=69472",
+      "naver_link": "https://www.arunews.com/news/articleView.html?idxno=69472",
+      "press": "한국주택경제",
+      "published": "2026-11-13T10:14:00+09:00",
+      "date_label": "2026.11.13 10:14",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "“강남 학원가 월세 400만원 시대”…통학권 실거주 단지 보니",
+      "link": "https://www.mk.co.kr/article/12206774",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005763128?sid=101",
+      "press": "매일경제",
+      "published": "2026-11-13T09:01:00+09:00",
+      "date_label": "2026.11.13 09:01",
+      "score": 6,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.11.13)\n\n1. 서울 양천·중랑 모아주택 2741가구…‘구역 분리 후 확대’로 공급 확... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10935772?ref=naver\n2. 서울 신월·중화동 모아주택 2천741세대…2028년 착공 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261113051100004?input=1195m\n3. [사설]집값은 하락 조짐, 전·월세는 급등…엇갈린 주택시장 — 아시아경제\n   https://view.asiae.co.kr/article/2026111309440783536\n4. 주택공급에는 흑백논리 없어야 — 한국주택경제\n   https://www.arunews.com/news/articleView.html?idxno=69472\n5. “강남 학원가 월세 400만원 시대”…통학권 실거주 단지 보니 — 매일경제\n   https://www.mk.co.kr/article/12206774\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://biz.heraldcorp.com/article/10935772?ref=naver",
+    "https://www.yna.co.kr/view/AKR20261113051100004?input=1195m",
+    "https://view.asiae.co.kr/article/2026111309440783536",
+    "https://www.arunews.com/news/articleView.html?idxno=69472",
+    "https://www.mk.co.kr/article/12206774"
+  ],
+  "created_at": "2026-11-13T11:18:28.455134+09:00"
+}
