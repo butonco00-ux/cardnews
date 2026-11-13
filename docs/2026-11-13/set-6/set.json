@@ -1,0 +1,137 @@
+{
+  "kind": "star",
+  "date": "2026-11-13",
+  "set": 6,
+  "tag": "스타",
+  "title": "BTS 진, 아워홈 전 회장 ‘한남동 빌딩’ 96억에 매입…근처 한남더힐 2...",
+  "subtitles": [],
+  "dept": "헤럴드경제",
+  "date_label": "2026.11.12",
+  "url": "https://biz.heraldcorp.com/article/10935499?ref=naver",
+  "license": {
+    "type": 0,
+    "usable": true,
+    "text_only": true,
+    "label": "",
+    "reason": null
+  },
+  "license_label": "",
+  "embargo": null,
+  "badge": "",
+  "source_file": "",
+  "created_at": "2026-11-13T18:55:03.248080+09:00",
+  "source_label": "출처: 헤럴드경제",
+  "news_items": [
+    {
+      "title": "BTS 진, 아워홈 전 회장 ‘한남동 빌딩’ 96억에 매입…근처 한남더힐 2...",
+      "link": "https://biz.heraldcorp.com/article/10935499?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002722792?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-11-12T17:41:00+09:00",
+      "date_label": "2026.11.12 17:41",
+      "summary": [
+        "BTS 멤버 진이 서울 용산구 한남동 상가 빌딩을 96억 원에 사들였다.",
+        "거래는 지난 4일 이뤄졌고 매도인은 구미현 전 아워홈 회장 일가다.",
+        "건물은 1990년 지어졌으며 지하 1층~지상 4층, 연면적 303㎡다.",
+        "구 전 회장 일가는 지난해 7월 이 빌딩을 68억 원에 매입했었다.",
+        "진은 매입 뒤 건물명을 '지니'로 바꿨고 인테리어 작업 중인 것으로 알려졌다.",
+        "진은 이 빌딩 인근 고급 빌라 한남더힐 2채를 보유하고 있다.",
+        "2019년 44억9000만 원에 산 한남더힐 1채는 올해 4월 127억 원에 팔았다."
+      ],
+      "summary_note": "AI 사실 정리"
+    }
+  ],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg"
+    ]
+  },
+  "card_items": [
+    [
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "BTS 멤버 진이 서울 용산구 한남동 상가 빌딩을 96억 원에 사들였다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "거래는 지난 4일 이뤄졌고 매도인은 구미현 전 아워홈 회장 일가다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "건물은 1990년 지어졌으며 지하 1층~지상 4층, 연면적 303㎡다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "구 전 회장 일가는 지난해 7월 이 빌딩을 68억 원에 매입했었다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "진은 매입 뒤 건물명을 '지니'로 바꿨고 인테리어 작업 중인 것으로 알려졌다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "진은 이 빌딩 인근 고급 빌라 한남더힐 2채를 보유하고 있다.",
+        "cont": false
+      }
+    ]
+  ],
+  "omitted": false,
+  "skipped": [],
+  "original": [
+    {
+      "text": "○ BTS 멤버 진이 서울 용산구 한남동 상가 빌딩을 96억 원에 사들였다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 거래는 지난 4일 이뤄졌고 매도인은 구미현 전 아워홈 회장 일가다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 건물은 1990년 지어졌으며 지하 1층~지상 4층, 연면적 303㎡다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 구 전 회장 일가는 지난해 7월 이 빌딩을 68억 원에 매입했었다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 진은 매입 뒤 건물명을 '지니'로 바꿨고 인테리어 작업 중인 것으로 알려졌다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 진은 이 빌딩 인근 고급 빌라 한남더힐 2채를 보유하고 있다.",
+      "used": "all"
+    }
+  ],
+  "excluded_tail": "",
+  "caption": "[스타] BTS 진, 아워홈 전 회장 ‘한남동 빌딩’ 96억에 매입…근처 한남더힐 2...\n\nBTS 멤버 진이 서울 용산구 한남동 상가 빌딩을 96억 원에 사들였다. 거래는 지난 4일 이뤄졌고 매도인은 구미현 전 아워홈 회장 일가다. 건물은 1990년 지어졌으며 지하 1층~지상 4층, 연면적 303㎡다. 구 전 회장 일가는 지난해 7월 이 빌딩을 68억 원에 매입했었다. 진은 매입 뒤 건물명을 '지니'로 바꿨고 인테리어 작업 중인 것으로 알려졌다. 진은 이 빌딩 인근 고급 빌라 한남더힐 2채를 보유하고 있다. 2019년 44억9000만 원에 산 한남더힐 1채는 올해 4월 127억 원에 팔았다.\n\n출처: 헤럴드경제 「BTS 진, 아워홈 전 회장 ‘한남동 빌딩’ 96억에 매입…근처 한남더힐 2...」(2026.11.12 17:41)\nhttps://biz.heraldcorp.com/article/10935499?ref=naver\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사 #연예인부동산",
+  "caption_problems": [],
+  "source_urls": [
+    "https://biz.heraldcorp.com/article/10935499?ref=naver"
+  ]
+}
