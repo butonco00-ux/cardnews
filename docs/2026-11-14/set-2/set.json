@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-11-14",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.11.14)",
+  "date_label": "2026.11.14",
+  "news_items": [
+    {
+      "title": "\"전세사기 예방이 최선\"…전북도, 전월세 안심계약 상담서비스",
+      "link": "https://www.yna.co.kr/view/AKR20261114022100055?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016441670?sid=101",
+      "press": "연합뉴스",
+      "published": "2026-11-14T09:20:00+09:00",
+      "date_label": "2026.11.14 09:20",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "광진구 재개발·재건축 75곳 속도전… 자양·중곡동에 최고 49층 주거단...",
+      "link": "https://biz.heraldcorp.com/article/10936728?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002723285?sid=102",
+      "press": "헤럴드경제",
+      "published": "2026-11-13T18:41:00+09:00",
+      "date_label": "2026.11.13 18:41",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "11월 셋째주 전국 10곳 1681가구 청약…서울·경기권에 80% 공급",
+      "link": "https://view.asiae.co.kr/article/2026111321073793517",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005842529?sid=101",
+      "press": "아시아경제",
+      "published": "2026-11-14T07:00:00+09:00",
+      "date_label": "2026.11.14 07:00",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "“아파트값 떨어진다고? 천만에 말씀”...부동산 ‘싱크탱크’의 경고",
+      "link": "https://magazine.hankyung.com/business/article/202611135321b",
+      "naver_link": "https://n.news.naver.com/mnews/article/050/0000113217?sid=101",
+      "press": "한국경제",
+      "published": "2026-11-13T14:59:00+09:00",
+      "date_label": "2026.11.13 14:59",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "[단독] \"보증금 없이 월세만\" 日기업 한국 상륙",
+      "link": "https://www.mk.co.kr/article/12208279",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005763505?sid=101",
+      "press": "매일경제",
+      "published": "2026-11-13T17:43:00+09:00",
+      "date_label": "2026.11.13 17:43",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.11.14)\n\n1. \"전세사기 예방이 최선\"…전북도, 전월세 안심계약 상담서비스 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261114022100055?input=1195m\n2. 광진구 재개발·재건축 75곳 속도전… 자양·중곡동에 최고 49층 주거단... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10936728?ref=naver\n3. 11월 셋째주 전국 10곳 1681가구 청약…서울·경기권에 80% 공급 — 아시아경제\n   https://view.asiae.co.kr/article/2026111321073793517\n4. “아파트값 떨어진다고? 천만에 말씀”...부동산 ‘싱크탱크’의 경고 — 한국경제\n   https://magazine.hankyung.com/business/article/202611135321b\n5. [단독] \"보증금 없이 월세만\" 日기업 한국 상륙 — 매일경제\n   https://www.mk.co.kr/article/12208279\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.yna.co.kr/view/AKR20261114022100055?input=1195m",
+    "https://biz.heraldcorp.com/article/10936728?ref=naver",
+    "https://view.asiae.co.kr/article/2026111321073793517",
+    "https://magazine.hankyung.com/business/article/202611135321b",
+    "https://www.mk.co.kr/article/12208279"
+  ],
+  "created_at": "2026-11-14T10:55:36.129597+09:00"
+}
