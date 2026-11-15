@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-11-15",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.11.15)",
+  "date_label": "2026.11.15",
+  "news_items": [
+    {
+      "title": "LH, 건설업계와 공공주택 신속공급 간담회…\"민간 협조 필요\"",
+      "link": "https://www.yna.co.kr/view/AKR20261115017000003?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016442222?sid=101",
+      "press": "연합뉴스",
+      "published": "2026-11-15T10:02:00+09:00",
+      "date_label": "2026.11.15 10:02",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "전세보증금 6년 새 35% 뛰고 대출 53% 늘고…세입자 시름 깊어진다",
+      "link": "https://biz.heraldcorp.com/article/10937304?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002723534?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-11-15T08:45:00+09:00",
+      "date_label": "2026.11.15 08:45",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "“서울 집값 쉽게 안 내려간다”…공급 공백 2~3년, 무주택자 지금 집 사...",
+      "link": "https://www.segye.com/newsView/20261111511984?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004175140?sid=101",
+      "press": "세계일보",
+      "published": "2026-11-15T05:45:00+09:00",
+      "date_label": "2026.11.15 05:45",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "“부동산에 악마 득실거려”…이승기, 105억 전세금 떼일 위기에 ‘경고...",
+      "link": "https://www.mk.co.kr/article/12208885",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005763665?sid=102",
+      "press": "매일경제",
+      "published": "2026-11-14T16:31:00+09:00",
+      "date_label": "2026.11.14 16:31",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "\"이제 와서 2억 더 내라고?\"…서초 아파트 주민들 '날벼락' [김용우의 각...",
+      "link": "https://www.hankyung.com/article/202611146307i",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005353871?sid=101",
+      "press": "한국경제",
+      "published": "2026-11-15T07:01:00+09:00",
+      "date_label": "2026.11.15 07:01",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.11.15)\n\n1. LH, 건설업계와 공공주택 신속공급 간담회…\"민간 협조 필요\" — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261115017000003?input=1195m\n2. 전세보증금 6년 새 35% 뛰고 대출 53% 늘고…세입자 시름 깊어진다 — 헤럴드경제\n   https://biz.heraldcorp.com/article/10937304?ref=naver\n3. “서울 집값 쉽게 안 내려간다”…공급 공백 2~3년, 무주택자 지금 집 사... — 세계일보\n   https://www.segye.com/newsView/20261111511984?OutUrl=naver\n4. “부동산에 악마 득실거려”…이승기, 105억 전세금 떼일 위기에 ‘경고... — 매일경제\n   https://www.mk.co.kr/article/12208885\n5. \"이제 와서 2억 더 내라고?\"…서초 아파트 주민들 '날벼락' [김용우의 각... — 한국경제\n   https://www.hankyung.com/article/202611146307i\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.yna.co.kr/view/AKR20261115017000003?input=1195m",
+    "https://biz.heraldcorp.com/article/10937304?ref=naver",
+    "https://www.segye.com/newsView/20261111511984?OutUrl=naver",
+    "https://www.mk.co.kr/article/12208885",
+    "https://www.hankyung.com/article/202611146307i"
+  ],
+  "created_at": "2026-11-15T10:27:22.397044+09:00"
+}
