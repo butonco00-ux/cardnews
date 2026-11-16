@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-11-16",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.11.16)",
+  "date_label": "2026.11.16",
+  "news_items": [
+    {
+      "title": "풍납극동, 용적률 340% 적용… 598세대 아파트로 재건축",
+      "link": "https://www.arunews.com/news/articleView.html?idxno=69534",
+      "naver_link": "https://www.arunews.com/news/articleView.html?idxno=69534",
+      "press": "한국주택경제",
+      "published": "2026-11-16T10:24:00+09:00",
+      "date_label": "2026.11.16 10:24",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "'디에이치 신반포에스테라', 잔여 5세대 임의공급...18~19일 청약",
+      "link": "https://magazine.hankyung.com/money/article/202611168513c",
+      "naver_link": "https://magazine.hankyung.com/money/article/202611168513c",
+      "press": "한국경제",
+      "published": "2026-11-16T10:00:00+09:00",
+      "date_label": "2026.11.16 10:00",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "LH, 남양주왕숙·고양창릉 등 9000호 민참 공공주택사업 공모 시행",
+      "link": "https://biz.heraldcorp.com/article/10938050?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002723827?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-11-16T09:22:00+09:00",
+      "date_label": "2026.11.16 09:22",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "서리풀1지구 공급주택 10가구 중 8가구 임대…주민들 반발",
+      "link": "https://www.segye.com/newsView/20261116502557?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004175405?sid=101",
+      "press": "세계일보",
+      "published": "2026-11-16T08:43:00+09:00",
+      "date_label": "2026.11.16 08:43",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "서울 12억~14억 주택 與 텃밭인데 …'종부세 대상'땐 이탈 가능성",
+      "link": "https://www.mk.co.kr/article/12209377",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005763992?sid=100",
+      "press": "매일경제",
+      "published": "2026-11-15T17:34:00+09:00",
+      "date_label": "2026.11.15 17:34",
+      "score": 6,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.11.16)\n\n1. 풍납극동, 용적률 340% 적용… 598세대 아파트로 재건축 — 한국주택경제\n   https://www.arunews.com/news/articleView.html?idxno=69534\n2. '디에이치 신반포에스테라', 잔여 5세대 임의공급...18~19일 청약 — 한국경제\n   https://magazine.hankyung.com/money/article/202611168513c\n3. LH, 남양주왕숙·고양창릉 등 9000호 민참 공공주택사업 공모 시행 — 헤럴드경제\n   https://biz.heraldcorp.com/article/10938050?ref=naver\n4. 서리풀1지구 공급주택 10가구 중 8가구 임대…주민들 반발 — 세계일보\n   https://www.segye.com/newsView/20261116502557?OutUrl=naver\n5. 서울 12억~14억 주택 與 텃밭인데 …'종부세 대상'땐 이탈 가능성 — 매일경제\n   https://www.mk.co.kr/article/12209377\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.arunews.com/news/articleView.html?idxno=69534",
+    "https://magazine.hankyung.com/money/article/202611168513c",
+    "https://biz.heraldcorp.com/article/10938050?ref=naver",
+    "https://www.segye.com/newsView/20261116502557?OutUrl=naver",
+    "https://www.mk.co.kr/article/12209377"
+  ],
+  "created_at": "2026-11-16T10:30:19.478220+09:00"
+}
