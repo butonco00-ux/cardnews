@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-11-17",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.11.17)",
+  "date_label": "2026.11.17",
+  "news_items": [
+    {
+      "title": "“전세 16억 받아도 12억 부족”…‘세입자 파이낸싱’ 부른 로또청약의...",
+      "link": "https://biz.heraldcorp.com/article/10939542?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002724427?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-11-17T10:56:00+09:00",
+      "date_label": "2026.11.17 10:56",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "분당 노후계획도시 32구역(양지마을) 재건축사업 정비사업 전자적 의사...",
+      "link": "https://www.arunews.com/news/articleView.html?idxno=69649",
+      "naver_link": "https://www.arunews.com/news/articleView.html?idxno=69649",
+      "press": "한국주택경제",
+      "published": "2026-11-17T13:08:00+09:00",
+      "date_label": "2026.11.17 13:08",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "연말연시 이사철 전세사기 걱정된다면…서울시, 청년대상 설명회",
+      "link": "https://www.yna.co.kr/view/AKR20261117043500004?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016446000?sid=102",
+      "press": "연합뉴스",
+      "published": "2026-11-17T11:15:00+09:00",
+      "date_label": "2026.11.17 11:15",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "집값 급등에… 2025년 종부세 주택 32% 늘었다",
+      "link": "https://www.segye.com/newsView/20261116515360?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004175563?sid=101",
+      "press": "세계일보",
+      "published": "2026-11-16T17:47:00+09:00",
+      "date_label": "2026.11.16 17:47",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "변동형이 고정형보다 높네 … 주택담보대출 금리 역전",
+      "link": "https://www.mk.co.kr/article/12210125",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005764508?sid=101",
+      "press": "매일경제",
+      "published": "2026-11-16T17:22:00+09:00",
+      "date_label": "2026.11.16 17:22",
+      "score": 6,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.11.17)\n\n1. “전세 16억 받아도 12억 부족”…‘세입자 파이낸싱’ 부른 로또청약의... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10939542?ref=naver\n2. 분당 노후계획도시 32구역(양지마을) 재건축사업 정비사업 전자적 의사... — 한국주택경제\n   https://www.arunews.com/news/articleView.html?idxno=69649\n3. 연말연시 이사철 전세사기 걱정된다면…서울시, 청년대상 설명회 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261117043500004?input=1195m\n4. 집값 급등에… 2025년 종부세 주택 32% 늘었다 — 세계일보\n   https://www.segye.com/newsView/20261116515360?OutUrl=naver\n5. 변동형이 고정형보다 높네 … 주택담보대출 금리 역전 — 매일경제\n   https://www.mk.co.kr/article/12210125\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://biz.heraldcorp.com/article/10939542?ref=naver",
+    "https://www.arunews.com/news/articleView.html?idxno=69649",
+    "https://www.yna.co.kr/view/AKR20261117043500004?input=1195m",
+    "https://www.segye.com/newsView/20261116515360?OutUrl=naver",
+    "https://www.mk.co.kr/article/12210125"
+  ],
+  "created_at": "2026-11-17T13:16:42.997828+09:00"
+}
