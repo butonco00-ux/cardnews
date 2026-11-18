@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-11-18",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.11.18)",
+  "date_label": "2026.11.18",
+  "news_items": [
+    {
+      "title": "부산 아파트 전세가격지수 28개월 연속 상승…전세가율 70% 근접",
+      "link": "https://biz.heraldcorp.com/article/10940918?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002725033?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-11-18T11:07:00+09:00",
+      "date_label": "2026.11.18 11:07",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "동의대 부동산대학원, 부산 재개발·재건축 활성화 포럼 개최",
+      "link": "https://view.asiae.co.kr/article/2026111810153988303",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005844254?sid=102",
+      "press": "아시아경제",
+      "published": "2026-11-18T10:15:00+09:00",
+      "date_label": "2026.11.18 10:15",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "하남시 \"교산신도시 기업 유치 규제 풀어달라\"…주택 우선공급 50% 확대...",
+      "link": "https://www.hankyung.com/article/202611183727h",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005355133?sid=102",
+      "press": "한국경제",
+      "published": "2026-11-18T09:28:00+09:00",
+      "date_label": "2026.11.18 09:28",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "집값보다 더 뛰는 월세… 서울 세입자 “소득 20% 주거비로”",
+      "link": "https://www.segye.com/newsView/20261117515764?OutUrl=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/022/0004176061?sid=101",
+      "press": "세계일보",
+      "published": "2026-11-18T06:05:00+09:00",
+      "date_label": "2026.11.18 06:05",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "국토위, 국토부 예산안 의결…가덕신공항·주거지원' 3.7조 순증",
+      "link": "https://www.yna.co.kr/view/AKR20261118081500001?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016448714?sid=100",
+      "press": "연합뉴스",
+      "published": "2026-11-18T11:26:00+09:00",
+      "date_label": "2026.11.18 11:26",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.11.18)\n\n1. 부산 아파트 전세가격지수 28개월 연속 상승…전세가율 70% 근접 — 헤럴드경제\n   https://biz.heraldcorp.com/article/10940918?ref=naver\n2. 동의대 부동산대학원, 부산 재개발·재건축 활성화 포럼 개최 — 아시아경제\n   https://view.asiae.co.kr/article/2026111810153988303\n3. 하남시 \"교산신도시 기업 유치 규제 풀어달라\"…주택 우선공급 50% 확대... — 한국경제\n   https://www.hankyung.com/article/202611183727h\n4. 집값보다 더 뛰는 월세… 서울 세입자 “소득 20% 주거비로” — 세계일보\n   https://www.segye.com/newsView/20261117515764?OutUrl=naver\n5. 국토위, 국토부 예산안 의결…가덕신공항·주거지원' 3.7조 순증 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261118081500001?input=1195m\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://biz.heraldcorp.com/article/10940918?ref=naver",
+    "https://view.asiae.co.kr/article/2026111810153988303",
+    "https://www.hankyung.com/article/202611183727h",
+    "https://www.segye.com/newsView/20261117515764?OutUrl=naver",
+    "https://www.yna.co.kr/view/AKR20261118081500001?input=1195m"
+  ],
+  "created_at": "2026-11-18T12:16:17.786943+09:00"
+}
