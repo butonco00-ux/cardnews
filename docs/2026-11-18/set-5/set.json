@@ -1,0 +1,136 @@
+{
+  "kind": "star",
+  "date": "2026-11-18",
+  "set": 5,
+  "tag": "스타",
+  "title": "떡 팔아 연 매출 17억, 건물주 됐다…서장훈 \"중소기업 수준\"",
+  "subtitles": [],
+  "dept": "마이데일리",
+  "date_label": "2026.11.18",
+  "url": "https://www.mydaily.co.kr/page/view/2026111808375247526",
+  "license": {
+    "type": 0,
+    "usable": true,
+    "text_only": true,
+    "label": "",
+    "reason": null
+  },
+  "license_label": "",
+  "embargo": null,
+  "badge": "",
+  "source_file": "",
+  "created_at": "2026-11-18T22:09:27.151323+09:00",
+  "source_label": "출처: 마이데일리",
+  "news_items": [
+    {
+      "title": "떡 팔아 연 매출 17억, 건물주 됐다…서장훈 \"중소기업 수준\"",
+      "link": "https://www.mydaily.co.kr/page/view/2026111808375247526",
+      "naver_link": "https://m.entertain.naver.com/article/117/0004126031",
+      "press": "마이데일리",
+      "published": "2026-11-18T09:34:00+09:00",
+      "date_label": "2026.11.18 09:34",
+      "summary": [
+        "김덕식은 떡 사업으로 건물주가 된 인물이다.",
+        "그는 18일 EBS '서장훈의 이웃집 백만장자'에 출연했다.",
+        "그가 운영하는 떡 공장은 약 900평 규모이다.",
+        "공장 건물은 1~5층 전체가 생산 시설로 쓰인다.",
+        "이 공장은 하루 평균 쌀 2톤으로 떡 100여 종을 만든다.",
+        "김덕식은 1989~1991년 폐백 사업으로 연 매출 16억5천만 원을 올렸다."
+      ],
+      "summary_note": "AI 사실 정리"
+    }
+  ],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg"
+    ]
+  },
+  "card_items": [
+    [
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "김덕식은 떡 사업으로 건물주가 된 인물이다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "그는 18일 EBS '서장훈의 이웃집 백만장자'에 출연했다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "그가 운영하는 떡 공장은 약 900평 규모이다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "공장 건물은 1~5층 전체가 생산 시설로 쓰인다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "이 공장은 하루 평균 쌀 2톤으로 떡 100여 종을 만든다.",
+        "cont": false
+      },
+      {
+        "level": 1,
+        "marker": "○",
+        "text": "김덕식은 1989~1991년 폐백 사업으로 연 매출 16억5천만 원을 올렸다.",
+        "cont": false
+      }
+    ]
+  ],
+  "omitted": false,
+  "skipped": [],
+  "original": [
+    {
+      "text": "○ 김덕식은 떡 사업으로 건물주가 된 인물이다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 그는 18일 EBS '서장훈의 이웃집 백만장자'에 출연했다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 그가 운영하는 떡 공장은 약 900평 규모이다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 공장 건물은 1~5층 전체가 생산 시설로 쓰인다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 이 공장은 하루 평균 쌀 2톤으로 떡 100여 종을 만든다.",
+      "used": "all"
+    },
+    {
+      "text": "○ 김덕식은 1989~1991년 폐백 사업으로 연 매출 16억5천만 원을 올렸다.",
+      "used": "all"
+    }
+  ],
+  "excluded_tail": "",
+  "caption": "[스타] 떡 팔아 연 매출 17억, 건물주 됐다…서장훈 \"중소기업 수준\"\n\n김덕식은 떡 사업으로 건물주가 된 인물이다. 그는 18일 EBS '서장훈의 이웃집 백만장자'에 출연했다. 그가 운영하는 떡 공장은 약 900평 규모이다. 공장 건물은 1~5층 전체가 생산 시설로 쓰인다. 이 공장은 하루 평균 쌀 2톤으로 떡 100여 종을 만든다. 김덕식은 1989~1991년 폐백 사업으로 연 매출 16억5천만 원을 올렸다.\n\n출처: 마이데일리 「떡 팔아 연 매출 17억, 건물주 됐다…서장훈 \"중소기업 수준\"」(2026.11.18 09:34)\nhttps://www.mydaily.co.kr/page/view/2026111808375247526\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사 #연예인부동산",
+  "caption_problems": [],
+  "source_urls": [
+    "https://www.mydaily.co.kr/page/view/2026111808375247526"
+  ]
+}
