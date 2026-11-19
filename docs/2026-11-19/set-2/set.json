@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-11-19",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.11.19)",
+  "date_label": "2026.11.19",
+  "news_items": [
+    {
+      "title": "與, 국힘 필버 예고에 \"민생포기 방침\"…주택공급 3법 처리 촉구",
+      "link": "https://www.yna.co.kr/view/AKR20261119079800001?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016451663?sid=100",
+      "press": "연합뉴스",
+      "published": "2026-11-19T11:38:00+09:00",
+      "date_label": "2026.11.19 11:38",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "[지금 구청은] 은평구, 부동산중개사무소 특별지도 및 임차인 교육",
+      "link": "https://biz.heraldcorp.com/article/10942577?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002725677?sid=102",
+      "press": "헤럴드경제",
+      "published": "2026-11-19T11:31:00+09:00",
+      "date_label": "2026.11.19 11:31",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "與 \"주택공급 3법, 주택 공급 물꼬 트는 법…野 협상나서야\"",
+      "link": "https://view.asiae.co.kr/article/2026111910541775161",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005844970?sid=100",
+      "press": "아시아경제",
+      "published": "2026-11-19T10:54:00+09:00",
+      "date_label": "2026.11.19 10:54",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "\"새집 짓는 시대 저문다\"…中 부동산 시장에 벌어진 대반전 [차이나 워...",
+      "link": "https://www.hankyung.com/article/202611172913i",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005355700?sid=101",
+      "press": "한국경제",
+      "published": "2026-11-19T10:07:00+09:00",
+      "date_label": "2026.11.19 10:07",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "예금금리 오르자 주담대 금리도 ‘껑충’…변동형은 6% 뚫렸다",
+      "link": "https://www.mk.co.kr/article/12213467",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005766097?sid=101",
+      "press": "매일경제",
+      "published": "2026-11-19T11:37:00+09:00",
+      "date_label": "2026.11.19 11:37",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.11.19)\n\n1. 與, 국힘 필버 예고에 \"민생포기 방침\"…주택공급 3법 처리 촉구 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261119079800001?input=1195m\n2. [지금 구청은] 은평구, 부동산중개사무소 특별지도 및 임차인 교육 — 헤럴드경제\n   https://biz.heraldcorp.com/article/10942577?ref=naver\n3. 與 \"주택공급 3법, 주택 공급 물꼬 트는 법…野 협상나서야\" — 아시아경제\n   https://view.asiae.co.kr/article/2026111910541775161\n4. \"새집 짓는 시대 저문다\"…中 부동산 시장에 벌어진 대반전 [차이나 워... — 한국경제\n   https://www.hankyung.com/article/202611172913i\n5. 예금금리 오르자 주담대 금리도 ‘껑충’…변동형은 6% 뚫렸다 — 매일경제\n   https://www.mk.co.kr/article/12213467\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.yna.co.kr/view/AKR20261119079800001?input=1195m",
+    "https://biz.heraldcorp.com/article/10942577?ref=naver",
+    "https://view.asiae.co.kr/article/2026111910541775161",
+    "https://www.hankyung.com/article/202611172913i",
+    "https://www.mk.co.kr/article/12213467"
+  ],
+  "created_at": "2026-11-19T11:54:45.544846+09:00"
+}
