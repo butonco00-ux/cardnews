@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-19",
+  "releases": [
+    {
+      "title": "[참고] 국토부는 재건축부담금 부과 제척기간 만료일에 대한 지자체 안내를 진행하였습니다.",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789904",
+      "dept": "국토교통부",
+      "list_date": "2026-11-19",
+      "date_label": "2026.11.19",
+      "subtitles": [],
+      "lead": "국토부는 서초구 등의 관원 질의를 접수한 이후 재건축부담금 부과 기한과 관련하여 법률적 검토를 진행하였습니다.",
+      "license_usable": true,
+      "license_label": "공공누리 제1유형(텍스트에 한함)",
+      "embargo": {
+        "available_at": "2026-11-19T00:00:00+09:00",
+        "raw": "배포 즉시 보도 가능배포2026. 11. 19(목)",
+        "rule": "배포 즉시 보도",
+        "certain": true
+      }
+    },
+    {
+      "title": "더 나은 주거환경, 더 든든한 주거안정 \"최저주거기준 높이고 공공임대 선택 넓힌다\"",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789871",
+      "dept": "국토교통부",
+      "list_date": "2026-11-19",
+      "date_label": "2026.11.19",
+      "subtitles": [
+        "20일 전문가·청년·시민단체가 모여 다양한 의견 듣고 제도개선 방안 논의",
+        "15년 만에 최저주거기준 개정 추진"
+      ],
+      "lead": "국토교통부(장관 홍지선)는 11월 20일(금) 오후 서울에서 전문가와 청년·시민단체 등이 참석한 가운데 주거복지 정책을 심도있게 논의하기 위한 「주거복지정책 토론회」를 개최한다.",
+      "license_usable": true,
+      "license_label": "공공누리 제1유형(텍스트에 한함)",
+      "embargo": {
+        "available_at": "2026-11-19T11:00:00+09:00",
+        "raw": "2026. 11. 19.(목) 11:00 이후(11. 20.(금) 조간)",
+        "rule": "적힌 시각",
+        "certain": true
+      }
+    }
+  ]
+}
