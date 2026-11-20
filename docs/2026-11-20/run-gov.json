@@ -1,0 +1,180 @@
+{
+  "date": "2026-11-20",
+  "finished_at": "2026-11-20T19:04:14.782241+09:00",
+  "messages": [
+    {
+      "level": "bad",
+      "text": "카드를 만들지 못했어요: 5번째 카드: 표 칸 글자가 원문과 다름 → 표준 개별 / 5번째 카드: 표 칸 글자가 원문과 다름 → 국토부장관 시·군·구청장 / 5번째 카드: 표 칸 글자가 원문과 다름 → '27. 1. 22. '27. 4.  / 5번째 카드: 표 칸 글자가 원문과 다름 → 표준 개별 / 5번째 카드: 표 칸 글자가 원문과 다름 → 국토부장관 시·군·구청장 / 5번째 카드: 표 칸 글자가 원문과 다름 → '27. 1. 22. '27. 4. "
+    }
+  ],
+  "candidates": [
+    {
+      "title": "[참고] '27년 부동산 공시가격 시세반영률은 전년 수준 유지",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790108",
+      "score": 8,
+      "status": "선택됨 → 세트 1"
+    },
+    {
+      "title": "[참고] 테슬라 FSD 특례 신청, 자료 보완 필요",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790094",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[장관동정] 홍지선 장관, \"겨울철 국민 안전 최우선… 비상대응체계 확립\"",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790070",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[차관동정] 정의경 제2차관, \"국민 불편이 없도록 신속한 노사합의와 철저한 대비 필요\"",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789971",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[차관동정] 정의경 제2차관, \"제설대책기간 돌입… 무·진·장 산간권 제설 대응 빈틈없이\"",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789931",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "부전마산 복선전철 낙동1터널 붕괴사고 건설사고조사위원회 조사결과",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789908",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[참고] 국토부는 재건축부담금 부과 제척기간 만료일에 대한 지자체 안내를 진행하였습니다.",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789904",
+      "score": 4,
+      "status": "후보"
+    },
+    {
+      "title": "더 나은 주거환경, 더 든든한 주거안정 \"최저주거기준 높이고 공공임대 선택 넓힌다\"",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789871",
+      "score": 5,
+      "status": "후보 (전에 만든 적 있음)"
+    },
+    {
+      "title": "모두의 성장으로 대전환을 위해 전 부처 역량 결집",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789855",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "아·태 교통협력 넓힌다 … 한국의 인공지능 등 미래 교통기술 공유",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789828",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "'26.11월 국고채 「모집 방식 비경쟁인수」 발행 미실시",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789962",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "2026년 3분기말 대외채권채무 동향",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789900",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "전략경제자문단 우주분과 현장 방문",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789941",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "깜빡 잊고 지나가버린 지난 3년간 실손보험금, '실손24'를 통해 한방에 청구하고 받을 수 있습니다",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789917",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "핀테크 기업에 필요한 지원사업을 AI가 찾아드립니다.",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789901",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "행정안전부 장관, 도로살얼음 취약구간 안전관리 실태 점검",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790137",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "청년의 아이디어로 지역에 새 활력을, '청년희망터' 5기 성과 한자리에",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790110",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "지방세제 혁신 아이디어 발굴·확산을 위한 '2026년 지방세 발전 포럼' 개최",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790043",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "민생 안정과 지속 가능한 지방재정, 지방교부세가 발판을 마련하겠습니다",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790039",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "지역자율방재단, 겨울철 대비 역량 강화 교육 실시",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790041",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "대한민국, 국제연합(UN) 전자정부평가 12년 만에 세계 1위 탈환",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790024",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "공공 AI 대전환의 미래, 한중이 함께 그린다",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789913",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "한파 대비 우수사례, 현장 안전관리에 적극 활용한다",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789899",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "모두의 성장으로 대전환을 위해 전 부처 역량 결집",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789859",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    }
+  ]
+}
