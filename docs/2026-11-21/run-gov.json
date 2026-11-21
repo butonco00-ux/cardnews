@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-21",
+  "finished_at": "2026-11-21T09:54:23.265509+09:00",
+  "messages": [
+    {
+      "level": "bad",
+      "text": "카드를 만들지 못했어요: 5번째 카드: 표 칸 글자가 원문과 다름 → 표준 개별 / 5번째 카드: 표 칸 글자가 원문과 다름 → 국토부장관 시·군·구청장 / 5번째 카드: 표 칸 글자가 원문과 다름 → '27. 1. 22. '27. 4.  / 5번째 카드: 표 칸 글자가 원문과 다름 → 표준 개별 / 5번째 카드: 표 칸 글자가 원문과 다름 → 국토부장관 시·군·구청장 / 5번째 카드: 표 칸 글자가 원문과 다름 → '27. 1. 22. '27. 4. "
+    }
+  ],
+  "candidates": [
+    {
+      "title": "[참고] '27년 부동산 공시가격 시세반영률은 전년 수준 유지",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790108",
+      "score": 8,
+      "status": "선택됨 → 세트 1"
+    },
+    {
+      "title": "[참고] 테슬라 FSD 특례 신청, 자료 보완 필요",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790094",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[장관동정] 홍지선 장관, \"겨울철 국민 안전 최우선… 비상대응체계 확립\"",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790070",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "행정안전부 장관, 도로살얼음 취약구간 안전관리 실태 점검",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790137",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "청년의 아이디어로 지역에 새 활력을, '청년희망터' 5기 성과 한자리에",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790110",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "지방세제 혁신 아이디어 발굴·확산을 위한 '2026년 지방세 발전 포럼' 개최",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790043",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "민생 안정과 지속 가능한 지방재정, 지방교부세가 발판을 마련하겠습니다",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790039",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "지역자율방재단, 겨울철 대비 역량 강화 교육 실시",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790041",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "대한민국, 국제연합(UN) 전자정부평가 12년 만에 세계 1위 탈환",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790024",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    }
+  ]
+}
