@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-11-21",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.11.21)",
+  "date_label": "2026.11.21",
+  "news_items": [
+    {
+      "title": "\"전입신고 늦어도 실거주땐 취득세 감면\"",
+      "link": "https://www.mk.co.kr/article/12214810",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005766813?sid=101",
+      "press": "매일경제",
+      "published": "2026-11-20T17:30:00+09:00",
+      "date_label": "2026.11.20 17:30",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "내년 부동산 공시가격 현실화율, 올해 수준 유지…5년 연속 동결",
+      "link": "https://view.asiae.co.kr/article/2026112011032029319",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005845767?sid=101",
+      "press": "아시아경제",
+      "published": "2026-11-20T16:27:00+09:00",
+      "date_label": "2026.11.20 16:27",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "부동산 수입 더 많다는 ‘김부장’ 원작자, ‘천지개벽’ 예상 지역 꼽...",
+      "link": "https://www.segye.com/newsView/20261120509076?OutUrl=naver",
+      "naver_link": "https://m.entertain.naver.com/article/022/0004176939",
+      "press": "세계일보",
+      "published": "2026-11-21T09:38:00+09:00",
+      "date_label": "2026.11.21 09:38",
+      "score": 3,
+      "tag": "정책"
+    },
+    {
+      "title": "공공분양도 8억 원대… 계양신도시 첫 민간분양 ‘카이브 유보라’ 가격...",
+      "link": "https://biz.heraldcorp.com/article/10944201?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002726481?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-11-21T09:00:00+09:00",
+      "date_label": "2026.11.21 09:00",
+      "score": 3,
+      "tag": "정책"
+    },
+    {
+      "title": "유럽 집값 10년 새 70% 급등…주택난에 각국 비상",
+      "link": "https://www.yna.co.kr/view/AKR20261120179300085?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016455380?sid=104",
+      "press": "연합뉴스",
+      "published": "2026-11-20T23:02:00+09:00",
+      "date_label": "2026.11.20 23:02",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.11.21)\n\n1. \"전입신고 늦어도 실거주땐 취득세 감면\" — 매일경제\n   https://www.mk.co.kr/article/12214810\n2. 내년 부동산 공시가격 현실화율, 올해 수준 유지…5년 연속 동결 — 아시아경제\n   https://view.asiae.co.kr/article/2026112011032029319\n3. 부동산 수입 더 많다는 ‘김부장’ 원작자, ‘천지개벽’ 예상 지역 꼽... — 세계일보\n   https://www.segye.com/newsView/20261120509076?OutUrl=naver\n4. 공공분양도 8억 원대… 계양신도시 첫 민간분양 ‘카이브 유보라’ 가격... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10944201?ref=naver\n5. 유럽 집값 10년 새 70% 급등…주택난에 각국 비상 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261120179300085?input=1195m\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.mk.co.kr/article/12214810",
+    "https://view.asiae.co.kr/article/2026112011032029319",
+    "https://www.segye.com/newsView/20261120509076?OutUrl=naver",
+    "https://biz.heraldcorp.com/article/10944201?ref=naver",
+    "https://www.yna.co.kr/view/AKR20261120179300085?input=1195m"
+  ],
+  "created_at": "2026-11-21T11:56:56.191518+09:00"
+}
