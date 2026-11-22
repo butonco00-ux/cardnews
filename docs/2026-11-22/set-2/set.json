@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-11-22",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.11.22)",
+  "date_label": "2026.11.22",
+  "news_items": [
+    {
+      "title": "아파트 옆동 실거래가로 증여세 부과…법원 \"문제 없어\"",
+      "link": "https://www.yna.co.kr/view/AKR20261121025900004?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016456114?sid=102",
+      "press": "연합뉴스",
+      "published": "2026-11-22T09:00:00+09:00",
+      "date_label": "2026.11.22 09:00",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "“더 작은집 없나요?”…분양가 치솟자 서울 청약신청 80% ‘소형평수’",
+      "link": "https://www.mk.co.kr/article/12215386",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005767088?sid=101",
+      "press": "매일경제",
+      "published": "2026-11-22T08:05:00+09:00",
+      "date_label": "2026.11.22 08:05",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "“10억 싼 급매, 부담금은 누가?”재건축 매수 셈법 바뀐다 [부동산360]",
+      "link": "https://biz.heraldcorp.com/article/10944332?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002726535?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-11-21T15:00:00+09:00",
+      "date_label": "2026.11.21 15:00",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "12억 넘는 집 가진 30대 '주택부자' 늘었다…역대 최고 수준",
+      "link": "https://view.asiae.co.kr/article/2026112210175555792",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005845982?sid=101",
+      "press": "아시아경제",
+      "published": "2026-11-22T10:22:00+09:00",
+      "date_label": "2026.11.22 10:22",
+      "score": 3,
+      "tag": "정책"
+    },
+    {
+      "title": "\"30대가 무슨 돈으로 12억을…\" 고가주택 보유자 70% 급증",
+      "link": "https://www.hankyung.com/article/2026112217677",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005356637?sid=101",
+      "press": "한국경제",
+      "published": "2026-11-22T07:27:00+09:00",
+      "date_label": "2026.11.22 07:27",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.11.22)\n\n1. 아파트 옆동 실거래가로 증여세 부과…법원 \"문제 없어\" — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261121025900004?input=1195m\n2. “더 작은집 없나요?”…분양가 치솟자 서울 청약신청 80% ‘소형평수’ — 매일경제\n   https://www.mk.co.kr/article/12215386\n3. “10억 싼 급매, 부담금은 누가?”재건축 매수 셈법 바뀐다 [부동산360] — 헤럴드경제\n   https://biz.heraldcorp.com/article/10944332?ref=naver\n4. 12억 넘는 집 가진 30대 '주택부자' 늘었다…역대 최고 수준 — 아시아경제\n   https://view.asiae.co.kr/article/2026112210175555792\n5. \"30대가 무슨 돈으로 12억을…\" 고가주택 보유자 70% 급증 — 한국경제\n   https://www.hankyung.com/article/2026112217677\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.yna.co.kr/view/AKR20261121025900004?input=1195m",
+    "https://www.mk.co.kr/article/12215386",
+    "https://biz.heraldcorp.com/article/10944332?ref=naver",
+    "https://view.asiae.co.kr/article/2026112210175555792",
+    "https://www.hankyung.com/article/2026112217677"
+  ],
+  "created_at": "2026-11-22T10:50:33.120814+09:00"
+}
