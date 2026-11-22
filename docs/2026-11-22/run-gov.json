@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-22",
+  "finished_at": "2026-11-22T18:50:19.783586+09:00",
+  "messages": [
+    {
+      "level": "warn",
+      "text": "오늘은 조건에 맞는 정책·세금 보도자료가 없어요"
+    }
+  ],
+  "candidates": [
+    {
+      "title": "[차관동정] 정의경 제2차관, \"안전을 최우선으로 탈선 현장 복구 및 이용객 불편 최소화할 것\"",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790153",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[참고] 경부선 소정리역 화물열차 탈선 사고 대응에 만전을 기하고 있습니다.",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790144",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    }
+  ]
+}
