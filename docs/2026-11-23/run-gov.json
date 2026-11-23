@@ -1,0 +1,201 @@
+{
+  "date": "2026-11-23",
+  "finished_at": "2026-11-23T19:15:09.596025+09:00",
+  "messages": [
+    {
+      "level": "bad",
+      "text": "카드를 만들지 못했어요: 5번째 카드: 표 칸 글자가 원문과 다름 → 표준 개별 / 5번째 카드: 표 칸 글자가 원문과 다름 → 국토부장관 시·군·구청장 / 5번째 카드: 표 칸 글자가 원문과 다름 → '27. 1. 22. '27. 4.  / 5번째 카드: 표 칸 글자가 원문과 다름 → 표준 개별 / 5번째 카드: 표 칸 글자가 원문과 다름 → 국토부장관 시·군·구청장 / 5번째 카드: 표 칸 글자가 원문과 다름 → '27. 1. 22. '27. 4. "
+    }
+  ],
+  "candidates": [
+    {
+      "title": "한국형 위성항법시스템(KPS), 본격 제작·조립·시험 절차 돌입",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790341",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "중고차 광고에 수수료까지 표시 … 실제 구매비용 한눈에 확인 「자동차관리법」 하위법령 개정안 입법예고",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790161",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[참고] 케이(K)-철도, 95조 원 베트남 고속철도 사업 진출 첫발",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790156",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[차관동정] 정의경 제2차관, \"안전을 최우선으로 탈선 현장 복구 및 이용객 불편 최소화할 것\"",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790153",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[참고] 경부선 소정리역 화물열차 탈선 사고 대응에 만전을 기하고 있습니다.",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790144",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[참고] '27년 부동산 공시가격 시세반영률은 전년 수준 유지",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790108",
+      "score": 8,
+      "status": "선택됨 → 세트 1"
+    },
+    {
+      "title": "[참고] 테슬라 FSD 특례 신청, 자료 보완 필요",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790094",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "[장관동정] 홍지선 장관, \"겨울철 국민 안전 최우선… 비상대응체계 확립\"",
+      "dept": "국토교통부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790070",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "'쉬었음' 청년을 다시 내:일로… 청년일자리팀, 제2회 '국민 체감 대상'",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790389",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "긴급 시장상황점검회의 개최",
+      "dept": "재정경제부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790262",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "사업보고서 등에 대한 조사·감리결과 조치",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790410",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "제11회 국제금융협력포럼 개최",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790382",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "금융정보분석원 설립 25주년 기념 자금세탁방지 국제세미나 개최",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790374",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "금융정보분석원 설립 25주년 및 제20회 「자금세탁방지의 날」 기념식 개최",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790315",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "이억원 금융위원장, 글로벌 금융안정 공조와 한-유럽 금융협력 강화로 한국 금융의 지평 넓혀",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790306",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "상장기업의 자기주식 1일 취득한도 확대를 3개월간 시행합니다",
+      "dept": "금융위원회",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790390",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "행안부-KT 손잡고 사회연대경제 현장에 AI 접목, 지역문제 함께 푼다",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790388",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "공무원이 직접 만든 인공지능(AI) 도구 1,035개 몰렸다… 45대 1 뚫은 23팀 결선",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790351",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "행안부, '2026 주한 외교사절 초청 공공행정 우수사례 설명회' 개최",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790353",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "겨울철 자연재난도 '풍수해·지진재해보험'으로 든든하게 대비하세요",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790282",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "카카오페이·토스·네이버페이에서도 '주민등록증 진위확인' 가능... 전자금융거래 안전성 강화",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790284",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "행정안전부 장관, 도로살얼음 취약구간 안전관리 실태 점검",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790137",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "청년의 아이디어로 지역에 새 활력을, '청년희망터' 5기 성과 한자리에",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790110",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "지역자율방재단, 겨울철 대비 역량 강화 교육 실시",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790041",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "민생 안정과 지속 가능한 지방재정, 지방교부세가 발판을 마련하겠습니다",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790039",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "지방세제 혁신 아이디어 발굴·확산을 위한 '2026년 지방세 발전 포럼' 개최",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790043",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    },
+    {
+      "title": "대한민국, 국제연합(UN) 전자정부평가 12년 만에 세계 1위 탈환",
+      "dept": "행정안전부",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790024",
+      "score": 0,
+      "status": "부동산 관련 단어가 제목에 없음"
+    }
+  ]
+}
