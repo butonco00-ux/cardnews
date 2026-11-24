@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-11-24",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.11.24)",
+  "date_label": "2026.11.24",
+  "news_items": [
+    {
+      "title": "삼양사거리역세권 장기전세주택 도시정비형 재개발사업 정비기반시설,...",
+      "link": "https://www.arunews.com/news/articleView.html?idxno=69924",
+      "naver_link": "https://www.arunews.com/news/articleView.html?idxno=69924",
+      "press": "한국주택경제",
+      "published": "2026-11-24T12:52:00+09:00",
+      "date_label": "2026.11.24 12:52",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "전세사기 불안에 보증금 부담까지…전세 25만 가구 줄었다",
+      "link": "https://www.hankyung.com/article/202611246552i",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005357525?sid=101",
+      "press": "한국경제",
+      "published": "2026-11-24T12:01:00+09:00",
+      "date_label": "2026.11.24 12:01",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "공공택지 보상 협조하면 지장물 보상액 최대 30% 더 [부동산360]",
+      "link": "https://biz.heraldcorp.com/article/10946985?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002727593?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-11-24T11:01:00+09:00",
+      "date_label": "2026.11.24 11:01",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "“2028년 총선은 부동산 심판 선거”…조정훈·이준석, 종부세 손질 요...",
+      "link": "https://www.mk.co.kr/article/12216122",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005767642?sid=100",
+      "press": "매일경제",
+      "published": "2026-11-23T14:58:00+09:00",
+      "date_label": "2026.11.23 14:58",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "[게시판] '알아야 사기 예방'…대전 중구 고3 대상 부동산 교육",
+      "link": "https://www.yna.co.kr/view/AKR20261124107200063?input=1195m",
+      "naver_link": "https://n.news.naver.com/mnews/article/001/0016460513?sid=102",
+      "press": "연합뉴스",
+      "published": "2026-11-24T13:52:00+09:00",
+      "date_label": "2026.11.24 13:52",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.11.24)\n\n1. 삼양사거리역세권 장기전세주택 도시정비형 재개발사업 정비기반시설,... — 한국주택경제\n   https://www.arunews.com/news/articleView.html?idxno=69924\n2. 전세사기 불안에 보증금 부담까지…전세 25만 가구 줄었다 — 한국경제\n   https://www.hankyung.com/article/202611246552i\n3. 공공택지 보상 협조하면 지장물 보상액 최대 30% 더 [부동산360] — 헤럴드경제\n   https://biz.heraldcorp.com/article/10946985?ref=naver\n4. “2028년 총선은 부동산 심판 선거”…조정훈·이준석, 종부세 손질 요... — 매일경제\n   https://www.mk.co.kr/article/12216122\n5. [게시판] '알아야 사기 예방'…대전 중구 고3 대상 부동산 교육 — 연합뉴스\n   https://www.yna.co.kr/view/AKR20261124107200063?input=1195m\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://www.arunews.com/news/articleView.html?idxno=69924",
+    "https://www.hankyung.com/article/202611246552i",
+    "https://biz.heraldcorp.com/article/10946985?ref=naver",
+    "https://www.mk.co.kr/article/12216122",
+    "https://www.yna.co.kr/view/AKR20261124107200063?input=1195m"
+  ],
+  "created_at": "2026-11-24T14:41:58.453646+09:00"
+}
