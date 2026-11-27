@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-11-27",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.11.27)",
+  "date_label": "2026.11.27",
+  "news_items": [
+    {
+      "title": "서울 종부세 1년 새 2배…세입자 ‘월세 폭탄’으로 돌아오나 [부동산3...",
+      "link": "https://biz.heraldcorp.com/article/10951448?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002729375?sid=101",
+      "press": "헤럴드경제",
+      "published": "2026-11-27T10:45:00+09:00",
+      "date_label": "2026.11.27 10:45",
+      "score": 12,
+      "tag": "정책"
+    },
+    {
+      "title": "“집값보다 높은 전세금에 주택 55채 매입”…전세사기 의심 88건 덜미",
+      "link": "https://www.mk.co.kr/article/12219982",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005769845?sid=101",
+      "press": "매일경제",
+      "published": "2026-11-27T10:36:00+09:00",
+      "date_label": "2026.11.27 10:36",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "일원 한솔아파트, 최고 25층 아파트 957세대로 재건축",
+      "link": "https://www.arunews.com/news/articleView.html?idxno=70110",
+      "naver_link": "https://www.arunews.com/news/articleView.html?idxno=70110",
+      "press": "한국주택경제",
+      "published": "2026-11-27T12:28:00+09:00",
+      "date_label": "2026.11.27 12:28",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "다시 고개 드는 '7% 주담대'…더 강해진 한은의 긴축 신호",
+      "link": "https://www.hankyung.com/article/202611274197i",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005358963?sid=101",
+      "press": "한국경제",
+      "published": "2026-11-27T10:12:00+09:00",
+      "date_label": "2026.11.27 10:12",
+      "score": 3,
+      "tag": "정책"
+    },
+    {
+      "title": "팔리지 않는 집 쌓이고 새집 지을 계획은 뚝… 부산 주택시장 한파",
+      "link": "https://view.asiae.co.kr/article/2026112708180734939",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005848570?sid=102",
+      "press": "아시아경제",
+      "published": "2026-11-27T08:18:00+09:00",
+      "date_label": "2026.11.27 08:18",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.11.27)\n\n1. 서울 종부세 1년 새 2배…세입자 ‘월세 폭탄’으로 돌아오나 [부동산3... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10951448?ref=naver\n2. “집값보다 높은 전세금에 주택 55채 매입”…전세사기 의심 88건 덜미 — 매일경제\n   https://www.mk.co.kr/article/12219982\n3. 일원 한솔아파트, 최고 25층 아파트 957세대로 재건축 — 한국주택경제\n   https://www.arunews.com/news/articleView.html?idxno=70110\n4. 다시 고개 드는 '7% 주담대'…더 강해진 한은의 긴축 신호 — 한국경제\n   https://www.hankyung.com/article/202611274197i\n5. 팔리지 않는 집 쌓이고 새집 지을 계획은 뚝… 부산 주택시장 한파 — 아시아경제\n   https://view.asiae.co.kr/article/2026112708180734939\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://biz.heraldcorp.com/article/10951448?ref=naver",
+    "https://www.mk.co.kr/article/12219982",
+    "https://www.arunews.com/news/articleView.html?idxno=70110",
+    "https://www.hankyung.com/article/202611274197i",
+    "https://view.asiae.co.kr/article/2026112708180734939"
+  ],
+  "created_at": "2026-11-27T12:53:59.058771+09:00"
+}
