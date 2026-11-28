@@ -1,0 +1,102 @@
+{
+  "kind": "news",
+  "date": "2026-11-28",
+  "set": 2,
+  "tag": "뉴스",
+  "title": "오늘의 부동산 뉴스 (2026.11.28)",
+  "date_label": "2026.11.28",
+  "news_items": [
+    {
+      "title": "\"분양가가 6억인데 부담금이 1억\"…미분양에 재초환까지 지방 재건축 '이...",
+      "link": "https://view.asiae.co.kr/article/2026112619072264450",
+      "naver_link": "https://n.news.naver.com/mnews/article/277/0005849023?sid=101",
+      "press": "아시아경제",
+      "published": "2026-11-28T07:00:00+09:00",
+      "date_label": "2026.11.28 07:00",
+      "score": 9,
+      "tag": "정책"
+    },
+    {
+      "title": "조정지역 임대아파트, LH에 팔면 양도세 감면",
+      "link": "https://www.mk.co.kr/article/12220434",
+      "naver_link": "https://n.news.naver.com/mnews/article/009/0005770139?sid=101",
+      "press": "매일경제",
+      "published": "2026-11-27T17:48:00+09:00",
+      "date_label": "2026.11.27 17:48",
+      "score": 6,
+      "tag": "정책"
+    },
+    {
+      "title": "\"새 아파트 받고 4억 받는다고?\"…집주인들 조용히 웃는 동네 [이슬기의...",
+      "link": "https://www.hankyung.com/article/2026112738476",
+      "naver_link": "https://n.news.naver.com/mnews/article/015/0005359307?sid=101",
+      "press": "한국경제",
+      "published": "2026-11-28T10:31:00+09:00",
+      "date_label": "2026.11.28 10:31",
+      "score": 3,
+      "tag": "정책"
+    },
+    {
+      "title": "‘野 정책사령탑’ 임이자 “李정부 가장 큰 실패는 부동산·증시…민생...",
+      "link": "https://biz.heraldcorp.com/article/10952339?ref=naver",
+      "naver_link": "https://n.news.naver.com/mnews/article/016/0002729727?sid=100",
+      "press": "헤럴드경제",
+      "published": "2026-11-28T09:00:00+09:00",
+      "date_label": "2026.11.28 09:00",
+      "score": 3,
+      "tag": "정책"
+    },
+    {
+      "title": "‘16년 침묵’ 원빈, 부동산 투자 성적은?…성수·청담 건물 가치 500억",
+      "link": "https://www.segye.com/newsView/20261127508593?OutUrl=naver",
+      "naver_link": "https://m.entertain.naver.com/article/022/0004178733",
+      "press": "세계일보",
+      "published": "2026-11-28T05:24:00+09:00",
+      "date_label": "2026.11.28 05:24",
+      "score": 3,
+      "tag": "정책"
+    }
+  ],
+  "notes": [],
+  "ok": true,
+  "problems": [],
+  "cards": [
+    "cards/01.jpg",
+    "cards/02.jpg",
+    "cards/03.jpg",
+    "cards/04.jpg",
+    "cards/05.jpg",
+    "cards/06.jpg"
+  ],
+  "styles": {
+    "1": [
+      "cards/01.jpg",
+      "cards/02.jpg",
+      "cards/03.jpg",
+      "cards/04.jpg",
+      "cards/05.jpg",
+      "cards/06.jpg"
+    ],
+    "2": [
+      "cards-buto/01.jpg",
+      "cards-buto/02.jpg",
+      "cards-buto/03.jpg",
+      "cards-buto/04.jpg",
+      "cards-buto/05.jpg",
+      "cards-buto/06.jpg"
+    ]
+  },
+  "caption": "오늘의 부동산 뉴스 (2026.11.28)\n\n1. \"분양가가 6억인데 부담금이 1억\"…미분양에 재초환까지 지방 재건축 '이... — 아시아경제\n   https://view.asiae.co.kr/article/2026112619072264450\n2. 조정지역 임대아파트, LH에 팔면 양도세 감면 — 매일경제\n   https://www.mk.co.kr/article/12220434\n3. \"새 아파트 받고 4억 받는다고?\"…집주인들 조용히 웃는 동네 [이슬기의... — 한국경제\n   https://www.hankyung.com/article/2026112738476\n4. ‘野 정책사령탑’ 임이자 “李정부 가장 큰 실패는 부동산·증시…민생... — 헤럴드경제\n   https://biz.heraldcorp.com/article/10952339?ref=naver\n5. ‘16년 침묵’ 원빈, 부동산 투자 성적은?…성수·청담 건물 가치 500억 — 세계일보\n   https://www.segye.com/newsView/20261127508593?OutUrl=naver\n\n기사 제목·언론사만 소개하며, 기사 저작권은 각 언론사에 있습니다.\n\n#부동산 #부동산정책 #부동산세금 #부동산뉴스 #공인중개사",
+  "caption_problems": [],
+  "embargo": null,
+  "license": null,
+  "badge": "",
+  "source_urls": [
+    "https://view.asiae.co.kr/article/2026112619072264450",
+    "https://www.mk.co.kr/article/12220434",
+    "https://www.hankyung.com/article/2026112738476",
+    "https://biz.heraldcorp.com/article/10952339?ref=naver",
+    "https://www.segye.com/newsView/20261127508593?OutUrl=naver"
+  ],
+  "created_at": "2026-11-28T12:40:09.877790+09:00"
+}
